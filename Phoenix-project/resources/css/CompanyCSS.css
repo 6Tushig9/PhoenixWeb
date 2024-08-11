@@ -1,13 +1,13 @@
-:root {
+:root{
     --main-fonts: "Inter", sans-serif;
-    --secondary-fonts: "Inter", sans-serif; /*solih*/
+    --secondary-fonts: "Inter", sans-serif;/*solih*/
     --mainBG: #c6c6c6;
     --mainBGMirror: #c6c6c6d9;
-    --darkerBG: #a1a1a1;
+    --darkerBG:#a1a1a1;
     --fontSize: 2rem;
     --fontC: #e5e5e5;
     --fontCdark: #2d2d2d;
-    --btnClr: #013220;
+    --btnClr: #013220; 
     --btnClr2: #054202;
     --btnClrBlr: #054202a7;
     --accentClr: #f0b33e;
@@ -15,14 +15,15 @@
     --shadowClr: #8b8b8b;
 }
 
-* {
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
     color: var(--fontCdark);
 }
-body {
+body{
     width: 100%;
     height: auto;
     display: flex;
@@ -35,13 +36,13 @@ body {
 }
 
 /*------Main buyu undsen heseg------*/
-.main {
+.main{
     width: 100%;
     height: auto;
 }
 
 /*---mini navigation---*/
-#thinnav {
+#thinnav{
     width: 100%;
     height: 30px;
     display: flex;
@@ -52,7 +53,7 @@ body {
     top: 0;
     z-index: 14;
 }
-.Welcome {
+.Welcome{
     width: 30vw;
     height: 30px;
     display: flex;
@@ -63,26 +64,26 @@ body {
     color: var(--fontC);
     padding-left: 30px;
 }
-.rightsd {
+.rightsd{
     width: 40vw;
     height: 30px;
     display: flex;
     overflow-y: visible;
 }
-.FAQhelp {
+.FAQhelp{
     width: 40rem;
     height: 30px;
     display: flex;
     justify-content: right;
     gap: 10px;
 }
-.FAQhelp a {
+.FAQhelp a{
     color: var(--fontC);
     text-decoration: none;
     display: flex;
     align-items: center;
 }
-.FAQhelp h2 {
+.FAQhelp h2{
     width: auto;
     height: 25px;
     display: flex;
@@ -93,34 +94,34 @@ body {
     font-family: var(--main-fonts);
     color: var(--fontC);
 }
-.miniicon {
+.miniicon{
     width: 15rem;
     display: flex;
     flex-direction: row;
 }
-.miniicon a {
+.miniicon a{
     width: 20px;
     height: 20px;
 }
-.miniicon a img {
+.miniicon a img{
     width: 20px;
     height: 20px;
 }
-.shpngcrt {
+.shpngcrt{
     width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-left: 20px;
 }
-.miniSocial {
+.miniSocial{
     width: 65%;
     display: flex;
     justify-content: space-around;
     padding: 0 15px;
     align-items: center;
 }
-.anglihel {
+.anglihel{
     width: 15%;
     display: flex;
     justify-content: center;
@@ -128,12 +129,13 @@ body {
 }
 /*mini navigation heseg duusaw*/
 
+
 /*---Gol menu button-d---*/
-.navi:hover {
-    background: var(--darkerBG);
+.navi:hover{
+    background:var(--darkerBG);
     transition: 0.3s ease-in-out;
 }
-.navi {
+.navi{
     width: 100%;
     box-sizing: border-box;
     height: auto;
@@ -151,19 +153,19 @@ body {
     transition: top 0.3s;
     z-index: 13;
 }
-.navi.hidden {
+.navi.hidden{
     top: -100px;
 }
-.lftMenu div:hover {
+.lftMenu div:hover{
     cursor: pointer;
 }
-.rghtMenu div:hover {
+.rghtMenu div:hover{
     cursor: pointer;
 }
-.lftMenu a {
+.lftMenu a{
     text-decoration: none;
 }
-.lftMenu {
+.lftMenu{
     width: 30vw;
     height: 4.5rem;
     display: flex;
@@ -173,10 +175,10 @@ body {
     font-weight: 400;
     gap: 1rem;
 }
-.rghtMenu a {
+.rghtMenu a{
     text-decoration: none;
 }
-.rghtMenu {
+.rghtMenu{
     width: 30vw;
     height: 4.5rem;
     display: flex;
@@ -186,26 +188,28 @@ body {
     font-weight: 400;
     gap: 1rem;
 }
-.navi img:hover {
+.navi img:hover{
     cursor: pointer;
 }
-.navi img {
+.navi img{
     background-size: contain;
     width: 5rem;
     height: 5rem;
     z-index: 20;
 }
-.mnubtn {
+.mnubtn{
     display: none;
     z-index: 15;
 }
-.mblMenu {
+.mblMenu{
     display: none;
     z-index: 12;
 }
 
+
+
 /*-----------------------------Company Heseg START---------------------------*/
-#mnContnr {
+#mnContnr{
     width: 80%;
     display: flex;
     font-family: var(--main-fonts);
@@ -216,37 +220,33 @@ body {
     row-gap: 1.5rem;
 }
 
-.firstInfo,
-.secondInfo {
+.firstInfo, .secondInfo{
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.frstPic,
-.scndPic {
+.frstPic, .scndPic{
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.frstPic img {
+.frstPic img{
     width: 90%;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.scndPic img {
+.scndPic img{
     width: 75%;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.frstIfno h3,
-.scndIfno h3 {
+.frstIfno h3, .scndIfno h3{
     display: flex;
     font-size: clamp(1.5rem, 2.5vw, 2.5rem);
 }
-.frstIfno,
-.scndIfno {
+.frstIfno, .scndIfno{
     width: 40%;
     display: flex;
     font-size: clamp(1rem, 1.5vw, 1.3rem);
@@ -256,7 +256,7 @@ body {
     gap: 1rem;
 }
 
-#Milestone {
+#Milestone{
     width: 90%;
     padding-top: 3rem;
     padding-bottom: 2rem;
@@ -266,7 +266,7 @@ body {
     align-items: center;
     gap: 1rem;
 }
-.section {
+.section{
     width: 15rem;
     height: 6.5rem;
     display: flex;
@@ -278,29 +278,29 @@ body {
     border-radius: 0.2rem;
     margin-bottom: 1.5rem;
 }
-.Numbers {
+.Numbers{
     font-size: 1.8rem;
     font-weight: 450;
     color: var(--fontCdark);
 }
-.descrptnOfNumber {
+.descrptnOfNumber{
     font-size: 1.2rem;
     color: var(--fontCdark);
 }
 
 @keyframes slide {
-    from {
+    from{
         transform: translateX(0);
     }
-    to {
+    to{
         transform: translateX(-100%);
     }
 }
-.Hamtragchid:hover .Hamtragchid-slide {
+.Hamtragchid:hover .Hamtragchid-slide{
     animation-play-state: paused;
     transition: 0.5s ease;
 }
-.Hamtragchid {
+.Hamtragchid{
     width: 90vw;
     overflow: hidden;
     padding: 1rem 0;
@@ -309,7 +309,7 @@ body {
 }
 
 .Hamtragchid:before,
-.Hamtragchid:after {
+.Hamtragchid:after{
     position: absolute;
     top: 0;
     width: 15rem;
@@ -317,32 +317,28 @@ body {
     content: "";
     z-index: 2;
 }
-.Hamtragchid:before {
+.Hamtragchid:before{
     left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--mainBG));
+    background: linear-gradient(to left, rgba(255,255,255,0),var(--mainBG));
 }
-.Hamtragchid:after {
+.Hamtragchid:after{
     right: 0;
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0),
-        var(--mainBG)
-    );
+    background: linear-gradient(to right, rgba(255,255,255,0),var(--mainBG));
 }
-.Hamtragchid-slide {
+.Hamtragchid-slide{
     display: inline-block;
     animation: 35s slide infinite linear;
 }
-.Hamtragchid-slide img {
+.Hamtragchid-slide img{
     height: 10rem;
     margin: 0 2rem;
 }
 
-#HamtrahHuselt:hover {
+#HamtrahHuselt:hover{
     cursor: pointer;
     box-shadow: 0 0 0 #3e3d3d99;
 }
-#HamtrahHuselt {
+#HamtrahHuselt{
     width: 25rem;
     height: 2.8rem;
     margin: 2rem 0 3rem 0;
@@ -356,30 +352,22 @@ body {
     /*border: 0.5px solid var(--shadowClr);*/
     box-shadow: 0 0 2px #26262699;
 }
-#HamtrahHuselt img {
+#HamtrahHuselt img{
     width: 1.5rem;
     height: 1.5rem;
 }
 /*-----------------------------Company Heseg END---------------------------*/
 
-::-webkit-scrollbar {
-    width: 10px;
-}
-::-webkit-scrollbar-corner {
-    display: none;
-}
-::-webkit-scrollbar:hover {
-    width: 13px;
-}
-::-webkit-scrollbar-thumb {
-    background: #464646;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #373636;
-    width: 15px;
-}
 
-footer {
+
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-corner {display: none;}
+::-webkit-scrollbar:hover {width: 13px;}
+::-webkit-scrollbar-thumb {background: #464646;}
+::-webkit-scrollbar-thumb:hover {background: #373636; width: 15px;}
+
+
+footer{
     width: 100%;
     height: auto;
     background-color: var(--darkerBG);
@@ -387,13 +375,13 @@ footer {
     flex-direction: column;
     bottom: 0;
 }
-footer a {
+footer a{
     text-decoration: none;
     font-family: var(--main-fonts);
     color: var(--fontCdark);
 }
 
-.SocialCont {
+.SocialCont{
     width: 100vw;
     display: flex;
     height: auto;
@@ -405,41 +393,41 @@ footer a {
     align-items: center;
     align-self: center;
 }
-.Emailicon:hover {
+.Emailicon:hover{
     opacity: 100%;
     cursor: pointer;
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
 }
-.Emailicon {
+.Emailicon{
     flex-direction: row;
     width: 2rem;
     height: 2.2rem;
     margin-left: 11px;
     opacity: 90%;
 }
-.Facebookicon:hover {
+.Facebookicon:hover{
     border-radius: 3px;
     opacity: 100%;
     cursor: pointer;
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
 }
-.Facebookicon {
+.Facebookicon{
     flex-direction: row;
     width: 2rem;
     height: 2rem;
     margin-left: 11px;
     opacity: 90%;
 }
-.Instagramicon:hover {
+.Instagramicon:hover{
     border-radius: 3px;
     opacity: 100%;
     cursor: pointer;
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
 }
-.Instagramicon {
+.Instagramicon{
     flex-direction: row;
     width: 2rem;
     height: 2rem;
@@ -447,7 +435,7 @@ footer a {
     opacity: 70%;
 }
 
-.hayg {
+.hayg{
     width: 100%;
     height: auto;
     display: flex;
@@ -459,7 +447,7 @@ footer a {
     flex-wrap: wrap;
     text-align: center;
 }
-.utas {
+.utas{
     display: flex;
     justify-content: space-around;
     font-size: 1.5rem;
@@ -467,15 +455,15 @@ footer a {
     color: var(--fontCdark);
     padding: 2rem 0;
 }
-.MapsG {
+.MapsG{
     font-size: 1rem;
     height: auto;
 }
-.MapsG iframe {
+.MapsG iframe{
     display: flex;
-    margin: 1.5rem 10vw;
+    margin:1.5rem 10vw;
 }
-.line {
+.line{
     width: 80%;
     height: 0.1rem;
     margin-right: 10vw;
@@ -484,7 +472,7 @@ footer a {
     border: 0.1rem var(--fontCdark) solid;
     border-radius: 0.05rem;
 }
-.endcrdt {
+.endcrdt{
     width: 100%;
     color: var(--fontCdark);
     font-weight: 400;
@@ -493,36 +481,38 @@ footer a {
     margin: 1.2rem 0;
 }
 
+
+
 /*---------------utasnii heseg START---------------*/
-@media (max-width: 900px) {
-    .Welcome {
+@media (max-width: 900px){
+    .Welcome{
         width: 40%;
     }
-    .rightsd {
+    .rightsd{
         width: 60%;
         padding-left: 0;
     }
-    .SanalBolgoh {
+    .SanalBolgoh{
         flex-direction: column-reverse;
         align-items: center;
     }
-    .zurag1 img {
+    .zurag1 img{
         width: 25rem;
         height: 20rem;
     }
-    .navi:hover {
+    .navi:hover{
         background: var(--mainBGMirror);
     }
-    .navi {
+    .navi{
         justify-content: space-between;
     }
-    .lftMenu {
+    .lftMenu{
         display: none;
     }
-    .rghtMenu {
+    .rghtMenu{
         display: none;
     }
-    .mnubtn {
+    .mnubtn{
         margin: 1rem;
         position: relative;
         width: 3rem;
@@ -536,7 +526,7 @@ footer a {
         cursor: pointer;
         overflow: hidden;
     }
-    .mnubtn span {
+    .mnubtn span{
         position: absolute;
         width: 2.2rem;
         height: 0.2rem;
@@ -544,31 +534,31 @@ footer a {
         border-radius: 0.2rem;
         transition: 0.3s;
     }
-    .mnubtn span:nth-child(1) {
+    .mnubtn span:nth-child(1){
         transform: translateY(-13px);
     }
-    .mnubtn.active span:nth-child(1) {
+    .mnubtn.active span:nth-child(1){
         transform: translateY(0px) rotate(45deg);
     }
-    .mnubtn span:nth-child(2) {
+    .mnubtn span:nth-child(2){
         transform: translateY(13px);
     }
-    .mnubtn.active span:nth-child(2) {
+    .mnubtn.active span:nth-child(2){
         transform: translateY(0px) rotate(-45deg);
     }
-    .mnubtn.active span:nth-child(3) {
+    .mnubtn.active span:nth-child(3){
         opacity: 0;
     }
-    .mnubtn.active {
+    .mnubtn.active{
         box-shadow: none;
     }
-    .mblMenu div:hover {
+    .mblMenu div:hover{
         cursor: pointer;
     }
-    .mblMenu a {
+    .mblMenu a{
         text-decoration: none;
     }
-    .mblMenu {
+    .mblMenu{
         display: flex;
         width: 100%;
         position: fixed;
@@ -583,103 +573,114 @@ footer a {
         padding: 2rem;
         opacity: 0;
         backdrop-filter: blur(15px);
-        padding-bottom: 4rem;
-        transform: translate(0, -100%); /* Position off-screen */
+        padding-bottom: 4rem;            
+        transform: translate(0,-100%); /* Position off-screen */
         transition: transform 0.5s ease, opacity 0.5s ease, top 0.8s;
     }
-    .mblMenu.hidden {
+    .mblMenu.hidden{
         top: -500px;
     }
-    .mblMenu.show {
-        /* Ensure the element is displayed */
+    .mblMenu.show { /* Ensure the element is displayed */
         backdrop-filter: blur(15px);
         opacity: 1;
         transform: translate(0); /* Move into view */
     }
 
-    /*-----------------------------Company Heseg START-------------------------*/
-    .firstInfo {
-        flex-direction: column;
-    }
-    .secondInfo {
-        flex-direction: column-reverse;
-    }
-    .frstPic,
-    .scndPic {
-        width: 100%;
-    }
-    .frstPic img,
-    .scndPic img {
-        width: 100%;
-    }
-    .frstIfno h3,
-    .scndIfno h3 {
-        display: flex;
-        font-size: clamp(2rem, 2.5vw, 2.5rem);
-    }
-    .frstIfno,
-    .scndIfno {
-        width: 100%;
-        font-size: clamp(1rem, 1.5vw, 1.3rem);
-    }
-    #HamtrahHuselt:hover {
-        cursor: pointer;
-        box-shadow: 0 0 0 #3e3d3d99;
-    }
-    #HamtrahHuselt {
-        width: 22.5rem;
-        height: 2.8rem;
-        margin: 2rem 0 3rem 0;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        display: flex;
-        font-size: 1.2rem;
-        font-weight: 400;
-        background: var(--darkerBG);
-        /*border: 0.5px solid var(--shadowClr);*/
-        box-shadow: 0 0 2px #3e3d3d99;
-    }
-    #HamtrahHuselt img {
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-    /*-----------------------------Company Heseg END---------------------------*/
+/*-----------------------------Company Heseg START-------------------------*/
+.firstInfo{
+    flex-direction: column;
+}
+.secondInfo{
+    flex-direction: column-reverse;
+}
+.frstPic, .scndPic{
+    width: 100%;
+}
+.frstPic img,.scndPic img{
+    width: 100%;
+}
+.frstIfno h3, .scndIfno h3{
+    display: flex;
+    font-size: clamp(2rem, 2.5vw, 2.5rem);
+}
+.frstIfno, .scndIfno{
+    width: 100%;
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+}
+#HamtrahHuselt:hover{
+    cursor: pointer;
+    box-shadow: 0 0 0 #3e3d3d99;
+}
+#HamtrahHuselt{
+    width: 22.5rem;
+    height: 2.8rem;
+    margin: 2rem 0 3rem 0;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 400;
+    background: var(--darkerBG);
+    /*border: 0.5px solid var(--shadowClr);*/
+    box-shadow: 0 0 2px #3e3d3d99;
+}
+#HamtrahHuselt img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+/*-----------------------------Company Heseg END---------------------------*/
 
-    /*-----------------------------Ecological Heseg START-------------------------*/
-    /*-----------------------------Ecological Heseg END---------------------------*/
 
-    /*-----------------------------Calculate Heseg START-------------------------*/
-    /*-----------------------------Calculate Heseg END---------------------------*/
 
-    /*-----------------------------Advice Heseg START-------------------------*/
-    /*-----------------------------Advice Heseg END---------------------------*/
+/*-----------------------------Ecological Heseg START-------------------------*/
+/*-----------------------------Ecological Heseg END---------------------------*/
+
+
+
+/*-----------------------------Calculate Heseg START-------------------------*/
+/*-----------------------------Calculate Heseg END---------------------------*/
+
+
+
+/*-----------------------------Advice Heseg START-------------------------*/
+/*-----------------------------Advice Heseg END---------------------------*/
+
 }
 
-@media (max-width: 610px) {
-    #thinnav {
+
+@media (max-width: 610px){
+    #thinnav{
         display: none;
     }
-    .navi {
+    .navi{
         top: 0;
     }
-    .mblMenu {
+    .mblMenu{
         top: 6rem;
     }
     /*.swiper-navBtn{
         display: none;
     }*/
 
-    /*-----------------------------Company Heseg START---------------------------*/
-    /*-----------------------------Company Heseg END---------------------------*/
 
-    /*-----------------------------Ecological Heseg START---------------------------*/
-    /*-----------------------------Ecological Heseg END---------------------------*/
+/*-----------------------------Company Heseg START---------------------------*/
+/*-----------------------------Company Heseg END---------------------------*/
 
-    /*-----------------------------Calculate Heseg START---------------------------*/
-    /*-----------------------------Calculate Heseg END---------------------------*/
 
-    /*-----------------------------Advice Heseg START---------------------------*/
-    /*-----------------------------Advice Heseg END---------------------------*/
+
+/*-----------------------------Ecological Heseg START---------------------------*/
+/*-----------------------------Ecological Heseg END---------------------------*/
+
+
+
+/*-----------------------------Calculate Heseg START---------------------------*/
+/*-----------------------------Calculate Heseg END---------------------------*/
+
+
+
+/*-----------------------------Advice Heseg START---------------------------*/
+/*-----------------------------Advice Heseg END---------------------------*/
+
 }
 /*---------------utasnii heseg END-----------------*/
