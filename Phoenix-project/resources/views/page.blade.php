@@ -46,7 +46,7 @@
     </div>
     <div class="navi">
         <div class="lftMenu">
-            <a href="Company.html">БАЙГУУЛЛАГА</a>
+            <a href="/page">БАЙГУУЛЛАГА</a>
             <a href="Ecological.html">Б.О.Н.З</a>
         </div>
         <img src="./pics2use/LogoBlck.png" class="MenuLogo">
