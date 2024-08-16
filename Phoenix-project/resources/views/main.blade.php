@@ -11,7 +11,6 @@
     <link rel="stylesheet" href={{ asset("css/PSHStyle.css") }}>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href={{ asset("css/swiper-bundle.min.css") }}>
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
         <header class="w-full">

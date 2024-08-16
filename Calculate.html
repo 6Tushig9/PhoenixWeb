@@ -16,12 +16,12 @@
             <div class="Welcome">Тавтай морил</div>
             <div class="rightsd">
                 <div class="FAQhelp">
-                    <a href="">Санал хүсэлт |</a>
-                    <a href="">Тусламж |</a>
+                    <button id="complaintBtn" class="open-popup-btn">Санал хүсэлт |</button>
+                    <a href="FAQ.html">Тусламж |</a>
                 </div>
                 <div class="miniicon">
                     <div class="shpngcrt">
-                        <a href="">
+                        <a href="ShoppingCart.html">
                             <img src="./pics2use/icons/Shoppingcart.png" class="shoppingC">
                         </a>
                     </div>
@@ -65,6 +65,42 @@
             <a href="Advice.html">ЗӨВЛӨМЖ</a>
         </div>
 
+        <!--Sanal huseltiin heseg-->
+        <div class="complaint-popup-wrapper" id="complaintPopup">
+            <div class="complaint-popup">
+                <span class="close-btn" id="closeComplaintPopup">&times;</span>
+                <h2>Санал хүсэлтээ илгээх</h2>
+                <form>
+                    <label for="nameC">Таны нэр:</label>
+                    <input type="text" id="nameC" placeholder="Нэрээ бичнэ үү" required>
+                    <label for="PhoneNumCom">Утасны дугаар:</label>
+                    <input type="text" id="PhoneNumCom" placeholder="Утасны дугаараа бичнэ үү" required>
+                    <label for="complaintDetail">Санал хүсэлт:</label>
+                    <textarea id="complaintDetail" placeholder="Санал хүсэлтээ бичнэ үү..." required></textarea>
+                    <button type="submit" class="submit-btn">Илгээх</button>
+                </form>
+            </div>
+        </div>
+<script>
+document.getElementById("complaintBtn").addEventListener("click", function() {
+    document.getElementById("complaintPopup").style.display = "flex";
+    document.body.classList.add("no-scroll");
+});
+document.getElementById("closeComplaintPopup").addEventListener("click", function() {
+    document.getElementById("complaintPopup").style.display = "none";
+    document.body.classList.remove("no-scroll");
+});
+window.addEventListener("click", function(event) {
+    const popup = document.getElementById("complaintPopup");
+    if (event.target === popup) {
+        popup.style.display = "none";
+        document.body.classList.remove("no-scroll");
+    }
+});
+</script>
+        <!--Sanal huseltiin heseg END-->
+
+
         <div class="tootsoolohW">
             <div class="hariu">
                 <div class="songolt">
@@ -72,7 +108,7 @@
                         
                     </div>
                     <div class="songolt2">
-
+                        
                     </div>
                 </div>
                 <div class="warningmsg">

@@ -88,4 +88,82 @@ if (event.target === popup) {
 </script>
     <!--Sanal huseltiin heseg END-->
 
+<script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isOpen = question.classList.contains('active');
+        
+                // Collapse all open answers
+                document.querySelectorAll('.faq-answer').forEach(answer => {
+                    answer.style.maxHeight = null;
+                });
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                });
+        
+                // Toggle the current answer
+                if (!isOpen) {
+                    question.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+</script>
+
+    <div class="faq-container">
+        <h1>Хэрэглэгчдээс ирдэг асуултууд</h1>
+        
+        <div class="faq-item">
+            <button class="faq-question">Баталгаат хугацаа хэдэн жил вэ?</button>
+            <div class="faq-answer">
+                <p>Манай халаагуурын баталгаат хугацаа 3 жил</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question">Баталгаат хугацаа хэдэн жил вэ?</button>
+            <div class="faq-answer">
+                <p>Манай халаагуурын баталгаат хугацаа 3 жил</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question">Баталгаат хугацаа хэдэн жил вэ?</button>
+            <div class="faq-answer">
+                <p>Манай халаагуурын баталгаат хугацаа 3 жил</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question">Баталгаат хугацаа хэдэн жил вэ?</button>
+            <div class="faq-answer">
+                <p>Манай халаагуурын баталгаат хугацаа 3 жил</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question">Баталгаат хугацаа хэдэн жил вэ?</button>
+            <div class="faq-answer">
+                <p>Манай халаагуурын баталгаат хугацаа 3 жил</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question">Баталгаат хугацаа хэдэн жил вэ?</button>
+            <div class="faq-answer">
+                <p>Манай халаагуурын баталгаат хугацаа 3 жил</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question">Баталгаат хугацаа хэдэн жил вэ?</button>
+            <div class="faq-answer">
+                <p>Манай халаагуурын баталгаат хугацаа 3 жил</p>
+            </div>
+        </div>
+    </div>
+
 @endsection
