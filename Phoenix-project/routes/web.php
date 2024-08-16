@@ -48,4 +48,3 @@ Route::get('/ShoppingCart', function(){
 Route::get('/FAQ', function(){
     return view('page.FAQ');
 });
-
