@@ -7,14 +7,18 @@
     --darkerBG:#a1a1a1;
     --fontSize: 2rem;
     --fontC: #e5e5e5;
+    --inputColor: #f8f8f8;
+    --brightBG: #e2e2e2;
     --fontCdark: #2d2d2d;
+    --fontCdarkBlur: #2d2d2d9a;
+    --shadowClr: #8b8b8b;
     --btnClr: #013220; 
     --btnClr2: #054202;
     --btnClrBlr: #054202a7;
     --accentClr: #f0b33e;
     --accentClrDark: #ce9936;
-    --shadowClr: #8b8b8b;
     --warningColor: #a3960f;
+    --alertColor: #a20505;
 }
 
 
@@ -32,6 +36,7 @@ body{
     font-weight: 200;
     background: var(--mainBG);
 }
+
 
 /*------Main buyu undsen heseg------*/
 .main{
@@ -81,6 +86,20 @@ body{
     display: flex;
     align-items: center;
 }
+.FAQhelp button:hover{
+    cursor: pointer;
+}
+.FAQhelp button{
+    font-family: var(--main-fonts);
+    color: var(--fontC);
+    font-size: 1rem;
+    font-weight: 200;
+    background: none;
+    border: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
 .FAQhelp h2{
     width: auto;
     height: 25px;
@@ -125,7 +144,80 @@ body{
     justify-content: center;
     align-items: center;
 }
-/*mini navigation heseg duusaw*/
+/*---mini navigation END---*/
+ 
+
+
+.complaint-popup-wrapper button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #d9534f;
+    color: white;
+}
+/* Pop-up Wrapper */
+.complaint-popup-wrapper {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    backdrop-filter: blur(10px);
+}
+
+/* Pop-up Container */
+.complaint-popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Form Elements */
+.complaint-popup input[type="text"],
+.complaint-popup input[type="email"],
+.complaint-popup select,
+.complaint-popup textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.complaint-popup textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.submit-btn {
+    background-color: #d9534f;
+}
+
+.open-popup-btn {
+    background-color: #007bff;
+}
+
+
 
 
 /*---Gol menu button-d---*/
@@ -202,7 +294,7 @@ body{
     display: none;
     z-index: 12;
 }
-/*gol menu button duusaw*/
+/*---gol menu button END---*/
 
 
 /*daraah heseg n main content-n code*/
@@ -216,7 +308,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-/*---nuur huudasnii gol medeelel---*/
+/*-------------------------nuur huudasnii gol medeelel--------------------*/
 .SanalBolgoh{
     width: 75%;
     height: auto;
@@ -287,10 +379,10 @@ body{
     width: 30rem;
     height: 25rem;
 }
-/*gol medeelliin heseg duusaw*/
+/*---------------------gol medeelliin heseg duusaw-----------------------*/
 
 
-/*--busad buteegdehuunuud--*/
+/*--------------------------busad buteegdehuunuud------------------------*/
 .BusadProd{
     width: 85%;
     overflow: hidden;
@@ -375,16 +467,488 @@ body{
 .swiper-pagination-bullet-active{
     background-color: #565656;
 }
-/*busad buteegdehuunuud ene hurtel*/
+/*--------------------busad buteegdehuunuud ene hurtel--------------------*/
+
+
+/*-----------------------------Company Heseg START------------------------*/
+#mnContnr{
+    width: 80%;
+    display: flex;
+    font-family: var(--main-fonts);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 8rem;
+    row-gap: 1.5rem;
+}
+
+.firstInfo, .secondInfo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.frstPic, .scndPic{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.frstPic img{
+    width: 90%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.scndPic img{
+    width: 75%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.frstIfno h3, .scndIfno h3{
+    display: flex;
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+.frstIfno, .scndIfno{
+    width: 40%;
+    display: flex;
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+#Milestone{
+    width: 90%;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+.section{
+    width: 15rem;
+    height: 6.5rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--fontCdark);
+    border-radius: 0.2rem;
+    margin-bottom: 1.5rem;
+}
+.Numbers{
+    font-size: 1.8rem;
+    font-weight: 450;
+    color: var(--fontCdark);
+}
+.descrptnOfNumber{
+    font-size: 1.2rem;
+    color: var(--fontCdark);
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.Hamtragchid:hover .Hamtragchid-slide{
+    animation-play-state: paused;
+    transition: 0.5s ease;
+}
+.Hamtragchid{
+    width: 90vw;
+    overflow: hidden;
+    padding: 1rem 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.Hamtragchid:before,
+.Hamtragchid:after{
+    position: absolute;
+    top: 0;
+    width: 15rem;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+.Hamtragchid:before{
+    left: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0),var(--mainBG));
+}
+.Hamtragchid:after{
+    right: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0),var(--mainBG));
+}
+.Hamtragchid-slide{
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
+.Hamtragchid-slide img{
+    height: 10rem;
+    margin: 0 2rem;
+}
+
+
+.email-popup-wrapper button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: #28a745;
+    color: white;
+}
+.email-popup-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+.email-popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+.email-popup input[type="email"],
+.email-popup input[type="text"],
+.email-popup textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.email-popup textarea {
+    resize: vertical;
+    height: 100px;
+}
+.send-btn {
+    background-color: #007bff;
+}
+.no-scroll {
+    overflow: hidden;
+}
+#sendEmailBtn:hover{
+    cursor: pointer;
+    box-shadow: 0 0 0 #3e3d3d99;
+}
+#sendEmailBtn{
+    width: 25rem;
+    height: 2.8rem;
+    margin: 2rem 0 3rem 0;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 400;
+    background: var(--darkerBG);
+    /*border: 0.5px solid var(--shadowClr);*/
+    box-shadow: 0 0 2px #26262699;
+    border: none;
+}
+#sendEmailBtn img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+/*-----------------------------Company Heseg END--------------------------*/
 
 
 
-/*-----------------------------Ecological Heseg START-------------------------*/
-/*-----------------------------Ecological Heseg END---------------------------*/
+/*-----------------------------BuyPage Heseg START------------------------*/
+#mainContnr{
+    width: 100%;
+    padding: 6rem 0;
+    display: flex;
+    position: relative;
+}
+.prodPicSide{
+    width: 50%;
+    height: 45rem;
+    display: flex;
+    padding-top: 6rem;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 6rem;
+}
+.bigImage{
+    width: 80%;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
+}
+.bigImage img{
+    width: 80%;
+}
+.miniImage{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.miniImage img:hover{
+    cursor: pointer;
+}
+.miniImage img{
+    width: 15%;
+    border: 1px solid var(--shadowClr);
+    border-radius: 0.15rem;
+    opacity: 0.7;
+}
+.advantageImage{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: var(--fontCdark);
+    font-size: 0.9rem;
+}
+.advantageImage img{
+    width: 8rem;
+}
+.advntg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.specSide{
+    width: 50%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1.5rem;
+    top: 5rem;
+}
+.heaterinfoDiv{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1.5rem;
+}
+.heaterName, .heaterDesc, .zagwaruudlabel{
+    display: flex;
+    width: 100%;
+}
+.heaterName{
+    font-size: 2.8rem;
+    color: var(--fontCdark);
+    font-weight: 350;
+}
+.heaterDesc{
+    font-size: 1.5rem;
+    width: 100%;
+}
+.zagwaruudlabel{
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    font-weight: 350;
+}
+.HeaterSelection{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.selections h2{
+    font-size: 1.3rem;
+    font-weight: 550;
+}
+.selections p{
+    font-size: 1.5rem;
+    font-weight: 350;
+}
+.selections:hover{
+    cursor: pointer;
+    box-shadow: 0 0 2px #3e3d3d99;
+}
+.selections{
+    max-width: 40%;
+    min-width: 30%;
+    border: 1px solid var(--shadowClr);
+    border-radius: 0.2rem;
+    gap: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tooshirheg{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+.quantity-selector {
+    width: 11rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--fontCdark);
+    border-radius: 0.2rem;
+    padding-left: 1rem;
+}
+.quantity-selector label {
+    margin-right: 0.2rem;
+    font-size: 1rem;
+    font-weight: 350;
+    color: var(--fontCdark);
+}
+.quantity-selector select {
+    padding: 0.6rem;
+    font-size: 1rem;
+    background-color: var(--mainBGMirror);
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer; /* Removes the default arrow */
+}
+.quantity-selector select {
+    width: 4rem;
+    padding-right: 15px; /* Space for the arrow */
+}
+
+.quantity-selector::after {
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+    color: var(--fontCdark);
+}
+
+.uldegdel{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--alertColor);
+    font-size: 0.8rem;
+}
+.bntsForOrder{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cartBtn:hover, .orderBtn:hover{
+    cursor: pointer;
+    box-shadow: 0 0 2px #3e3d3d99;
+}
+.cartBtn, .orderBtn{
+    width: 40%;
+    padding: 1rem 0.5rem;
+    border: 1px solid var(--shadowClr);
+    border-radius: 0.2rem;
+    background: var(--mainBG);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
 
 
+.zahialagchiinBulan, .tulburiinMedeelel{
+    width: 90%;
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border: 1px dashed var(--brightBG);
+    background: var(--mainBG);
+    border-radius: 0.3rem;
+    padding: 1rem;
+}
+.zahialagchiinBulan h2,.tulburiinMedeelel h2, .zahialagchiinBulan1 h2,.tulburiinMedeelel1 h2{
+    font-weight: 400;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.zahialagchiinBulan label, .zahialagchiinBulan1 label{
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--fontCdark);
+}
+.zahialagchiinBulan input::placeholder,.zahialagchiinBulan1 input::placeholder {
+    color: var(--fontCdarkBlur);
+    font-size: 1rem;
+}
+.zahialagchiinBulan input, .zahialagchiinBulan1 input{
+    font-size: 1.2rem;
+    padding: 0.2rem 0.5rem;
+    margin: 0.5rem 0rem;
+    border: none;
+    background: var(--inputColor);
+}
+.zahialagchiinBulan button:hover, .zahialagchiinBulan1 button:hover{
+    cursor: pointer;
+    background: var(--brightBG);
+    border: 1px solid var(--darkerBG);
+}
+.zahialagchiinBulan button, .zahialagchiinBulan1 button{
+    width: 16rem;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.2rem;
+    margin-top: 1rem;
+    color: var(--fontCdark);
+    background: var(--darkerBG);
+    border: 1px solid var(--darkerBG);
+    transition: 0.3s ease;
+}
+#ZahialagchDID{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: var(--brightBG);
+    padding: 1rem 0.5rem;
+    border-radius: 0.2rem;
+}
+.PaymentDetails{
+    border: 1px solid var(--darkerBG);
+}
+/*-----------------------------BuyPage Heseg END-------------------------*/
 
-/*-----------------------------Calculate Heseg START-------------------------*/
+
+/*-----------------------------Ecological Heseg START---------------------*/
+/*-----------------------------Ecological Heseg END-----------------------*/
+
+
+/*-----------------------------Calculate Heseg START----------------------*/
 .tootsoolohW{
     width: 100%;
     padding-top: 6rem;
@@ -404,7 +968,7 @@ body{
     width: 80%;
 }
 .songolt{
-    width: 100%;
+    width: 80%;
     display: flex;
 }
 .songolt1{
@@ -485,8 +1049,7 @@ body{
     color: var(--fontC);
     transition: 0.2s ease;
 }
-/*-----------------------------Calculate Heseg END---------------------------*/
-
+/*-----------------------------Calculate Heseg END------------------------*/
 
 
 /*-----------------------------Advice Heseg START-------------------------*/
@@ -510,7 +1073,7 @@ body{
 ::-webkit-scrollbar {width: 10px;}
 ::-webkit-scrollbar-corner {display: none;}
 ::-webkit-scrollbar:hover {width: 13px;}
-::-webkit-scrollbar-thumb {background: #464646;}
+::-webkit-scrollbar-thumb {background: #464646; border-radius: 0.15rem;}
 ::-webkit-scrollbar-thumb:hover {background: #373636; width: 15px;}
 .cardd:hover{
     box-shadow: 4px 6px 8px #1210175e;
@@ -597,6 +1160,173 @@ body{
 
 /*-----------------------------Advice Heseg END---------------------------*/
 /*main content ene hurtel*/
+
+
+/*-----------------------------Shopping cart Heseg START---------------------------*/
+#cartMainCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6rem;
+}
+.selectedHtrs{
+    width: 60%;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 2rem;
+    margin: 1rem 0;
+    overflow: scroll;
+}
+.selectionByOrder{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    background: var(--brightBG);
+    border-radius: 0.3rem;
+}
+.price-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--main-fonts);
+}
+.price {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.quantity-selector1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f9f3eb;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    margin: 1rem;
+}
+.qty-btn {
+    background-color: #f09c00;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.quantity {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 1rem;
+}
+.selectionByOrder img{
+    width: 15rem;
+    background-size: contain;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.PaymentDetailsDiv{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.zahialagchiinBulan1, .tulburiinMedeelel1{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border: 1px dashed var(--darkerBG);
+    border-radius: 0.3rem;
+    padding: 1rem;
+}
+/*-----------------------------Shopping cart Heseg END---------------------------*/
+
+
+
+
+/*-----------------------------FAQ Heseg START---------------------------*/
+.faq-container {
+    max-width: 80%;
+    background-color: var(--fontC);
+    margin: 7rem auto 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.faq-container h1 {
+    text-align: center;
+    margin-bottom: 1.8rem;
+    font-size: 2rem;
+    color: var(--fontCdark);
+}
+.faq-item {
+    border-bottom: 1px solid var(--fontC);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.faq-question {
+    width: 100%;
+    background-color: var(--inputColor);
+    border: none;
+    outline: none;
+    font-family: var(--main-fonts);
+    padding: 15px;
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 450;
+    color: var(--fontCdark);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+.faq-question::after {
+    content: '\25BC'; /* Unicode for downward arrow */
+    font-size: 1rem;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    color: var(--fontCdark);
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+.faq-question.active::after {
+    transform: translateY(-50%) rotate(180deg); /* Rotate arrow */
+}
+.faq-question:hover {
+    background-color: var(--brightBG);
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-left: 15px;
+}
+.faq-answer p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: 350;
+    color: var(--fontCdark);
+}
+/*-----------------------------FAQ Heseg END---------------------------*/
 
 
 /*footer section footer n @media heseg deer edit hiigdehgui */
@@ -714,8 +1444,100 @@ footer a{
     margin: 1.2rem 0;
 }
 
-
 /*-------------------------------------------------------------*/
+
+
+/*for small screen*/
+@media (max-width: 1050px){
+    #mainContnr{
+        padding-top: 0;
+    }
+    .prodPicSide{
+        width: 40%;
+        padding-top: 0;
+        position: sticky;
+    }
+    .bigImage img{
+        width: 100%;
+    }
+    .miniImage img{
+        width: 25%;
+    }
+    .specSide{
+        width: 60%;
+    }
+    .specSide{
+        justify-content: center;
+        align-items: center;
+    }
+    .advantageImage{
+        width: 100%;
+    }
+    .advntg{
+        width: 25%;
+    }
+    .advntg img{
+        width: 100%;
+    }
+    .heaterName{
+        padding-top: 2rem;
+    }
+    .cartBtn, .orderBtn{
+        width: 18rem;
+    }
+
+
+    .selectionByOrder{
+        width: 85%;
+    }
+
+
+    /* company*/
+    .firstInfo{
+        flex-direction: column;
+    }
+    .secondInfo{
+        flex-direction: column-reverse;
+    }
+    .frstPic, .scndPic{
+        width: 100%;
+    }
+    .frstPic img,.scndPic img{
+        width: 100%;
+    }
+    .frstIfno h3, .scndIfno h3{
+        display: flex;
+        font-size: clamp(2rem, 2.5vw, 2.5rem);
+    }
+    .frstIfno, .scndIfno{
+        width: 100%;
+        font-size: clamp(1rem, 1.5vw, 1.3rem);
+    }
+    #HamtrahHuselt:hover{
+        cursor: pointer;
+        box-shadow: 0 0 0 #3e3d3d99;
+    }
+    #HamtrahHuselt{
+        width: 22.5rem;
+        height: 2.8rem;
+        margin: 2rem 0 3rem 0;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        display: flex;
+        font-size: 1.2rem;
+        font-weight: 400;
+        background: var(--darkerBG);
+        /*border: 0.5px solid var(--shadowClr);*/
+        box-shadow: 0 0 2px #3e3d3d99;
+    }
+    #HamtrahHuselt img{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    /* company end*/
+}
+/*for small screen*/
 
 
 /*For tablet 834px*/
@@ -840,6 +1662,78 @@ footer a{
     .medeelliinheseg{
         width: 100%;
     }
+
+
+    #mainContnr{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 6rem;
+        height: auto;
+    }
+    .prodPicSide{
+        width: 95%;
+        height: auto;
+        position: relative;
+        padding-top: 0;
+        padding-bottom: 2rem;
+    }
+    .bigImage img{
+        width: 80%;
+    }
+    .specSide{
+        width: 95%;
+    }
+    .specSide{
+        justify-content: center;
+        align-items: center;
+    }
+    .miniImage img{
+        width: 15%;
+    }
+    .heaterinfoDiv{
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .heaterName{
+        display: flex;
+        justify-content: center;
+    }
+    .zagwaruudlabel{
+        flex-direction: column;
+        align-items: center;
+    }
+    .HeaterSelection{
+        flex-direction: column;
+        align-items: center;
+    }
+    .tooshirheg{
+        text-align: center;
+        align-items: center;
+    }
+    .bntsForOrder{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #cartMainCont{
+        flex-direction: column;
+    }
+    .selectedHtrs, .PaymentDetailsDiv{
+        width: 100%;
+        align-items: center;
+    }
+    .selectedHtrs{
+        height: auto;
+        justify-content: start;
+    }
+    .selectionByOrder img{
+        width: 10rem;
+    }
 }
 
 @media (max-width: 610px){
@@ -855,6 +1749,10 @@ footer a{
     /*.swiper-navBtn{
         display: none;
     }*/
+    .heaterName{
+        font-size: 2rem;
+        text-align: center;
+    }
 }
 /*For mobile 480px*/
 @media (max-width: 480px){
