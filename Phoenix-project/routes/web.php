@@ -25,4 +25,3 @@ Route::get('/Calculate', function(){
 Route::get('/Advice', function(){
     return view('page.Advice');
 });
-
