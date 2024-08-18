@@ -5,11 +5,11 @@
             <div class="rightsd">
                 <div class="FAQhelp">
                     <button id="complaintBtn" class="open-popup-btn">Санал хүсэлт |</button>
-                    <a href="FAQ.html">Тусламж |</a>
+                    <a href="/FAQ">Тусламж |</a>
                 </div>
                 <div class="miniicon">
                     <div class="shpngcrt">
-                        <a href="ShoppingCart.html">
+                        <a href="/ShoppingCart">
                             <img src={{ asset("pics2use/icons/Shoppingcart.png") }} class="shoppingC"><!-- src={{ asset("pics2use/icons/Shoppingcart.png") }}-->
                         </a>
                     </div>
@@ -98,7 +98,7 @@ window.addEventListener("click", function(event) {
     <div id="mainContnr">
         <div class="prodPicSide">
             <div class="bigImage">
-                <img src="./pics2use/xmpl2.png">
+                <img src={{ asset("pics2use/xmpl2.png")}}>
             </div>
             <div class="miniImage">
                 <img src={{ asset("pics2use/xmpl2.png")}} class="mnimgs">
