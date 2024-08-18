@@ -11,23 +11,23 @@
                 <div class="miniicon">
                     <div class="shpngcrt">
                         <a href="ShoppingCart.html">
-                            <img src="./pics2use/icons/Shoppingcart.png" class="shoppingC">
+                            <img src={{ asset("pics2use/icons/Shoppingcart.png") }} class="shoppingC"><!-- src={{ asset("pics2use/icons/Shoppingcart.png") }}-->
                         </a>
                     </div>
                     <div class="miniSocial">
                         <a href="https://www.facebook.com/centralrich.mongolia">
-                            <img src="./pics2use/icons/facebookwhite.png" class="mini fb">
+                            <img src= {{ asset("pics2use/icons/facebookwhite.png")}} class="mini fb">
                         </a>
                         <a href="https://www.facebook.com/centralrich.mongolia">
-                            <img src="./pics2use/icons/fbgroup.png" class="mini group">
+                            <img src={{ asset("pics2use/icons/fbgroup.png")}} class="mini group">
                         </a>
                         <a href="https://www.instagram.com/phoenix_s_heater">
-                            <img src="./pics2use/icons/igwhite.png" class="mini insta">
+                            <img src={{ asset("pics2use/icons/igwhite.png")}} class="mini insta">
                         </a>
                     </div>
                     <div class="anglihel">
                         <a href="">
-                            <img src="./pics2use/icons/Anglihel.png" class="lang">
+                            <img src={{ asset("pics2use/icons/Anglihel.png")}} class="lang">
                         </a>
                     </div>
                 </div>
@@ -35,23 +35,23 @@
         </div>
         <div class="navi">
             <div class="lftMenu">
-                <a href="Company.html">БАЙГУУЛЛАГА</a>
-                <a href="Ecological.html">Б.О.Н.З</a>
+                <a href="/Company">БАЙГУУЛЛАГА</a>
+                <a href="/Ecological">Б.О.Н.З</a>
             </div>
-            <img src="./pics2use/LogoBlck.png" class="MenuLogo">
+            <img src={{ asset("pics2use/LogoBlck.png")}} class="MenuLogo">
             <div class="rghtMenu">
-                <a href="Calculate.html">ТООЦООЛУУР</a>
-                <a href="Advice.html">ЗӨВЛӨМЖ</a>
+                <a href="/Calculate">ТООЦООЛУУР</a>
+                <a href="/Advice">ЗӨВЛӨМЖ</a>
             </div>
             <div class="mnubtn">
                 <span></span><span></span><span></span>
             </div>
         </div>
         <div class="mblMenu">
-            <a href="Company.html">БАЙГУУЛЛАГА</a>
-            <a href="Ecological.html">Б.О.Н.З</a>
-            <a href="Calculate.html" class="CalcBtn">ТООЦООЛУУР</a>
-            <a href="Advice.html">ЗӨВЛӨМЖ</a>
+            <a href="/Company">БАЙГУУЛЛАГА</a>
+            <a href="/Ecological">Б.О.Н.З</a>
+            <a href="/Calculate" class="CalcBtn">ТООЦООЛУУР</a>
+            <a href="/Advice">ЗӨВЛӨМЖ</a>
         </div>
 
         <!--Sanal huseltiin heseg-->
@@ -103,7 +103,7 @@ window.addEventListener("click", function(event) {
                     </div>
                 </div>
                 <div class="zurag1">
-                    <img src="./pics2use/xmpl2.png">
+                    <img src={{ asset("pics2use/xmpl2.png")}} >
                 </div>
             </div>
             <div class="BusadProd">
@@ -113,7 +113,7 @@ window.addEventListener("click", function(event) {
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="./pics2use/xmpl2.png" alt="" class="card-img">
+                                        <img src={{ asset("pics2use/xmpl2.png")}} class="card-img">
                                     </div>
 
                                     <div class="card-content">
@@ -127,7 +127,7 @@ window.addEventListener("click", function(event) {
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="./pics2use/xmpl2.png" alt="" class="card-img">
+                                        <img src={{ asset("pics2use/xmpl2.png")}} class="card-img">
                                     </div>
 
                                     <div class="card-content">
@@ -141,7 +141,7 @@ window.addEventListener("click", function(event) {
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="./pics2use/xmpl2.png" alt="" class="card-img"">
+                                        <img src={{ asset("pics2use/xmpl2.png")}} class="card-img"">
                                     </div>
 
                                     <div class="card-content">
@@ -155,7 +155,7 @@ window.addEventListener("click", function(event) {
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="./pics2use/xmpl2.png" alt="" class="card-img">
+                                        <img src={{ asset("pics2use/xmpl2.png")}} class="card-img">
                                     </div>
 
                                     <div class="card-content">
@@ -169,7 +169,7 @@ window.addEventListener("click", function(event) {
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="./pics2use/xmpl2.png" alt="" class="card-img">
+                                        <img src={{ asset("pics2use/xmpl2.png")}} class="card-img">
                                     </div>
 
                                     <div class="card-content">
@@ -183,7 +183,7 @@ window.addEventListener("click", function(event) {
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="./pics2use/xmpl2.png" alt="" class="card-img">
+                                        <img src={{ asset("pics2use/xmpl2.png")}} class="card-img">
                                     </div>
 
                                     <div class="card-content">
@@ -197,7 +197,7 @@ window.addEventListener("click", function(event) {
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="./pics2use/xmpl2.png" alt="" class="card-img">
+                                        <img src={{ asset("pics2use/xmpl2.png")}} class="card-img">
                                     </div>
 
                                     <div class="card-content">
@@ -211,7 +211,7 @@ window.addEventListener("click", function(event) {
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src="./pics2use/xmpl2.png" alt="" class="card-img">
+                                        <img src={{ asset("pics2use/xmpl2.png")}} class="card-img">
                                     </div>
 
                                     <div class="card-content">

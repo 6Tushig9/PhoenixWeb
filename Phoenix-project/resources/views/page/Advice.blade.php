@@ -1,58 +1,59 @@
 @extends("main")
 @section("Phoenix")
 <div id="thinnav">
-        <div class="Welcome">Тавтай морил</div>
-        <div class="rightsd">
-            <div class="FAQhelp">
-                <button id="complaintBtn" class="open-popup-btn">Санал хүсэлт |</button>
-                <a href="FAQ.html">Тусламж |</a>
+    <div class="Welcome">Тавтай морил</div>
+    <div class="rightsd">
+        <div class="FAQhelp">
+            <button id="complaintBtn" class="open-popup-btn">Санал хүсэлт |</button>
+            <a href="FAQ.html">Тусламж |</a>
+        </div>
+        <div class="miniicon">
+            <div class="shpngcrt">
+                <a href="ShoppingCart.html">
+                    <img src={{ asset("pics2use/icons/Shoppingcart.png") }} class="shoppingC"><!-- src={{ asset("pics2use/icons/Shoppingcart.png") }}-->
+                </a>
             </div>
-            <div class="miniicon">
-                <div class="shpngcrt">
-                    <a href="ShoppingCart.html">
-                        <img src="./pics2use/icons/Shoppingcart.png" class="shoppingC">
-                    </a>
-                </div>
-                <div class="miniSocial">
-                    <a href="https://www.facebook.com/centralrich.mongolia">
-                        <img src="./pics2use/icons/facebookwhite.png" class="mini fb">
-                    </a>
-                    <a href="https://www.facebook.com/centralrich.mongolia">
-                        <img src="./pics2use/icons/fbgroup.png" class="mini group">
-                    </a>
-                    <a href="https://www.instagram.com/phoenix_s_heater">
-                        <img src="./pics2use/icons/igwhite.png" class="mini insta">
-                    </a>
-                </div>
-                <div class="anglihel">
-                    <a href="">
-                        <img src="./pics2use/icons/Anglihel.png" class="lang">
-                    </a>
-                </div>
+            <div class="miniSocial">
+                <a href="https://www.facebook.com/centralrich.mongolia">
+                    <img src= {{ asset("pics2use/icons/facebookwhite.png")}} class="mini fb">
+                </a>
+                <a href="https://www.facebook.com/centralrich.mongolia">
+                    <img src={{ asset("pics2use/icons/fbgroup.png")}} class="mini group">
+                </a>
+                <a href="https://www.instagram.com/phoenix_s_heater">
+                    <img src={{ asset("pics2use/icons/igwhite.png")}} class="mini insta">
+                </a>
+            </div>
+            <div class="anglihel">
+                <a href="">
+                    <img src={{ asset("pics2use/icons/Anglihel.png")}} class="lang">
+                </a>
             </div>
         </div>
     </div>
-    <div id="AdvPage">
-        <div class="navi">
+</div>
+<div id="AdvPage">
+    <div class="navi">
             <div class="lftMenu">
-                <a href="Company.html">БАЙГУУЛЛАГА</a>
-                <a href="Ecological.html">Б.О.Н.З</a>
+                <a href="/Company">БАЙГУУЛЛАГА</a>
+                <a href="/Ecological">Б.О.Н.З</a>
             </div>
-            <img src="./pics2use/LogoBlck.png" class="MenuLogo">
+            <img src={{ asset("pics2use/LogoBlck.png")}} class="MenuLogo">
             <div class="rghtMenu">
-                <a href="Calculate.html">ТООЦООЛУУР</a>
-                <a href="Advice.html">ЗӨВЛӨМЖ</a>
+                <a href="/Calculate">ТООЦООЛУУР</a>
+                <a href="/Advice">ЗӨВЛӨМЖ</a>
             </div>
             <div class="mnubtn">
                 <span></span><span></span><span></span>
             </div>
         </div>
         <div class="mblMenu">
-            <a href="Company.html">БАЙГУУЛЛАГА</a>
-            <a href="Ecological.html">Б.О.Н.З</a>
-            <a href="Calculate.html" class="CalcBtn">ТООЦООЛУУР</a>
-            <a href="Advice.html">ЗӨВЛӨМЖ</a>
+            <a href="/Company">БАЙГУУЛЛАГА</a>
+            <a href="/Ecological">Б.О.Н.З</a>
+            <a href="/Calculate" class="CalcBtn">ТООЦООЛУУР</a>
+            <a href="/Advice">ЗӨВЛӨМЖ</a>
         </div>
+
         <!--Sanal huseltiin heseg-->
         <div class="complaint-popup-wrapper" id="complaintPopup">
             <div class="complaint-popup">
@@ -89,7 +90,7 @@ window.addEventListener("click", function(event) {
         <!--Sanal huseltiin heseg END-->
 
         <div class="cardd" id="card1">
-            <img src="./pics2use/TechSketch.jpg">
+            <img src={{ asset("pics2use/TechSketch.jpg")}}>
             <div>
                 <h2>Дугуйгаа шалгаж байх</h2>
                 <h3> Нийтэлсэн 2024.03.04</h3>
@@ -105,7 +106,7 @@ window.addEventListener("click", function(event) {
             </div>
         </div>
         <div class="cardd" id="card2">
-            <img src="./pics2use/TechSketch.jpg">
+            <img src={{ asset("pics2use/TechSketch.jpg")}}>
             <div>
                 <h2>Тосоо сольж байх</h2>
                 <h3>Нийтэлсэн 2024.03.04</h3>
@@ -119,7 +120,7 @@ window.addEventListener("click", function(event) {
             </div>
         </div>
         <div class="cardd" id="card3">
-            <img src="./pics2use/TechSketch.jpg">
+            <img src={{ asset("pics2use/TechSketch.jpg")}}>
             <div>
                 <h2>Баттерэй шалгах</h2>
                 <h3>Нийтэлсэн 2024.03.04</h3>
@@ -135,7 +136,7 @@ window.addEventListener("click", function(event) {
             </div>
         </div>
         <div class="cardd" id="card4">
-            <img src="./pics2use/TechSketch.jpg">
+            <img src={{ asset("pics2use/TechSketch.jpg")}}>
             <div>
                 <h2>Хөргөгч шингэнээ хянах</h2>
                 <h3>Нийтэлсэн 2024.03.04</h3>
@@ -149,7 +150,7 @@ window.addEventListener("click", function(event) {
             </div>
         </div>
         <div class="cardd" id="card5">
-            <img src="./pics2use/TechSketch.jpg">
+            <img src={{ asset("pics2use/TechSketch.jpg")}}>
             <div>
                 <h2>Тормосоо шалгах</h2>
                 <h3>Нийтэлсэн 2024.03.04</h3>
@@ -163,7 +164,7 @@ window.addEventListener("click", function(event) {
             </div>
         </div>
         <div class="cardd" id="card6">
-            <img src="./pics2use/TechSketch.jpg">
+            <img src={{ asset("pics2use/TechSketch.jpg")}}>
             <div>
                 <h2>Хяналтийн самбарт анхаарал хандуулах</h2>
                 <h3>Нийтэлсэн 2024.03.04</h3>
@@ -176,5 +177,5 @@ window.addEventListener("click", function(event) {
                 <button id="More6" onclick="More6()">More</button>
             </div>
         </div>
-
+</div>
 @endsection
