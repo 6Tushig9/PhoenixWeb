@@ -1,90 +1,92 @@
 @extends("main")
 @section("Phoenix")
 <div id="thinnav">
-        <div class="Welcome">Тавтай морил</div>
-        <div class="rightsd">
-            <div class="FAQhelp">
-                <button id="complaintBtn" class="open-popup-btn">Санал хүсэлт |</button>
-                <a href="FAQ.html">Тусламж |</a>
+            <div class="Welcome">Тавтай морил</div>
+            <div class="rightsd">
+                <div class="FAQhelp">
+                    <button id="complaintBtn" class="open-popup-btn">Санал хүсэлт |</button>
+                    <a href="/FAQ">Тусламж |</a>
+                </div>
+                <div class="miniicon">
+                    <div class="shpngcrt">
+                        <a href="/ShoppingCart">
+                            <img src={{ asset("pics2use/icons/Shoppingcart.png") }} class="shoppingC"><!-- src={{ asset("pics2use/icons/Shoppingcart.png") }}-->
+                        </a>
+                    </div>
+                    <div class="miniSocial">
+                        <a href="https://www.facebook.com/centralrich.mongolia">
+                            <img src= {{ asset("pics2use/icons/facebookwhite.png")}} class="mini fb">
+                        </a>
+                        <a href="https://www.facebook.com/centralrich.mongolia">
+                            <img src={{ asset("pics2use/icons/fbgroup.png")}} class="mini group">
+                        </a>
+                        <a href="https://www.instagram.com/phoenix_s_heater">
+                            <img src={{ asset("pics2use/icons/igwhite.png")}} class="mini insta">
+                        </a>
+                    </div>
+                    <div class="anglihel">
+                        <a href="">
+                            <img src={{ asset("pics2use/icons/Anglihel.png")}} class="lang">
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="miniicon">
-                <div class="shpngcrt">
-                    <a href="ShoppingCart.html">
-                        <img src="./pics2use/icons/Shoppingcart.png" class="shoppingC">
-                    </a>
-                </div>
-                <div class="miniSocial">
-                    <a href="https://www.facebook.com/centralrich.mongolia">
-                        <img src="./pics2use/icons/facebookwhite.png" class="mini fb">
-                    </a>
-                    <a href="https://www.facebook.com/centralrich.mongolia">
-                        <img src="./pics2use/icons/fbgroup.png" class="mini group">
-                    </a>
-                    <a href="https://www.instagram.com/phoenix_s_heater">
-                        <img src="./pics2use/icons/igwhite.png" class="mini insta">
-                    </a>
-                </div>
-                <div class="anglihel">
-                    <a href="">
-                        <img src="./pics2use/icons/Anglihel.png" class="lang">
-                    </a>
-                </div>
+        </div>
+        <div class="navi">
+            <div class="lftMenu">
+                <a href="/Company">БАЙГУУЛЛАГА</a>
+                <a href="/Ecological">Б.О.Н.З</a>
+            </div>
+            <img src={{ asset("pics2use/LogoBlck.png")}} class="MenuLogo">
+            <div class="rghtMenu">
+                <a href="/Calculate">ТООЦООЛУУР</a>
+                <a href="/Advice">ЗӨВЛӨМЖ</a>
+            </div>
+            <div class="mnubtn">
+                <span></span><span></span><span></span>
             </div>
         </div>
-    </div>
-    <div class="navi">
-        <div class="lftMenu">
-            <a href="Company.html">БАЙГУУЛЛАГА</a>
-            <a href="Ecological.html">Б.О.Н.З</a>
+        <div class="mblMenu">
+            <a href="/Company">БАЙГУУЛЛАГА</a>
+            <a href="/Ecological">Б.О.Н.З</a>
+            <a href="/Calculate" class="CalcBtn">ТООЦООЛУУР</a>
+            <a href="/Advice">ЗӨВЛӨМЖ</a>
         </div>
-        <img src="./pics2use/LogoBlck.png" class="MenuLogo">
-        <div class="rghtMenu">
-            <a href="Calculate.html">ТООЦООЛУУР</a>
-            <a href="Advice.html">ЗӨВЛӨМЖ</a>
+
+<!--Sanal huseltiin heseg-->
+        <div class="complaint-popup-wrapper" id="complaintPopup">
+            <div class="complaint-popup">
+                <span class="close-btn" id="closeComplaintPopup">&times;</span>
+                <h2>Санал хүсэлтээ илгээх</h2>
+                <form>
+                    <label for="nameC">Таны нэр:</label>
+                    <input type="text" id="nameC" placeholder="Нэрээ бичнэ үү" required>
+                    <label for="PhoneNumCom">Утасны дугаар:</label>
+                    <input type="text" id="PhoneNumCom" placeholder="Утасны дугаараа бичнэ үү" required>
+                    <label for="complaintDetail">Санал хүсэлт:</label>
+                    <textarea id="complaintDetail" placeholder="Санал хүсэлтээ бичнэ үү..." required></textarea>
+                    <button type="submit" class="submit-btn">Илгээх</button>
+                </form>
+            </div>
         </div>
-        <div class="mnubtn">
-            <span></span><span></span><span></span>
-        </div>
-    </div>
-    <div class="mblMenu">
-        <a href="Company.html">БАЙГУУЛЛАГА</a>
-        <a href="Ecological.html">Б.О.Н.З</a>
-        <a href="Calculate.html" class="CalcBtn">ТООЦООЛУУР</a>
-        <a href="Advice.html">ЗӨВЛӨМЖ</a>
-    </div>
-    <div class="complaint-popup-wrapper" id="complaintPopup">
-        <div class="complaint-popup">
-            <span class="close-btn" id="closeComplaintPopup">&times;</span>
-            <h2>Санал хүсэлтээ илгээх</h2>
-            <form>
-                <label for="nameC">Таны нэр:</label>
-                <input type="text" id="nameC" placeholder="Нэрээ бичнэ үү" required>
-                <label for="PhoneNumCom">Утасны дугаар:</label>
-                <input type="text" id="PhoneNumCom" placeholder="Утасны дугаараа бичнэ үү" required>
-                <label for="complaintDetail">Санал хүсэлт:</label>
-                <textarea id="complaintDetail" placeholder="Санал хүсэлтээ бичнэ үү..." required></textarea>
-                <button type="submit" class="submit-btn">Илгээх</button>
-            </form>
-        </div>
-    </div>
 <script>
 document.getElementById("complaintBtn").addEventListener("click", function() {
-document.getElementById("complaintPopup").style.display = "flex";
-document.body.classList.add("no-scroll");
+    document.getElementById("complaintPopup").style.display = "flex";
+    document.body.classList.add("no-scroll");
 });
 document.getElementById("closeComplaintPopup").addEventListener("click", function() {
-document.getElementById("complaintPopup").style.display = "none";
-document.body.classList.remove("no-scroll");
+    document.getElementById("complaintPopup").style.display = "none";
+    document.body.classList.remove("no-scroll");
 });
 window.addEventListener("click", function(event) {
-const popup = document.getElementById("complaintPopup");
-if (event.target === popup) {
-    popup.style.display = "none";
-    document.body.classList.remove("no-scroll");
-}
+    const popup = document.getElementById("complaintPopup");
+    if (event.target === popup) {
+        popup.style.display = "none";
+        document.body.classList.remove("no-scroll");
+    }
 });
 </script>
-
+<!--Sanal huseltiin heseg END-->
 
 <script>
 // Attach event listeners to all plus and minus buttons
@@ -127,7 +129,7 @@ document.querySelectorAll('.close-btn').forEach(function(button) {
         <div class="selectedHtrs">
             <div class="selectionByOrder">
                 <button class="close-btn">X</button>
-                <div><img src="./pics2use/xmpl2.png"></div>
+                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
                 <h2 class="OrdrHtrName">S1200TW</h2>
                 <span class="price">730000₮</span>
                 <div class="quantity-selector1">
@@ -139,7 +141,7 @@ document.querySelectorAll('.close-btn').forEach(function(button) {
 
             <div class="selectionByOrder">
                 <button class="close-btn">X</button>
-                <div><img src="./pics2use/xmpl2.png"></div>
+                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
                 <h2 class="OrdrHtrName">S1200TW</h2>
                 <span class="price">399000₮</span>
                 <div class="quantity-selector1">
@@ -151,7 +153,7 @@ document.querySelectorAll('.close-btn').forEach(function(button) {
 
             <div class="selectionByOrder">
                 <button class="close-btn">X</button>
-                <div><img src="./pics2use/xmpl2.png"></div>
+                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
                 <h2 class="OrdrHtrName">S1200TW</h2>
                 <span class="price">690000₮</span>
                 <div class="quantity-selector1">
