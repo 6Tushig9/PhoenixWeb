@@ -43,6 +43,6 @@
             <div class="endcrdt">@ 2024 | Designed by SprouX</div>
         </div>
     </footer>
-    <script src={{ asset("javascript/PSHjs.js") }}></script>
+    <script src={{ asset("js/PSHjs.js") }}></script>
 </body>
 </html>
