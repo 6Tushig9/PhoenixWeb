@@ -17,9 +17,9 @@ menuToggle.onclick = function(){
 
 
 /* img click home page */
-const imgclick=document.querySelector('.MenuLogo')
-imgclick.addEventListener('click',function(){
-    window.location.href='PhoenixSheater.html'
+const imgclick = document.querySelector('.MenuLogo');
+imgclick.addEventListener('click', function() {
+    window.location.href = '/PhoenixSheater';
 });
 
 
@@ -205,11 +205,11 @@ const buypageJump2=document.querySelectorAll('.VMore');
 const buyPageJump=document.querySelector('.fnctbtn');
 buypageJump2.forEach(function(element) {
     element.addEventListener('click', function() {
-        window.location.href = 'BuyPage.html';
+        window.location.href = '/BuyPage';
     });
 });
 buyPageJump.addEventListener('click',function(){
-    window.location.href='BuyPage.html'
+    window.location.href='/BuyPage'
 });
 
 

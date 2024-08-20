@@ -89,30 +89,7 @@ window.addEventListener("click", function(event) {
 </script>
         <!--Sanal huseltiin heseg END-->
 
-<script>
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const isOpen = question.classList.contains('active');
-        
-                // Collapse all open answers
-                document.querySelectorAll('.faq-answer').forEach(answer => {
-                    answer.style.maxHeight = null;
-                });
-                document.querySelectorAll('.faq-question').forEach(q => {
-                    q.classList.remove('active');
-                });
-        
-                // Toggle the current answer
-                if (!isOpen) {
-                    question.classList.add('active');
-                    answer.style.maxHeight = answer.scrollHeight + 'px';
-                }
-            });
-        });
-</script>
+
 
     <div class="faq-container">
         <h1>Хэрэглэгчдээс ирдэг асуултууд</h1>
@@ -166,5 +143,28 @@ window.addEventListener("click", function(event) {
             </div>
         </div>
     </div>
-
+<script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isOpen = question.classList.contains('active');
+        
+                // Collapse all open answers
+                document.querySelectorAll('.faq-answer').forEach(answer => {
+                    answer.style.maxHeight = null;
+                });
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                });
+        
+                // Toggle the current answer
+                if (!isOpen) {
+                    question.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+</script>
 @endsection

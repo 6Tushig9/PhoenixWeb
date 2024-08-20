@@ -93,7 +93,7 @@ window.addEventListener("click", function(event) {
     <div id="mnContnr">
         <div class="firstInfo">
             <div class="frstPic"> 
-                <img src={{ assert("pics2use/PicEmployee.avif")}}>
+                <img src={{ asset("pics2use/PicEmployee.avif")}}>
             </div>
             <div class="frstIfno">
                 <h3>Яаж эхэлсэн бэ</h3>
