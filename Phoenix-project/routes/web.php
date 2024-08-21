@@ -8,13 +8,8 @@ Route::get('/', function () {
     return view('main');
 });
 
-Route::get('/Company', function(){
-    return view('page.Company', [
-        'var' => User::all(),
-        'var1'=>'dsds',
-        "var2"=>1222,
-        ]
-    );
+Route::get('/', function(){
+    return view('page.Company');
 });
 
 Route::get('/PhoenixSheater', function(){
