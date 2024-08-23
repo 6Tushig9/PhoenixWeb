@@ -33,7 +33,7 @@
                 </div>
             </div>
         </div>
-        <div class="navi">
+        {{-- <div class="navi">
             <div class="lftMenu">
                 <a href="/Company">БАЙГУУЛЛАГА</a>
                 <a href="/Ecological">Б.О.Н.З</a>
@@ -69,7 +69,7 @@
                     <button type="submit" class="submit-btn">Илгээх</button>
                 </form>
             </div>
-        </div>
+        </div> --}}
 <script>
 document.getElementById("complaintBtn").addEventListener("click", function() {
     document.getElementById("complaintPopup").style.display = "flex";
@@ -93,28 +93,49 @@ window.addEventListener("click", function(event) {
     <div id="mnContnr">
         <div class="firstInfo">
             <div class="frstPic"> 
-                <img src={{ assert("pics2use/PicEmployee.avif")}}>
+                <img src={{ asset("pics2use/PicEmployee.avif")}}>
             </div>
             <div class="frstIfno">
-                <h3>Яаж эхэлсэн бэ</h3>
-                Lorem ipsum dolor sit, amet consectetur 
-                adipisicing elit. Velit exercitationem reprehenderit deleniti 
-                iste dolore rerum provident dicta. Ad, ut, vel possimus quo 
-                est veritatis accusantium facilis, illum consequuntur 
-                maiores debitis! Ad, ut, vel possimus quo 
-                est veritatis accusantium facilis, illum consequuntur 
-                maiores debitis!
+                <h3>Бидний эхэлсэн шалтгаан</h3>
+                   Бид 2014 онд байгаль орчинд ээлтэй дэвшилтэт халаагуур эх орондоо 
+                   үйлдвэрлэн гэсэн маш тодорхой зорилготойгоор үүсгэн байгуулагдсан. 
+                   7 жилийн турш судалгаа, хөгжүүлэлт тасралтгүй хийгдсэний үндсэн дээр 
+                   2021 онд анхны цахилгаан халаагуураа зах зээлд нэвтрүүлсэн. Борлуулалт 
+                   хийж эхэлсэн цагаас хэрэглэгчдээс тасралтгүй эерэг сэтгэгдэл ирж 
+                   байгаа тул бид бахархалтайгаар бүтээгдэхүүн маань хэрэглэгчдийн 
+                   хэрэгцээ, шаардлагыг хангасан гэж дүгнэнэ. <br>
+                    Бүтээгдэхүүн маань утааг бууруулахад бодит хувь нэмэр оруулахаас гадна 
+                    хэрэглэгчдэдээ санхүүгийн хэмнэлт үүсгэж чадахыг бид мэдэж байгаа тул цаашид 
+                    уламжлалт мод, нүүрс түлдэг өрх бүрд цахилгааны хэмнэлттэй халаагуурын 
+                    шийдлээ хэрэглүүлэхийг зорьж байна. Цаашид бид шинэ төрлийн бүтээгдэхүүн 
+                    хөгжүүлэлтийг тасралтгүй хийсээр байх төдийгүй айл өрхийг тав тухтай, эко 
+                    амьдрах орчныг бүрдүүлэхээр зорин ажиллаж байна. 
+
             </div>
         </div>
         <div class="secondInfo">
             <div class="scndIfno">
-                <h3>Яаж эхэлсэн бэ</h3>
-                Lorem ipsum dolor sit, amet consectetur 
-                adipisicing elit. Velit exercitationem reprehenderit deleniti 
-                iste dolore rerum provident dicta. Ad, ut, vel possimus quo 
-                est veritatis accusantium facilis, illum consequuntur 
-                maiores debitis! Velit exercitationem reprehenderit deleniti 
-                iste dolore rerum provident dicta.
+                <h3>Бидний үнэ цэн бол чанар</h3>
+                   Бид үүсгэн байгуулагдсан зорилгоо биелүүлэхийн тулд бүтээгдэхүүний 
+                   чанарыг хамгийн эхэнд тавьж бүтээгдэхүүн хөгжүүлэлт дээр нухацтай 
+                   хандсаар ирсэн. Тиймдээ ч “Шинжлэх ухааны академийн Физик, Технологийн 
+                   хүрээлэн, Хэрэглээний физикийн салбар, Технологи хөгжүүлэлтийн 
+                   лаборатори”, “МУ-ын ШУТИС-ын Барилгын эрчим хүч хэмнэлтийн төв” болон 
+                   “Эрчим хүчний Аудитор”-ын газар тус бүрээр бүтээгдэхүүндээ дүн шинжилгээ 
+                   хийлгэсний дүгнэлтэд манай Phoenix-S брэндийн халаагуур нь“Эрчим хүчний 
+                   хэмнэлттэй” болохыг албан ёсоор баталгаажуулсан. Үүгээр ч зогсолтгүй 
+                   “Чанар, стандартын MNS 6780:2019” гэрчилгээ авч үйл ажиллагаагаа дүгнүүлсэн. 
+                   Манай хамт олны хамгийн их бахархдаг  нь бид Оюуны өмчийн газраас "Ашигтай 
+                   загварын гэрчилгээ" 2-ыг эзэмшдэг явдал юм. <br>
+                    Дээрх шинжилгээ, баталгаажуулалт, гэрчилгээнүүд нь бидний бүтээгдэхүүн бүрэн 
+                    аюулгүй, агаар шатаах, хуурайшуулах, халалтаас шалтгаалсан ямар нэгэн үнэр 
+                    гарах, харшил үүсгэх зэрэг сөрөг үр дагаваргүй, цахилгааны хэмнэлттэй эко 
+                    бүтээгдэхүүн болохыг илтгэнэ. <br>
+                    Мөн бид хэзээ ч цахилгаан халаагуураа гар утаснаасаа өөрийн хүссэнээр 
+                    удирдах, өрөөний температурыг хэмжих, хянах инновацлаг шийдлүүдийг нэвтрүүлснээр 
+                    гаднын аль ч төрлийн ижил бүтээгдэхүүнтэй өрсөлдөж чадна. бүтээгдэхүүнтэй 
+                    өрсөлдөх чадвартай бүтээгдэхүүн бүтээсэн.
+
             </div>
             <div class="scndPic"><img src={{ asset("pics2use/TechSketch.jpg")}}></div>
         </div>
@@ -139,15 +160,18 @@ window.addEventListener("click", function(event) {
         <h2 style="font-weight: 300;">ХАМТРАГЧ БАЙГУУЛЛАГУУД</h2>
         <div class="Hamtragchid">
             <div class="Hamtragchid-slide">
-                <img src={{ asset("pics2use/LogoBlck.png")}}>
-                <img src={{ asset("pics2use/LogoBlck.png")}}>
-                <img src={{ asset("pics2use/LogoBlck.png")}}>
-                <img src={{ asset("pics2use/LogoBlck.png")}}>
-                <img src={{ asset("pics2use/LogoBlck.png")}}>
-                <img src={{ asset("pics2use/LogoBlck.png")}}>
-                <img src={{ asset("pics2use/LogoBlck.png")}}>
-                <img src={{ asset("pics2use/LogoBlck.png")}}>
-                <img src={{ asset("pics2use/LogoBlck.png")}}>
+                <img src={{ asset("pics2use/Companions/KhaanBank.png")}}>
+                <img src={{ asset("pics2use/Companions/XacBank.png")}}>
+                <img src={{ asset("pics2use/Companions/TuriinBank.png")}}>
+                <img src={{ asset("pics2use/Companions/Pocket.png")}}>
+                <img src={{ asset("pics2use/Companions/StorePay.png")}}>
+                <img src={{ asset("pics2use/Companions/Gund.png")}}>
+                <img src={{ asset("pics2use/Companions/Socratus.png")}}>
+                <img src={{ asset("pics2use/Companions/MAOSIHT.png")}}>
+                <img src={{ asset("pics2use/Companions/TumenHouse.png")}}>
+                <img src={{ asset("pics2use/Companions/Tuss.png")}}>
+                <img src={{ asset("pics2use/Companions/Tomo.png")}}>
+                <img src={{ asset("pics2use/Companions/chatBot.png")}}>
             </div>
         </div>
 <script>

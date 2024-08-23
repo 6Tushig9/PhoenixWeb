@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <div class="navi">
+        {{-- <div class="navi">
             <div class="lftMenu">
                 <a href="/Company">БАЙГУУЛЛАГА</a>
                 <a href="/Ecological">Б.О.Н.З</a>
@@ -68,7 +68,7 @@
                     <button type="submit" class="submit-btn">Илгээх</button>
                 </form>
             </div>
-        </div>
+        </div> --}}
 <script>
 document.getElementById("complaintBtn").addEventListener("click", function() {
     document.getElementById("complaintPopup").style.display = "flex";
@@ -89,10 +89,14 @@ window.addEventListener("click", function(event) {
         <!--Sanal huseltiin heseg END-->
 
 <script>
+    document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.orderBtn').addEventListener('click', function() {
         document.querySelector('.zahialagchiinBulan').style.display = 'flex';
         document.querySelector('.tulburiinMedeelel').style.display = 'flex';
-        });
+    });
+});
+
+
 </script>
 
     <div id="mainContnr">
