@@ -1,5 +1,6 @@
 @extends("main")
 @section("Phoenix")
+<<<<<<< HEAD
 <div id="thinnav">
             <div class="Welcome">Тавтай морил</div>
             <div class="rightsd">
@@ -87,6 +88,11 @@ window.addEventListener("click", function(event) {
 });
 </script>
 <!--Sanal huseltiin heseg END-->
+=======
+
+
+
+>>>>>>> a7b726b3de167d06f75a7338374c9e2f0f478188
 
 <script>
 // Attach event listeners to all plus and minus buttons

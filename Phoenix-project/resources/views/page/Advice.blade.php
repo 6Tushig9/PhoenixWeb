@@ -1,5 +1,6 @@
 @extends("main")
 @section("Phoenix")
+<<<<<<< HEAD
 <div id="thinnav">
     <div class="Welcome">Тавтай морил</div>
     <div class="rightsd">
@@ -90,6 +91,12 @@
     });
 </script>
         <!--Sanal huseltiin heseg END-->
+=======
+
+
+        <x-sanal-huselt/>
+
+>>>>>>> a7b726b3de167d06f75a7338374c9e2f0f478188
         <div class="cardd" id="card1">
             <img src={{ asset("pics2use/TechSketch.jpg")}}>
             <div>

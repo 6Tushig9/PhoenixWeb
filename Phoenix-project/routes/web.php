@@ -8,6 +8,10 @@ Route::get('/', function () {
     return view('main');
 });
 
+Route::get('/', function(){
+    return view('page.Company');
+});
+
 Route::get('/PhoenixSheater', function(){
     return view('page.PhoenixSheater');
 });
