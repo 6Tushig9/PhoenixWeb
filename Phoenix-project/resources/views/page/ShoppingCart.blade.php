@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <div class="navi">
+        {{-- <div class="navi">
             <div class="lftMenu">
                 <a href="/Company">БАЙГУУЛЛАГА</a>
                 <a href="/Ecological">Б.О.Н.З</a>
@@ -51,10 +51,10 @@
             <a href="/Ecological">Б.О.Н.З</a>
             <a href="/Calculate" class="CalcBtn">ТООЦООЛУУР</a>
             <a href="/Advice">ЗӨВЛӨМЖ</a>
-        </div>
+        </div> --}}
 
 <!--Sanal huseltiin heseg-->
-        <div class="complaint-popup-wrapper" id="complaintPopup">
+        {{-- <div class="complaint-popup-wrapper" id="complaintPopup">
             <div class="complaint-popup">
                 <span class="close-btn" id="closeComplaintPopup">&times;</span>
                 <h2>Санал хүсэлтээ илгээх</h2>
@@ -68,7 +68,7 @@
                     <button type="submit" class="submit-btn">Илгээх</button>
                 </form>
             </div>
-        </div>
+        </div> --}}
 <script>
 document.getElementById("complaintBtn").addEventListener("click", function() {
     document.getElementById("complaintPopup").style.display = "flex";

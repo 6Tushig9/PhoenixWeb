@@ -33,12 +33,14 @@
     </div>
 </div>
 <div id="AdvPage">
-    <div class="navi">
+    {{-- <div class="navi">
             <div class="lftMenu">
                 <a href="/Company">БАЙГУУЛЛАГА</a>
                 <a href="/Ecological">Б.О.Н.З</a>
             </div>
-            <img src={{ asset("pics2use/LogoBlck.png")}} class="MenuLogo">
+            <a href="/PhoenixSheater">
+                <img src={{ asset("pics2use/LogoBlck.png")}} class="MenuLogo">
+            </a>
             <div class="rghtMenu">
                 <a href="/Calculate">ТООЦООЛУУР</a>
                 <a href="/Advice">ЗӨВЛӨМЖ</a>
@@ -69,26 +71,25 @@
                     <button type="submit" class="submit-btn">Илгээх</button>
                 </form>
             </div>
-        </div>
+        </div> --}}
 <script>
-document.getElementById("complaintBtn").addEventListener("click", function() {
-    document.getElementById("complaintPopup").style.display = "flex";
-    document.body.classList.add("no-scroll");
-});
-document.getElementById("closeComplaintPopup").addEventListener("click", function() {
-    document.getElementById("complaintPopup").style.display = "none";
-    document.body.classList.remove("no-scroll");
-});
-window.addEventListener("click", function(event) {
-    const popup = document.getElementById("complaintPopup");
-    if (event.target === popup) {
-        popup.style.display = "none";
+    document.getElementById("complaintBtn").addEventListener("click", function() {
+        document.getElementById("complaintPopup").style.display = "flex";
+        document.body.classList.add("no-scroll");
+    });
+    document.getElementById("closeComplaintPopup").addEventListener("click", function() {
+        document.getElementById("complaintPopup").style.display = "none";
         document.body.classList.remove("no-scroll");
-    }
-});
+    });
+    window.addEventListener("click", function(event) {
+        const popup = document.getElementById("complaintPopup");
+        if (event.target === popup) {
+            popup.style.display = "none";
+            document.body.classList.remove("no-scroll");
+        }
+    });
 </script>
         <!--Sanal huseltiin heseg END-->
-
         <div class="cardd" id="card1">
             <img src={{ asset("pics2use/TechSketch.jpg")}}>
             <div>

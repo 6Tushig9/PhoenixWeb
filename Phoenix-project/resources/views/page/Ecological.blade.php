@@ -33,7 +33,7 @@
                 </div>
             </div>
         </div>
-        <div class="navi">
+        {{-- <div class="navi">
             <div class="lftMenu">
                 <a href="/Company">БАЙГУУЛЛАГА</a>
                 <a href="/Ecological">Б.О.Н.З</a>
@@ -52,10 +52,10 @@
             <a href="/Ecological">Б.О.Н.З</a>
             <a href="/Calculate" class="CalcBtn">ТООЦООЛУУР</a>
             <a href="/Advice">ЗӨВЛӨМЖ</a>
-        </div>
+        </div> --}}
 
         <!--Sanal huseltiin heseg-->
-        <div class="complaint-popup-wrapper" id="complaintPopup">
+        {{-- <div class="complaint-popup-wrapper" id="complaintPopup">
             <div class="complaint-popup">
                 <span class="close-btn" id="closeComplaintPopup">&times;</span>
                 <h2>Санал хүсэлтээ илгээх</h2>
@@ -69,24 +69,42 @@
                     <button type="submit" class="submit-btn">Илгээх</button>
                 </form>
             </div>
-        </div>
+        </div> --}}
 <script>
 document.getElementById("complaintBtn").addEventListener("click", function() {
-    document.getElementById("complaintPopup").style.display = "flex";
-    document.body.classList.add("no-scroll");
+document.getElementById("complaintPopup").style.display = "flex";
+document.body.classList.add("no-scroll");
 });
 document.getElementById("closeComplaintPopup").addEventListener("click", function() {
-    document.getElementById("complaintPopup").style.display = "none";
-    document.body.classList.remove("no-scroll");
+document.getElementById("complaintPopup").style.display = "none";
+document.body.classList.remove("no-scroll");
 });
 window.addEventListener("click", function(event) {
-    const popup = document.getElementById("complaintPopup");
-    if (event.target === popup) {
-        popup.style.display = "none";
-        document.body.classList.remove("no-scroll");
-    }
+const popup = document.getElementById("complaintPopup");
+if (event.target === popup) {
+    popup.style.display = "none";
+    document.body.classList.remove("no-scroll");
+}
 });
 </script>
-        <!--Sanal huseltiin heseg END-->
+    <!--Sanal huseltiin heseg END-->
 
+
+    <div class="grid">
+        <div class="grid-1"></div>
+        <div class="grid-2">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="grid-3">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="grid-4"></div>
+    </div>
+    
 @endsection

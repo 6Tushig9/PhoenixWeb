@@ -378,6 +378,7 @@ body{
 .zurag1 img{
     width: 30rem;
     height: 25rem;
+    background-size: contain;
 }
 /*---------------------gol medeelliin heseg duusaw-----------------------*/
 
@@ -496,12 +497,12 @@ body{
     align-items: center;
 }
 .frstPic img{
-    width: 90%;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .scndPic img{
-    width: 75%;
+    width: 85%;
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -516,6 +517,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    padding: 1rem;
+    margin-left: 2rem;
     gap: 1rem;
 }
 
@@ -593,7 +596,7 @@ body{
     animation: 35s slide infinite linear;
 }
 .Hamtragchid-slide img{
-    height: 10rem;
+    height: 6rem;
     margin: 0 2rem;
 }
 
@@ -945,6 +948,93 @@ body{
 
 
 /*-----------------------------Ecological Heseg START---------------------*/
+.grid{
+    display: grid;
+    padding: 8rem 6rem 2rem 6rem;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.5rem;
+    height: 1080px;
+    gap: 0.3rem;
+}
+.grid div:hover{
+    box-shadow: none;
+}
+.grid-2 div:nth-child(1):hover{
+    box-shadow: none;
+}
+.grid-2 div:nth-child(2):hover{
+    box-shadow: none;
+}
+.grid-2 div:nth-child(3):hover{
+    box-shadow: none;
+}
+.grid-3 div:nth-child(1):hover{
+    box-shadow: none;
+}
+.grid-3 div:nth-child(2):hover{
+    box-shadow: none;
+}
+.grid-3 div:nth-child(3):hover{
+    box-shadow: none;
+}
+.grid-1{
+    border-radius: 0.3rem;
+    border: 1px solid var(--darkerBG);
+    box-shadow: 0 0 1.5px #26262699;
+}
+.grid-2{
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.2rem;
+}
+.grid-2 div:nth-child(1){
+    border: 1px solid var(--darkerBG);
+    box-shadow: 0 0 1.5px #26262699;
+    grid-column: 1/1;
+    border-radius: 0.3rem;
+}
+.grid-2 div:nth-child(2){
+    border: 1px solid var(--darkerBG);
+    box-shadow: 0 0 1.5px #26262699;
+    grid-column: 2/2;
+    border-radius: 0.3rem;
+}
+.grid-2 div:nth-child(3){
+    border: 1px solid var(--darkerBG);
+    box-shadow: 0 0 1.5px #26262699;
+    grid-column: 1/3;
+    border-radius: 0.3rem;
+}
+.grid-3 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.2rem;
+}
+.grid-3 div:nth-child(1){
+    border: 1px solid var(--darkerBG);
+    box-shadow: 0 0 1.5px #26262699;
+    grid-row: 1 / 3;
+    border-radius: 0.3rem;
+}
+.grid-3 div:nth-child(2){
+    border: 1px solid var(--darkerBG);
+    box-shadow: 0 0 1.5px #26262699;
+    grid-row: 1 / 2;
+    border-radius: 0.3rem;
+}
+.grid-3 div:nth-child(3){
+    border: 1px solid var(--darkerBG);
+    box-shadow: 0 0 1.5px #26262699;
+    grid-row: 2 / 3;
+    border-radius: 0.3rem;
+}
+.grid-4{
+    border: 1px solid var(--darkerBG);
+    box-shadow: 0 0 1.5px #26262699;
+    border-radius: 0.3rem;
+}
 /*-----------------------------Ecological Heseg END-----------------------*/
 
 
@@ -1120,6 +1210,7 @@ body{
 }
 .cardd h3{
     font-family: var(--mainfont-fonts);
+    color: var(--fontCdarkBlur);
     font-size: 1.3rem;
     font-weight: 400;
     letter-spacing: 1.2px;
@@ -1619,7 +1710,7 @@ footer a{
         display: flex;
         width: 100%;
         position: fixed;
-        top: 6rem;
+        top: 8.15rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -1643,6 +1734,41 @@ footer a{
         transform: translate(0); /* Move into view */
     }
     
+
+    .cardd{
+        margin: 40px 40px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 60px;
+        padding-top: 170px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cardd h2{
+        margin-right: 0;
+    }
+    .cardd img{
+        margin: -100px 0 30px 0;
+        width: 100%;
+        border-radius: 10px;
+        margin-top: -140px;
+    }
+    .box{
+        width: 10rem ;
+    }
+    .cardd div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
 
     .SanalBolgoh{
         width: 85%;
@@ -1734,6 +1860,69 @@ footer a{
     .selectionByOrder img{
         width: 10rem;
     }
+
+    /*Ecological*/
+        .grid{
+        padding: 6rem 2rem 2rem 2rem;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 0;
+        box-shadow: none;
+    }
+    .grid-1{
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .grid-2{
+        box-shadow: none;
+        border-radius: 0;
+        gap: 0;
+    }
+    .grid-2 div:nth-child(1){
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .grid-2 div:nth-child(2){
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .grid-2 div:nth-child(3){
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .grid-3 {
+        box-shadow: none;
+        border-radius: 0;
+        gap: 0;
+    }
+    .grid-3 div:nth-child(1){
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .grid-3 div:nth-child(2){
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .grid-3 div:nth-child(3){
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .grid-4{
+        box-shadow: none;
+        border-radius: 0;
+        gap: 0;
+    }
+
+    
+.Hamtragchid:before,
+.Hamtragchid:after{
+    position: absolute;
+    top: 0;
+    width: 3rem;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
 }
 
 @media (max-width: 610px){
@@ -1752,6 +1941,56 @@ footer a{
     .heaterName{
         font-size: 2rem;
         text-align: center;
+    }
+    /*Ecological*/
+    .grid{
+        padding: 6rem 0 2rem 0;
+    }
+    .grid-2{
+        grid-template-columns: 1fr 1fr;
+    }
+    .grid-2 div:nth-child(1){
+        grid-column: 1/1;
+        grid-row: 1/3;
+    }
+    .grid-2 div:nth-child(2){
+        grid-column: 2/2;
+    }
+    .grid-2 div:nth-child(3){
+        grid-column: 2/3;
+    }
+    .grid-3{
+        grid-template-columns: 1fr 1fr;
+    }
+    .grid-3 div:nth-child(1){
+        grid-row: 1/1;
+    }
+    .grid-3 div:nth-child(2){
+        grid-row: 1/2;
+    }
+    .grid-3 div:nth-child(3){
+        grid-row: 1/3;
+    }
+
+
+    .cardd{
+        margin: 0 40px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 60px;
+        margin-bottom: 3rem;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+    }
+    .cardd h2{
+        margin-right: 0;
+        font-size: 2rem;
+    }
+    .cardd img{
+        margin: -100px 0 30px 0;
+        width: 100%;
+        margin-top: -140px;
     }
 }
 /*For mobile 480px*/

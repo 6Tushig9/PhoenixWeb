@@ -1,5 +1,9 @@
 @extends("main")
 @section("Phoenix")
+
+<script>
+
+</script>
 <div class="main">
         <div id="thinnav">
             <div class="Welcome">Тавтай морил</div>
@@ -33,7 +37,7 @@
                 </div>
             </div>
         </div>
-        <div class="navi">
+        {{-- <div class="navi">
             <div class="lftMenu">
                 <a href="/Company">БАЙГУУЛЛАГА</a>
                 <a href="/Ecological">Б.О.Н.З</a>
@@ -52,10 +56,10 @@
             <a href="/Ecological">Б.О.Н.З</a>
             <a href="/Calculate" class="CalcBtn">ТООЦООЛУУР</a>
             <a href="/Advice">ЗӨВЛӨМЖ</a>
-        </div>
+        </div> --}}
 
         <!--Sanal huseltiin heseg-->
-        <div class="complaint-popup-wrapper" id="complaintPopup">
+        {{-- <div class="complaint-popup-wrapper" id="complaintPopup">
             <div class="complaint-popup">
                 <span class="close-btn" id="closeComplaintPopup">&times;</span>
                 <h2>Санал хүсэлтээ илгээх</h2>
@@ -69,23 +73,23 @@
                     <button type="submit" class="submit-btn">Илгээх</button>
                 </form>
             </div>
-        </div>
+        </div> --}}
 <script>
-document.getElementById("complaintBtn").addEventListener("click", function() {
-    document.getElementById("complaintPopup").style.display = "flex";
-    document.body.classList.add("no-scroll");
-});
-document.getElementById("closeComplaintPopup").addEventListener("click", function() {
-    document.getElementById("complaintPopup").style.display = "none";
-    document.body.classList.remove("no-scroll");
-});
-window.addEventListener("click", function(event) {
-    const popup = document.getElementById("complaintPopup");
-    if (event.target === popup) {
-        popup.style.display = "none";
+    document.getElementById("complaintBtn").addEventListener("click", function() {
+        document.getElementById("complaintPopup").style.display = "flex";
+        document.body.classList.add("no-scroll");
+    });
+    document.getElementById("closeComplaintPopup").addEventListener("click", function() {
+        document.getElementById("complaintPopup").style.display = "none";
         document.body.classList.remove("no-scroll");
-    }
-});
+    });
+    window.addEventListener("click", function(event) {
+        const popup = document.getElementById("complaintPopup");
+        if (event.target === popup) {
+            popup.style.display = "none";
+            document.body.classList.remove("no-scroll");
+        }
+    });
 </script>
         <!--Sanal huseltiin heseg END-->
 
@@ -103,7 +107,7 @@ window.addEventListener("click", function(event) {
                     </div>
                 </div>
                 <div class="zurag1">
-                    <img src={{ asset("pics2use/xmpl2.png")}} >
+                    <img src={{ asset("pics2use/S1200TW.png")}} >
                 </div>
             </div>
             <div class="BusadProd">
@@ -113,7 +117,7 @@ window.addEventListener("click", function(event) {
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src={{ asset("pics2use/xmpl2.png")}} class="card-img">
+                                        <img src={{ asset("pics2use/S600TW.png")}} class="card-img">
                                     </div>
 
                                     <div class="card-content">
