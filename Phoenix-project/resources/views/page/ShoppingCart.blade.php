@@ -2,45 +2,34 @@
 @section("Phoenix")
 
 
-
-
 <script>
-// Attach event listeners to all plus and minus buttons
-document.querySelectorAll('.selectionByOrder').forEach(function(card) {
-    // Get the base price from the existing price element
-    let priceElement = card.querySelector('.price');
-    let basePrice = parseInt(priceElement.innerText.replace(/[^\d]/g, '')); // Extract numeric value
-    
-    let quantity = card.querySelector('.quantity');
-
-    // Minus button functionality
-    card.querySelector('.minus').addEventListener('click', function() {
-        if (quantity.innerText > 1) {
-            quantity.innerText = parseInt(quantity.innerText) - 1;
+    document.querySelectorAll('.selectionByOrder').forEach(function(card) {
+        let priceElement = card.querySelector('.price');
+        let basePrice = parseInt(priceElement.innerText.replace(/[^\d]/g, ''));
+        
+        let quantity = card.querySelector('.quantity');
+        card.querySelector('.minus').addEventListener('click', function() {
+            if (quantity.innerText > 1) {
+                quantity.innerText = parseInt(quantity.innerText) - 1;
+                updatePrice(priceElement, quantity.innerText, basePrice);
+            }
+        });
+        card.querySelector('.plus').addEventListener('click', function() {
+            quantity.innerText = parseInt(quantity.innerText) + 1;
             updatePrice(priceElement, quantity.innerText, basePrice);
-        }
+        });
     });
-
-    // Plus button functionality
-    card.querySelector('.plus').addEventListener('click', function() {
-        quantity.innerText = parseInt(quantity.innerText) + 1;
-        updatePrice(priceElement, quantity.innerText, basePrice);
+    function updatePrice(priceElement, quantity, basePrice) {
+        let newPrice = basePrice * quantity;
+        priceElement.innerText = `${newPrice}₮`;
+    }
+    document.querySelectorAll('.close-btn').forEach(function(button) {
+        button.addEventListener('click', function() {
+            let sectionToRemove = button.closest('.selectionByOrder');
+            sectionToRemove.remove();
+        });
     });
-});
-function updatePrice(priceElement, quantity, basePrice) {
-    let newPrice = basePrice * quantity;
-    priceElement.innerText = `${newPrice}₮`;
-}
-//delete section
-document.querySelectorAll('.close-btn').forEach(function(button) {
-    button.addEventListener('click', function() {
-        let sectionToRemove = button.closest('.selectionByOrder');
-        sectionToRemove.remove();
-    });
-});
 </script>
-
-
     <div id="cartMainCont">
         <div class="selectedHtrs">
             <div class="selectionByOrder">
@@ -123,5 +112,4 @@ document.querySelectorAll('.close-btn').forEach(function(button) {
             </div>
         </div>
     </div>
-
 @endsection

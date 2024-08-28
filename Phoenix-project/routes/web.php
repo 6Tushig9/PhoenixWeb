@@ -15,3 +15,4 @@ Route::controller(RoutePages::class)->group(function (){
     Route::get('/shoppingcart', 'shoppingcart');
     Route::get('/faq', 'faq');
 });
+
