@@ -19,9 +19,6 @@
     });
 </script>
         <!--Sanal huseltiin heseg END-->
-
-
-
         <div class="tootsoolohW">
             <div class="hariu">
                 <div class="songolt">

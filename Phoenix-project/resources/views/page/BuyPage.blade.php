@@ -17,7 +17,6 @@ window.addEventListener("click", function(event) {
     }
 });
 </script>
-        <!--Sanal huseltiin heseg END-->
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -26,8 +25,6 @@ window.addEventListener("click", function(event) {
         document.querySelector('.tulburiinMedeelel').style.display = 'flex';
     });
 });
-
-
 </script>
 
     <div id="mainContnr">
@@ -156,5 +153,4 @@ window.addEventListener("click", function(event) {
             </div>
         </div>
     </div>
-
 @endsection
