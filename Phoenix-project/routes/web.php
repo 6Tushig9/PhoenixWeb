@@ -15,7 +15,3 @@ Route::controller(RoutePages::class)->group(function (){
     Route::get('/shoppingcart', 'shoppingcart');
     Route::get('/faq', 'faq');
 });
-
-Route::controller(Hamtrah_huselt::class)->group(function (){
-    Route::get('/test','f1');
-});
