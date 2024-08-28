@@ -6,6 +6,9 @@ use App\Filament\Resources\LogonuudResource\Pages;
 use App\Filament\Resources\LogonuudResource\RelationManagers;
 use App\Models\Logonuud;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Group;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -19,11 +22,17 @@ class LogonuudResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationGroup='Logo oruulah';
+
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                //
+                Group::make()
+                ->schema([
+                    TextInput::make('name'),
+                    FileUpload::make('image'),
+                ])
             ]);
     }
 

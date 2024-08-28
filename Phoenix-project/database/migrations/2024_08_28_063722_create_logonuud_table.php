@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('logonuud', function (Blueprint $table) {
             $table->id();
-            $table->mediumText('Name');
-            $table->mediumText('Image');
+            $table->mediumText('name');
+            $table->mediumText('image');
             $table->timestamps();
         });
     }

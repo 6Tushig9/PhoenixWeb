@@ -9,5 +9,5 @@ class Logonuud extends Model
 {
     use HasFactory;
     protected $table = 'logonuud';
-    protected $fillable=['Name','Image'];
+    protected $fillable=['name','image'];
 }
