@@ -6,9 +6,14 @@ use App\Filament\Resources\BichverResource\Pages;
 use App\Filament\Resources\BichverResource\RelationManagers;
 use App\Models\PostOruulah;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Group;
+use Filament\Forms\Components\MarkdownEditor;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -23,7 +28,12 @@ class BichverResource extends Resource
     {
         return $form
             ->schema([
-                //
+               Group::make()
+               ->schema([
+                    TextInput::make('title'),
+                    FileUpload::make('image'),
+                    MarkdownEditor::make('post'),
+               ])
             ]);
     }
 
@@ -31,7 +41,8 @@ class BichverResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('title'),
+                TextColumn::make('image'),
             ])
             ->filters([
                 //
