@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('sanal_ilgeeh', function (Blueprint $table) {
             $table->id();
-            $table->mediumInteger('Name');
+            $table->mediumInteger('name');
             $table->integer('phone');
             $table->text('post');
             $table->timestamps();
