@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tuslamjs', function (Blueprint $table) {
+        Schema::create('hamtrahs', function (Blueprint $table) {
             $table->id();
+            $table->mediumText('Ner');
+            $table->integer('Utas');
+            $table->text('Message');
             $table->timestamps();
         });
     }
@@ -22,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tuslamjs');
+        Schema::dropIfExists('hamtrahs');
     }
 };

@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('sanals', function (Blueprint $table) {
             $table->id();
-            $table->text('name');
-            $table->integer('phonenumber');
-            $table->text('sanal');
+            $table->mediumText('Ner');
+            $table->integer('Utas');
+            $table->text('Sanal');
             $table->timestamps();
         });
     }

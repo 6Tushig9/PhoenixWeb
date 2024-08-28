@@ -32,7 +32,10 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
         
+=======
+>>>>>>> 1dd2681bf8908428df9600698b17cc921f91db08
 <script>
 document.getElementById("complaintBtn").addEventListener("click", function() {
     document.getElementById("complaintPopup").style.display = "flex";
