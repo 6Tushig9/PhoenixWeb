@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tuslamjs', function (Blueprint $table) {
+        Schema::create('huselt_ilgeehs', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -22,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tuslamjs');
+        Schema::dropIfExists('huselt_ilgeehs');
     }
 };

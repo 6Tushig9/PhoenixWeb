@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\PhoenixResource\Pages;
-use App\Filament\Resources\PhoenixResource\RelationManagers;
-use App\Models\Phoenix;
+use App\Filament\Resources\BichverResource\Pages;
+use App\Filament\Resources\BichverResource\RelationManagers;
+use App\Models\PostOruulah;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,9 +13,9 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class PhoenixResource extends Resource
+class BichverResource extends Resource
 {
-    protected static ?string $model = Phoenix::class;
+    protected static ?string $model = PostOruulah::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -56,9 +56,9 @@ class PhoenixResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListPhoenixes::route('/'),
-            'create' => Pages\CreatePhoenix::route('/create'),
-            'edit' => Pages\EditPhoenix::route('/{record}/edit'),
+            'index' => Pages\ListBichvers::route('/'),
+            'create' => Pages\CreateBichver::route('/create'),
+            'edit' => Pages\EditBichver::route('/{record}/edit'),
         ];
     }
 }

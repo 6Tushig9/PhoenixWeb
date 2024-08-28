@@ -1,45 +1,17 @@
 <?php
 
+namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Request;
-use app\Models\User;
 
-Route::get('/', function () {
-    return view('main');
-});
-
-Route::get('/', function(){
-    return view('page.Company');
-});
-
-Route::get('/PhoenixSheater', function(){
-    return view('page.PhoenixSheater');
-});
-
-Route::get('/Company', function(){
-    return view('page.Company');
-});
-
-Route::get('/Ecological', function(){
-    return view('page.Ecological');
-});
-
-Route::get('/Calculate', function(){
-    return view('page.Calculate');
-});
-
-Route::get('/Advice', function(){
-    return view('page.Advice');
-});
-
-Route::get('/BuyPage', function(){
-    return view('page.BuyPage');
-});
-
-Route::get('/ShoppingCart', function(){
-    return view('page.ShoppingCart');
-});
-
-Route::get('/FAQ', function(){
-    return view('page.FAQ');
+Route::controller(RoutePages::class)->group(function (){
+    Route::get('/', 'showmain');
+    Route::get('/', 'showmainpage');
+    Route::get('/phoenixsheater', 'phoenixsheater');
+    Route::get('/company', 'company');
+    Route::get('/ecological', 'ecological');
+    Route::get('/calculate', 'calculate');
+    Route::get('/advice', 'advice');
+    Route::get('/buypage', 'buypage');
+    Route::get('/shoppingcart', 'shoppingcart');
+    Route::get('/faq', 'faq');
 });
