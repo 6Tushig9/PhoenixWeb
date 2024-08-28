@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class Phoenix extends Mailable
+class Tushig extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -27,7 +27,7 @@ class Phoenix extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Phoenix',
+            subject: 'Tushig',
         );
     }
 
