@@ -24,7 +24,9 @@ class BichverResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $navigationGroup = 'Post oruulah';
+    protected static ?string $navigationLabel = 'Веб руу пост бичвэр оруулах';
+
+    protected static ?string $navigationGroup = 'Пост оруулах';
 
     public static function form(Form $form): Form
     {

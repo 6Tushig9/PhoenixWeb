@@ -2,11 +2,10 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\LogonuudResource\Pages;
-use App\Filament\Resources\LogonuudResource\RelationManagers;
-use App\Models\Logonuud;
+use App\Filament\Resources\StatisticsResource\Pages;
+use App\Filament\Resources\StatisticsResource\RelationManagers;
+use App\Models\Statistic;
 use Filament\Forms;
-use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Group;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -16,15 +15,15 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class LogonuudResource extends Resource
+class StatisticsResource extends Resource
 {
-    protected static ?string $model = Logonuud::class;
+    protected static ?string $model = Statistic::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $navigationGroup = 'Лого оруулах';
+    protected static ?string $navigationLabel = 'Тоон мэдээлэл оруулах';
 
-    protected static ?string $navigationLabel = 'Газруудын лого оруулах';
+    protected static ?string $navigationGroup = 'Өгөгдөл оруулах';
 
     public static function form(Form $form): Form
     {
@@ -32,8 +31,10 @@ class LogonuudResource extends Resource
             ->schema([
                 Group::make()
                 ->schema([
-                    TextInput::make('name'),
-                    FileUpload::make('image'),
+                    TextInput::make('year'),
+                    TextInput::make('hometown'),
+                    TextInput::make('electric'),
+                    TextInput::make('carbon'),
                 ])
             ]);
     }
@@ -67,9 +68,9 @@ class LogonuudResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListLogonuuds::route('/'),
-            'create' => Pages\CreateLogonuud::route('/create'),
-            'edit' => Pages\EditLogonuud::route('/{record}/edit'),
+            'index' => Pages\ListStatistics::route('/'),
+            'create' => Pages\CreateStatistics::route('/create'),
+            'edit' => Pages\EditStatistics::route('/{record}/edit'),
         ];
     }
 }
