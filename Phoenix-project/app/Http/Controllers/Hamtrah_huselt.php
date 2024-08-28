@@ -8,6 +8,7 @@ use \App\Models\Hamtrah;
 class Hamtrah_huselt extends Controller
 {
     public function f1(Request $request){
-        Hamtrah::create($request->all());
+        // Hamtrah::create($request->all());
+        return dd($request->all());
     }
 }
