@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Logonuud;
 use Illuminate\Http\Request;
 use App\Models\PostOruulah;
 
@@ -12,7 +13,10 @@ class RoutePages extends Controller
     }
     
     public function showmainpage(){
-        return view('page.Company', ['data'=>PostOruulah::all()]);
+        return view('page.Company', [
+                                    'data'=>PostOruulah::all(),
+                                    'logo'=>Logonuud::all(['image'])
+                                    ]);
     }
 
     public function phoenixsheater(Request $request){

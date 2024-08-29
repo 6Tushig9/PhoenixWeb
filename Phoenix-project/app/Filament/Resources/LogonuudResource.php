@@ -12,6 +12,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -25,6 +26,8 @@ class LogonuudResource extends Resource
     protected static ?string $navigationGroup = 'Лого оруулах';
 
     protected static ?string $navigationLabel = 'Газруудын лого оруулах';
+
+    protected static ?string $modelLabel = 'Зурагнууд';
 
     public static function form(Form $form): Form
     {
@@ -42,7 +45,8 @@ class LogonuudResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name'),
+                TextColumn::make('image'),
             ])
             ->filters([
                 //
