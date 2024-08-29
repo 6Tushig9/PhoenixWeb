@@ -12,13 +12,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('statistics', function (Blueprint $table) {
+        Schema::create('advice', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class)->constrained();
-            $table->integer('year');
-            $table->integer('hometown')->default(0);
-            $table->double('electric')->default(0);
-            $table->double('carbon')->default(0);
+            $table->mediumText('title');
+            $table->text('content');
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('statistics');
+        Schema::dropIfExists('advice');
     }
 };

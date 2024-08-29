@@ -9,7 +9,7 @@
                 </div>
                 <div class="miniicon">
                     <div class="shpngcrt">
-                        <a href="/ShoppingCart">
+                        <a href="/shoppingcart">
                             <img src={{ asset("pics2use/icons/Shoppingcart.png") }} class="shoppingC"><!-- src={{ asset("pics2use/icons/Shoppingcart.png") }}-->
                         </a>
                     </div>
