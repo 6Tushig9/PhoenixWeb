@@ -17,10 +17,7 @@ window.addEventListener("click", function(event) {
     }
 });
 </script>
-        <!--Sanal huseltiin heseg END-->
-
-
-
+    
     <div class="faq-container">
         <h1>Хэрэглэгчдээс ирдэг асуултууд</h1>
         

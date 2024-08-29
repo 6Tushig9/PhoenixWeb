@@ -26,7 +26,6 @@ window.addEventListener("click", function(event) {
     });
 });
 </script>
-
     <div id="mainContnr">
         <div class="prodPicSide">
             <div class="bigImage">

@@ -16,3 +16,7 @@ Route::controller(RoutePages::class)->group(function (){
     Route::get('/faq', 'faq');
 });
 
+Route::controller(Posts::class)->group(function (){
+    Route::post('/hamtrah', 'hamtrah_huselt');
+    Route::post('/sanal', 'sanal_huselt');
+});
