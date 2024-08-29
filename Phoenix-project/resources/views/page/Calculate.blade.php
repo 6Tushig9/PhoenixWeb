@@ -1,6 +1,5 @@
 @extends("main")
 @section("Phoenix")
-<div class="main">
 <script>
     document.getElementById("complaintBtn").addEventListener("click", function() {
         document.getElementById("complaintPopup").style.display = "flex";
@@ -18,16 +17,11 @@
         }
     });
 </script>
-        <!--Sanal huseltiin heseg END-->
         <div class="tootsoolohW">
             <div class="hariu">
                 <div class="songolt">
-                    <div class="songolt1">
-                        
-                    </div>
-                    <div class="songolt2">
-                        
-                    </div>
+                    <div class="songolt1"></div>
+                    <div class="songolt2"></div>
                 </div>
                 <div class="warningmsg">
                     Энэ тооцоололд байшингийн шалнаас тааз хүртэлх өндөрийг 
@@ -62,15 +56,6 @@
                 </div>
                 <button>ТООЦООЛОХ</button>
             </div>
-            <!--<div class="DulaanAld">
-                    <h2>Таны байшин хэр дулаан алдагдалтай вэ?</h2>
-                    <input type="radio" name="ih" id="ih">
-                    <label for="ih">Их</label>
-                    <input type="radio" name="engiin" id="engiin">
-                    <label for="engiin">Энгийн</label>
-                    <input type="radio" name="baga" id="baga">
-                    <label for="baga">Бага</label>
-            </div>-->
         </div>
     </div>
 @endsection

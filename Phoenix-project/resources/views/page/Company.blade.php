@@ -17,9 +17,6 @@
         }
     });
 </script>
-        <!--Sanal huseltiin heseg END-->
-
-    <!-- main info -->
     <div id="mnContnr">
         <div class="firstInfo">
             <div class="frstPic"> 
@@ -105,24 +102,48 @@
             </div>
         </div>
 <script>
-    //company tsesnii company-d-n logo duplicate
      var copy = document.querySelector(".Hamtragchid-slide").cloneNode(true)
-    document.querySelector(".Hamtragchid").appendChild(copy);
+     document.querySelector(".Hamtragchid").appendChild(copy);
 </script>
 
         <div class="email-popup-wrapper" id="emailPopup">
             <div class="email-popup">
                 <span class="close-btn" id="closePopup">&times;</span>
                 <h2>Хамтран ажиллах хүсэлт илгээх</h2>
-                <form>
+                <section>
+                    <script>
+                       $(document).ready(function() {
+                            $.ajaxSetup({
+                                headers: {
+                                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                }
+                            });
+                            $('.send-btn').click(function() {
+                                $.ajax({
+                                    type: 'POST',
+                                    url: '/hamtrah',
+                                    dataType: 'json',
+                                    data: {
+                                        'name': $('#NameOfSender').val(),
+                                        'phone': $('#phoneNum').val(),
+                                        'post': $('#message').val()
+                                    },
+                                    success: function(response) {
+                                        console.log(response)
+                                    }
+                                });
+                            });
+                        });
+
+                    </script>
                     <label for="NameOfSender">Нэр:</label>
                     <input type="text" id="NameOfSender" placeholder="Хүсэлт илгээгчийн нэр" required>
                     <label for="phoneNum">Утасны дугаар:</label>
                     <input type="text" id="phoneNum" placeholder="Утасны дугаар" required>
                     <label for="message">Мессеж:</label>
                     <textarea id="message" placeholder="Таны илгээх мессеж" required></textarea>
-                    <button type="submit" class="send-btn">Send</button>
-                </form>
+                    <button type="button" class="send-btn">Send</button>
+                </section>
             </div>
         </div>
 
@@ -141,7 +162,6 @@ document.getElementById("closePopup").addEventListener("click", function() {
     document.body.classList.remove("no-scroll");
 });
 
-// Close the popup if the user clicks outside of it
 window.addEventListener("click", function(event) {
     const popup = document.getElementById("emailPopup");
     if (event.target === popup) {

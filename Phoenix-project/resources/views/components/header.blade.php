@@ -42,7 +42,7 @@
         </a>
         <div class="rghtMenu">
             <a href="/calculate">ТООЦООЛУУР</a>
-            <a href="/Advice">ЗӨВЛӨМЖ</a>
+            <a href="/advice">ЗӨВЛӨМЖ</a>
         </div>
         <div class="mnubtn">
             <span></span><span></span><span></span>
