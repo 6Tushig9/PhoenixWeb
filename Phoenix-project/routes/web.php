@@ -18,5 +18,4 @@ Route::controller(RoutePages::class)->group(function (){
 
 Route::controller(Posts::class)->group(function (){
     Route::post('/hamtrah', 'hamtrah_huselt');
-    Route::post('/sanal', 'sanal_huselt');
 });

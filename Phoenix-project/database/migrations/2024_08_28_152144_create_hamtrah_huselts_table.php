@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('hamtrah_huselts', function (Blueprint $table) {
             $table->id();
-            $table->mediumText('name')->unique();
+            $table->mediumText('name');
             $table->integer('phone');
             $table->text('comment');
             $table->timestamps();
