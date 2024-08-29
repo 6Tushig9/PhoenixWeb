@@ -101,9 +101,11 @@ window.addEventListener("click", function(event) {
                             <option value="10">14</option>
                         </select>
                     </div>
-                    <div class="uldegdel">Энэ загварын халаагуур одоогоор 
+                    <div class="uldegdel">
+                        Энэ загварын халаагуур одоогоор 
                         бэлэн байхгүй байгаа тул захиалга нь 7-10 хонгийн 
-                        дотор бэлэн болно.</div>
+                        дотор бэлэн болно.
+                    </div>
                 </div>
                 <div class="bntsForOrder">
                     <button class="cartBtn">Сагсанд хийх</button>
