@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Logonuud;
 use Illuminate\Http\Request;
 use App\Models\PostOruulah;
+use App\Models\Statistic;
 
 class RoutePages extends Controller
 {
@@ -15,7 +16,9 @@ class RoutePages extends Controller
     public function showmainpage(){
         return view('page.Company', [
                                     'data'=>PostOruulah::all(),
-                                    'logo'=>Logonuud::all(['image'])
+                                    'logo'=>Logonuud::all(['image']),
+                                    'year'=>Statistic::all(['year']),
+                                    'hometown'=>Statistic::all(['hometown']),
                                     ]);
     }
 

@@ -74,11 +74,11 @@
         </div>
         <div id="Milestone">
             <div class="section">
-                <div class="Numbers">3</div>
+                <div class="Numbers">{{ $year }}</div>
                 <div class="descrptnOfNumber">Жил</div>
             </div>
             <div class="section">
-                <div class="Numbers">500'000</div>
+                <div class="Numbers">{{ $hometown }}</div>
                 <div class="descrptnOfNumber">Нийт айл өрх</div>
             </div>
             <div class="section">
