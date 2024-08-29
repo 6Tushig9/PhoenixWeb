@@ -59,13 +59,37 @@
             <span class="close-btn" id="closeComplaintPopup">&times;</span>
             <h2>Санал хүсэлтээ илгээх</h2>
             <section>
+                <script>
+                    $(document).ready(function() {
+                            $.ajaxSetup({
+                                headers: {
+                                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                }
+                            });
+                            $('.submit-btn').click(function() {
+                                $.ajax({
+                                    type: 'post',
+                                    url: '/sanal',
+                                    dataType: 'json',
+                                    data: {
+                                        'name': $('#nameC').val(),
+                                        'phone': $('#PhoneNumCom').val(),
+                                        'post': $('#complaintDetail').val()
+                                    },
+                                    success: function(response) {
+                                        console.log(response)
+                                    }
+                                });
+                            });
+                        });
+                </script>
                 <label for="nameC">Таны нэр:</label>
                 <input type="text" id="nameC" placeholder="Нэрээ бичнэ үү" required>
                 <label for="PhoneNumCom">Утасны дугаар:</label>
                 <input type="text" id="PhoneNumCom" placeholder="Утасны дугаараа бичнэ үү" required>
                 <label for="complaintDetail">Санал хүсэлт:</label>
                 <textarea id="complaintDetail" placeholder="Санал хүсэлтээ бичнэ үү..." required></textarea>
-                <button type="submit" class="submit-btn">Илгээх</button>
+                <button type="button" class="submit-btn">Илгээх</button>
             </section>
         </div>
     </div>

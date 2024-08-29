@@ -22,4 +22,19 @@ class Posts extends Controller
         }
         return response()->json(['status'=>'success'],201);
     }
+
+    public function sanal_huselt(Request $request){
+        if($request->isMethod('post')){
+            try{
+                Sanal_huselt::create([
+                'name'=>$request->name,
+                'phone'=>$request->phone,
+                'comment'=>$request->post
+            ]);
+            } catch(\Exception $e) {
+                return response()->json(['status'=>$e->getMessage()]);
+            }
+        }
+         return response()->json(['status'=>'success'],201);
+    }
 }
