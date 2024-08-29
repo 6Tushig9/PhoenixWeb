@@ -40,7 +40,7 @@
 
             </div>
         </div>
-        <div class="secondInfo">
+        {{-- <div class="secondInfo">
             <div class="scndIfno">
                 <h3>Бидний үнэ цэн бол чанар</h3>
                    Бид үүсгэн байгуулагдсан зорилгоо биелүүлэхийн тулд бүтээгдэхүүний 
@@ -65,6 +65,11 @@
 
             </div>
             <div class="scndPic"><img src={{ asset("pics2use/TechSketch.jpg")}}></div>
+        </div> --}}
+        <div class="secondInfo">
+            <div class="scndIfno">
+                {{ $data }}
+            </div>
         </div>
         <div id="Milestone">
             <div class="section">
@@ -129,7 +134,7 @@
                                         'post': $('#message').val()
                                     },
                                     success: function(response) {
-                                        console.log(response)
+                                       alert('Амжилттай илгээгдлээ')
                                     }
                                 });
                             });

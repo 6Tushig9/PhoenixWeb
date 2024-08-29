@@ -28,12 +28,13 @@ class BichverResource extends Resource
 
     protected static ?string $navigationGroup = 'Пост оруулах';
 
+    protected static ?string $modelLabel = 'Постууд';
+
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-               Group::make()
-               ->schema([
+               Group::make()->schema([
                     TextInput::make('title'),
                     FileUpload::make('image'),
                     MarkdownEditor::make('post'),
@@ -47,12 +48,14 @@ class BichverResource extends Resource
             ->columns([
                 TextColumn::make('title'),
                 TextColumn::make('image'),
+                TextColumn::make('post'),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
