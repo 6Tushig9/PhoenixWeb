@@ -5,7 +5,7 @@
             <div class="rightsd">
                 <div class="FAQhelp">
                     <button id="complaintBtn" class="open-popup-btn">Санал хүсэлт |</button>
-                    <a href="/FAQ">Тусламж |</a>
+                    <a href="/faq">Тусламж |</a>
                 </div>
                 <div class="miniicon">
                     <div class="shpngcrt">
