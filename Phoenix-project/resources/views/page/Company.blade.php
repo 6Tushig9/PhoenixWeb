@@ -40,7 +40,7 @@
 
             </div>
         </div>
-        <div class="secondInfo">
+        {{-- <div class="secondInfo">
             <div class="scndIfno">
                 <h3>Бидний үнэ цэн бол чанар</h3>
                    Бид үүсгэн байгуулагдсан зорилгоо биелүүлэхийн тулд бүтээгдэхүүний 
@@ -63,6 +63,12 @@
                     гаднын аль ч төрлийн ижил бүтээгдэхүүнтэй өрсөлдөж чадна. бүтээгдэхүүнтэй 
                     өрсөлдөх чадвартай бүтээгдэхүүн бүтээсэн.
 
+            </div>
+            <div class="scndPic"><img src={{ asset("pics2use/TechSketch.jpg")}}></div>
+        </div> --}}
+        <div class="secondInfo">
+            <div class="scndIfno">
+                {{ $data }}
             </div>
             <div class="scndPic"><img src={{ asset("pics2use/TechSketch.jpg")}}></div>
         </div>
@@ -129,7 +135,7 @@
                                         'post': $('#message').val()
                                     },
                                     success: function(response) {
-                                        console.log(response)
+                                       alert('Амжилттай илгээгдлээ')
                                     }
                                 });
                             });

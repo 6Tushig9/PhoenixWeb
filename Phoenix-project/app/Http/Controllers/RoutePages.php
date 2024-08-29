@@ -3,15 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\PostOruulah;
 
 class RoutePages extends Controller
 {
-    public function showmain(Request $request){
+    public function showmain(){
         return view('main');
     }
     
-    public function showmainpage(Request $request){
-        return view('page.Company');
+    public function showmainpage(){
+        return view('page.Company', ['data'=>PostOruulah::all()]);
     }
 
     public function phoenixsheater(Request $request){
