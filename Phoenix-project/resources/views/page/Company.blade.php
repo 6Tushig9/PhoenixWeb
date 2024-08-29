@@ -120,7 +120,7 @@
                             });
                             $('.send-btn').click(function() {
                                 $.ajax({
-                                    type: 'POST',
+                                    type: 'post',
                                     url: '/hamtrah',
                                     dataType: 'json',
                                     data: {
