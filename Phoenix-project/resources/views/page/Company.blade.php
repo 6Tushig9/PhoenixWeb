@@ -74,11 +74,11 @@
         </div>
         <div id="Milestone">
             <div class="section">
-                <div class="Numbers">3</div>
+                <div class="Numbers">{{ $year }}</div>
                 <div class="descrptnOfNumber">Жил</div>
             </div>
             <div class="section">
-                <div class="Numbers">500'000</div>
+                <div class="Numbers">{{ $hometown }}</div>
                 <div class="descrptnOfNumber">Нийт айл өрх</div>
             </div>
             <div class="section">
@@ -92,7 +92,7 @@
         </div>
         <h2 style="font-weight: 300;">ХАМТРАГЧ БАЙГУУЛЛАГУУД</h2>
         <div class="Hamtragchid">
-            <div class="Hamtragchid-slide">
+            {{-- <div class="Hamtragchid-slide">
                 <img src={{ asset("pics2use/Companions/KhaanBank.png")}}>
                 <img src={{ asset("pics2use/Companions/XacBank.png")}}>
                 <img src={{ asset("pics2use/Companions/TuriinBank.png")}}>
@@ -105,7 +105,10 @@
                 <img src={{ asset("pics2use/Companions/Tuss.png")}}>
                 <img src={{ asset("pics2use/Companions/Tomo.png")}}>
                 <img src={{ asset("pics2use/Companions/chatBot.png")}}>
-            </div>
+            </div> --}}
+            <div class="Hamtragchid-slide">
+                <img src={{ asset($logo) }} alt="">
+            <div>
         </div>
 <script>
      var copy = document.querySelector(".Hamtragchid-slide").cloneNode(true)
