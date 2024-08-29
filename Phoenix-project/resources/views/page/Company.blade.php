@@ -70,6 +70,7 @@
             <div class="scndIfno">
                 {{ $data }}
             </div>
+            <div class="scndPic"><img src={{ asset("pics2use/TechSketch.jpg")}}></div>
         </div>
         <div id="Milestone">
             <div class="section">
