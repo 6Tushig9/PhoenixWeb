@@ -69,8 +69,62 @@
                 </form>
             </div>
         </div> --}}
-
+<script>
+document.getElementById("complaintBtn").addEventListener("click", function() {
+    document.getElementById("complaintPopup").style.display = "flex";
+    document.body.classList.add("no-scroll");
+});
+document.getElementById("closeComplaintPopup").addEventListener("click", function() {
+    document.getElementById("complaintPopup").style.display = "none";
+    document.body.classList.remove("no-scroll");
+});
+window.addEventListener("click", function(event) {
+    const popup = document.getElementById("complaintPopup");
+    if (event.target === popup) {
+        popup.style.display = "none";
+        document.body.classList.remove("no-scroll");
+    }
+});
+</script>
 <!--Sanal huseltiin heseg END-->
+
+<script>
+// Attach event listeners to all plus and minus buttons
+document.querySelectorAll('.selectionByOrder').forEach(function(card) {
+    // Get the base price from the existing price element
+    let priceElement = card.querySelector('.price');
+    let basePrice = parseInt(priceElement.innerText.replace(/[^\d]/g, '')); // Extract numeric value
+    
+    let quantity = card.querySelector('.quantity');
+
+    // Minus button functionality
+    card.querySelector('.minus').addEventListener('click', function() {
+        if (quantity.innerText > 1) {
+            quantity.innerText = parseInt(quantity.innerText) - 1;
+            updatePrice(priceElement, quantity.innerText, basePrice);
+        }
+    });
+
+    // Plus button functionality
+    card.querySelector('.plus').addEventListener('click', function() {
+        quantity.innerText = parseInt(quantity.innerText) + 1;
+        updatePrice(priceElement, quantity.innerText, basePrice);
+    });
+});
+function updatePrice(priceElement, quantity, basePrice) {
+    let newPrice = basePrice * quantity;
+    priceElement.innerText = `${newPrice}₮`;
+}
+//delete section
+document.querySelectorAll('.close-btn').forEach(function(button) {
+    button.addEventListener('click', function() {
+        let sectionToRemove = button.closest('.selectionByOrder');
+        sectionToRemove.remove();
+    });
+});
+</script>
+
+
     <div id="cartMainCont">
         <div class="selectedHtrs">
             <div class="selectionByOrder">
@@ -345,5 +399,4 @@
             </div>
         </div>
     </div>
-
 @endsection

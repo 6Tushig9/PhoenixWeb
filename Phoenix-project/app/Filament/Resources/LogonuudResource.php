@@ -2,28 +2,42 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\PhoenixResource\Pages;
-use App\Filament\Resources\PhoenixResource\RelationManagers;
-use App\Models\Phoenix;
+use App\Filament\Resources\LogonuudResource\Pages;
+use App\Filament\Resources\LogonuudResource\RelationManagers;
+use App\Models\Logonuud;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Group;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class PhoenixResource extends Resource
+class LogonuudResource extends Resource
 {
-    protected static ?string $model = Phoenix::class;
+    protected static ?string $model = Logonuud::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
+    protected static ?string $navigationGroup = 'Лого оруулах';
+
+    protected static ?string $navigationLabel = 'Газруудын лого оруулах';
+
+    protected static ?string $modelLabel = 'Зурагнууд';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                //
+                Group::make()
+                ->schema([
+                    TextInput::make('name'),
+                    FileUpload::make('image'),
+                ])
             ]);
     }
 
@@ -31,7 +45,8 @@ class PhoenixResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name'),
+                TextColumn::make('image'),
             ])
             ->filters([
                 //
@@ -56,9 +71,9 @@ class PhoenixResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListPhoenixes::route('/'),
-            'create' => Pages\CreatePhoenix::route('/create'),
-            'edit' => Pages\EditPhoenix::route('/{record}/edit'),
+            'index' => Pages\ListLogonuuds::route('/'),
+            'create' => Pages\CreateLogonuud::route('/create'),
+            'edit' => Pages\EditLogonuud::route('/{record}/edit'),
         ];
     }
 }

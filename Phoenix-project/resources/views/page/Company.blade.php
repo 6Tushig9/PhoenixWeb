@@ -1,95 +1,22 @@
 @extends("main")
 @section("Phoenix")
-<div class="main">
-        <div id="thinnav">
-            <div class="Welcome">Тавтай морил</div>
-            <div class="rightsd">
-                <div class="FAQhelp">
-                    <button id="complaintBtn" class="open-popup-btn">Санал хүсэлт |</button>
-                    <a href="/FAQ">Тусламж |</a>
-                </div>
-                <div class="miniicon">
-                    <div class="shpngcrt">
-                        <a href="/ShoppingCart">
-                            <img src={{ asset("pics2use/icons/Shoppingcart.png") }} class="shoppingC"><!-- src={{ asset("pics2use/icons/Shoppingcart.png") }}-->
-                        </a>
-                    </div>
-                    <div class="miniSocial">
-                        <a href="https://www.facebook.com/centralrich.mongolia">
-                            <img src= {{ asset("pics2use/icons/facebookwhite.png")}} class="mini fb">
-                        </a>
-                        <a href="https://www.facebook.com/centralrich.mongolia">
-                            <img src={{ asset("pics2use/icons/fbgroup.png")}} class="mini group">
-                        </a>
-                        <a href="https://www.instagram.com/phoenix_s_heater">
-                            <img src={{ asset("pics2use/icons/igwhite.png")}} class="mini insta">
-                        </a>
-                    </div>
-                    <div class="anglihel">
-                        <a href="">
-                            <img src={{ asset("pics2use/icons/Anglihel.png")}} class="lang">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {{-- <div class="navi">
-            <div class="lftMenu">
-                <a href="/Company">БАЙГУУЛЛАГА</a>
-                <a href="/Ecological">Б.О.Н.З</a>
-            </div>
-            <img src={{ asset("pics2use/LogoBlck.png")}} class="MenuLogo">
-            <div class="rghtMenu">
-                <a href="/Calculate">ТООЦООЛУУР</a>
-                <a href="/Advice">ЗӨВЛӨМЖ</a>
-            </div>
-            <div class="mnubtn">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="mblMenu">
-            <a href="/Company">БАЙГУУЛЛАГА</a>
-            <a href="/Ecological">Б.О.Н.З</a>
-            <a href="/Calculate" class="CalcBtn">ТООЦООЛУУР</a>
-            <a href="/Advice">ЗӨВЛӨМЖ</a>
-        </div>
-
-        <!--Sanal huseltiin heseg-->
-        <div class="complaint-popup-wrapper" id="complaintPopup">
-            <div class="complaint-popup">
-                <span class="close-btn" id="closeComplaintPopup">&times;</span>
-                <h2>Санал хүсэлтээ илгээх</h2>
-                <form>
-                    <label for="nameC">Таны нэр:</label>
-                    <input type="text" id="nameC" placeholder="Нэрээ бичнэ үү" required>
-                    <label for="PhoneNumCom">Утасны дугаар:</label>
-                    <input type="text" id="PhoneNumCom" placeholder="Утасны дугаараа бичнэ үү" required>
-                    <label for="complaintDetail">Санал хүсэлт:</label>
-                    <textarea id="complaintDetail" placeholder="Санал хүсэлтээ бичнэ үү..." required></textarea>
-                    <button type="submit" class="submit-btn">Илгээх</button>
-                </form>
-            </div>
-        </div> --}}
 <script>
-document.getElementById("complaintBtn").addEventListener("click", function() {
-    document.getElementById("complaintPopup").style.display = "flex";
-    document.body.classList.add("no-scroll");
-});
-document.getElementById("closeComplaintPopup").addEventListener("click", function() {
-    document.getElementById("complaintPopup").style.display = "none";
-    document.body.classList.remove("no-scroll");
-});
-window.addEventListener("click", function(event) {
-    const popup = document.getElementById("complaintPopup");
-    if (event.target === popup) {
-        popup.style.display = "none";
+    document.getElementById("complaintBtn").addEventListener("click", function() {
+        document.getElementById("complaintPopup").style.display = "flex";
+        document.body.classList.add("no-scroll");
+    });
+    document.getElementById("closeComplaintPopup").addEventListener("click", function() {
+        document.getElementById("complaintPopup").style.display = "none";
         document.body.classList.remove("no-scroll");
-    }
-});
+    });
+    window.addEventListener("click", function(event) {
+        const popup = document.getElementById("complaintPopup");
+        if (event.target === popup) {
+            popup.style.display = "none";
+            document.body.classList.remove("no-scroll");
+        }
+    });
 </script>
-        <!--Sanal huseltiin heseg END-->
-
-    <!-- main info -->
     <div id="mnContnr">
         <div class="firstInfo">
             <div class="frstPic"> 
@@ -113,7 +40,7 @@ window.addEventListener("click", function(event) {
 
             </div>
         </div>
-        <div class="secondInfo">
+        {{-- <div class="secondInfo">
             <div class="scndIfno">
                 <h3>Бидний үнэ цэн бол чанар</h3>
                    Бид үүсгэн байгуулагдсан зорилгоо биелүүлэхийн тулд бүтээгдэхүүний 
@@ -138,14 +65,20 @@ window.addEventListener("click", function(event) {
 
             </div>
             <div class="scndPic"><img src={{ asset("pics2use/TechSketch.jpg")}}></div>
+        </div> --}}
+        <div class="secondInfo">
+            <div class="scndIfno">
+                {{ $data }}
+            </div>
+            <div class="scndPic"><img src={{ asset("pics2use/TechSketch.jpg")}}></div>
         </div>
         <div id="Milestone">
             <div class="section">
-                <div class="Numbers">3</div>
+                <div class="Numbers">{{ $year }}</div>
                 <div class="descrptnOfNumber">Жил</div>
             </div>
             <div class="section">
-                <div class="Numbers">500'000</div>
+                <div class="Numbers">{{ $hometown }}</div>
                 <div class="descrptnOfNumber">Нийт айл өрх</div>
             </div>
             <div class="section">
@@ -159,7 +92,7 @@ window.addEventListener("click", function(event) {
         </div>
         <h2 style="font-weight: 300;">ХАМТРАГЧ БАЙГУУЛЛАГУУД</h2>
         <div class="Hamtragchid">
-            <div class="Hamtragchid-slide">
+            {{-- <div class="Hamtragchid-slide">
                 <img src={{ asset("pics2use/Companions/KhaanBank.png")}}>
                 <img src={{ asset("pics2use/Companions/XacBank.png")}}>
                 <img src={{ asset("pics2use/Companions/TuriinBank.png")}}>
@@ -172,26 +105,53 @@ window.addEventListener("click", function(event) {
                 <img src={{ asset("pics2use/Companions/Tuss.png")}}>
                 <img src={{ asset("pics2use/Companions/Tomo.png")}}>
                 <img src={{ asset("pics2use/Companions/chatBot.png")}}>
-            </div>
+            </div> --}}
+            <div class="Hamtragchid-slide">
+                <img src={{ asset($logo) }} alt="">
+            <div>
         </div>
 <script>
-    //company tsesnii company-d-n logo duplicate
      var copy = document.querySelector(".Hamtragchid-slide").cloneNode(true)
-    document.querySelector(".Hamtragchid").appendChild(copy);
+     document.querySelector(".Hamtragchid").appendChild(copy);
 </script>
 
         <div class="email-popup-wrapper" id="emailPopup">
             <div class="email-popup">
                 <span class="close-btn" id="closePopup">&times;</span>
                 <h2>Хамтран ажиллах хүсэлт илгээх</h2>
-                <form>
+                <section>
+                    <script>
+                       $(document).ready(function() {
+                            $.ajaxSetup({
+                                headers: {
+                                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                }
+                            });
+                            $('.send-btn').click(function() {
+                                $.ajax({
+                                    type: 'post',
+                                    url: '/hamtrah',
+                                    dataType: 'json',
+                                    data: {
+                                        'name': $('#NameOfSender').val(),
+                                        'phone': $('#phoneNum').val(),
+                                        'post': $('#message').val()
+                                    },
+                                    success: function(response) {
+                                       alert('Амжилттай илгээгдлээ')
+                                    }
+                                });
+                            });
+                        });
+
+                    </script>
                     <label for="NameOfSender">Нэр:</label>
                     <input type="text" id="NameOfSender" placeholder="Хүсэлт илгээгчийн нэр" required>
                     <label for="phoneNum">Утасны дугаар:</label>
                     <input type="text" id="phoneNum" placeholder="Утасны дугаар" required>
                     <label for="message">Мессеж:</label>
                     <textarea id="message" placeholder="Таны илгээх мессеж" required></textarea>
-                    <button type="submit" class="send-btn">Илгээх</button>
+                    <button type="submit" class="send-btn">Send</button>
                 </form>
             </div>
         </div>
@@ -211,7 +171,6 @@ document.getElementById("closePopup").addEventListener("click", function() {
     document.body.classList.remove("no-scroll");
 });
 
-// Close the popup if the user clicks outside of it
 window.addEventListener("click", function(event) {
     const popup = document.getElementById("emailPopup");
     if (event.target === popup) {
