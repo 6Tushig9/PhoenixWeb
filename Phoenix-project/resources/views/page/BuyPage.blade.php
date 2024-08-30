@@ -203,11 +203,12 @@ window.addEventListener("click", function(event) {
                 <div class="InstallDiv" id="ZahialagchDID">
                     <label for="Installment">Суурилуулалт хийлгэх эсэх:</label>
                     <div id="Installment">
-                        <button class="instChoice" id="InstYes">Хийлнэгэ</button>
+                        <button class="instChoice" id="InstYes">Хийлгэнэ</button>
                         <button class="instChoice" id="InstNo">Хийлгэхгүй</button>
                     </div>
                 </div>
                 <div class="BairshilDiv" id="ZahialagchDID">
+                    <!--irj awah songoltoos hamaarch idwehijdeg baih-->
                     <label for="Bairshil">Бараа хүлээн авах сонголт:</label>
                     <div id="Bairshil">
                         <button class="BChoice" id="Salbaraas">Салбараас ирж авах</button>

@@ -1,6 +1,5 @@
 @extends("main")
 @section("Phoenix")
-<<<<<<< HEAD
 <div id="thinnav">
             <div class="Welcome">Тавтай морил</div>
             <div class="rightsd">
@@ -70,69 +69,178 @@
                 </form>
             </div>
         </div> --}}
-<script>
-document.getElementById("complaintBtn").addEventListener("click", function() {
-    document.getElementById("complaintPopup").style.display = "flex";
-    document.body.classList.add("no-scroll");
-});
-document.getElementById("closeComplaintPopup").addEventListener("click", function() {
-    document.getElementById("complaintPopup").style.display = "none";
-    document.body.classList.remove("no-scroll");
-});
-window.addEventListener("click", function(event) {
-    const popup = document.getElementById("complaintPopup");
-    if (event.target === popup) {
-        popup.style.display = "none";
-        document.body.classList.remove("no-scroll");
-    }
-});
-</script>
+
 <!--Sanal huseltiin heseg END-->
-=======
-
-
-
->>>>>>> a7b726b3de167d06f75a7338374c9e2f0f478188
-
-<script>
-// Attach event listeners to all plus and minus buttons
-document.querySelectorAll('.selectionByOrder').forEach(function(card) {
-    // Get the base price from the existing price element
-    let priceElement = card.querySelector('.price');
-    let basePrice = parseInt(priceElement.innerText.replace(/[^\d]/g, '')); // Extract numeric value
-    
-    let quantity = card.querySelector('.quantity');
-
-    // Minus button functionality
-    card.querySelector('.minus').addEventListener('click', function() {
-        if (quantity.innerText > 1) {
-            quantity.innerText = parseInt(quantity.innerText) - 1;
-            updatePrice(priceElement, quantity.innerText, basePrice);
-        }
-    });
-
-    // Plus button functionality
-    card.querySelector('.plus').addEventListener('click', function() {
-        quantity.innerText = parseInt(quantity.innerText) + 1;
-        updatePrice(priceElement, quantity.innerText, basePrice);
-    });
-});
-function updatePrice(priceElement, quantity, basePrice) {
-    let newPrice = basePrice * quantity;
-    priceElement.innerText = `${newPrice}₮`;
-}
-//delete section
-document.querySelectorAll('.close-btn').forEach(function(button) {
-    button.addEventListener('click', function() {
-        let sectionToRemove = button.closest('.selectionByOrder');
-        sectionToRemove.remove();
-    });
-});
-</script>
-
-
     <div id="cartMainCont">
         <div class="selectedHtrs">
+            <div class="selectionByOrder">
+                <button class="close-btn">X</button>
+                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
+                <h2 class="OrdrHtrName">S600</h2>
+                <span class="price">399000₮</span>
+                <div class="quantity-selector1">
+                    <button class="qty-btn minus">−</button>
+                    <span class="quantity">1</span>
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+
+            <div class="selectionByOrder">
+                <button class="close-btn">X</button>
+                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
+                <h2 class="OrdrHtrName">S600T</h2>
+                <span class="price">439000₮</span>
+                <div class="quantity-selector1">
+                    <button class="qty-btn minus">−</button>
+                    <span class="quantity">1</span>
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+
+            <div class="selectionByOrder">
+                <button class="close-btn">X</button>
+                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
+                <h2 class="OrdrHtrName">S600TW</h2>
+                <span class="price">489000₮</span>
+                <div class="quantity-selector1">
+                    <button class="qty-btn minus">−</button>
+                    <span class="quantity">1</span>
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+
+            <div class="selectionByOrder">
+                <button class="close-btn">X</button>
+                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
+                <h2 class="OrdrHtrName">S800</h2>
+                <span class="price">520000₮</span>
+                <div class="quantity-selector1">
+                    <button class="qty-btn minus">−</button>
+                    <span class="quantity">1</span>
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+
+            <div class="selectionByOrder">
+                <button class="close-btn">X</button>
+                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
+                <h2 class="OrdrHtrName">S800T</h2>
+                <span class="price">570000₮</span>
+                <div class="quantity-selector1">
+                    <button class="qty-btn minus">−</button>
+                    <span class="quantity">1</span>
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+
+            <div class="selectionByOrder">
+                <button class="close-btn">X</button>
+                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
+                <h2 class="OrdrHtrName">S800TW</h2>
+                <span class="price">610000₮</span>
+                <div class="quantity-selector1">
+                    <button class="qty-btn minus">−</button>
+                    <span class="quantity">1</span>
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+
+            <div class="selectionByOrder">
+                <button class="close-btn">X</button>
+                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
+                <h2 class="OrdrHtrName">S900</h2>
+                <span class="price">520000₮</span>
+                <div class="quantity-selector1">
+                    <button class="qty-btn minus">−</button>
+                    <span class="quantity">1</span>
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+
+            <div class="selectionByOrder">
+                <button class="close-btn">X</button>
+                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
+                <h2 class="OrdrHtrName">S900T</h2>
+                <span class="price">570000₮</span>
+                <div class="quantity-selector1">
+                    <button class="qty-btn minus">−</button>
+                    <span class="quantity">1</span>
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+
+            <div class="selectionByOrder">
+                <button class="close-btn">X</button>
+                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
+                <h2 class="OrdrHtrName">S900TW</h2>
+                <span class="price">610000₮</span>
+                <div class="quantity-selector1">
+                    <button class="qty-btn minus">−</button>
+                    <span class="quantity">1</span>
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+
+            <div class="selectionByOrder">
+                <button class="close-btn">X</button>
+                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
+                <h2 class="OrdrHtrName">S1000</h2>
+                <span class="price">520000₮</span>
+                <div class="quantity-selector1">
+                    <button class="qty-btn minus">−</button>
+                    <span class="quantity">1</span>
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+
+            <div class="selectionByOrder">
+                <button class="close-btn">X</button>
+                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
+                <h2 class="OrdrHtrName">S1000T</h2>
+                <span class="price">570000₮</span>
+                <div class="quantity-selector1">
+                    <button class="qty-btn minus">−</button>
+                    <span class="quantity">1</span>
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+
+            <div class="selectionByOrder">
+                <button class="close-btn">X</button>
+                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
+                <h2 class="OrdrHtrName">S1000TW</h2>
+                <span class="price">610000₮</span>
+                <div class="quantity-selector1">
+                    <button class="qty-btn minus">−</button>
+                    <span class="quantity">1</span>
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+
+            <div class="selectionByOrder">
+                <button class="close-btn">X</button>
+                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
+                <h2 class="OrdrHtrName">S1200</h2>
+                <span class="price">520000₮</span>
+                <div class="quantity-selector1">
+                    <button class="qty-btn minus">−</button>
+                    <span class="quantity">1</span>
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+
+            <div class="selectionByOrder">
+                <button class="close-btn">X</button>
+                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
+                <h2 class="OrdrHtrName">S1200T</h2>
+                <span class="price">570000₮</span>
+                <div class="quantity-selector1">
+                    <button class="qty-btn minus">−</button>
+                    <span class="quantity">1</span>
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+
             <div class="selectionByOrder">
                 <button class="close-btn">X</button>
                 <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
@@ -148,8 +256,8 @@ document.querySelectorAll('.close-btn').forEach(function(button) {
             <div class="selectionByOrder">
                 <button class="close-btn">X</button>
                 <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
-                <h2 class="OrdrHtrName">S1200TW</h2>
-                <span class="price">399000₮</span>
+                <h2 class="OrdrHtrName">S400T</h2>
+                <span class="price">610000₮</span>
                 <div class="quantity-selector1">
                     <button class="qty-btn minus">−</button>
                     <span class="quantity">1</span>
@@ -160,8 +268,32 @@ document.querySelectorAll('.close-btn').forEach(function(button) {
             <div class="selectionByOrder">
                 <button class="close-btn">X</button>
                 <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
-                <h2 class="OrdrHtrName">S1200TW</h2>
-                <span class="price">690000₮</span>
+                <h2 class="OrdrHtrName">TX900TW</h2>
+                <span class="price">610000₮</span>
+                <div class="quantity-selector1">
+                    <button class="qty-btn minus">−</button>
+                    <span class="quantity">1</span>
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+
+            <div class="selectionByOrder">
+                <button class="close-btn">X</button>
+                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
+                <h2 class="OrdrHtrName">G1800</h2>
+                <span class="price">610000₮</span>
+                <div class="quantity-selector1">
+                    <button class="qty-btn minus">−</button>
+                    <span class="quantity">1</span>
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+
+            <div class="selectionByOrder">
+                <button class="close-btn">X</button>
+                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
+                <h2 class="OrdrHtrName">G2200</h2>
+                <span class="price">610000₮</span>
                 <div class="quantity-selector1">
                     <button class="qty-btn minus">−</button>
                     <span class="quantity">1</span>

@@ -191,7 +191,7 @@ window.addEventListener("click", function(event) {
                     <input type="text" id="phoneNum" placeholder="Утасны дугаар" required>
                     <label for="message">Мессеж:</label>
                     <textarea id="message" placeholder="Таны илгээх мессеж" required></textarea>
-                    <button type="submit" class="send-btn">Send</button>
+                    <button type="submit" class="send-btn">Илгээх</button>
                 </form>
             </div>
         </div>

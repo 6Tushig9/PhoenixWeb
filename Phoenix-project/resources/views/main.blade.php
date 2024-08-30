@@ -70,6 +70,7 @@
             </a>
         </div>
         <div class="utas">+976-8939-0000 </div>
+        <!--haygan deer darahad idewhijdeg click hiij boldog bolgoh-->
         <div class="hayg" id="Ohayg"> Оффис: Улаанбаатар хот, Амарсанаагын гудамж, Гандан 16р хороо, Колорадо бизнес төв, 202 тоот</div>
         <div class="hayg" id="bbhayg"> Борлуулалтын байр: Улаанбаатар хот, Аюушийн өргөн чөлөө, БГД 8р хороо, Хороолол барилгын материалын дэлгүүр, В1 давхар</div>
         <div class="hayg" id="Uhayg"> Үйлдвэр: Улаанбаатар хот, БЗД 29р хороо, Зохицол төсөл</div>
@@ -85,6 +86,5 @@
             <div class="endcrdt">@ 2024 | Designed by SprouX</div>
         </div>
     </footer>
-    
 </body>
 </html>
