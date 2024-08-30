@@ -5,7 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Tuslamj extends Model
+class Sanal_huselt extends Model
 {
     use HasFactory;
+    protected $table='sanal_huselts';
+    protected $fillable=['name','phone','comment'];
 }
