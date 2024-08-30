@@ -92,7 +92,7 @@
         </div>
         <h2 style="font-weight: 300;">ХАМТРАГЧ БАЙГУУЛЛАГУУД</h2>
         <div class="Hamtragchid">
-            {{-- <div class="Hamtragchid-slide">
+            <div class="Hamtragchid-slide">
                 <img src={{ asset("pics2use/Companions/KhaanBank.png")}}>
                 <img src={{ asset("pics2use/Companions/XacBank.png")}}>
                 <img src={{ asset("pics2use/Companions/TuriinBank.png")}}>
@@ -105,10 +105,8 @@
                 <img src={{ asset("pics2use/Companions/Tuss.png")}}>
                 <img src={{ asset("pics2use/Companions/Tomo.png")}}>
                 <img src={{ asset("pics2use/Companions/chatBot.png")}}>
-            </div> --}}
-            <div class="Hamtragchid-slide">
-                <img src={{ asset($logo) }} alt="">
-            <div>
+            </div>
+            
         </div>
 <script>
      var copy = document.querySelector(".Hamtragchid-slide").cloneNode(true)
