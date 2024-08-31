@@ -1,5 +1,6 @@
 <?php
 
+namespace App\Models;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -11,10 +12,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('product_models', function (Blueprint $table) {
+        Schema::create('main_categories', function (Blueprint $table) {
             $table->id();
-            $table->mediumText('model');
+            $table->mediumText('name');
+            $table->mediumText('feature');
+            $table->text('content');
+            $table->mediumText('image');
             $table->integer('price');
+            $table->integer('number');
+            $table->foreignIdFor(subCateogory::class)->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -24,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('product_models');
+        Schema::dropIfExists('main_categories');
     }
 };

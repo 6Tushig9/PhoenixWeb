@@ -20,3 +20,9 @@ Route::controller(Posts::class)->group(function (){
     Route::post('/hamtrah', 'hamtrah_huselt');
     Route::post('/sanal', 'sanal_huselt');
 });
+
+
+
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+Route::post('/products', [ProductController::class, 'store'])->name('products.store');
