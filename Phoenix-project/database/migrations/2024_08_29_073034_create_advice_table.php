@@ -14,7 +14,6 @@ return new class extends Migration
     {
         Schema::create('advice', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(User::class)->constrained();
             $table->mediumText('title');
             $table->text('content');
             $table->timestamps();
