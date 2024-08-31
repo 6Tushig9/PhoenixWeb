@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class UploadProduct extends Model
+class ProductPrice extends Model
 {
     use HasFactory;
-    protected $table='upload_product';
-    protected $fillable=['product-name','product-feature','product-info'];
+    protected $table='product_price';
+    protected $fillable=['model','price'];
 }

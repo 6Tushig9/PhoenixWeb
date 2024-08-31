@@ -2,31 +2,41 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\SanalHuseltResource\Pages;
-use App\Filament\Resources\SanalHuseltResource\RelationManagers;
-use App\Models\Sanal_huselt;
+use App\Filament\Resources\AdviceResource\Pages;
+use App\Filament\Resources\AdviceResource\RelationManagers;
+use App\Models\Advice;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\MarkdownEditor;
+use Filament\Forms\Components\Group;
 
-class SanalHuseltResource extends Resource
+class AdviceResource extends Resource
 {
-    protected static ?string $model = Sanal_huselt::class;
+    protected static ?string $model = Advice::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $navigationLabel = 'Санал хүсэлт';
+    protected static ?string $navigationLabel = 'Зөвлөмж';
+
+    protected static ?string $modelLabel = 'Зөвлөмж';
+    
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                //
+                Group::make()->schema([
+                    TextInput::make('title'),
+                    FileUpload::make('image'),
+                    MarkdownEditor::make('content'),
+                ])
             ]);
     }
 
@@ -34,16 +44,13 @@ class SanalHuseltResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name'),
-                TextColumn::make('phone'),
-                TextColumn::make('comment'),
+                
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -62,9 +69,9 @@ class SanalHuseltResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListSanalHuselts::route('/'),
-            'create' => Pages\CreateSanalHuselt::route('/create'),
-            'edit' => Pages\EditSanalHuselt::route('/{record}/edit'),
+            'index' => Pages\ListAdvice::route('/'),
+            'create' => Pages\CreateAdvice::route('/create'),
+            'edit' => Pages\EditAdvice::route('/{record}/edit'),
         ];
     }
 }
