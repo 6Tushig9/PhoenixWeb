@@ -14,7 +14,6 @@ return new class extends Migration
     {
         Schema::create('logonuud', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(User::class)->constrained();
             $table->mediumText('name');
             $table->mediumText('image');
             $table->timestamps();
