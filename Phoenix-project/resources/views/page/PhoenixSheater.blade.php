@@ -64,8 +64,14 @@
                                         <h2 class="name">S600</h2>
                                         <p class="descrptn">8-10м2</p>
                                     </div>
-
-                                    <button class="VMore">Дэлгэрэнгүй</button>
+                                    <script>
+                                        $(document).ready(function() {
+                                            $('.VMoring').click(function() {
+                                                window.location.href = '/buypage';
+                                            });
+                                        });
+                                        </script>
+                                    <button class="VMore VMoring">Дэлгэрэнгүй</button>
                                 </div>
                             </div>
                             <div class="card swiper-slide">
