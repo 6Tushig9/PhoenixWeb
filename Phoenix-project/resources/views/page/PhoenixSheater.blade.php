@@ -32,8 +32,18 @@
                         Ducimus ullam voluptate sapiente expedita nisi voluptates 
                         perspiciatis doloremque est eligendi consequatur animi.</h3>
                     <div class="shuudhudaldah">
-                        <div class="fnctbtn buy">Худалдан авах</div>
-                        <div class="fnctbtn cart">Сагсанд хийх</div>
+                         <script>
+                        $(document).ready(function() {
+                            $('#buying').click(function() {
+                                window.location.href = '/buypage';
+                            });
+                            $('#basketing').click(function(){
+                                window.location.href='/shoppingcart';
+                            });
+                        });
+                        </script>
+                        <div class="fnctbtn buy" id="buying">Худалдан авах</div>
+                        <div class="fnctbtn cart" id="basketing">Сагсанд хийх</div>
                     </div>
                 </div>
                 <div class="zurag1">

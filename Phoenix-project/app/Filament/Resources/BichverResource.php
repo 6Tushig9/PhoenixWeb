@@ -10,6 +10,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Group;
 use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -47,7 +48,7 @@ class BichverResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('title'),
-                TextColumn::make('image'),
+                ImageColumn::make('image'),
                 TextColumn::make('post'),
             ])
             ->filters([
