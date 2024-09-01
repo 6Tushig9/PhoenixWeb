@@ -23,6 +23,7 @@ Route::controller(Posts::class)->group(function (){
 });
 
 Route::get('/test', function(){
-    // return response()->json(['data'=>Product::all()]);
     return view('test', ['products'=>Product::all()]);
 });
+
+Route::get('/product-model/{id}', [ProductModel::class, 'show'])->name('product-model.show');
