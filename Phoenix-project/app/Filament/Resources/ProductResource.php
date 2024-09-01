@@ -6,9 +6,15 @@ use App\Filament\Resources\ProductResource\Pages;
 use App\Filament\Resources\ProductResource\RelationManagers;
 use App\Models\Product;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Group;
+use Filament\Forms\Components\MarkdownEditor;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -23,7 +29,20 @@ class ProductResource extends Resource
     {
         return $form
             ->schema([
-                //
+               Group::make()->schema([
+                TextInput::make('name')->required(),
+                TextInput::make('feature')->required(),
+                MarkdownEditor::make('content')->required(),
+
+                FileUpload::make('image')
+                    ->required(),
+                TextInput::make('price')
+                    ->numeric()
+                    ->required(),
+                TextInput::make('number')
+                    ->numeric()
+                    ->required(),
+               ])
             ]);
     }
 
@@ -31,7 +50,12 @@ class ProductResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name'),
+                TextColumn::make('feature'),
+                TextColumn::make('content'),
+                ImageColumn::make('image')->size(40),
+                TextColumn::make('price'),
+                TextColumn::make('number'),
             ])
             ->filters([
                 //
