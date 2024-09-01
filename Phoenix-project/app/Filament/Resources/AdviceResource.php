@@ -26,6 +26,8 @@ class AdviceResource extends Resource
     protected static ?string $navigationLabel = 'Зөвлөмж';
 
     protected static ?string $modelLabel = 'Зөвлөмж';
+
+    protected static ?string $navigationGroup = 'Зөвлөмж оруулах хэсэг';
     
 
     public static function form(Form $form): Form

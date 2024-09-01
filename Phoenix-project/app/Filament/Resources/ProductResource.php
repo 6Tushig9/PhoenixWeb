@@ -23,7 +23,11 @@ class ProductResource extends Resource
 {
     protected static ?string $model = Product::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-shopping-cart';
+
+    protected static ?string $navigationGroup = 'Бүтээгдэхүүн оруулах';
+
+    protected static ?string $navigationLabel = 'Ерөнхий мэдээлэл';
 
     public static function form(Form $form): Form
     {
@@ -37,11 +41,9 @@ class ProductResource extends Resource
                 FileUpload::make('image')
                     ->required(),
                 TextInput::make('price')
-                    ->numeric()
-                    ->required(),
+                    ->numeric(),
                 TextInput::make('number')
-                    ->numeric()
-                    ->required(),
+                    ->numeric(),
                ])
             ]);
     }
@@ -62,6 +64,7 @@ class ProductResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

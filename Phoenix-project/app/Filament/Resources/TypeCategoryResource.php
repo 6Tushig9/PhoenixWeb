@@ -17,7 +17,11 @@ class TypeCategoryResource extends Resource
 {
     protected static ?string $model = TypeCategory::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-square-3-stack-3d';
+
+    protected static ?string $navigationGroup = 'Бүтээгдэхүүн оруулах';
+
+    protected static ?string $navigationLabel = 'Ангилал';
 
     public static function form(Form $form): Form
     {

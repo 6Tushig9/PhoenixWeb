@@ -21,11 +21,11 @@ class LogonuudResource extends Resource
 {
     protected static ?string $model = Logonuud::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-photo';
 
-    protected static ?string $navigationGroup = 'Лого оруулах';
+    protected static ?string $navigationGroup = 'Харилцагч байгууллага';
 
-    protected static ?string $navigationLabel = 'Газруудын лого оруулах';
+    protected static ?string $navigationLabel = 'Газруудын зураг оруулах';
 
     protected static ?string $modelLabel = 'Зурагнууд';
 

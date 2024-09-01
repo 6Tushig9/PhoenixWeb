@@ -23,11 +23,11 @@ class BichverResource extends Resource
 {
     protected static ?string $model = PostOruulah::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-arrow-up-on-square-stack';
 
-    protected static ?string $navigationLabel = 'Веб руу пост бичвэр оруулах';
+    protected static ?string $navigationLabel = 'Веб руу бичвэр оруулах';
 
-    protected static ?string $navigationGroup = 'Пост оруулах';
+    protected static ?string $navigationGroup = 'Бичвэр оруулах';
 
     protected static ?string $modelLabel = 'Постууд';
 
@@ -36,9 +36,9 @@ class BichverResource extends Resource
         return $form
             ->schema([
                Group::make()->schema([
-                    TextInput::make('title'),
-                    FileUpload::make('image'),
-                    MarkdownEditor::make('post'),
+                    TextInput::make('title')->required(),
+                    FileUpload::make('image')->required(),
+                    MarkdownEditor::make('post')->required(),
                ])
             ]);
     }

@@ -18,9 +18,11 @@ class HamtrahHuseltResource extends Resource
 {
     protected static ?string $model = Hamtrah_huselt::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
     protected static ?string $navigationLabel = 'Хамтрах хүсэлт';
+
+    protected static ?string $navigationGroup = 'Хэрэглэгчдээс ирэх хүсэлт';
 
     public static function form(Form $form): Form
     {

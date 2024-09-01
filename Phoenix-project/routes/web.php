@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
+use App\Models\Product;
 
 Route::controller(RoutePages::class)->group(function (){
     Route::get('/', 'showmain');
@@ -21,8 +22,7 @@ Route::controller(Posts::class)->group(function (){
     Route::post('/sanal', 'sanal_huselt');
 });
 
-
-
-Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
-Route::post('/products', [ProductController::class, 'store'])->name('products.store');
+Route::get('/test', function(){
+    // return response()->json(['data'=>Product::all()]);
+    return view('test', ['products'=>Product::all()]);
+});
