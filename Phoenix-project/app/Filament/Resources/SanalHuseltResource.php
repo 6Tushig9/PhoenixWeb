@@ -18,9 +18,11 @@ class SanalHuseltResource extends Resource
 {
     protected static ?string $model = Sanal_huselt::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-bottom-center-text';
 
-    protected static ?string $navigationLabel = 'Санал хүслэт';
+    protected static ?string $navigationLabel = 'Санал хүсэлт';
+
+    protected static ?string $navigationGroup = 'Хэрэглэгчдээс ирэх хүсэлт';
 
     public static function form(Form $form): Form
     {

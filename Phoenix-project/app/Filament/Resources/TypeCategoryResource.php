@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\HamtrahHuseltResource\Pages;
-use App\Filament\Resources\HamtrahHuseltResource\RelationManagers;
-use App\Models\Hamtrah_huselt;
+use App\Filament\Resources\TypeCategoryResource\Pages;
+use App\Filament\Resources\TypeCategoryResource\RelationManagers;
+use App\Models\TypeCategory;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -12,17 +12,16 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\Tables\Columns\TextColumn;
 
-class HamtrahHuseltResource extends Resource
+class TypeCategoryResource extends Resource
 {
-    protected static ?string $model = Hamtrah_huselt::class;
+    protected static ?string $model = TypeCategory::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-user-group';
+    protected static ?string $navigationIcon = 'heroicon-o-square-3-stack-3d';
 
-    protected static ?string $navigationLabel = 'Хамтрах хүсэлт';
+    protected static ?string $navigationGroup = 'Бүтээгдэхүүн оруулах';
 
-    protected static ?string $navigationGroup = 'Хэрэглэгчдээс ирэх хүсэлт';
+    protected static ?string $navigationLabel = 'Ангилал';
 
     public static function form(Form $form): Form
     {
@@ -36,9 +35,7 @@ class HamtrahHuseltResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name'),
-                TextColumn::make('phone'),
-                TextColumn::make('comment'),
+                //
             ])
             ->filters([
                 //
@@ -63,9 +60,9 @@ class HamtrahHuseltResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListHamtrahHuselts::route('/'),
-            'create' => Pages\CreateHamtrahHuselt::route('/create'),
-            'edit' => Pages\EditHamtrahHuselt::route('/{record}/edit'),
+            'index' => Pages\ListTypeCategories::route('/'),
+            'create' => Pages\CreateTypeCategory::route('/create'),
+            'edit' => Pages\EditTypeCategory::route('/{record}/edit'),
         ];
     }
 }

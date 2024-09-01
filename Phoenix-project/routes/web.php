@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
+use App\Models\Product;
 
 Route::controller(RoutePages::class)->group(function (){
     Route::get('/', 'showmain');
@@ -19,4 +20,9 @@ Route::controller(RoutePages::class)->group(function (){
 Route::controller(Posts::class)->group(function (){
     Route::post('/hamtrah', 'hamtrah_huselt');
     Route::post('/sanal', 'sanal_huselt');
+});
+
+Route::get('/test', function(){
+    // return response()->json(['data'=>Product::all()]);
+    return view('test', ['products'=>Product::all()]);
 });

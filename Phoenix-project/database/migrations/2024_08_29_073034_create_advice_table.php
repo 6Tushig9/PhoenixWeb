@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::create('advice', function (Blueprint $table) {
             $table->id();
             $table->mediumText('title');
+            $table->mediumText('image');
             $table->text('content');
             $table->timestamps();
         });
