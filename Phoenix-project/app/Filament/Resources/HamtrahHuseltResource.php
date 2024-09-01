@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\HamtrahHuseltResource\Pages;
 use App\Filament\Resources\HamtrahHuseltResource\RelationManagers;
-use App\Models\HamtrahHuselt;
+use App\Models\Hamtrah_huselt;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class HamtrahHuseltResource extends Resource
 {
-    protected static ?string $model = HamtrahHuselt::class;
+    protected static ?string $model = Hamtrah_huselt::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
