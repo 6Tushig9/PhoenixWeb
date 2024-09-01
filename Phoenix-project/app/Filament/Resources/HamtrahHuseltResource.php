@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\HamtrahHuseltResource\Pages;
 use App\Filament\Resources\HamtrahHuseltResource\RelationManagers;
-use App\Models\Hamtrah_huselt;
+use App\Models\HamtrahHuselt;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -12,17 +12,12 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\Tables\Columns\TextColumn;
 
 class HamtrahHuseltResource extends Resource
 {
-    protected static ?string $model = Hamtrah_huselt::class;
+    protected static ?string $model = HamtrahHuselt::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-user-group';
-
-    protected static ?string $navigationLabel = 'Хамтрах хүсэлт';
-
-    protected static ?string $navigationGroup = 'Хэрэглэгчдээс ирэх хүсэлт';
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
     {
@@ -36,9 +31,7 @@ class HamtrahHuseltResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name'),
-                TextColumn::make('phone'),
-                TextColumn::make('comment'),
+                //
             ])
             ->filters([
                 //
