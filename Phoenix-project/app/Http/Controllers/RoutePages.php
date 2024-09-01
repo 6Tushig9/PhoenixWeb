@@ -13,13 +13,12 @@ class RoutePages extends Controller
         return view('main');
     }
     
-    public function showmainpage(){
-        return view('page.Company', [
-                                    'data'=>PostOruulah::all(),
-                                    'logo'=>Logonuud::all(['image']),
-                                    'year'=>Statistic::all(['year']),
-                                    'hometown'=>Statistic::all(['hometown']),
-                                    ]);
+    public function showmainpage(Request $request){
+        if($request->isMethod('get')){
+            return view('page.Company', [
+                'postuud'=>PostOruulah::all(),
+                ]);
+        }
     }
 
     public function phoenixsheater(Request $request){
