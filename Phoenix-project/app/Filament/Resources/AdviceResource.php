@@ -2,41 +2,42 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\LogonuudResource\Pages;
-use App\Filament\Resources\LogonuudResource\RelationManagers;
-use App\Models\Logonuud;
+use App\Filament\Resources\AdviceResource\Pages;
+use App\Filament\Resources\AdviceResource\RelationManagers;
+use App\Models\Advice;
 use Filament\Forms;
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Group;
-use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\MarkdownEditor;
+use Filament\Forms\Components\Group;
 
-class LogonuudResource extends Resource
+class AdviceResource extends Resource
 {
-    protected static ?string $model = Logonuud::class;
+    protected static ?string $model = Advice::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-photo';
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $navigationGroup = 'Харилцагч байгууллага';
+    protected static ?string $navigationLabel = 'Зөвлөмж';
 
-    protected static ?string $navigationLabel = 'Газруудын зураг оруулах';
+    protected static ?string $modelLabel = 'Зөвлөмж';
 
-    protected static ?string $modelLabel = 'Зурагнууд';
+    protected static ?string $navigationGroup = 'Зөвлөмж оруулах хэсэг';
+    
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Group::make()
-                ->schema([
-                    TextInput::make('name'),
+                Group::make()->schema([
+                    TextInput::make('title'),
                     FileUpload::make('image'),
+                    MarkdownEditor::make('content'),
                 ])
             ]);
     }
@@ -45,8 +46,7 @@ class LogonuudResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name'),
-                TextColumn::make('image'),
+                
             ])
             ->filters([
                 //
@@ -71,9 +71,9 @@ class LogonuudResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListLogonuuds::route('/'),
-            'create' => Pages\CreateLogonuud::route('/create'),
-            'edit' => Pages\EditLogonuud::route('/{record}/edit'),
+            'index' => Pages\ListAdvice::route('/'),
+            'create' => Pages\CreateAdvice::route('/create'),
+            'edit' => Pages\EditAdvice::route('/{record}/edit'),
         ];
     }
 }

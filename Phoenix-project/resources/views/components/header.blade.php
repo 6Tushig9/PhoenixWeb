@@ -37,7 +37,7 @@
             <a href="/company">БАЙГУУЛЛАГА</a>
             <a href="/ecological">Б.О.Н.З</a>
         </div>
-        <a href="/phoenixsheater">
+        <a href="/">
             <img src={{ asset("pics2use/LogoBlck.png")}} class="MenuLogo">
         </a>
         <div class="rghtMenu">

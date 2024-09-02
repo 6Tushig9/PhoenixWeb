@@ -108,6 +108,13 @@ window.addEventListener("click", function(event) {
                     </div>
                 </div>
                 <div class="bntsForOrder">
+                    <script>
+                    $(document).ready(function() {
+                        $('.cartBtn').click(function() {
+                        window.location.href = '/shoppingcart';
+                        });
+                    });
+                    </script>
                     <button class="cartBtn">Сагсанд хийх</button>
                     <button class="orderBtn">Захиалга өгөх</button>
                 </div>

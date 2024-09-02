@@ -14,9 +14,8 @@ return new class extends Migration
     {
         Schema::create('post_oruulah', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(User::class)->constrained();
-            $table->mediumText('title');
-            $table->mediumText('image');
+            $table->text('title');
+            $table->text('image');
             $table->text('post');
             $table->timestamps();
         });

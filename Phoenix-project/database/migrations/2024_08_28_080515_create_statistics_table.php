@@ -14,7 +14,6 @@ return new class extends Migration
     {
         Schema::create('statistics', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(User::class)->constrained();
             $table->integer('year');
             $table->integer('hometown')->default(0);
             $table->double('electric')->default(0);

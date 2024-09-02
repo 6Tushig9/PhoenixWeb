@@ -40,8 +40,8 @@
 
             </div>
         </div>
-        {{-- <div class="secondInfo">
-            <div class="scndIfno">
+        <div class="secondInfo">
+            {{-- <div class="scndIfno">
                 <h3>Бидний үнэ цэн бол чанар</h3>
                    Бид үүсгэн байгуулагдсан зорилгоо биелүүлэхийн тулд бүтээгдэхүүний 
                    чанарыг хамгийн эхэнд тавьж бүтээгдэхүүн хөгжүүлэлт дээр нухацтай 
@@ -64,21 +64,22 @@
                     өрсөлдөх чадвартай бүтээгдэхүүн бүтээсэн.
 
             </div>
-            <div class="scndPic"><img src={{ asset("pics2use/TechSketch.jpg")}}></div>
-        </div> --}}
-        <div class="secondInfo">
-            <div class="scndIfno">
-                {{ $data }}
-            </div>
-            <div class="scndPic"><img src={{ asset("pics2use/TechSketch.jpg")}}></div>
+            <div class="scndPic"><img src={{ asset("pics2use/TechSketch.jpg")}}></div> --}}
+            @foreach ($postuud as $posts)
+                <div class="scndIfno">
+                    <h3>{{ $posts->title }}</h3>
+                    {{ $posts->post }}
+                </div>
+                <div class="scndPic"><img src={{ asset('storage/'.$posts->image) }} alt=""></div>
+            @endforeach
         </div>
         <div id="Milestone">
             <div class="section">
-                <div class="Numbers">{{ $year }}</div>
+                <div class="Numbers">3</div>
                 <div class="descrptnOfNumber">Жил</div>
             </div>
             <div class="section">
-                <div class="Numbers">{{ $hometown }}</div>
+                <div class="Numbers">500'000</div>
                 <div class="descrptnOfNumber">Нийт айл өрх</div>
             </div>
             <div class="section">
@@ -92,6 +93,7 @@
         </div>
         <h2 style="font-weight: 300;">ХАМТРАГЧ БАЙГУУЛЛАГУУД</h2>
         <div class="Hamtragchid">
+            <div class="Hamtragchid-slide">
             <div class="Hamtragchid-slide">
                 <img src={{ asset("pics2use/Companions/KhaanBank.png")}}>
                 <img src={{ asset("pics2use/Companions/XacBank.png")}}>
@@ -107,6 +109,7 @@
                 <img src={{ asset("pics2use/Companions/chatBot.png")}}>
             </div>
             
+            </div>
         </div>
 <script>
      var copy = document.querySelector(".Hamtragchid-slide").cloneNode(true)
