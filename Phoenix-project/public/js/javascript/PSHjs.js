@@ -26,11 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 });
 
-/* img click home page */
-// const imgclick = document.querySelector('.MenuLogo');
-// imgclick.addEventListener('click', function() {
-//     window.location.href = '/PhoenixSheater';
-// });
+// img click home page 
 document.addEventListener("DOMContentLoaded", function () {
     const imgClick = document.querySelector(".MenuLogo");
     if (imgClick) {
@@ -40,47 +36,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-/*scroll hiihed menu heseg garch ireh method*/
-// let lastScrollTop = 0;
-// const navbar = document.querySelector('.navi');
-// const mblnavbar = document.querySelector('.mblMenu');
+//scroll hiihed menu heseg garch ireh method
+document.addEventListener("DOMContentLoaded",function(){
+    let lastScrollTop = 0;
+    const navbar = document.querySelector(".navi");
+    const mblnavbar = document.querySelector(".mblMenu");
 
-// window.addEventListener('scroll', function() {
-//     let scrollTop = window.scrollY || document.documentElement.scrollTop;
-//     if (scrollTop > lastScrollTop) {
-         // Downscroll
-//         navbar.classList.add('hidden');
-//         mblnavbar.classList.add('hidden');
-        
-//     } else {
-         // Upscroll
-//         navbar.classList.remove('hidden');
-//         mblnavbar.classList.remove('hidden');
-//     }
-//     lastScrollTop = scrollTop;
-// });
-
-let lastScrollTop = 0;
-const navbar = document.querySelector(".navi");
-const mblnavbar = document.querySelector(".mblMenu");
-
-window.addEventListener("scroll", function () {
-    let scrollTop = window.scrollY || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop) {
-        // Downscroll
-        if (navbar) navbar.classList.add("hidden");
-        if (mblnavbar) mblnavbar.classList.add("hidden");
-    } else {
-        // Upscroll
-        if (navbar) navbar.classList.remove("hidden");
-        if (mblnavbar) mblnavbar.classList.remove("hidden");
-    }
-    lastScrollTop = scrollTop;
+    window.addEventListener("scroll", function () {
+        let scrollTop = window.scrollY || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            // Downscroll
+            if (navbar) navbar.classList.add("hidden");
+            if (mblnavbar) mblnavbar.classList.add("hidden");
+        } else {
+            // Upscroll
+            if (navbar) navbar.classList.remove("hidden");
+            if (mblnavbar) mblnavbar.classList.remove("hidden");
+        }
+        lastScrollTop = scrollTop;
+    });
 });
 
 
-
-/*buypage deh heater songoltiin function() */
+//buypage deh heater songoltiin function() 
 document.addEventListener("DOMContentLoaded", function (){
     const selections = document.querySelectorAll(".selections");
     selections.forEach(function (selection) {
@@ -146,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-  /*ene hesegt advice page deh medeellig delgerengui uzeh bolon haahad zoriulagdsan code bgaa*/
+ //ene hesegt advice page deh medeellig delgerengui uzeh bolon haahad zoriulagdsan code bgaa
 function More1(){
     var pelement=document.querySelector('#card1 p');
     var buttonname=document.getElementById('More1');
@@ -246,17 +224,6 @@ function More6(){
 
 
 //buyPage ruu shiljih code
-// const buypageJump2=document.querySelectorAll('.VMore');
-// const buyPageJump=document.querySelector('.fnctbtn');
-// buypageJump2.forEach(function(element) {
-//     element.addEventListener('click', function() {
-//         window.location.href = '/BuyPage';
-//     });
-// });
-// buyPageJump.addEventListener('click',function(){
-//     window.location.href='/BuyPage'
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
     const buypageJump2 = document.querySelectorAll(".VMore");
     const buyPageJump = document.querySelector(".fnctbtn");
@@ -275,3 +242,67 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     } 
 });
+
+
+
+//shoppingCart code
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("complaintBtn").addEventListener("click", function () {
+        document.getElementById("complaintPopup").style.display = "flex";
+        document.body.classList.add("no-scroll");
+    });
+    document.getElementById("closeComplaintPopup")
+        .addEventListener("click", function () {
+            document.getElementById("complaintPopup").style.display = "none";
+            document.body.classList.remove("no-scroll");
+        });
+    window.addEventListener("click", function (event) {
+        const popup = document.getElementById("complaintPopup");
+        if (event.target === popup) {
+            popup.style.display = "none";
+            document.body.classList.remove("no-scroll");
+        }
+    });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Attach event listeners to all plus and minus buttons
+    document.querySelectorAll(".selectionByOrder").forEach(function (card) {
+        // Get the base price from the existing price element
+        let priceElement = card.querySelector(".price");
+        let basePrice = parseInt(priceElement.innerText.replace(/[^\d]/g, "")); // Extract numeric value
+
+        let quantity = card.querySelector(".quantity");
+
+        // Minus button functionality
+        card.querySelector(".minus").addEventListener("click", function () {
+            if (quantity.innerText > 1) {
+                quantity.innerText = parseInt(quantity.innerText) - 1;
+                updatePrice(priceElement, quantity.innerText, basePrice);
+            }
+        });
+
+        // Plus button functionality
+        card.querySelector(".plus").addEventListener("click", function () {
+            quantity.innerText = parseInt(quantity.innerText) + 1;
+            updatePrice(priceElement, quantity.innerText, basePrice);
+        });
+    });
+    function updatePrice(priceElement, quantity, basePrice) {
+        let newPrice = basePrice * quantity;
+        priceElement.innerText = `${newPrice}₮`;
+    }
+    //delete section
+    document.querySelectorAll(".close-btn").forEach(function (button) {
+        button.addEventListener("click", function () {
+            let sectionToRemove = button.closest(".selectionByOrder");
+            sectionToRemove.remove();
+        });
+    });
+});
+
+
+
+// calculate page code

@@ -94,6 +94,7 @@
         <h2 style="font-weight: 300;">ХАМТРАГЧ БАЙГУУЛЛАГУУД</h2>
         <div class="Hamtragchid">
             <div class="Hamtragchid-slide">
+            <div class="Hamtragchid-slide">
                 <img src={{ asset("pics2use/Companions/KhaanBank.png")}}>
                 <img src={{ asset("pics2use/Companions/XacBank.png")}}>
                 <img src={{ asset("pics2use/Companions/TuriinBank.png")}}>
@@ -106,6 +107,8 @@
                 <img src={{ asset("pics2use/Companions/Tuss.png")}}>
                 <img src={{ asset("pics2use/Companions/Tomo.png")}}>
                 <img src={{ asset("pics2use/Companions/chatBot.png")}}>
+            </div>
+            
             </div>
         </div>
 <script>
@@ -149,8 +152,8 @@
                     <input type="text" id="phoneNum" placeholder="Утасны дугаар" required>
                     <label for="message">Мессеж:</label>
                     <textarea id="message" placeholder="Таны илгээх мессеж" required></textarea>
-                    <button type="button" class="send-btn">Send</button>
-                </section>
+                    <button type="submit" class="send-btn">Send</button>
+                </form>
             </div>
         </div>
 
