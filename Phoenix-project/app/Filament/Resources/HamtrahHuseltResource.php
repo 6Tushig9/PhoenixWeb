@@ -19,6 +19,10 @@ class HamtrahHuseltResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationGroup = 'Хүсэлтүүд';
+
+    protected static ?string $navigationLabel = 'Хамтрах хүсэлт';
+
     public static function form(Form $form): Form
     {
         return $form

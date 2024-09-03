@@ -26,4 +26,6 @@ Route::get('/test', function(){
     return view('test', ['products'=>Product::all()]);
 });
 
-Route::get('/product-model/{id}', [ProductModel::class, 'show'])->name('product-model.show');
+Route::get('/product-model/{id}', [ProductModel::class, 'subcategory'])->name('product-model.show');
+
+Route::post('/typecategory/store', [ProductModel::class, 'store'])->name('typecategory.store');
