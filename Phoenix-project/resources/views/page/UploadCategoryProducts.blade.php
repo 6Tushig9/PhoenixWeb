@@ -1,7 +1,4 @@
-@extends('main')
-
-@section('Phoenix')
-    <div class="mx-auto px-4 py-6 h-[600px]">
+<div class="mx-auto px-4 py-6 h-[600px]">
         <h1 class="text-2xl font-bold mb-6">Upload TypeCategory</h1>
 
         <form action="{{ route('typecategory.store') }}" method="POST" enctype="multipart/form-data">
@@ -33,5 +30,4 @@
                 Submit
             </button>
         </form>
-    </div>
-@endsection
+</div>
