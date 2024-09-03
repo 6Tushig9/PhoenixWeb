@@ -75,7 +75,7 @@
             </div>
         </div>
         <div class="secondInfo">
-            {{-- <div class="scndIfno">
+            <div class="scndIfno">
                 <h3>Бидний үнэ цэн бол чанар</h3>
                    Бид үүсгэн байгуулагдсан зорилгоо биелүүлэхийн тулд бүтээгдэхүүний 
                    чанарыг хамгийн эхэнд тавьж бүтээгдэхүүн хөгжүүлэлт дээр нухацтай 
@@ -98,14 +98,7 @@
                     өрсөлдөх чадвартай бүтээгдэхүүн бүтээсэн.
 
             </div>
-            <div class="scndPic"><img src={{ asset("pics2use/TechSketch.jpg")}}></div> --}}
-            @foreach ($postuud as $posts)
-                <div class="scndIfno">
-                    <h3>{{ $posts->title }}</h3>
-                    {{ $posts->post }}
-                </div>
-                <div class="scndPic"><img src={{ asset('storage/'.$posts->image) }} alt=""></div>
-            @endforeach
+            <div class="scndPic"><img src={{ asset("pics2use/TechSketch.jpg")}}></div>
         </div>
         <div id="Milestone">
             <div class="section">
