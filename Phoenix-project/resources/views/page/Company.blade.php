@@ -17,6 +17,40 @@
         }
     });
 </script>
+    <div id="thinnav">
+        <div class="Welcome">Тавтай морил</div>
+        <div class="rightsd">
+            <div class="FAQhelp">
+                <button id="complaintBtn" class="open-popup-btn">Санал хүсэлт |</button>
+                <a href="/faq">Тусламж |</a>
+            </div>
+            <div class="miniicon">
+                <div class="shpngcrt">
+                    <a href="/shoppingcart">
+                        <img src={{ asset("pics2use/icons/Shoppingcart.png") }} class="shoppingC"><!-- src={{ asset("pics2use/icons/Shoppingcart.png") }}-->
+                    </a>
+                </div>
+                <div class="miniSocial">
+                    <a href="https://www.facebook.com/centralrich.mongolia">
+                        <img src= {{ asset("pics2use/icons/facebookwhite.png")}} class="mini fb">
+                    </a>
+                    <a href="https://www.facebook.com/centralrich.mongolia">
+                        <img src={{ asset("pics2use/icons/fbgroup.png")}} class="mini group">
+                    </a>
+                    <a href="https://www.instagram.com/phoenix_s_heater">
+                        <img src={{ asset("pics2use/icons/igwhite.png")}} class="mini insta">
+                    </a>
+                </div>
+                <div class="anglihel">
+                    <a href="">
+                        <img src={{ asset("pics2use/icons/Anglihel.png")}} class="lang">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div id="mnContnr">
         <div class="firstInfo">
             <div class="frstPic"> 
@@ -41,7 +75,7 @@
             </div>
         </div>
         <div class="secondInfo">
-            {{-- <div class="scndIfno">
+            <div class="scndIfno">
                 <h3>Бидний үнэ цэн бол чанар</h3>
                    Бид үүсгэн байгуулагдсан зорилгоо биелүүлэхийн тулд бүтээгдэхүүний 
                    чанарыг хамгийн эхэнд тавьж бүтээгдэхүүн хөгжүүлэлт дээр нухацтай 
@@ -64,14 +98,7 @@
                     өрсөлдөх чадвартай бүтээгдэхүүн бүтээсэн.
 
             </div>
-            <div class="scndPic"><img src={{ asset("pics2use/TechSketch.jpg")}}></div> --}}
-            @foreach ($postuud as $posts)
-                <div class="scndIfno">
-                    <h3>{{ $posts->title }}</h3>
-                    {{ $posts->post }}
-                </div>
-                <div class="scndPic"><img src={{ asset('storage/'.$posts->image) }} alt=""></div>
-            @endforeach
+            <div class="scndPic"><img src={{ asset("pics2use/TechSketch.jpg")}}></div>
         </div>
         <div id="Milestone">
             <div class="section">

@@ -14,11 +14,7 @@ class RoutePages extends Controller
     }
     
     public function showmainpage(Request $request){
-        if($request->isMethod('get')){
-            return view('page.Company', [
-                'postuud'=>PostOruulah::all(),
-                ]);
-        }
+            return view('page.Company');
     }
 
     public function phoenixsheater(Request $request){

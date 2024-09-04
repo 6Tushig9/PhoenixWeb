@@ -17,6 +17,41 @@
         }
     });
 </script>
+    <div id="thinnav">
+        <div class="Welcome">Тавтай морил</div>
+        <div class="rightsd">
+            <div class="FAQhelp">
+                <button id="complaintBtn" class="open-popup-btn">Санал хүсэлт |</button>
+                <a href="/faq">Тусламж |</a>
+            </div>
+            <div class="miniicon">
+                <div class="shpngcrt">
+                    <a href="/shoppingcart">
+                        <img src={{ asset("pics2use/icons/Shoppingcart.png") }} class="shoppingC"><!-- src={{ asset("pics2use/icons/Shoppingcart.png") }}-->
+                    </a>
+                </div>
+                <div class="miniSocial">
+                    <a href="https://www.facebook.com/centralrich.mongolia">
+                        <img src= {{ asset("pics2use/icons/facebookwhite.png")}} class="mini fb">
+                    </a>
+                    <a href="https://www.facebook.com/centralrich.mongolia">
+                        <img src={{ asset("pics2use/icons/fbgroup.png")}} class="mini group">
+                    </a>
+                    <a href="https://www.instagram.com/phoenix_s_heater">
+                        <img src={{ asset("pics2use/icons/igwhite.png")}} class="mini insta">
+                    </a>
+                </div>
+                <div class="anglihel">
+                    <a href="">
+                        <img src={{ asset("pics2use/icons/Anglihel.png")}} class="lang">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<div id="AdvPage">
         <div class="cardd" id="card1">
             <img src={{ asset("pics2use/TechSketch.jpg")}}>
             <div>
@@ -33,4 +68,5 @@
                 <button id="More1" onclick="More1()">Дэлгэрэнгүй...</button>
             </div>
         </div>
+</div>
 @endsection
