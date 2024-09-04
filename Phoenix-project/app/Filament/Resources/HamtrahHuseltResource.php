@@ -17,7 +17,7 @@ class HamtrahHuseltResource extends Resource
 {
     protected static ?string $model = Hamtrah_huselt::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
     protected static ?string $navigationGroup = 'Хүсэлтүүд';
 
