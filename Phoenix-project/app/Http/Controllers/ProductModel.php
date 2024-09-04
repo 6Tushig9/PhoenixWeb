@@ -28,6 +28,7 @@ class ProductModel extends Controller
         $product = Product::findOrFail($request->product_id);
         $product->typecategory()->create([
             'model' => $request->model,
+            'feature'=> $request->feature,
             'image' => $request->image,
             'price' => $request->price,
             'number' => $request->number,
