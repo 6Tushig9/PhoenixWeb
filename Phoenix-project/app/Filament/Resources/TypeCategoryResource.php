@@ -2,26 +2,29 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\SanalHuseltResource\Pages;
-use App\Filament\Resources\SanalHuseltResource\RelationManagers;
-use App\Models\Sanal_huselt;
+use App\Filament\Resources\TypeCategoryResource\Pages;
+use App\Filament\Resources\TypeCategoryResource\RelationManagers;
+use App\Models\TypeCategory;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Nette\Utils\ImageColor;
 
-class SanalHuseltResource extends Resource
+class TypeCategoryResource extends Resource
 {
-    protected static ?string $model = Sanal_huselt::class;
+    protected static ?string $model = TypeCategory::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-bottom-center-text';
+    protected static ?string $navigationIcon = 'heroicon-o-circle-stack';
 
-    protected static ?string $navigationGroup = 'Хүсэлтүүд';
+    protected static ?string $navigationGroup = 'Бүтээгдэхүүн';
 
-    protected static ?string $navigationLabel = 'Санал хүсэлт';
+    protected static ?string $navigationLabel = 'Загварууд';
 
     public static function form(Form $form): Form
     {
@@ -35,7 +38,10 @@ class SanalHuseltResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('model'),
+                ImageColumn::make('image'),
+                TextColumn::make('price'),
+                TextColumn::make('number'),
             ])
             ->filters([
                 //
@@ -60,9 +66,9 @@ class SanalHuseltResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListSanalHuselts::route('/'),
-            'create' => Pages\CreateSanalHuselt::route('/create'),
-            'edit' => Pages\EditSanalHuselt::route('/{record}/edit'),
+            'index' => Pages\ListTypeCategories::route('/'),
+            'create' => Pages\CreateTypeCategory::route('/create'),
+            'edit' => Pages\EditTypeCategory::route('/{record}/edit'),
         ];
     }
 }
