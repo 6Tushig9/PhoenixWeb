@@ -12,6 +12,11 @@
             </div>
 
             <div class="mb-4 h-[400px]">
+                <label for="model" class="block text-sm font-medium text-gray-700">Feature</label>
+                <input type="text" id="feature" name="feature" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 sm:text-sm" required>
+            </div>
+
+            <div class="mb-4 h-[400px]">
                 <label for="image" class="block text-sm font-medium text-gray-700">Image</label>
                 <input type="file" id="image" name="image" class="mt-1 block w-full text-sm text-gray-500 file:border-gray-300 file:bg-gray-50 file:py-2 file:px-4 file:rounded-md file:text-sm file:font-medium hover:file:bg-gray-100" required>
             </div>

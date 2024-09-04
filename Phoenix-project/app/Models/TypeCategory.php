@@ -10,7 +10,7 @@ class TypeCategory extends Model
 {
     use HasFactory;
     protected $table='type_categories';
-    protected $fillable=['model','image','price','number'];
+    protected $fillable=['model','image','feature','price','number'];
 
     public function product(): BelongsTo
     {

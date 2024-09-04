@@ -15,11 +15,13 @@ return new class extends Migration
         Schema::create('type_categories', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Product::class)->constrained();
-            $table->mediumText('model')->unique();
-            $table->mediumText('image')->unique();
+            $table->mediumText('model');
+            $table->mediumText('image');
+            $table->mediumText('feature');
             $table->integer('price')->default(0)->unique();
             $table->integer('number')->default(0)->unique();
             $table->timestamps();
+            
         });
     }
 
