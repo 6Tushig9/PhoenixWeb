@@ -23,7 +23,7 @@ class ProductModel extends Controller
     {
         if ($request->hasFile('image')) {
             $imageName = time() . '.' . $request->file('image')->extension();
-            $request->file('image')->storeAs('images', $imageName, 'public');
+            $request->file('image')->store($imageName, 'public');
         }
         $product = Product::findOrFail($request->product_id);
         $product->typecategory()->create([
