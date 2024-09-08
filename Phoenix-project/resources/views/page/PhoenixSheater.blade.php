@@ -1,9 +1,5 @@
 @extends("main")
 @section("Phoenix")
-
-<script>
-
-</script>
 <script>
     document.getElementById("complaintBtn").addEventListener("click", function() {
         document.getElementById("complaintPopup").style.display = "flex";
@@ -21,8 +17,6 @@
         }
     });
 </script>
-        <!--Sanal huseltiin heseg END-->
-    
         <div id="landingP">
             <div class="SanalBolgoh">
                 <div class="medeelliinheseg">

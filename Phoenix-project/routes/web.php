@@ -5,8 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Product;
 
 Route::controller(RoutePages::class)->group(function (){
-    Route::get('/', 'showmain');
-    Route::get('/showmainpage', 'showmainpage');
     Route::get('/', 'phoenixsheater');
     Route::get('/company', 'company');
     Route::get('/ecological', 'ecological');

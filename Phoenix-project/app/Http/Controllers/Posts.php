@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use \App\Models\Hamtrah_huselt;
 use \App\Models\Sanal_huselt;
-use Illuminate\Validation\Validator;
 
 class Posts extends Controller
 {
