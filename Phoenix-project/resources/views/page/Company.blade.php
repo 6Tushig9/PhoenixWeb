@@ -75,9 +75,7 @@
                     удирдах, өрөөний температурыг хэмжих, хянах инновацлаг шийдлүүдийг нэвтрүүлснээр 
                     гаднын аль ч төрлийн ижил бүтээгдэхүүнтэй өрсөлдөж чадна. бүтээгдэхүүнтэй 
                     өрсөлдөх чадвартай бүтээгдэхүүн бүтээсэн.
-
             </div>
-            <div class="scndPic"><img src={{ asset("pics2use/TechSketch.jpg")}}></div>
         </div>
         <div id="Milestone">
             <div class="section">
@@ -100,7 +98,6 @@
         <h2 style="font-weight: 300;">ХАМТРАГЧ БАЙГУУЛЛАГУУД</h2>
         <div class="Hamtragchid">
             <div class="Hamtragchid-slide">
-            <div class="Hamtragchid-slide">
                 <img src={{ asset("pics2use/Companions/KhaanBank.png")}}>
                 <img src={{ asset("pics2use/Companions/XacBank.png")}}>
                 <img src={{ asset("pics2use/Companions/TuriinBank.png")}}>
@@ -113,8 +110,6 @@
                 <img src={{ asset("pics2use/Companions/Tuss.png")}}>
                 <img src={{ asset("pics2use/Companions/Tomo.png")}}>
                 <img src={{ asset("pics2use/Companions/chatBot.png")}}>
-            </div>
-            
             </div>
         </div>
 <script>
@@ -168,23 +163,23 @@
         </button>
     </div>
 <script>
-document.getElementById("sendEmailBtn").addEventListener("click", function() {
-document.getElementById("emailPopup").style.display = "flex";
-document.body.classList.add("no-scroll");
-});
+    document.getElementById("sendEmailBtn").addEventListener("click", function() {
+    document.getElementById("emailPopup").style.display = "flex";
+    document.body.classList.add("no-scroll");
+    });
 
-document.getElementById("closePopup").addEventListener("click", function() {
-    document.getElementById("emailPopup").style.display = "none";
-    document.body.classList.remove("no-scroll");
-});
-
-window.addEventListener("click", function(event) {
-    const popup = document.getElementById("emailPopup");
-    if (event.target === popup) {
-        popup.style.display = "none";
+    document.getElementById("closePopup").addEventListener("click", function() {
+        document.getElementById("emailPopup").style.display = "none";
         document.body.classList.remove("no-scroll");
-    }
-});
+    });
+
+    window.addEventListener("click", function(event) {
+        const popup = document.getElementById("emailPopup");
+        if (event.target === popup) {
+            popup.style.display = "none";
+            document.body.classList.remove("no-scroll");
+        }
+    });
 </script>
 
 @endsection

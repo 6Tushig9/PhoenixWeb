@@ -568,7 +568,6 @@ body{
 }
 .Hamtragchid:hover .Hamtragchid-slide{
     animation-play-state: paused;
-    transition: 0.5s ease;
 }
 .Hamtragchid{
     width: 90vw;
@@ -576,6 +575,7 @@ body{
     padding: 1rem 0;
     white-space: nowrap;
     position: relative;
+    transition: 0.5s ease;
 }
 
 .Hamtragchid:before,

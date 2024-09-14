@@ -179,13 +179,9 @@ bodojOloh.addEventListener("click", function() {
         totalBillContainer.textContent = `Сард гарах нийт цахилгааны зардал: ₮${totalBill.toFixed(2)}`;
     });
 });
-
-
-
-
-
 </script>
 
+<div class="main">
     <div class="HouseInfo">
         <div class="ques">
             <label for="NiitTalbai">Нийт талбай /мкв/</label>
@@ -208,4 +204,5 @@ bodojOloh.addEventListener("click", function() {
         <div id="total-bill-container"></div> <!-- Separate container for the total bill -->
 
     </div>
+</div>
 @endsection
