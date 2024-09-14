@@ -186,25 +186,26 @@ bodojOloh.addEventListener("click", function() {
 
 </script>
 
-<div class="HouseInfo">
-    <div class="ques">
-        <label for="NiitTalbai">Нийт талбай /мкв/</label>
-        <input type="number" class="NiitTalbai">
-    </div>
-    <div class="ques">
-        <label for="RoomNum">Өрөөний тоо /ш/</label>
-        <input type="number" class="RoomNum" disabled>
-    </div>
-    <div class="ques room-container">
+    <div class="HouseInfo">
+        <div class="ques">
+            <label for="NiitTalbai">Нийт талбай /мкв/</label>
+            <input type="number" class="NiitTalbai">
+        </div>
+        <div class="ques">
+            <label for="RoomNum">Өрөөний тоо /ш/</label>
+            <input type="number" class="RoomNum" disabled>
+        </div>
+        <div class="ques room-container">
                 <!-- Өрөөнүүдийн м2 RoomNum-с хамаарч гарч ирнэ -->
-    </div>
-    <div class="ques">
-        <label for="WindowHigh">Шалнаас цонхны тавцан хүртэл зай /см/</label>
-        <input type="number" class="WindowHigh" disabled>
-    </div>
-    <button id="Toots">Тооцоолох</button>
+        </div>
+        <div class="ques">
+            <label for="WindowHigh">Шалнаас цонхны тавцан хүртэл зай /см/</label>
+            <input type="number" class="WindowHigh" disabled>
+        </div>
+        <button id="Toots">Тооцоолох</button>
 
-    <div id="heater-card-container" class="card-container"></div>
-    <div id="total-bill-container"></div> <!-- Separate container for the total bill -->
-</div>
+        <div id="heater-card-container" class="card-container"></div>
+        <div id="total-bill-container"></div> <!-- Separate container for the total bill -->
+
+    </div>
 @endsection
