@@ -12,7 +12,7 @@
             <a href="/advice">ЗӨВЛӨМЖ</a>
         </div>
         <div class="mnubtn">
-            <span></span><span></span><span></span>
+            
         </div>
     </div>
     <div class="mblMenu">
@@ -44,7 +44,7 @@
                                         'post': $('#complaintDetail').val()
                                     },
                                     success: function(response) {
-                                        console.log(response)
+                                        alert('Амжилттай хүлээж авлаа.')
                                     }
                                 });
                             });
@@ -60,4 +60,6 @@
             </section>
         </div>
     </div>
+
+
 </header>

@@ -16,6 +16,38 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="thinnav">
+        <div class="Welcome">Тавтай морил</div>
+        <div class="rightsd">
+            <div class="FAQhelp">
+                <button id="complaintBtn" class="open-popup-btn">Санал хүсэлт |</button>
+                <a href="/faq">Тусламж |</a>
+            </div>
+            <div class="miniicon">
+                <div class="shpngcrt">
+                    <a href="/shoppingcart">
+                        <img src={{ asset("pics2use/icons/Shoppingcart.png") }} class="shoppingC"><!-- src={{ asset("pics2use/icons/Shoppingcart.png") }}-->
+                    </a>
+                </div>
+                <div class="miniSocial">
+                    <a href="https://www.facebook.com/centralrich.mongolia">
+                        <img src= {{ asset("pics2use/icons/facebookwhite.png")}} class="mini fb">
+                    </a>
+                    <a href="https://www.facebook.com/centralrich.mongolia">
+                        <img src={{ asset("pics2use/icons/fbgroup.png")}} class="mini group">
+                    </a>
+                    <a href="https://www.instagram.com/phoenix_s_heater">
+                        <img src={{ asset("pics2use/icons/igwhite.png")}} class="mini insta">
+                    </a>
+                </div>
+                <div class="anglihel">
+                    <a href="">
+                        <img src={{ asset("pics2use/icons/Anglihel.png")}} class="lang">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
    <x-header/>
 <section>
     @yield("Phoenix")

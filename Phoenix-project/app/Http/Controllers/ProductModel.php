@@ -4,22 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
-use App\Models\TypeCategory;
 
 class ProductModel extends Controller
 {
-    public function show($id)
-    {
-        $product = Product::findOrFail($id);
-        return response()->json(['id'=>$product]);
-    }
 
     public function subcategory($id){
         $product = Product::findOrFail($id);
         return view('page.UploadCategoryProducts', compact('product'));
     }
 
-    public function store(Request $request, TypeCategory $category)
+    public function store(Request $request)
     {
         if ($request->hasFile('image')) {
             $imageName = time() . '.' . $request->file('image')->extension();
@@ -33,8 +27,6 @@ class ProductModel extends Controller
             'price' => $request->price,
             'number' => $request->number,
         ]);
-
-
         return redirect()->route('product-model.show', ['id' => $request->product_id])->with('success', 'TypeCategory added successfully.');
     }
 }

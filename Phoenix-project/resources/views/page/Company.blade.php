@@ -17,62 +17,41 @@
         }
     });
 </script>
-    <div id="thinnav">
-        <div class="Welcome">Тавтай морил</div>
-        <div class="rightsd">
-            <div class="FAQhelp">
-                <button id="complaintBtn" class="open-popup-btn">Санал хүсэлт |</button>
-                <a href="/faq">Тусламж |</a>
-            </div>
-            <div class="miniicon">
-                <div class="shpngcrt">
-                    <a href="/shoppingcart">
-                        <img src={{ asset("pics2use/icons/Shoppingcart.png") }} class="shoppingC"><!-- src={{ asset("pics2use/icons/Shoppingcart.png") }}-->
-                    </a>
-                </div>
-                <div class="miniSocial">
-                    <a href="https://www.facebook.com/centralrich.mongolia">
-                        <img src= {{ asset("pics2use/icons/facebookwhite.png")}} class="mini fb">
-                    </a>
-                    <a href="https://www.facebook.com/centralrich.mongolia">
-                        <img src={{ asset("pics2use/icons/fbgroup.png")}} class="mini group">
-                    </a>
-                    <a href="https://www.instagram.com/phoenix_s_heater">
-                        <img src={{ asset("pics2use/icons/igwhite.png")}} class="mini insta">
-                    </a>
-                </div>
-                <div class="anglihel">
-                    <a href="">
-                        <img src={{ asset("pics2use/icons/Anglihel.png")}} class="lang">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
     <div id="mnContnr">
         <div class="firstInfo">
-            <div class="frstPic"> 
-                <img src={{ asset("pics2use/PicEmployee.avif")}}>
+            <div class="firstInfo">
+                <div class="frstPic"> 
+                    <img src={{ asset("pics2use/PicEmployee.avif")}}>
+                </div>
+                <div class="frstIfno">
+                    <h3>Бидний эхэлсэн шалтгаан</h3>
+                    Бид 2014 онд байгаль орчинд ээлтэй дэвшилтэт халаагуур эх орондоо 
+                    үйлдвэрлэн гэсэн маш тодорхой зорилготойгоор үүсгэн байгуулагдсан. 
+                    7 жилийн турш судалгаа, хөгжүүлэлт тасралтгүй хийгдсэний үндсэн дээр 
+                    2021 онд анхны цахилгаан халаагуураа зах зээлд нэвтрүүлсэн. Борлуулалт 
+                    хийж эхэлсэн цагаас хэрэглэгчдээс тасралтгүй эерэг сэтгэгдэл ирж 
+                    байгаа тул бид бахархалтайгаар бүтээгдэхүүн маань хэрэглэгчдийн 
+                    хэрэгцээ, шаардлагыг хангасан гэж дүгнэнэ. <br>
+                        Бүтээгдэхүүн маань утааг бууруулахад бодит хувь нэмэр оруулахаас гадна 
+                        хэрэглэгчдэдээ санхүүгийн хэмнэлт үүсгэж чадахыг бид мэдэж байгаа тул цаашид 
+                        уламжлалт мод, нүүрс түлдэг өрх бүрд цахилгааны хэмнэлттэй халаагуурын 
+                        шийдлээ хэрэглүүлэхийг зорьж байна. Цаашид бид шинэ төрлийн бүтээгдэхүүн 
+                        хөгжүүлэлтийг тасралтгүй хийсээр байх төдийгүй айл өрхийг тав тухтай, эко 
+                        амьдрах орчныг бүрдүүлэхээр зорин ажиллаж байна.
+                </div>
             </div>
-            <div class="frstIfno">
-                <h3>Бидний эхэлсэн шалтгаан</h3>
-                   Бид 2014 онд байгаль орчинд ээлтэй дэвшилтэт халаагуур эх орондоо 
-                   үйлдвэрлэн гэсэн маш тодорхой зорилготойгоор үүсгэн байгуулагдсан. 
-                   7 жилийн турш судалгаа, хөгжүүлэлт тасралтгүй хийгдсэний үндсэн дээр 
-                   2021 онд анхны цахилгаан халаагуураа зах зээлд нэвтрүүлсэн. Борлуулалт 
-                   хийж эхэлсэн цагаас хэрэглэгчдээс тасралтгүй эерэг сэтгэгдэл ирж 
-                   байгаа тул бид бахархалтайгаар бүтээгдэхүүн маань хэрэглэгчдийн 
-                   хэрэгцээ, шаардлагыг хангасан гэж дүгнэнэ. <br>
-                    Бүтээгдэхүүн маань утааг бууруулахад бодит хувь нэмэр оруулахаас гадна 
-                    хэрэглэгчдэдээ санхүүгийн хэмнэлт үүсгэж чадахыг бид мэдэж байгаа тул цаашид 
-                    уламжлалт мод, нүүрс түлдэг өрх бүрд цахилгааны хэмнэлттэй халаагуурын 
-                    шийдлээ хэрэглүүлэхийг зорьж байна. Цаашид бид шинэ төрлийн бүтээгдэхүүн 
-                    хөгжүүлэлтийг тасралтгүй хийсээр байх төдийгүй айл өрхийг тав тухтай, эко 
-                    амьдрах орчныг бүрдүүлэхээр зорин ажиллаж байна. 
-
-            </div>
+            @if (!$posts)
+            @else
+                @foreach ($posts as $item)
+                    <div class="frstPic"> 
+                        <img src={{ asset('storate/'.$item->image) }}>
+                    </div>
+                    <div class="frstInfo">
+                        <h3>{{ $item->title }}</h3>
+                        {{ $item->post }}
+                    </div>
+                @endforeach
+            @endif
         </div>
         <div class="secondInfo">
             <div class="scndIfno">
@@ -96,7 +75,6 @@
                     удирдах, өрөөний температурыг хэмжих, хянах инновацлаг шийдлүүдийг нэвтрүүлснээр 
                     гаднын аль ч төрлийн ижил бүтээгдэхүүнтэй өрсөлдөж чадна. бүтээгдэхүүнтэй 
                     өрсөлдөх чадвартай бүтээгдэхүүн бүтээсэн.
-
             </div>
         </div>
         <div id="Milestone">
@@ -185,23 +163,23 @@
         </button>
     </div>
 <script>
-document.getElementById("sendEmailBtn").addEventListener("click", function() {
-document.getElementById("emailPopup").style.display = "flex";
-document.body.classList.add("no-scroll");
-});
+    document.getElementById("sendEmailBtn").addEventListener("click", function() {
+    document.getElementById("emailPopup").style.display = "flex";
+    document.body.classList.add("no-scroll");
+    });
 
-document.getElementById("closePopup").addEventListener("click", function() {
-    document.getElementById("emailPopup").style.display = "none";
-    document.body.classList.remove("no-scroll");
-});
-
-window.addEventListener("click", function(event) {
-    const popup = document.getElementById("emailPopup");
-    if (event.target === popup) {
-        popup.style.display = "none";
+    document.getElementById("closePopup").addEventListener("click", function() {
+        document.getElementById("emailPopup").style.display = "none";
         document.body.classList.remove("no-scroll");
-    }
-});
+    });
+
+    window.addEventListener("click", function(event) {
+        const popup = document.getElementById("emailPopup");
+        if (event.target === popup) {
+            popup.style.display = "none";
+            document.body.classList.remove("no-scroll");
+        }
+    });
 </script>
 
 @endsection
