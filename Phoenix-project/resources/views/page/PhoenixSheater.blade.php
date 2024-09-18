@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div class="zurag1">
-                    <img src={{ asset("pics2use/S1200TW.png")}} >
+                    <img src={{ asset("pics2use/Heaters/S1200TWbig.png")}} >
                 </div>
             </div>
             <div class="BusadProd">
@@ -51,12 +51,12 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src={{ asset("pics2use/S600TW.png")}} class="card-img">
+                                        <img src={{ asset("pics2use/Heaters/SD600.png")}} class="card-img">
                                     </div>
 
                                     <div class="card-content">
-                                        <h2 class="name">S600</h2>
-                                        <p class="descrptn">8-10м2</p>
+                                        <h2 class="name">SD600</h2>
+                                        <p class="descrptn">8-12м2</p>
                                     </div>
                                     <script>
                                         $(document).ready(function() {
@@ -71,12 +71,26 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src={{ asset("pics2use/xmpl2.png")}} class="card-img">
+                                        <img src={{ asset("pics2use/Heaters/S600TW.png")}} class="card-img">
                                     </div>
 
                                     <div class="card-content">
-                                        <h2 class="name">S800</h2>
-                                        <p class="descrptn">8-10м2</p>
+                                        <h2 class="name">S600TW</h2>
+                                        <p class="descrptn">8-12м2</p>
+                                    </div>
+
+                                    <button class="VMore VMoring">Дэлгэрэнгүй</button>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="image-content">
+                                    <div class="card-image">
+                                        <img src={{ asset("pics2use/Heaters/S800TW.png")}} class="card-img">
+                                    </div>
+
+                                    <div class="card-content">
+                                        <h2 class="name">S800TW</h2>
+                                        <p class="descrptn">14-18м2</p>
                                     </div>
 
                                     <button class="VMore">Дэлгэрэнгүй</button>
@@ -85,12 +99,12 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src={{ asset("pics2use/xmpl2.png")}} class="card-img"">
+                                        <img src={{ asset("pics2use/Heaters/S900TW.png")}} class="card-img"">
                                     </div>
 
                                     <div class="card-content">
-                                        <h2 class="name">S900</h2>
-                                        <p class="descrptn">8-10м2</p>
+                                        <h2 class="name">S900TW</h2>
+                                        <p class="descrptn">16-20м2</p>
                                     </div>
 
                                     <button class="VMore">Дэлгэрэнгүй</button>
@@ -99,12 +113,12 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src={{ asset("pics2use/xmpl2.png")}} class="card-img">
+                                        <img src={{ asset("pics2use/Heaters/S1000TW.png")}} class="card-img">
                                     </div>
 
                                     <div class="card-content">
-                                        <h2 class="name">S1000</h2>
-                                        <p class="descrptn">8-10м2</p>
+                                        <h2 class="name">S1000TW</h2>
+                                        <p class="descrptn">18-22м2</p>
                                     </div>
 
                                     <button class="VMore">Дэлгэрэнгүй</button>
@@ -113,12 +127,12 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src={{ asset("pics2use/xmpl2.png")}} class="card-img">
+                                        <img src={{ asset("pics2use/Heaters/S1200TW.png")}} class="card-img">
                                     </div>
 
                                     <div class="card-content">
-                                        <h2 class="name">S1200</h2>
-                                        <p class="descrptn">8-10м2</p>
+                                        <h2 class="name">S1200TW</h2>
+                                        <p class="descrptn">20-24м2</p>
                                     </div>
 
                                     <button class="VMore">Дэлгэрэнгүй</button>
@@ -127,12 +141,12 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src={{ asset("pics2use/xmpl2.png")}} class="card-img">
+                                        <img src={{ asset("pics2use/Heaters/TX900TW.png")}} class="card-img">
                                     </div>
 
                                     <div class="card-content">
-                                        <h2 class="name">TX900</h2>
-                                        <p class="descrptn">8-10м2</p>
+                                        <h2 class="name">TX900TW</h2>
+                                        <p class="descrptn">18-20м2</p>
                                     </div>
 
                                     <button class="VMore">Дэлгэрэнгүй</button>
@@ -141,12 +155,12 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src={{ asset("pics2use/xmpl2.png")}} class="card-img">
+                                        <img src={{ asset("pics2use/Heaters/S400TW.png")}} class="card-img">
                                     </div>
 
                                     <div class="card-content">
-                                        <h2 class="name">H400</h2>
-                                        <p class="descrptn">8-10м2</p>
+                                        <h2 class="name">S400TW</h2>
+                                        <p class="descrptn">6-8м2</p>
                                     </div>
 
                                     <button class="VMore">Дэлгэрэнгүй</button>
@@ -155,12 +169,26 @@
                             <div class="card swiper-slide">
                                 <div class="image-content">
                                     <div class="card-image">
-                                        <img src={{ asset("pics2use/xmpl2.png")}} class="card-img">
+                                        <img src={{ asset("pics2use/Heaters/G2200TW.png")}} class="card-img">
                                     </div>
 
                                     <div class="card-content">
                                         <h2 class="name">Гэрийн халаагуур</h2>
-                                        <p class="descrptn">8-10м2</p>
+                                        <p class="descrptn">25-33м2</p>
+                                    </div>
+
+                                    <button class="VMore">Дэлгэрэнгүй</button>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="image-content">
+                                    <div class="card-image">
+                                        <img src={{ asset("pics2use/Heaters/G1800R.png")}} class="card-img">
+                                    </div>
+
+                                    <div class="card-content">
+                                        <h2 class="name">Гэрийн халаагуур</h2>
+                                        <p class="descrptn">18-25м2</p>
                                     </div>
 
                                     <button class="VMore">Дэлгэрэнгүй</button>
