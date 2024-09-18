@@ -78,7 +78,13 @@
                                         <h2 class="name">S600TW</h2>
                                         <p class="descrptn">8-12м2</p>
                                     </div>
-
+                                    <script>
+                                        $(document).ready(function() {
+                                            $('.VMoring').click(function() {
+                                                window.location.href = '/buypage';
+                                            });
+                                        });
+                                    </script>
                                     <button class="VMore VMoring">Дэлгэрэнгүй</button>
                                 </div>
                             </div>

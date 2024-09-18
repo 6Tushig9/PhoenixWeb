@@ -13,6 +13,7 @@ Route::controller(RoutePages::class)->group(function (){
     Route::get('/buypage', 'buypage');
     Route::get('/shoppingcart', 'shoppingcart');
     Route::get('/faq', 'faq');
+    Route::get('/login', 'login');
 });
 
 Route::controller(Posts::class)->group(function (){
