@@ -31,11 +31,11 @@
             <form class="my-form">
                 <div class="socials-row">
                     <a href="#" title="Use Google">
-                        <img src="./pics2use/icons/Google.png" alt="Google">
+                        <img src={{ asset("pics2use/icons/Google.png")}} alt="Google">
                         Google-р нэвтрэх
                     </a>
                     <a href="#" title="Use Facebook">
-                        <img src="./pics2use/icons/Facebook.png" alt="Facebook">
+                        <img src={{ asset("pics2use/icons/Facebook.png")}} alt="Facebook">
                         Facebook-р нэвтрэх
                     </a>
                 </div>
@@ -51,7 +51,7 @@
                         name="email" 
                         placeholder="Таны Е-мэйл" 
                         required>
-                <img src="./pics2use/icons/Email@.png" alt="Email Icon" title="Email Icon">
+                <img src={{ asset("pics2use/icons/Email@.png")}} alt="Email Icon" title="Email Icon">
             </div>
                 <div class="text-field">
                     <label for="email">Нууц үг:</label>
@@ -60,7 +60,7 @@
                             name="email" 
                             placeholder="Таны нууц үг" 
                             required>
-                    <img src="./pics2use/icons/PassIcon.png" alt="Email Icon" title="Email Icon">
+                    <img src={{ asset("pics2use/icons/PassIcon.png")}} alt="Email Icon" title="Email Icon">
                 </div>
                 <input type="submit" 
                     class="my-form_button" 
@@ -78,7 +78,7 @@
         </div>
     </div>
     <div class="info-side">
-        <img src="./pics2use/TechSketch.jpg" alt="Mock" class="mockup">
+        <img src={{ asset("pics2use/PicEmployee.avif")}} alt="Mock" class="mockup">
         <div class="welcome-message">
         <h2>Phoenix-S Heaters</h2>
         <p>Бид хэрэглэгчдийнхээ ая тухтай амьдрахад шаардлагатай 
