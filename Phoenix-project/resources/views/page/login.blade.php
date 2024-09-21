@@ -20,9 +20,9 @@
 
 <div class="login-wrapper">
   <div class="login-side">
-        <a href="#" title="logo">
+        {{-- <a href="#" title="logo">
             <img src="./pics2use/logo old.png" alt="logo" class="logo">
-        </a>
+        </a> --}}
         <div class="my-form_wrapper">
             <div class="login-welcome-row">
                 <h1>Тавтай морил</h1>
