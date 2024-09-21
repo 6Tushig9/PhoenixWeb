@@ -21,7 +21,7 @@ class AdviceResource extends Resource
 {
     protected static ?string $model = Advice::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-phone-arrow-down-left';
 
     protected static ?string $navigationLabel = 'Зөвлөмж';
 
