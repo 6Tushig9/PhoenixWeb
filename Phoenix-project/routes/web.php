@@ -40,7 +40,3 @@ Route::get('/mail',function(){
     Mail::to('nvipree441@gmail.com')->send(new Admin());
     return response()->json(['status'=> 'Success']);
 });
-
-Route::get('/login', function(){
-    return view('page.login');
-});
