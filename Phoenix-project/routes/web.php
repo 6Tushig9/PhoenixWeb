@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
 use App\Models\Product;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Admin;
 
 Route::controller(RoutePages::class)->group(function (){
     Route::get('/', 'phoenixsheater');
@@ -28,3 +30,13 @@ Route::get('/test', function(){
 Route::get('/product-model/{id}', [ProductModel::class, 'subcategory'])->name('product-model.show');
 
 Route::post('/typecategory/store', [ProductModel::class, 'store'])->name('typecategory.store');
+
+
+Route::get('/pro',function(){
+    return view('production.Production_Upload');
+});
+
+Route::get('/mail',function(){
+    Mail::to('nvipree441@gmail.com')->send(new Admin());
+    return response()->json(['status'=> 'Success']);
+});
