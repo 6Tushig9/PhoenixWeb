@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\PostOruulah;
+use App\Models\Advice;
 
 class RoutePages extends Controller
 {    
@@ -11,7 +12,7 @@ class RoutePages extends Controller
     }
 
     public function company(){
-        return view('page.Company', ['posts' => PostOruulah::all()]);
+        return view('page.Company');
     }
     
     public function ecological(){
