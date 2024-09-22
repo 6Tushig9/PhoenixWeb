@@ -159,6 +159,32 @@
         <div class="tulburiinMedeelel">
             <h2>Төлбөрийн мэдээлэл</h2>
             <div class="PaymentDetails">
+                <div class="zahDugaar">
+                    <div class="zahialga">Захиалгын дугаар</div>
+                    <div class="zahialgaNum">2024/09/24/01</div>
+                </div>
+                <div class="sepLine"></div>
+                <div class="zahDetails">
+                    <div class="baraaS">Барааны дүн</div>
+                    <div class="dun">1250000₮</div>
+                </div>
+                <div class="zahDetails">
+                    <div class="hurgeltS">Хүргэлтийн төлбөр</div>
+                    <div class="dun">40000₮</div>
+                </div>
+                <div class="zahDetails">
+                    <div class="suuriluulaltS">Суурилуулалтын төлбөр</div>
+                    <div class="dun">50000₮</div>
+                </div>
+                <div class="sepLine"></div>
+                <div class="totalS">
+                    <div class="niitTuluh">Нийт төлөх дүн</div>
+                    <div class="dunTotal">1340000₮</div>
+                </div>
+            </div>
+            <div class="btnOrder">
+                <button class="continueBtn">Үргэлжлүүлэх</button>
+                <button class="cancelBtn">Цуцлах</button>
             </div>
         </div>
     </div>
