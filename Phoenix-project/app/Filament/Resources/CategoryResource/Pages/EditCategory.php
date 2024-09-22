@@ -16,14 +16,4 @@ class EditCategory extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
-
-    protected function afterSave()
-    {
-        // Get the current record
-        $record = $this->record;
-
-        // Sync the selected products
-        $record->mainProducts()->sync($this->form->getState()['main_products']);
-        $record->subProducts()->sync($this->form->getState()['sub_products']);
-    }
 }

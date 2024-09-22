@@ -63,11 +63,6 @@ class CategoryResource extends Resource
         ];
     }
 
-    public static function afterSave($record, array $data): void
-    {
-        $record->mainProducts()->sync($data['main_products']);
-        $record->subProducts()->sync($data['sub_products']);
-    }
 
     public static function getPages(): array
     {
