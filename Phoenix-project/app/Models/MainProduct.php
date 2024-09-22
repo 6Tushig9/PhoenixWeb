@@ -4,8 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class MainProduct extends Model
 {
     use HasFactory;
+    protected $table='main_products';
+    protected $fillable=['Бүтээгдэхүүн','Онцлог_шинж','Зураг','Үнэ','Товч_мэдээлэл','Тоон_хэмжээ'];
+
+    public function category(): BelongsToMany
+    {
+        return $this->BelongsToMany(SubProduct::class,'categories');
+    }
 }
