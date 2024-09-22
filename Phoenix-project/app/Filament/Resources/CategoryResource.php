@@ -6,12 +6,16 @@ use App\Filament\Resources\CategoryResource\Pages;
 use App\Filament\Resources\CategoryResource\RelationManagers;
 use App\Models\Category;
 use Filament\Forms;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Models\MainProduct;
+use App\Models\SubProduct;
+use Filament\Tables\Columns\TextColumn;
 
 class CategoryResource extends Resource
 {
@@ -23,7 +27,12 @@ class CategoryResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Select::make('MainProduct')
+                    ->options(MainProduct::all()->pluck('Бүтээгдэхүүн', 'id'))
+                    ->searchable(),
+                Select::make('SubProduct')
+                    ->options(SubProduct::all()->pluck('Загвар', 'id'))
+                    ->searchable(),
             ]);
     }
 
@@ -31,7 +40,8 @@ class CategoryResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('Бүтээгдэхүүн'),
+                TextColumn::make('Загвар'),
             ])
             ->filters([
                 //
@@ -51,6 +61,12 @@ class CategoryResource extends Resource
         return [
             //
         ];
+    }
+
+    public static function afterSave($record, array $data): void
+    {
+        $record->mainProducts()->sync($data['main_products']);
+        $record->subProducts()->sync($data['sub_products']);
     }
 
     public static function getPages(): array
