@@ -9,7 +9,7 @@ class RoutePages extends Controller
 
     public function test(){
        $arr=MainProduct::all();
-       return response()->json(['data'=>array($arr)]);
+       return response()->json($arr);
     }
 
     public function phoenixsheater(){
