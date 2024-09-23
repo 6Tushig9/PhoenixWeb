@@ -45,19 +45,4 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-
-    public function advice(): HasMany
-    {
-        return $this->HasMany(Advice::class);
-    }
-
-    public function logonuud(): HasMany
-    {
-        return $this->HasMany(Logonuud::class);
-    }
-
-    public function postoruulah(): HasMany
-    {
-        return $this->HasMany(PostOruulah::class);
-    }
 }
