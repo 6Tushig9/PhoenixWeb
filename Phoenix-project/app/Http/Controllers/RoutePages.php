@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\MainProduct;
 
 class RoutePages extends Controller
-{    
+{   
 
     public function test(){
        $arr=MainProduct::all()[0];
