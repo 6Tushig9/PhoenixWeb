@@ -14,6 +14,6 @@ class SubProduct extends Model
 
     public function category(): BelongsTo
     {
-        return $this->BelongsTo(MainProduct::class);
+        return $this->BelongsTo(MainProduct::class,'main_product_id');
     }
 }
