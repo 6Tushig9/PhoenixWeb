@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class MainProduct extends Model
 {
@@ -12,8 +12,8 @@ class MainProduct extends Model
     protected $table='main_products';
     protected $fillable=['Бүтээгдэхүүн','Онцлог_шинж','Зураг','Үнэ','Товч_мэдээлэл','Тоон_хэмжээ'];
 
-    public function category(): BelongsToMany
+    public function category(): HasMany
     {
-        return $this->BelongsToMany(SubProduct::class,'categories');
+        return $this->HasMany(SubProduct::class);
     }
 }

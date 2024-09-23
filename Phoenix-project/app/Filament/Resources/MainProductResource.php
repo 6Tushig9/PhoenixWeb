@@ -16,6 +16,7 @@ use Filament\Tables;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Filament\Tables\View\TablesRenderHook;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -33,13 +34,9 @@ class MainProductResource extends Resource
                     TextInput::make('Бүтээгдэхүүн')->required(),
                     TextInput::make('Онцлог_шинж')->required(),
                     FileUpload::make('Зураг')->required(),
-                    TextInput::make('Үнэ')
-                        ->required()
-                        ->numeric(),
+                    TextInput::make('Үнэ')->numeric()->required(),
                     MarkdownEditor::make('Товч_мэдээлэл')->required(),
-                    TextInput::make('Тоон_хэмжээ')
-                        ->required()
-                        ->numeric(),
+                    TextInput::make('Тоон_хэмжээ')->numeric()->required(),
                 ])
             ]);
     }
@@ -53,14 +50,16 @@ class MainProductResource extends Resource
                 ImageColumn::make('Зураг'),
                 TextColumn::make('Үнэ')->numeric(),
                 TextColumn::make('Товч_мэдээлэл')->wrap(),
-                TextColumn::make('Тоон_хэмжээ'),
+                TextColumn::make('Тоон_хэмжээ')->numeric(),
             ])
             ->filters([
                 //
             ])
             ->actions([
+                Tables\Actions\Action::make('add')
+                    ->color('primary')
+                    ->url(fn(MainProduct $record)=>route('filament.admin.resources.sub-products.create',['main_product_id'=>$record->id])),
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

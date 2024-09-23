@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
-use App\Models\Product;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\Admin;
+use App\Filament\Resources\DemoResource;
 
 Route::controller(RoutePages::class)->group(function (){
     Route::get('/', 'phoenixsheater');
@@ -18,17 +16,3 @@ Route::controller(RoutePages::class)->group(function (){
     Route::get('/login', 'login');
     Route::get('/upload','upload');
 });
-
-
-Route::get('/test', function(){
-    return view('test', ['products'=>Product::all()]);
-});
-
-Route::get('/pro',function(){
-    return view('production.Production_Upload');
-});
-
-Route::get('/category/{id}',function($id){
-    return view('product.category', ['id'=>$id]);
-})->name('category');
-

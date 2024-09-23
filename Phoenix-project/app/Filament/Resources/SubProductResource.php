@@ -19,6 +19,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Models\MainProduct;
 
 class SubProductResource extends Resource
 {
@@ -31,20 +32,14 @@ class SubProductResource extends Resource
         return $form
             ->schema([
                 Group::make([
+                    Select::make('main_product_id')
+                        ->options(MainProduct::all()->pluck('Бүтээгдэхүүн', 'id')),
                     TextInput::make('Загвар')->required(),
                     TextInput::make('Онцлог_шинж')->required(),
                     FileUpload::make('Зураг')->required(),
-                    TextInput::make('Үнэ')
-                        ->required()
-                        ->numeric(),
+                    TextInput::make('Үнэ')->numeric()->required(),
                     MarkdownEditor::make('Товч_мэдээлэл')->required(),
-                    TextInput::make('Тоон_хэмжээ')
-                        ->required()
-                        ->numeric(),
-                    Select::make('Загвар')
-                        ->relationship('category','Бүтээгдэхүүн')
-                        ->searchable()
-                        ->required(),
+                    TextInput::make('Тоон_хэмжээ')->numeric()->required(),
                 ])
             ]);
     }
@@ -58,14 +53,13 @@ class SubProductResource extends Resource
                 ImageColumn::make('Зураг'),
                 TextColumn::make('Үнэ')->numeric(),
                 TextColumn::make('Товч_мэдээлэл')->wrap(),
-                TextColumn::make('Тоон_хэмжээ'),
+                TextColumn::make('Тоон_хэмжээ')->numeric(),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

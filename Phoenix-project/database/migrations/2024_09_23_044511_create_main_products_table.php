@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('main_products', function (Blueprint $table) {
             $table->id();
-            $table->mediumText('Бүтээгдэхүүн')->nullable();
-            $table->mediumText('Онцлог_шинж')->nullable();
+            $table->mediumText('Бүтээгдэхүүн')->default('')->nullable();
+            $table->mediumText('Онцлог_шинж')->default('')->nullable();
             $table->mediumText('Зураг')->nullable();
             $table->mediumInteger('Үнэ')->default(0)->nullable();
-            $table->text('Товч_мэдээлэл')->nullable();
+            $table->mediumText('Товч_мэдээлэл')->default('')->nullable();
             $table->mediumInteger('Тоон_хэмжээ')->default(0)->nullable();
             $table->timestamps();
         });
