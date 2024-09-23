@@ -9,6 +9,7 @@ use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Group;
 use Filament\Forms\Components\MarkdownEditor;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -40,6 +41,10 @@ class SubProductResource extends Resource
                     TextInput::make('Тоон_хэмжээ')
                         ->required()
                         ->numeric(),
+                    Select::make('Загвар')
+                        ->relationship('category','Бүтээгдэхүүн')
+                        ->searchable()
+                        ->required(),
                 ])
             ]);
     }
