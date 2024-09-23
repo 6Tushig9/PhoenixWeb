@@ -8,12 +8,13 @@ class RoutePages extends Controller
 {    
 
     public function test(){
-       $arr=MainProduct::all();
+       $arr=MainProduct::all()[0];
        return response()->json($arr);
     }
 
     public function phoenixsheater(){
-        return view('page.PhoenixSheater');
+        $arr=MainProduct::all()[0];
+        return view('page.PhoenixSheater',['first_item'=>$arr]);
     }
 
     public function company(){
