@@ -44,29 +44,30 @@
                 <div class="zurag1">
                     <img src={{ asset("pics2use/Heaters/S1200TWbig.png")}} >
                 </div>
-                @endif
-                <div class="medeelliinheseg">
-                    <h1>{{ $first_item->Бүтээгдэхүүн }}</h1>
-                    <h2>{{ $first_item->Онцлог_шинж }}</h2>
-                    <h3>{{ $first_item->Товч_мэдээлэл }}</h3>
-                    <div class="shuudhudaldah">
-                         <script>
-                        $(document).ready(function() {
-                            $('#buying').click(function() {
-                                window.location.href = '/buypage';
+                @else
+                    <div class="medeelliinheseg">
+                        <h1>{{ $first_item->Бүтээгдэхүүн }}</h1>
+                        <h2>{{ $first_item->Онцлог_шинж }}</h2>
+                        <h3>{{ $first_item->Товч_мэдээлэл }}</h3>
+                        <div class="shuudhudaldah">
+                            <script>
+                            $(document).ready(function() {
+                                $('#buying').click(function() {
+                                    window.location.href = '/buypage';
+                                });
+                                $('#basketing').click(function(){
+                                    window.location.href='/shoppingcart';
+                                });
                             });
-                            $('#basketing').click(function(){
-                                window.location.href='/shoppingcart';
-                            });
-                        });
-                        </script>
-                        <div class="fnctbtn buy" id="buying">Худалдан авах</div>
-                        <div class="fnctbtn cart" id="basketing">Сагсанд хийх</div>
+                            </script>
+                            <div class="fnctbtn buy" id="buying">Худалдан авах</div>
+                            <div class="fnctbtn cart" id="basketing">Сагсанд хийх</div>
+                        </div>
                     </div>
-                </div>
-                <div class="zurag1">
-                    <img src={{ asset("storage/". $first_item->Зураг)}} alt="">
-                </div>
+                    <div class="zurag1">
+                        <img src={{ asset("storage/". $first_item->Зураг)}} alt="">
+                    </div>
+                @endif
             </div>
             <div class="BusadProd">
                 <div class="slide-container swiper">
@@ -222,7 +223,9 @@
                                                 </div>
                                             </div>
                             @else
-                                
+                                @foreach ($menu as $item)
+                                    <p>{{ $item }}</p>
+                                @endforeach
                             @endif
                         </div>
                    
