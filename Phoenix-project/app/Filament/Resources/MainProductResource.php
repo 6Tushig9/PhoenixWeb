@@ -24,7 +24,11 @@ class MainProductResource extends Resource
 {
     protected static ?string $model = MainProduct::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Бүтээгдэхүүн';
+
+    protected static ?string $navigationLabel = 'Ц - Халаагуур';
+
+    protected static ?string $navigationIcon = 'heroicon-o-bolt';
 
     public static function form(Form $form): Form
     {
@@ -56,10 +60,12 @@ class MainProductResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\Action::make('add')
-                    ->color('primary')
+                Tables\Actions\Action::make('Category')
+                    ->color('gray')
+                    ->icon('heroicon-o-cpu-chip')
                     ->url(fn(MainProduct $record)=>route('filament.admin.resources.sub-products.create',['main_product_id'=>$record->id])),
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

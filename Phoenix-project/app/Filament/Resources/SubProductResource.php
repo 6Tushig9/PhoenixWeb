@@ -25,7 +25,11 @@ class SubProductResource extends Resource
 {
     protected static ?string $model = SubProduct::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Бүтээгдэхүүн';
+
+    protected static ?string $navigationLabel = 'Загварууд';
+
+    protected static ?string $navigationIcon = 'heroicon-o-cpu-chip';
 
     public static function form(Form $form): Form
     {
@@ -61,6 +65,7 @@ class SubProductResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
