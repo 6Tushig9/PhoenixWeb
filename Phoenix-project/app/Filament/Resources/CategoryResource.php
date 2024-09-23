@@ -15,7 +15,10 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Models\MainProduct;
 use App\Models\SubProduct;
+use Filament\Forms\Components\Repeater;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\Button;
+
 
 class CategoryResource extends Resource
 {
@@ -27,12 +30,15 @@ class CategoryResource extends Resource
     {
         return $form
             ->schema([
-                Select::make('MainProduct')
+                Repeater::make('Demo')
+                ->schema([
+                    Select::make('MainProduct')
                     ->options(MainProduct::all()->pluck('Бүтээгдэхүүн', 'id'))
                     ->searchable(),
                 Select::make('SubProduct')
                     ->options(SubProduct::all()->pluck('Загвар', 'id'))
                     ->searchable(),
+                ])
             ]);
     }
 
