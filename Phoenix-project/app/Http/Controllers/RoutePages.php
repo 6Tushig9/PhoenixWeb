@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PostOruulah;
-use App\Models\Advice;
+use App\Models\MainProduct;
 
 class RoutePages extends Controller
 {    
+
+    public function test(){
+       $arr=MainProduct::all();
+       return response()->json(['data'=>array($arr)]);
+    }
+
     public function phoenixsheater(){
         return view('page.PhoenixSheater');
     }

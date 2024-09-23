@@ -15,6 +15,7 @@ Route::controller(RoutePages::class)->group(function (){
     Route::get('/faq', 'faq');
     Route::get('/login', 'login');
     Route::get('/upload','upload');
+    Route::get('/test','test');
 });
 
 Route::controller(CustomerReact::class)->group(function(){
