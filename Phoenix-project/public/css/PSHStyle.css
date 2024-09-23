@@ -1,10 +1,10 @@
 /*root elementuud*/
-:root{
+:root {
     --main-fonts: "Inter", sans-serif;
-    --secondary-fonts: "Inter", sans-serif;/*solih*/
+    --secondary-fonts: "Inter", sans-serif; /*solih*/
     --mainBG: #c6c6c6;
     --mainBGMirror: #c6c6c6d9;
-    --darkerBG:#a1a1a1;
+    --darkerBG: #a1a1a1;
     --fontSize: 2rem;
     --fontC: #e5e5e5;
     --inputColor: #f8f8f8;
@@ -12,7 +12,7 @@
     --fontCdark: #2d2d2d;
     --fontCdarkBlur: #2d2d2d9a;
     --shadowClr: #8b8b8b;
-    --btnClr: #013220; 
+    --btnClr: #013220;
     --btnClr2: #054202;
     --btnClrBlr: #054202a7;
     --accentClr: #f0b33e;
@@ -21,15 +21,14 @@
     --alertColor: #a20505;
 }
 
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
     color: var(--fontCdark);
 }
-body{
+body {
     width: 100%;
     height: auto;
     font-family: var(--main-fonts);
@@ -37,15 +36,14 @@ body{
     background: var(--mainBG);
 }
 
-
 /*------Main buyu undsen heseg------*/
-.main{
+.main {
     width: 100%;
     height: auto;
 }
 
 /*---mini navigation---*/
-#thinnav{
+#thinnav {
     width: 100%;
     height: 30px;
     display: flex;
@@ -56,7 +54,7 @@ body{
     top: 0;
     z-index: 14;
 }
-.Welcome{
+.Welcome {
     width: 30vw;
     height: 30px;
     display: flex;
@@ -67,29 +65,29 @@ body{
     color: var(--fontC);
     padding-left: 30px;
 }
-.rightsd{
+.rightsd {
     width: 40vw;
     height: 30px;
     display: flex;
     overflow-y: visible;
 }
-.FAQhelp{
+.FAQhelp {
     width: 40rem;
     height: 30px;
     display: flex;
     justify-content: right;
     gap: 10px;
 }
-.FAQhelp a{
+.FAQhelp a {
     color: var(--fontC);
     text-decoration: none;
     display: flex;
     align-items: center;
 }
-.FAQhelp button:hover{
+.FAQhelp button:hover {
     cursor: pointer;
 }
-.FAQhelp button{
+.FAQhelp button {
     font-family: var(--main-fonts);
     color: var(--fontC);
     font-size: 1rem;
@@ -100,7 +98,7 @@ body{
     display: flex;
     align-items: center;
 }
-.FAQhelp h2{
+.FAQhelp h2 {
     width: auto;
     height: 25px;
     display: flex;
@@ -111,42 +109,40 @@ body{
     font-family: var(--main-fonts);
     color: var(--fontC);
 }
-.miniicon{
+.miniicon {
     width: 15rem;
     display: flex;
     flex-direction: row;
 }
-.miniicon a{
+.miniicon a {
     width: 20px;
     height: 20px;
 }
-.miniicon a img{
+.miniicon a img {
     width: 20px;
     height: 20px;
 }
-.shpngcrt{
+.shpngcrt {
     width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-left: 20px;
 }
-.miniSocial{
+.miniSocial {
     width: 65%;
     display: flex;
     justify-content: space-around;
     padding: 0 15px;
     align-items: center;
 }
-.anglihel{
+.anglihel {
     width: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 /*---mini navigation END---*/
- 
-
 
 .complaint-popup-wrapper button {
     padding: 10px 20px;
@@ -217,15 +213,12 @@ body{
     background-color: #007bff;
 }
 
-
-
-
 /*---Gol menu button-d---*/
-.navi:hover{
-    background:var(--darkerBG);
+.navi:hover {
+    background: var(--darkerBG);
     transition: 0.3s ease-in-out;
 }
-.navi{
+.navi {
     width: 100%;
     height: auto;
     position: fixed;
@@ -242,19 +235,19 @@ body{
     transition: top 0.3s;
     z-index: 13;
 }
-.navi.hidden{
+.navi.hidden {
     top: -100px;
 }
-.lftMenu div:hover{
+.lftMenu div:hover {
     cursor: pointer;
 }
-.rghtMenu div:hover{
+.rghtMenu div:hover {
     cursor: pointer;
 }
-.lftMenu a{
+.lftMenu a {
     text-decoration: none;
 }
-.lftMenu{
+.lftMenu {
     width: 30vw;
     height: 4.5rem;
     display: flex;
@@ -264,10 +257,10 @@ body{
     font-weight: 400;
     gap: 1rem;
 }
-.rghtMenu a{
+.rghtMenu a {
     text-decoration: none;
 }
-.rghtMenu{
+.rghtMenu {
     width: 30vw;
     height: 4.5rem;
     display: flex;
@@ -277,28 +270,27 @@ body{
     font-weight: 400;
     gap: 1rem;
 }
-.navi img:hover{
+.navi img:hover {
     cursor: pointer;
 }
-.navi img{
+.navi img {
     background-size: contain;
     width: 5rem;
     height: 5rem;
     z-index: 20;
 }
-.mnubtn{
+.mnubtn {
     display: none;
     z-index: 15;
 }
-.mblMenu{
+.mblMenu {
     display: none;
     z-index: 12;
 }
 /*---gol menu button END---*/
 
-
 /*daraah heseg n main content-n code*/
-#landingP{
+#landingP {
     width: 100%;
     height: auto;
     padding-top: 4.5rem;
@@ -309,14 +301,14 @@ body{
     align-items: center;
 }
 /*-------------------------nuur huudasnii gol medeelel--------------------*/
-.SanalBolgoh{
+.SanalBolgoh {
     width: 75%;
     height: auto;
     display: flex;
     justify-content: center;
     margin: 2rem;
 }
-.medeelliinheseg{
+.medeelliinheseg {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -325,23 +317,23 @@ body{
     gap: 1rem;
     z-index: 10;
 }
-.medeelliinheseg h1{
+.medeelliinheseg h1 {
     font-size: 3rem;
 }
-.medeelliinheseg h3{
+.medeelliinheseg h3 {
     font-size: 1.1rem;
     font-weight: 500;
 }
-.shuudhudaldah{
+.shuudhudaldah {
     width: 100%;
     display: flex;
     justify-content: start;
     gap: 2rem;
 }
-.fnctbtn:hover{
+.fnctbtn:hover {
     cursor: pointer;
 }
-.fnctbtn{
+.fnctbtn {
     width: 10rem;
     height: 3rem;
     display: flex;
@@ -353,93 +345,92 @@ body{
     border-radius: 0.2rem;
     transition: 0.15s ease;
 }
-.buy:hover{
+.buy:hover {
     background: var(--btnClr);
     box-shadow: 0 0 0 #3e3d3d99;
 }
-.buy{
+.buy {
     background: var(--btnClr2);
     color: var(--fontC);
     box-shadow: 0 0 4px #3e3d3d99;
 }
-.cart:hover{
+.cart:hover {
     color: var(--btnClr);
     box-shadow: 0 0 2px var(--btnClrBlr);
 }
-.cart{
+.cart {
     box-shadow: 0 0 5px var(--btnClrBlr);
 }
-.zurag1{
+.zurag1 {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.zurag1 img{
+.zurag1 img {
     width: 30rem;
     height: 25rem;
 }
 /*---------------------gol medeelliin heseg duusaw-----------------------*/
 
-
 /*--------------------------busad buteegdehuunuud------------------------*/
-.BusadProd{
+.BusadProd {
     width: 85%;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.slide-container{
+.slide-container {
     width: 100%;
 }
-.slide-content{
+.slide-content {
     padding: 3rem 1.2rem;
     margin: 0 40px;
     overflow: hidden;
 }
 .image-content,
-.card-content{
+.card-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 10px 14px;
 }
-.image-content{
+.image-content {
     row-gap: 0.8rem;
 }
-.card{
+.card {
     width: 20rem;
     border-radius: 0.2rem;
     background: var(--shadowClr);
 }
-.card-image{
+.card-image {
     position: relative;
     height: 10rem;
     width: 12rem;
 }
-.card-image .card-img{
+.card-image .card-img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-.name{
+.name {
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--fontC);
 }
-.descrptn{
+.descrptn {
     font-size: 1rem;
     color: var(--fontC);
     text-align: center;
 }
-.VMore:hover{
+.VMore:hover {
     background-color: var(--shadowClr);
     color: var(--fontC);
     border: 1px solid var(--darkerBG);
 }
-.VMore{
+.VMore {
     border: none;
     font-size: 1.3rem;
     color: var(--fontC);
@@ -451,27 +442,26 @@ body{
     cursor: pointer;
     transition: 0.2s ease;
 }
-.swiper-navBtn:hover{
+.swiper-navBtn:hover {
     color: var(--fontCdark);
 }
-.swiper-navBtn{
+.swiper-navBtn {
     width: 2rem;
     height: 2rem;
     color: #8b8b8b;
     transition: 0.3s ease;
 }
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
     background-color: #8b8b8b;
     opacity: 1;
 }
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
     background-color: #565656;
 }
 /*--------------------busad buteegdehuunuud ene hurtel--------------------*/
 
-
 /*-----------------------------Company Heseg START------------------------*/
-#mnContnr{
+#mnContnr {
     width: 80%;
     display: flex;
     font-family: var(--main-fonts);
@@ -483,19 +473,21 @@ body{
     row-gap: 1.5rem;
 }
 
-.firstInfo, .secondInfo{
+.firstInfo,
+.secondInfo {
     width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.frstPic, .scndPic{
+.frstPic,
+.scndPic {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.frstPic img{
+.frstPic img {
     width: 90%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -505,11 +497,13 @@ body{
     background-repeat: no-repeat;
     background-size: contain;
 } */
-.frstIfno h3, .scndIfno h3{
+.frstIfno h3,
+.scndIfno h3 {
     display: flex;
     font-size: clamp(1.5rem, 2.5vw, 2.5rem);
 }
-.frstIfno, .scndIfno{
+.frstIfno,
+.scndIfno {
     display: flex;
     font-size: clamp(1rem, 1.5vw, 1.3rem);
     flex-direction: column;
@@ -517,16 +511,16 @@ body{
     align-items: flex-start;
     gap: 1rem;
 }
-.frstIfno{
+.frstIfno {
     width: 40%;
     text-align: justify;
 }
-.scndIfno{
+.scndIfno {
     width: 90%;
     text-align: justify;
 }
 
-#Milestone{
+#Milestone {
     width: 90%;
     padding-top: 3rem;
     padding-bottom: 2rem;
@@ -536,7 +530,7 @@ body{
     align-items: center;
     gap: 1rem;
 }
-.section{
+.section {
     width: 15rem;
     height: 6.5rem;
     display: flex;
@@ -548,29 +542,29 @@ body{
     border-radius: 0.2rem;
     margin-bottom: 1.5rem;
 }
-.Numbers{
+.Numbers {
     font-size: 1.8rem;
     font-weight: 450;
     color: var(--fontCdark);
 }
-.descrptnOfNumber{
+.descrptnOfNumber {
     font-size: 1.2rem;
     color: var(--fontCdark);
 }
 
 @keyframes slide {
-    from{
+    from {
         transform: translateX(0);
     }
-    to{
+    to {
         transform: translateX(-100%);
     }
 }
-.Hamtragchid:hover .Hamtragchid-slide{
+.Hamtragchid:hover .Hamtragchid-slide {
     animation-play-state: paused;
     transition: 0.5s ease;
 }
-.Hamtragchid{
+.Hamtragchid {
     width: 90vw;
     overflow: hidden;
     padding: 1rem 0;
@@ -579,7 +573,7 @@ body{
 }
 
 .Hamtragchid:before,
-.Hamtragchid:after{
+.Hamtragchid:after {
     position: absolute;
     top: 0;
     width: 15rem;
@@ -587,23 +581,26 @@ body{
     content: "";
     z-index: 2;
 }
-.Hamtragchid:before{
+.Hamtragchid:before {
     left: 0;
-    background: linear-gradient(to left, rgba(255,255,255,0),var(--mainBG));
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--mainBG));
 }
-.Hamtragchid:after{
+.Hamtragchid:after {
     right: 0;
-    background: linear-gradient(to right, rgba(255,255,255,0),var(--mainBG));
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        var(--mainBG)
+    );
 }
-.Hamtragchid-slide{
+.Hamtragchid-slide {
     display: inline-block;
     animation: 35s slide infinite linear;
 }
-.Hamtragchid-slide img{
+.Hamtragchid-slide img {
     height: 6rem;
     margin: 0 2rem;
 }
-
 
 .email-popup-wrapper button {
     padding: 10px 20px;
@@ -655,11 +652,11 @@ body{
 .no-scroll {
     overflow: hidden;
 }
-#sendEmailBtn:hover{
+#sendEmailBtn:hover {
     cursor: pointer;
     box-shadow: 0 0 0 #3e3d3d99;
 }
-#sendEmailBtn{
+#sendEmailBtn {
     width: 25rem;
     height: 2.8rem;
     margin: 2rem 0 3rem 0;
@@ -674,22 +671,20 @@ body{
     box-shadow: 0 0 2px #26262699;
     border: none;
 }
-#sendEmailBtn img{
+#sendEmailBtn img {
     width: 1.5rem;
     height: 1.5rem;
 }
 /*-----------------------------Company Heseg END--------------------------*/
 
-
-
 /*-----------------------------BuyPage Heseg START------------------------*/
-#mainContnr{
+#mainContnr {
     width: 100%;
     padding: 6rem 0;
     display: flex;
     position: relative;
 }
-.prodPicSide{
+.prodPicSide {
     width: 50%;
     height: 45rem;
     display: flex;
@@ -701,7 +696,7 @@ body{
     position: sticky;
     top: 6rem;
 }
-.bigImage{
+.bigImage {
     width: 80%;
     display: flex;
     background-repeat: no-repeat;
@@ -709,10 +704,10 @@ body{
     justify-content: center;
     align-items: center;
 }
-.bigImage img{
+.bigImage img {
     width: 80%;
 }
-.miniImage{
+.miniImage {
     width: 80%;
     display: flex;
     flex-wrap: wrap;
@@ -720,16 +715,16 @@ body{
     align-items: center;
     gap: 0.5rem;
 }
-.miniImage img:hover{
+.miniImage img:hover {
     cursor: pointer;
 }
-.miniImage img{
+.miniImage img {
     width: 15%;
     border: 1px solid var(--shadowClr);
     border-radius: 0.15rem;
     opacity: 0.7;
 }
-.advantageImage{
+.advantageImage {
     width: 90%;
     display: flex;
     flex-wrap: wrap;
@@ -740,10 +735,10 @@ body{
     color: var(--fontCdark);
     font-size: 0.9rem;
 }
-.advantageImage img{
+.advantageImage img {
     width: 8rem;
 }
-.advntg{
+.advntg {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -751,7 +746,7 @@ body{
     gap: 0.5rem;
 }
 
-.specSide{
+.specSide {
     width: 50%;
     display: flex;
     position: relative;
@@ -761,7 +756,7 @@ body{
     gap: 1.5rem;
     top: 5rem;
 }
-.heaterinfoDiv{
+.heaterinfoDiv {
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -769,44 +764,46 @@ body{
     align-items: start;
     gap: 1.5rem;
 }
-.heaterName, .heaterDesc, .zagwaruudlabel{
+.heaterName,
+.heaterDesc,
+.zagwaruudlabel {
     display: flex;
     width: 100%;
 }
-.heaterName{
+.heaterName {
     font-size: 2.8rem;
     color: var(--fontCdark);
     font-weight: 350;
 }
-.heaterDesc{
+.heaterDesc {
     font-size: 1.5rem;
     width: 100%;
 }
-.zagwaruudlabel{
+.zagwaruudlabel {
     margin-top: 1rem;
     font-size: 1.8rem;
     font-weight: 350;
 }
-.HeaterSelection{
+.HeaterSelection {
     width: 100%;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
     flex-wrap: wrap;
 }
-.selections h2{
+.selections h2 {
     font-size: 1.3rem;
     font-weight: 550;
 }
-.selections p{
+.selections p {
     font-size: 1.5rem;
     font-weight: 350;
 }
-.selections:hover{
+.selections:hover {
     cursor: pointer;
     box-shadow: 0 0 2px #3e3d3d99;
 }
-.selections{
+.selections {
     max-width: 40%;
     min-width: 30%;
     border: 1px solid var(--shadowClr);
@@ -818,7 +815,7 @@ body{
     align-items: center;
 }
 
-.tooshirheg{
+.tooshirheg {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -859,7 +856,7 @@ body{
     color: var(--fontCdark);
 }
 
-.uldegdel{
+.uldegdel {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -868,17 +865,19 @@ body{
     color: var(--alertColor);
     font-size: 0.8rem;
 }
-.bntsForOrder{
+.bntsForOrder {
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.cartBtn:hover, .orderBtn:hover{
+.cartBtn:hover,
+.orderBtn:hover {
     cursor: pointer;
     box-shadow: 0 0 2px #3e3d3d99;
 }
-.cartBtn, .orderBtn{
+.cartBtn,
+.orderBtn {
     width: 40%;
     padding: 1rem 0.5rem;
     border: 1px solid var(--shadowClr);
@@ -888,8 +887,8 @@ body{
     margin-top: 1rem;
 }
 
-
-.zahialagchiinBulan, .tulburiinMedeelel{
+.zahialagchiinBulan,
+.tulburiinMedeelel {
     width: 90%;
     display: none;
     flex-direction: column;
@@ -900,33 +899,41 @@ body{
     border-radius: 0.3rem;
     padding: 1rem;
 }
-.zahialagchiinBulan h2,.tulburiinMedeelel h2, .zahialagchiinBulan1 h2,.tulburiinMedeelel1 h2{
+.zahialagchiinBulan h2,
+.tulburiinMedeelel h2,
+.zahialagchiinBulan1 h2,
+.tulburiinMedeelel1 h2 {
     font-weight: 400;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
-.zahialagchiinBulan label, .zahialagchiinBulan1 label{
+.zahialagchiinBulan label,
+.zahialagchiinBulan1 label {
     font-size: 1.3rem;
     font-weight: 300;
     color: var(--fontCdark);
 }
-.zahialagchiinBulan input::placeholder,.zahialagchiinBulan1 input::placeholder {
+.zahialagchiinBulan input::placeholder,
+.zahialagchiinBulan1 input::placeholder {
     color: var(--fontCdarkBlur);
     font-size: 1rem;
 }
-.zahialagchiinBulan input, .zahialagchiinBulan1 input{
+.zahialagchiinBulan input,
+.zahialagchiinBulan1 input {
     font-size: 1.2rem;
     padding: 0.2rem 0.5rem;
     margin: 0.5rem 0rem;
     border: none;
     background: var(--inputColor);
 }
-.zahialagchiinBulan button:hover, .zahialagchiinBulan1 button:hover{
+.zahialagchiinBulan button:hover,
+.zahialagchiinBulan1 button:hover {
     cursor: pointer;
     background: var(--brightBG);
     border: 1px solid var(--darkerBG);
 }
-.zahialagchiinBulan button, .zahialagchiinBulan1 button{
+.zahialagchiinBulan button,
+.zahialagchiinBulan1 button {
     width: 16rem;
     font-size: 1.2rem;
     padding: 0.3rem 0.6rem;
@@ -937,7 +944,7 @@ body{
     border: 1px solid var(--darkerBG);
     transition: 0.3s ease;
 }
-#ZahialagchDID{
+#ZahialagchDID {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -945,14 +952,13 @@ body{
     padding: 1rem 0.5rem;
     border-radius: 0.2rem;
 }
-.PaymentDetails{
+.PaymentDetails {
     border: 1px solid var(--darkerBG);
 }
 /*-----------------------------BuyPage Heseg END-------------------------*/
 
-
 /*-----------------------------Ecological Heseg START---------------------*/
-.grid{
+.grid {
     display: grid;
     padding: 6rem 6rem 2rem 6rem;
     grid-template-rows: 1fr 1fr;
@@ -961,51 +967,51 @@ body{
     height: 1080px;
     gap: 0.3rem;
 }
-.grid div:hover{
+.grid div:hover {
     box-shadow: none;
 }
-.grid-2 div:nth-child(1):hover{
+.grid-2 div:nth-child(1):hover {
     box-shadow: none;
 }
-.grid-2 div:nth-child(2):hover{
+.grid-2 div:nth-child(2):hover {
     box-shadow: none;
 }
-.grid-2 div:nth-child(3):hover{
+.grid-2 div:nth-child(3):hover {
     box-shadow: none;
 }
-.grid-3 div:nth-child(1):hover{
+.grid-3 div:nth-child(1):hover {
     box-shadow: none;
 }
-.grid-3 div:nth-child(2):hover{
+.grid-3 div:nth-child(2):hover {
     box-shadow: none;
 }
-.grid-3 div:nth-child(3):hover{
+.grid-3 div:nth-child(3):hover {
     box-shadow: none;
 }
-.grid-1{
+.grid-1 {
     border-radius: 0.3rem;
     border: 1px solid var(--darkerBG);
     box-shadow: 0 0 3px #26262699;
 }
-.grid-2{
+.grid-2 {
     display: grid;
-    grid-template-rows: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 0.2rem;
 }
-.grid-2 div:nth-child(1){
+.grid-2 div:nth-child(1) {
     border: 1px solid var(--darkerBG);
     box-shadow: 0 0 3px #26262699;
     grid-column: 1/1;
     border-radius: 0.3rem;
 }
-.grid-2 div:nth-child(2){
+.grid-2 div:nth-child(2) {
     border: 1px solid var(--darkerBG);
     box-shadow: 0 0 3px #26262699;
     grid-column: 2/2;
     border-radius: 0.3rem;
 }
-.grid-2 div:nth-child(3){
+.grid-2 div:nth-child(3) {
     border: 1px solid var(--darkerBG);
     box-shadow: 0 0 3px #26262699;
     grid-column: 1/3;
@@ -1016,34 +1022,33 @@ body{
     grid-template-rows: 1fr 1fr;
     gap: 0.2rem;
 }
-.grid-3 div:nth-child(1){
+.grid-3 div:nth-child(1) {
     border: 1px solid var(--darkerBG);
     box-shadow: 0 0 3px #26262699;
     grid-row: 1 / 3;
     border-radius: 0.3rem;
 }
-.grid-3 div:nth-child(2){
+.grid-3 div:nth-child(2) {
     border: 1px solid var(--darkerBG);
     box-shadow: 0 0 3px #26262699;
     grid-row: 1 / 2;
     border-radius: 0.3rem;
 }
-.grid-3 div:nth-child(3){
+.grid-3 div:nth-child(3) {
     border: 1px solid var(--darkerBG);
     box-shadow: 0 0 3px #26262699;
     grid-row: 2 / 3;
     border-radius: 0.3rem;
 }
-.grid-4{
+.grid-4 {
     border: 1px solid var(--darkerBG);
     box-shadow: 0 0 3px #26262699;
     border-radius: 0.3rem;
 }
 /*-----------------------------Ecological Heseg END-----------------------*/
 
-
 /*----------------login popup try START----------------*/
-.containerLogin{
+.containerLogin {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
@@ -1088,9 +1093,10 @@ body{
     color: var(--fontCdark);
 }
 
-#openLoginModalBtn, #openSignupModalBtn {
+#openLoginModalBtn,
+#openSignupModalBtn {
     width: 20rem;
-    background-color: #4CAF50;
+    background-color: #4caf50;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -1098,14 +1104,18 @@ body{
     font-size: 16px;
 }
 
-#openLoginModalBtn:hover, #openSignupModalBtn:hover {
+#openLoginModalBtn:hover,
+#openSignupModalBtn:hover {
     background-color: #45a049;
 }
-.signupForm button, .loginForm button{
+.signupForm button,
+.loginForm button {
     width: 50%;
 }
 
-input[type="text"], input[type="password"], input[type="email"] {
+input[type="text"],
+input[type="password"],
+input[type="email"] {
     width: 100%;
     padding: 8px;
     margin: 8px 0;
@@ -1120,31 +1130,27 @@ form div {
 
 /*----------------login popup try END-----------------*/
 
-
-
-
-
 /*-----------------------------Calculate Heseg START----------------------*/
-#heater-card-container{
+#heater-card-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
     align-items: center;
 }
-.cardh{
+.cardh {
     background: var(--darkerBG);
     color: var(--fontCdark);
     border-radius: 0.3rem;
     padding: 1rem;
 }
-.swiper-slidee{
+.swiper-slidee {
     gap: 1rem;
 }
-.card-contentt{
+.card-contentt {
     gap: 0.6rem;
 }
-.namee{
+.namee {
     display: flex;
     font-size: 1.2rem;
     font-weight: 500;
@@ -1152,7 +1158,7 @@ form div {
     justify-content: center;
     align-items: center;
 }
-.descrptnn{
+.descrptnn {
     display: flex;
     font-size: 1.4rem;
     font-weight: 400;
@@ -1160,7 +1166,7 @@ form div {
     justify-content: center;
     align-items: center;
 }
-.room-bill{
+.room-bill {
     display: flex;
     font-size: 1.1rem;
     text-align: center;
@@ -1169,7 +1175,7 @@ form div {
     justify-content: center;
     align-items: center;
 }
-#total-bill-container{
+#total-bill-container {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1179,16 +1185,17 @@ form div {
     font-weight: 600;
     color: var(--btnClrBlr);
 }
-.total-bill{
+.total-bill {
     font-size: 1.5rem;
     font-weight: 400;
     color: var(--btnClrBlr);
 }
-.HouseInfo{
+.HouseInfo {
     width: 100%;
     margin-top: 6rem;
 }
-.HouseInfo, .ques{
+.HouseInfo,
+.ques {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1197,7 +1204,7 @@ form div {
     gap: 1rem;
     padding: 1rem;
 }
-.ques{
+.ques {
     padding-top: 2rem;
     padding-bottom: 2rem;
     width: 25rem;
@@ -1207,17 +1214,17 @@ form div {
     font-size: 1.5rem;
     font-weight: 350;
 }
-.ques input{
+.ques input {
     width: 80%;
     padding: 0.2rem;
     font-size: 1.3rem;
     text-align: center;
 }
-.HouseInfo button:hover{
+.HouseInfo button:hover {
     box-shadow: 0 0 3px #26262699;
     cursor: pointer;
 }
-.HouseInfo button{
+.HouseInfo button {
     width: 25rem;
     padding: 0.8rem 4rem;
     font-size: 1.4rem;
@@ -1228,9 +1235,8 @@ form div {
 }
 /*-----------------------------Calculate Heseg END------------------------*/
 
-
 /*-----------------------------Advice Heseg START-------------------------*/
-#AdvPage{
+#AdvPage {
     display: flex;
     padding-top: 4.3rem;
     flex-direction: row;
@@ -1241,24 +1247,36 @@ form div {
     grid-column: 1 / 3;
     justify-content: center;
     align-items: center;
-    /*background-color: #e5e5e5;*/    
+    /*background-color: #e5e5e5;*/
     background-size: 300% 300%;
     animation: color 10s ease-in-out infinite forwards;
     color: #fdfcfd;
     font-family: var(--main-fonts);
 }
-::-webkit-scrollbar {width: 10px;}
-::-webkit-scrollbar-corner {display: none;}
-::-webkit-scrollbar:hover {width: 13px;}
-::-webkit-scrollbar-thumb {background: #464646; border-radius: 0.15rem;}
-::-webkit-scrollbar-thumb:hover {background: #373636; width: 15px;}
-.cardd:hover{
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-corner {
+    display: none;
+}
+::-webkit-scrollbar:hover {
+    width: 13px;
+}
+::-webkit-scrollbar-thumb {
+    background: #464646;
+    border-radius: 0.15rem;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #373636;
+    width: 15px;
+}
+.cardd:hover {
     box-shadow: 4px 6px 8px #1210175e;
-    transform:translateY(3px);
+    transform: translateY(3px);
     transition: 0.3s ease;
     opacity: 1;
 }
-.cardd{
+.cardd {
     display: flex;
     align-items: center;
     width: 80vw;
@@ -1276,7 +1294,7 @@ form div {
     animation-range-start: cover;
     animation-range-end: 500px;
 }
-.cardd img{
+.cardd img {
     max-width: 280px;
     width: 35vw;
     height: 380px;
@@ -1286,16 +1304,16 @@ form div {
     border-radius: 10px;
     box-shadow: 0 60px 40px rgb(0 0 0/8%);
 }
-.cardd h2{
+.cardd h2 {
     font-size: 2.3rem;
     font-weight: 400;
     letter-spacing: 1px;
     margin-top: 0;
     margin-right: 30px;
     margin-bottom: 20px;
-    font-family:var(--mainfont-fonts);
+    font-family: var(--mainfont-fonts);
 }
-.cardd h3{
+.cardd h3 {
     font-family: var(--mainfont-fonts);
     font-size: 1.3rem;
     font-weight: 400;
@@ -1303,7 +1321,7 @@ form div {
     margin: 10px 0;
     opacity: 0.75;
 }
-.cardd p{
+.cardd p {
     display: flex;
     font-family: var(--mainfont-fonts);
     font-size: 1.3rem;
@@ -1314,7 +1332,7 @@ form div {
     margin-bottom: 50px;
     opacity: 0.7;
 }
-.cardd button:hover{
+.cardd button:hover {
     background: #0e602c;
     /*box-shadow: inset 500px 0 0 0 #0e602c;*/
     transition: ease 0.4s;
@@ -1339,16 +1357,15 @@ form div {
 /*-----------------------------Advice Heseg END---------------------------*/
 /*main content ene hurtel*/
 
-
 /*-----------------------------Shopping cart Heseg START---------------------------*/
-#cartMainCont{
+#cartMainCont {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 6rem;
 }
-.selectedHtrs{
+.selectedHtrs {
     width: 60%;
     height: 50rem;
     display: flex;
@@ -1360,7 +1377,7 @@ form div {
     margin: 1rem 0;
     overflow: scroll;
 }
-.selectionByOrder{
+.selectionByOrder {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -1405,7 +1422,7 @@ form div {
     font-weight: bold;
     padding: 0 1rem;
 }
-.selectionByOrder img{
+.selectionByOrder img {
     width: 15rem;
     background-size: contain;
 }
@@ -1420,12 +1437,13 @@ form div {
     color: #555;
 }
 
-.PaymentDetailsDiv{
+.PaymentDetailsDiv {
     width: 40%;
     display: flex;
     flex-direction: column;
 }
-.zahialagchiinBulan1, .tulburiinMedeelel1{
+.zahialagchiinBulan1,
+.tulburiinMedeelel1 {
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -1436,9 +1454,6 @@ form div {
     padding: 1rem;
 }
 /*-----------------------------Shopping cart Heseg END---------------------------*/
-
-
-
 
 /*-----------------------------FAQ Heseg START---------------------------*/
 .faq-container {
@@ -1477,7 +1492,7 @@ form div {
     position: relative;
 }
 .faq-question::after {
-    content: '\25BC'; /* Unicode for downward arrow */
+    content: "\25BC"; /* Unicode for downward arrow */
     font-size: 1rem;
     position: absolute;
     right: 20px;
@@ -1506,20 +1521,17 @@ form div {
 }
 /*-----------------------------FAQ Heseg END---------------------------*/
 
-
-
-
 /*----------------login popup try START----------------*/
-.socials-row{
+.socials-row {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
 }
-.socials-row img{
+.socials-row img {
     width: 1.5rem;
     height: 1.5rem;
 }
-.socials-row>a{
+.socials-row > a {
     padding: 0.5rem;
     border-radius: 0.5rem;
     width: 100%;
@@ -1534,24 +1546,24 @@ form div {
     border: 1px solid var(--fontC);
     font-weight: 700;
 }
-.socials-row>a:hover{
+.socials-row > a:hover {
     border: 1px solid var(--btnClrBlr);
 }
 
-.divider{
+.divider {
     display: flex;
     flex-direction: row;
     color: var(--fontCdark);
     gap: 1rem;
     align-items: center;
 }
-.divider-line{
+.divider-line {
     width: 100%;
     height: 1px;
     background: var(--fontCdark);
-    opacity: .2;
+    opacity: 0.2;
 }
-.login-wrapper{
+.login-wrapper {
     font-family: var(--main-fonts);
     position: relative;
     display: grid;
@@ -1559,16 +1571,16 @@ form div {
     margin: 0 auto;
 }
 
-.login-side{
+.login-side {
     padding: 11.75rem 2rem 3rem 2rem;
     display: flex;
     justify-content: center;
     align-items: start;
 }
-.info-side{
+.info-side {
     height: 100vh;
     padding: 5.25rem 3rem 3rem 2rem;
-    color: #401B3d;
+    color: #401b3d;
     width: 100%;
     display: flex;
     overflow: hidden;
@@ -1577,28 +1589,28 @@ form div {
     align-items: center;
     background: var(--brightBG);
 }
-.info-side h2{
+.info-side h2 {
     margin-top: 3rem;
     color: var(--fontCdarkBlur);
     font-size: 1.8rem;
     margin-bottom: 0.75rem;
 }
-.info-side p{
+.info-side p {
     font-size: 1.2rem;
 }
 .info-side img {
     max-width: 53.75rem;
 }
-.welcome-message{
+.welcome-message {
     max-width: 22.5rem;
 }
-.logo{
+.logo {
     height: 6rem;
     position: absolute;
     top: 1.25rem;
     left: 1.25rem;
 }
-.my-form_wrapper{
+.my-form_wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1607,28 +1619,28 @@ form div {
     width: 100%;
     padding: 3rem 2rem;
     height: fit-content;
-    box-shadow: rgba(100,100,111,0.2) 0rem 6px 26px 0rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0rem 6px 26px 0rem;
 }
-.my-form{
+.my-form {
     display: flex;
     flex-direction: column;
     justify-content: start;
     position: relative;
     gap: 1rem;
 }
-.login-welcome{
-    height: 5rem ;
+.login-welcome {
+    height: 5rem;
     width: 5rem;
     border-radius: 50%;
     object-fit: cover;
 }
-.login-welcome-row{
+.login-welcome-row {
     display: flex;
     width: 100%;
     flex-direction: column;
     gap: 0.5rem;
 }
-.my-form_button{
+.my-form_button {
     background: var(--btnClrBlr);
     color: white;
     white-space: nowrap;
@@ -1640,33 +1652,33 @@ form div {
     line-height: 3.125rem;
     outline: none;
     font-size: 1.125rem;
-    letter-spacing: .025rem;
+    letter-spacing: 0.025rem;
     text-decoration: none;
     cursor: pointer;
     font-weight: 800;
     min-height: 3.125rem;
     width: 100%;
     border-radius: 0.5rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
-    -webkit-transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
 }
-.my-form_actions{
+.my-form_actions {
     display: flex;
     flex-direction: column;
     color: var(--fontCdark);
     gap: 1rem;
     margin-top: 0.5rem;
 }
-.my-form_actions a{
+.my-form_actions a {
     color: var(--fontCdark);
     font-weight: 600;
     text-decoration: none;
 }
-.my-form_actions a:hover{
+.my-form_actions a:hover {
     text-decoration: underline;
 }
-.my-form_row{
+.my-form_row {
     display: flex;
     justify-content: space-between;
 }
@@ -1674,16 +1686,16 @@ form div {
     display: flex;
     justify-content: center;
 }
-.my-form_signup a{
+.my-form_signup a {
     color: var(--btnClrBlr);
     font-weight: 800;
     text-decoration: none;
     font-size: 1.125rem;
 }
-.my-form_signup a:hover{
+.my-form_signup a:hover {
     text-decoration: underline;
 }
-.text-field input{
+.text-field input {
     color: var(--btnClrBlr);
     font-size: 1rem;
     font-weight: 500;
@@ -1691,45 +1703,41 @@ form div {
     width: 100%;
     border: 1px solid var(--btnClrBlr);
     height: 3.125rem;
-    letter-spacing: .03rem;
+    letter-spacing: 0.03rem;
     background-color: transparent;
     outline: none;
-    transition: .25s;
+    transition: 0.25s;
     border-radius: 0.5rem;
     text-indent: 1.25rem;
     margin-top: 0.5rem;
 }
-.text-field{
+.text-field {
     position: relative;
 }
-.text-field img{
+.text-field img {
     position: absolute;
     right: -0.125rem;
     bottom: -0.25rem;
     width: 1.875rem;
     height: 1.875rem;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     transform-origin: center;
 }
-.text-field input:focus{
+.text-field input:focus {
     border: 0.0625rem solid var(--btnClrBlr);
 }
-.text-field label{
+.text-field label {
     color: var(--fontCdark);
     font-size: 0.875rem;
     font-weight: 600;
-    letter-spacing: .03rem;
+    letter-spacing: 0.03rem;
     z-index: 10;
 }
 
-
 /*----------------login popup try END-----------------*/
 
-
-
-
 /*footer section footer n @media heseg deer edit hiigdehgui */
-footer{
+footer {
     width: 100%;
     height: auto;
     background-color: var(--darkerBG);
@@ -1737,13 +1745,13 @@ footer{
     flex-direction: column;
     bottom: 0;
 }
-footer a{
+footer a {
     text-decoration: none;
     font-family: var(--main-fonts);
     color: var(--fontCdark);
 }
 
-.SocialCont{
+.SocialCont {
     width: 100vw;
     display: flex;
     height: auto;
@@ -1755,41 +1763,41 @@ footer a{
     align-items: center;
     align-self: center;
 }
-.Emailicon:hover{
+.Emailicon:hover {
     opacity: 100%;
     cursor: pointer;
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
 }
-.Emailicon{
+.Emailicon {
     flex-direction: row;
     width: 2rem;
     height: 2.2rem;
     margin-left: 11px;
     opacity: 90%;
 }
-.Facebookicon:hover{
+.Facebookicon:hover {
     border-radius: 3px;
     opacity: 100%;
     cursor: pointer;
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
 }
-.Facebookicon{
+.Facebookicon {
     flex-direction: row;
     width: 2rem;
     height: 2rem;
     margin-left: 11px;
     opacity: 90%;
 }
-.Instagramicon:hover{
+.Instagramicon:hover {
     border-radius: 3px;
     opacity: 100%;
     cursor: pointer;
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
 }
-.Instagramicon{
+.Instagramicon {
     flex-direction: row;
     width: 2rem;
     height: 2rem;
@@ -1797,7 +1805,7 @@ footer a{
     opacity: 70%;
 }
 
-.hayg{
+.hayg {
     width: 100%;
     height: auto;
     display: flex;
@@ -1809,7 +1817,7 @@ footer a{
     flex-wrap: wrap;
     text-align: center;
 }
-.utas{
+.utas {
     display: flex;
     justify-content: space-around;
     font-size: 1.5rem;
@@ -1817,15 +1825,15 @@ footer a{
     color: var(--fontCdark);
     padding: 2rem 0;
 }
-.MapsG{
+.MapsG {
     font-size: 1rem;
     height: auto;
 }
-.MapsG iframe{
+.MapsG iframe {
     display: flex;
-    margin:1.5rem 10vw;
+    margin: 1.5rem 10vw;
 }
-.line{
+.line {
     width: 80vw;
     height: 0.1rem;
     margin-right: 10vw;
@@ -1834,7 +1842,7 @@ footer a{
     border: 0.1rem var(--fontCdark) solid;
     border-radius: 0.05rem;
 }
-.endcrdt{
+.endcrdt {
     width: 100%;
     color: var(--fontCdark);
     font-weight: 400;
@@ -1845,78 +1853,80 @@ footer a{
 
 /*-------------------------------------------------------------*/
 
-
 /*for small screen*/
-@media (max-width: 1050px){
-    #mainContnr{
+@media (max-width: 1050px) {
+    #mainContnr {
         padding-top: 0;
     }
-    .prodPicSide{
+    .prodPicSide {
         width: 40%;
         padding-top: 0;
         position: sticky;
     }
-    .bigImage img{
+    .bigImage img {
         width: 100%;
     }
-    .miniImage img{
+    .miniImage img {
         width: 25%;
     }
-    .specSide{
+    .specSide {
         width: 60%;
     }
-    .specSide{
+    .specSide {
         justify-content: center;
         align-items: center;
     }
-    .advantageImage{
+    .advantageImage {
         width: 100%;
     }
-    .advntg{
+    .advntg {
         width: 25%;
     }
-    .advntg img{
+    .advntg img {
         width: 100%;
     }
-    .heaterName{
+    .heaterName {
         padding-top: 2rem;
     }
-    .cartBtn, .orderBtn{
+    .cartBtn,
+    .orderBtn {
         width: 18rem;
     }
 
-
-    .selectionByOrder{
+    .selectionByOrder {
         width: 85%;
     }
 
-
     /* company*/
-    .firstInfo{
+    .firstInfo {
         flex-direction: column;
     }
-    .secondInfo{
+    .secondInfo {
         flex-direction: column-reverse;
     }
-    .frstPic, .scndPic{
+    .frstPic,
+    .scndPic {
         width: 100%;
     }
-    .frstPic img,.scndPic img{
+    .frstPic img,
+    .scndPic img {
         width: 100%;
     }
-    .frstIfno h3, .scndIfno h3{
+    .frstIfno h3,
+    .scndIfno h3 {
         display: flex;
         font-size: clamp(2rem, 2.5vw, 2.5rem);
     }
-    .frstIfno, .scndIfno{
+    .frstIfno,
+    .scndIfno {
         width: 100%;
         font-size: clamp(1rem, 1.5vw, 1.3rem);
     }
-    #HamtrahHuselt:hover{
+    #HamtrahHuselt:hover {
         cursor: pointer;
         box-shadow: 0 0 0 #3e3d3d99;
     }
-    #HamtrahHuselt{
+    #HamtrahHuselt {
         width: 22.5rem;
         height: 2.8rem;
         margin: 2rem 0 3rem 0;
@@ -1930,7 +1940,7 @@ footer a{
         /*border: 0.5px solid var(--shadowClr);*/
         box-shadow: 0 0 2px #3e3d3d99;
     }
-    #HamtrahHuselt img{
+    #HamtrahHuselt img {
         width: 1.5rem;
         height: 1.5rem;
     }
@@ -1938,37 +1948,36 @@ footer a{
 }
 /*for small screen*/
 
-
 /*For tablet 834px*/
-@media (max-width: 850px){
-    .Welcome{
+@media (max-width: 850px) {
+    .Welcome {
         width: 40%;
     }
-    .rightsd{
+    .rightsd {
         width: 60%;
         padding-left: 0;
     }
-    .SanalBolgoh{
+    .SanalBolgoh {
         flex-direction: column-reverse;
         align-items: center;
     }
-    .zurag1 img{
+    .zurag1 img {
         width: 25rem;
         height: 20rem;
     }
-    .navi:hover{
+    .navi:hover {
         background: var(--mainBGMirror);
     }
-    .navi{
+    .navi {
         justify-content: space-between;
     }
-    .lftMenu{
+    .lftMenu {
         display: none;
     }
-    .rghtMenu{
+    .rghtMenu {
         display: none;
     }
-    .mnubtn{
+    .mnubtn {
         margin: 1rem;
         position: relative;
         width: 3rem;
@@ -1982,7 +1991,7 @@ footer a{
         cursor: pointer;
         overflow: hidden;
     }
-    .mnubtn span{
+    .mnubtn span {
         position: absolute;
         width: 2.2rem;
         height: 0.2rem;
@@ -1990,31 +1999,31 @@ footer a{
         border-radius: 0.2rem;
         transition: 0.3s;
     }
-    .mnubtn span:nth-child(1){
+    .mnubtn span:nth-child(1) {
         transform: translateY(-13px);
     }
-    .mnubtn.active span:nth-child(1){
+    .mnubtn.active span:nth-child(1) {
         transform: translateY(0px) rotate(45deg);
     }
-    .mnubtn span:nth-child(2){
+    .mnubtn span:nth-child(2) {
         transform: translateY(13px);
     }
-    .mnubtn.active span:nth-child(2){
+    .mnubtn.active span:nth-child(2) {
         transform: translateY(0px) rotate(-45deg);
     }
-    .mnubtn.active span:nth-child(3){
+    .mnubtn.active span:nth-child(3) {
         opacity: 0;
     }
-    .mnubtn.active{
+    .mnubtn.active {
         box-shadow: none;
     }
-    .mblMenu div:hover{
+    .mblMenu div:hover {
         cursor: pointer;
     }
-    .mblMenu a{
+    .mblMenu a {
         text-decoration: none;
     }
-    .mblMenu{
+    .mblMenu {
         display: flex;
         width: 100%;
         position: fixed;
@@ -2029,68 +2038,67 @@ footer a{
         padding: 2rem;
         opacity: 0;
         backdrop-filter: blur(15px);
-        padding-bottom: 4rem;            
-        transform: translate(0,-100%); /* Position off-screen */
+        padding-bottom: 4rem;
+        transform: translate(0, -100%); /* Position off-screen */
         transition: transform 0.5s ease, opacity 0.5s ease, top 0.8s;
     }
-    .mblMenu.hidden{
+    .mblMenu.hidden {
         top: -500px;
     }
-    .mblMenu.show { /* Ensure the element is displayed */
+    .mblMenu.show {
+        /* Ensure the element is displayed */
         backdrop-filter: blur(15px);
         opacity: 1;
         transform: translate(0); /* Move into view */
     }
-    
 
-    .SanalBolgoh{
+    .SanalBolgoh {
         width: 85%;
         margin-left: 5rem;
         margin-right: 5rem;
     }
-    .medeelliinheseg h1{
+    .medeelliinheseg h1 {
         font-size: 2.5rem;
     }
-    .medeelliinheseg h2{
+    .medeelliinheseg h2 {
         font-size: 1.2rem;
     }
-    .medeelliinheseg h3{
+    .medeelliinheseg h3 {
         font-size: 1rem;
         font-weight: 500;
     }
-    .medeelliinheseg{
+    .medeelliinheseg {
         width: 100%;
     }
 
-
-    #mainContnr{
+    #mainContnr {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding-bottom: 6rem;
         height: auto;
     }
-    .prodPicSide{
+    .prodPicSide {
         width: 95%;
         height: auto;
         position: relative;
         padding-top: 0;
         padding-bottom: 2rem;
     }
-    .bigImage img{
+    .bigImage img {
         width: 80%;
     }
-    .specSide{
+    .specSide {
         width: 95%;
     }
-    .specSide{
+    .specSide {
         justify-content: center;
         align-items: center;
     }
-    .miniImage img{
+    .miniImage img {
         width: 15%;
     }
-    .heaterinfoDiv{
+    .heaterinfoDiv {
         width: 85%;
         display: flex;
         flex-direction: column;
@@ -2098,69 +2106,69 @@ footer a{
         align-items: center;
         gap: 1.5rem;
     }
-    .heaterName{
+    .heaterName {
         display: flex;
         justify-content: center;
     }
-    .zagwaruudlabel{
+    .zagwaruudlabel {
         flex-direction: column;
         align-items: center;
     }
-    .HeaterSelection{
+    .HeaterSelection {
         flex-direction: column;
         align-items: center;
     }
-    .tooshirheg{
+    .tooshirheg {
         text-align: center;
         align-items: center;
     }
-    .bntsForOrder{
+    .bntsForOrder {
         flex-direction: column;
         align-items: center;
     }
 
-    #cartMainCont{
+    #cartMainCont {
         flex-direction: column;
     }
-    .selectedHtrs, .PaymentDetailsDiv{
+    .selectedHtrs,
+    .PaymentDetailsDiv {
         width: 100%;
         align-items: center;
     }
-    .selectedHtrs{
+    .selectedHtrs {
         height: auto;
         justify-content: start;
     }
-    .selectionByOrder img{
+    .selectionByOrder img {
         width: 10rem;
     }
 
-
     /*ecological heseg*/
-    .grid{
+    .grid {
         padding: 6rem 2rem 2rem 2rem;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr;
         gap: 0;
         box-shadow: none;
     }
-    .grid-1{
+    .grid-1 {
         box-shadow: none;
         border-radius: 0;
     }
-    .grid-2{
+    .grid-2 {
         box-shadow: none;
         border-radius: 0;
         gap: 0;
     }
-    .grid-2 div:nth-child(1){
+    .grid-2 div:nth-child(1) {
         box-shadow: none;
         border-radius: 0;
     }
-    .grid-2 div:nth-child(2){
+    .grid-2 div:nth-child(2) {
         box-shadow: none;
         border-radius: 0;
     }
-    .grid-2 div:nth-child(3){
+    .grid-2 div:nth-child(3) {
         box-shadow: none;
         border-radius: 0;
     }
@@ -2169,82 +2177,82 @@ footer a{
         border-radius: 0;
         gap: 0;
     }
-    .grid-3 div:nth-child(1){
+    .grid-3 div:nth-child(1) {
         box-shadow: none;
         border-radius: 0;
     }
-    .grid-3 div:nth-child(2){
+    .grid-3 div:nth-child(2) {
         box-shadow: none;
         border-radius: 0;
     }
-    .grid-3 div:nth-child(3){
+    .grid-3 div:nth-child(3) {
         box-shadow: none;
         border-radius: 0;
     }
-    .grid-4{
+    .grid-4 {
         box-shadow: none;
         border-radius: 0;
         gap: 0;
     }
 
     /*login*/
-        .login-wrapper{
+    .login-wrapper {
         grid-template-columns: 1fr;
         height: 100vh;
     }
-    .info-side{
+    .info-side {
         flex-direction: column-reverse;
         padding: 3rem 3rem 3rem 2rem;
     }
     /*login*/
 }
 
-@media (max-width: 610px){
-    #thinnav{
+@media (max-width: 610px) {
+    #thinnav {
         display: none;
     }
-    .navi{
+    .navi {
         top: 0;
     }
-    .mblMenu{
+    .mblMenu {
         top: 6rem;
     }
     /*.swiper-navBtn{
         display: none;
     }*/
-    .heaterName{
+    .heaterName {
         font-size: 2rem;
         text-align: center;
     }
-    .grid{
+    .grid {
         padding: 6rem 0 2rem 0;
     }
-    .grid-2{
+    .grid-2 {
         grid-template-columns: 1fr 1fr;
     }
-    .grid-2 div:nth-child(1){
+    .grid-2 div:nth-child(1) {
         grid-column: 1/1;
         grid-row: 1/3;
     }
-    .grid-2 div:nth-child(2){
+    .grid-2 div:nth-child(2) {
         grid-column: 2/2;
     }
-    .grid-2 div:nth-child(3){
+    .grid-2 div:nth-child(3) {
         grid-column: 2/3;
     }
-    .grid-3{
+    .grid-3 {
         grid-template-columns: 1fr 1fr;
     }
-    .grid-3 div:nth-child(1){
+    .grid-3 div:nth-child(1) {
         grid-row: 1/1;
     }
-    .grid-3 div:nth-child(2){
+    .grid-3 div:nth-child(2) {
         grid-row: 1/2;
     }
-    .grid-3 div:nth-child(3){
+    .grid-3 div:nth-child(3) {
         grid-row: 1/3;
     }
 }
 /*For mobile 480px*/
-@media (max-width: 480px){
+@media (max-width: 480px) {
 }
