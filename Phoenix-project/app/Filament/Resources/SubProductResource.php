@@ -48,6 +48,7 @@ class SubProductResource extends Resource
     {
         return $table
             ->columns([
+                TextColumn::make('category.Бүтээгдэхүүн'),
                 TextColumn::make('Загвар'),
                 TextColumn::make('Онцлог_шинж'),
                 ImageColumn::make('Зураг'),
