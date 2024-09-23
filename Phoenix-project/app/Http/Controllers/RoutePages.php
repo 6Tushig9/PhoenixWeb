@@ -3,18 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\MainProduct;
+use App\Models\Advice;
 
 class RoutePages extends Controller
-{    
+{   
 
     public function test(){
-       $arr=MainProduct::all()[0];
-       return response()->json($arr);
+       $arr=MainProduct::all()[0] ?? null;
+       $test=Advice::all() ?? null;
+       return response()->json($test);
     }
 
     public function phoenixsheater(){
-        $arr=MainProduct::all()[0];
-        $array=array(MainProduct::all());
+        $arr=MainProduct::all()[0] ?? null;
+        $array=array(MainProduct::all()) ?? null;
         $menu=[];
         for ($i = 1; $i < count($array); $i++) {
             array_push($menu, $array[$i]);
@@ -36,7 +38,8 @@ class RoutePages extends Controller
     }
 
     public function advice(){
-         return view('page.Advice');
+        $data=Advice::all() ?? null;
+        return view('page.Advice',['advice'=>$data]);
     }
 
     public function buypage(){
