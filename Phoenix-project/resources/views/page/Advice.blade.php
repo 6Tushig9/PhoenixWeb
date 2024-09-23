@@ -35,5 +35,6 @@
                 <button id="More1" onclick="More1()">Дэлгэрэнгүй...</button>
             </div>
         </div>
+        
 </div>
 @endsection

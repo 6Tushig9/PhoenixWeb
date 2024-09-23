@@ -40,18 +40,6 @@
                         амьдрах орчныг бүрдүүлэхээр зорин ажиллаж байна.
                 </div>
             </div>
-            @if (!$posts)
-            @else
-                @foreach ($posts as $item)
-                    <div class="frstPic"> 
-                        <img src={{ asset('storate/'.$item->image) }}>
-                    </div>
-                    <div class="frstInfo">
-                        <h3>{{ $item->title }}</h3>
-                        {{ $item->post }}
-                    </div>
-                @endforeach
-            @endif
         </div>
         <div class="secondInfo">
             <div class="scndIfno">
@@ -151,7 +139,7 @@
                     <input type="text" id="NameOfSender" placeholder="Хүсэлт илгээгчийн нэр" required>
                     <label for="phoneNum">Утасны дугаар:</label>
                     <input type="text" id="phoneNum" placeholder="Утасны дугаар" required>
-                    <label for="message">Мессеж:</label>
+                    <label for="message">Хамтрах хүсэлт:</label>
                     <textarea id="message" placeholder="Таны илгээх мессеж" required></textarea>
                     <button type="submit" class="send-btn">Send</button>
                 </form>

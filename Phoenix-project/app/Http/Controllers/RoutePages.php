@@ -2,16 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PostOruulah;
+use App\Models\MainProduct;
 
 class RoutePages extends Controller
 {    
+
+    public function test(){
+       $arr=MainProduct::all()[0];
+       return response()->json($arr);
+    }
+
     public function phoenixsheater(){
-        return view('page.PhoenixSheater');
+        $arr=MainProduct::all()[0];
+        $array=array(MainProduct::all());
+        $menu=[];
+        for ($i = 1; $i < count($array); $i++) {
+            array_push($menu, $array[$i]);
+        }
+            
+        return view('page.PhoenixSheater',['first_item'=>$arr, 'menu'=>$menu]);
     }
 
     public function company(){
-        return view('page.Company', ['posts' => PostOruulah::all()]);
+        return view('page.Company');
     }
     
     public function ecological(){
