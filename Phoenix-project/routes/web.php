@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
-use App\Filament\Resources\DemoResource;
 
 Route::controller(RoutePages::class)->group(function (){
     Route::get('/', 'phoenixsheater');
