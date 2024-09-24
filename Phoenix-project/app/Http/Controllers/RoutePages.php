@@ -18,8 +18,8 @@ class RoutePages extends Controller
     public function phoenixsheater(): View
     {
         $arr=MainProduct::all()[0] ?? null;
-        $array=array(MainProduct::all()) ?? null;
-        return View('page.PhoenixSheater',['first_item'=>$arr, 'menu'=>$array]);
+        $product=MainProduct::all() ?? null;
+        return View('page.PhoenixSheater',['first_item'=>$arr, 'menu'=>$product]);
     }
 
     public function company(): View

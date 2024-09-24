@@ -28,6 +28,8 @@ class MainProductResource extends Resource
 
     protected static ?string $navigationLabel = 'Ц - Халаагуур';
 
+    protected static ?string $modelLabel = 'Ц - Халаагуур';
+
     protected static ?string $navigationIcon = 'heroicon-o-bolt';
 
     public static function form(Form $form): Form
