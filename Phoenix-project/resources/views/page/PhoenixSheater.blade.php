@@ -112,30 +112,6 @@
                                         <button class="VMore VMoring">Дэлгэрэнгүй</button>
                                     </div>
                                 </div>
-                                <div class="card swiper-slide">
-                                    <div class="image-content">
-                                        <div class="card-image">
-                                            <img src={{ asset("pics2use/Heaters/S800TW.png")}} class="card-img">
-                                        </div>
-                                        <div class="card-content">
-                                            <h2 class="name">S800TW</h2>
-                                            <p class="descrptn">14-18м2</p>
-                                        </div>
-                                        <button class="VMore">Дэлгэрэнгүй</button>
-                                    </div>
-                                </div>
-                                <div class="card swiper-slide">
-                                    <div class="image-content">
-                                        <div class="card-image">
-                                            <img src={{ asset("pics2use/Heaters/S900TW.png")}} class="card-img"">
-                                        </div>
-                                        <div class="card-content">
-                                            <h2 class="name">S900TW</h2>
-                                            <p class="descrptn">16-20м2</p>
-                                        </div>
-                                        <button class="VMore">Дэлгэрэнгүй</button>
-                                    </div>
-                                </div>
                             @else
                                 @foreach ($menu as $product)
                                     <div class="card swiper-slide">
