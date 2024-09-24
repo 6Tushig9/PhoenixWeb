@@ -12,7 +12,7 @@ class RoutePages extends Controller
 {   
 
     public function test(){
-       return response()->json(Statistic::all());
+       return response()->json(Statistic::all() ?? null);
     }
 
     public function phoenixsheater(): View
@@ -24,8 +24,8 @@ class RoutePages extends Controller
 
     public function company(): View
     {
-        $organization=Organization::all();
-        $statistic=Statistic::all();
+        $organization=Organization::all() ?? null;
+        $statistic=Statistic::all() ?? null;
         return View('page.Company',['organization'=>$organization, 'statistic'=>$statistic]);
     }
     
