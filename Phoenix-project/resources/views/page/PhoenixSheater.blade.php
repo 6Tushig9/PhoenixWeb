@@ -21,34 +21,11 @@
             <div class="SanalBolgoh">
                 @if ($first_item == null)
                     <div class="medeelliinheseg">
-                    <h1>S1200TW</h1>
-                    <h2>22м2 талбай халаах хүчин чадалтай</h2>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Ducimus ullam voluptate sapiente expedita nisi voluptates 
-                        perspiciatis doloremque est eligendi consequatur animi.</h3>
-                    <div class="shuudhudaldah">
-                         <script>
-                        $(document).ready(function() {
-                            $('#buying').click(function() {
-                                window.location.href = '/buypage';
-                            });
-                            $('#basketing').click(function(){
-                                window.location.href='/shoppingcart';
-                            });
-                        });
-                        </script>
-                        <div class="fnctbtn buy" id="buying">Худалдан авах</div>
-                        <div class="fnctbtn cart" id="basketing">Сагсанд хийх</div>
-                    </div>
-                </div>
-                <div class="zurag1">
-                    <img src={{ asset("pics2use/Heaters/S1200TWbig.png")}} >
-                </div>
-                @else
-                    <div class="medeelliinheseg">
-                        <h1>{{ $first_item->Бүтээгдэхүүн }}</h1>
-                        <h2>{{ $first_item->Онцлог_шинж }}</h2>
-                        <h3>{{ $first_item->Товч_мэдээлэл }}</h3>
+                        <h1>S1200TW</h1>
+                        <h2>22м2 талбай халаах хүчин чадалтай</h2>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Ducimus ullam voluptate sapiente expedita nisi voluptates 
+                            perspiciatis doloremque est eligendi consequatur animi.</h3>
                         <div class="shuudhudaldah">
                             <script>
                             $(document).ready(function() {
@@ -59,6 +36,29 @@
                                     window.location.href='/shoppingcart';
                                 });
                             });
+                            </script>
+                            <div class="fnctbtn buy" id="buying">Худалдан авах</div>
+                            <div class="fnctbtn cart" id="basketing">Сагсанд хийх</div>
+                        </div>
+                    </div>
+                    <div class="zurag1">
+                        <img src={{ asset("pics2use/Heaters/S1200TWbig.png")}} >
+                    </div>
+                @else
+                    <div class="medeelliinheseg">
+                        <h1>{{ $first_item->Бүтээгдэхүүн }}</h1>
+                        <h2>{{ $first_item->Онцлог_шинж }}</h2>
+                        <h3>{{ $first_item->Товч_мэдээлэл }}</h3>
+                        <div class="shuudhudaldah">
+                            <script>
+                                $(document).ready(function() {
+                                    $('#buying').click(function() {
+                                        window.location.href = '/buypage';
+                                    });
+                                    $('#basketing').click(function(){
+                                        window.location.href='/shoppingcart';
+                                    });
+                                });
                             </script>
                             <div class="fnctbtn buy" id="buying">Худалдан авах</div>
                             <div class="fnctbtn cart" id="basketing">Сагсанд хийх</div>
