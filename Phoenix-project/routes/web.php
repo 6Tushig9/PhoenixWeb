@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
-use App\Filament\Resources\DemoResource;
 
 Route::controller(RoutePages::class)->group(function (){
     Route::get('/', 'phoenixsheater');
@@ -11,11 +10,11 @@ Route::controller(RoutePages::class)->group(function (){
     Route::get('/calculate', 'calculate');
     Route::get('/advice', 'advice');
     Route::get('/buypage', 'buypage');
+    Route::get('/buypage/{id}','bpage')->name('buy');
     Route::get('/shoppingcart', 'shoppingcart');
     Route::get('/faq', 'faq');
-    Route::get('/login', 'login');
-    Route::get('/upload','upload');
     Route::get('/test','test');
+    Route::get('/login','login');
 });
 
 Route::controller(CustomerReact::class)->group(function(){
