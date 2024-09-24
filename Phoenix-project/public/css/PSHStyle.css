@@ -831,9 +831,10 @@ body {
     width: 11rem;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     border: 1px solid var(--fontCdark);
     border-radius: 0.2rem;
-    padding-left: 1rem;
+    padding: 0.5rem 0 0.5rem 0.5rem;
 }
 .quantity-selector label {
     margin-right: 0.2rem;

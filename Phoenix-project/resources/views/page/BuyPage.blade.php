@@ -16,9 +16,6 @@
             document.body.classList.remove("no-scroll");
         }
     });
-</script>
-
-<script>
     document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.orderBtn').addEventListener('click', function() {
         document.querySelector('.zahialagchiinBulan').style.display = 'flex';
@@ -26,6 +23,7 @@
         });
     });
 </script>
+
 
 
 <div id="mainContnr">
@@ -37,11 +35,8 @@
                 <img src={{ asset("pics2use/xmpl2.png")}} class="mnimgs">
                 <img src={{ asset("pics2use/xmpl2.png")}} class="mnimgs">
                 <img src={{ asset("pics2use/xmpl2.png")}} class="mnimgs">
-                <img src={{ asset("pics2use/xmpl2.png")}} class="mnimgs">
-                <img src={{ asset("pics2use/xmpl2.png")}} class="mnimgs">
-                <img src={{ asset("pics2use/xmpl2.png")}} class="mnimgs">
         </div>
-        <div class="advantageImage">
+        {{-- <div class="advantageImage">
             <div class="advntg">
                 <img src={{ asset("pics2use/TechSketch.jpg")}}>
                 Эрчим хүч хэмнэнэ
@@ -54,7 +49,7 @@
                 <img src={{ asset("pics2use/TechSketch.jpg")}}>
                 Эрчим хүч хэмнэнэ
             </div>
-        </div>
+        </div> --}}
     </div>
     <div class="specSide">
         <div class="heaterinfoDiv">
@@ -85,28 +80,8 @@
             </div>
             <div class="tooshirheg">
                 <div class="quantity-selector">
-                    <label for="quantity">Тоо ширхэг</label>
-                    <select id="quantity">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="10">11</option>
-                        <option value="10">12</option>
-                        <option value="10">13</option>
-                        <option value="10">14</option>
-                    </select>
-                </div>
-                <div class="uldegdel">
-                    Энэ загварын халаагуур одоогоор 
-                    бэлэн байхгүй байгаа тул захиалга нь 7-10 хонгийн 
-                    дотор бэлэн болно.
+                    <span>Тоо ширхэг</span>
+                    <span>1</span>
                 </div>
             </div>
             <div class="bntsForOrder">
