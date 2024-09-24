@@ -7,12 +7,17 @@ use App\Models\Advice;
 use Illuminate\View\View;
 use App\Models\Organization;
 use App\Models\Statistic;
+use Illuminate\Support\Facades\DB;
 
 class RoutePages extends Controller
 {   
 
     public function test(){
        return response()->json(Statistic::all() ?? null);
+    }
+
+    public function test1($id){
+        return response()->json(DB::table('main_products')->find($id));
     }
 
     public function phoenixsheater(): View
@@ -52,7 +57,8 @@ class RoutePages extends Controller
 
     public function bpage($id): View
     {
-        return View('page.BuyPage');
+        $production=DB::table('main_products')->find($id);
+        return View('page.BuyPage', ['production'=>$production]);
     }
 
     public function shoppingcart(): View
