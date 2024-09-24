@@ -5,31 +5,28 @@ namespace App\Http\Controllers;
 use App\Models\MainProduct;
 use App\Models\Advice;
 use Illuminate\View\View;
+use App\Models\Organization;
+use App\Models\Statistic;
 
 class RoutePages extends Controller
 {   
 
     public function test(){
-       $arr=MainProduct::all()[0] ?? null;
-       $test=Advice::all() ?? null;
-       return response()->json($test);
+       return response()->json(Statistic::all());
     }
 
     public function phoenixsheater(): View
     {
         $arr=MainProduct::all()[0] ?? null;
         $array=array(MainProduct::all()) ?? null;
-        $menu=[];
-        for ($i = 1; $i < count($array); $i++) {
-            array_push($menu, $array[$i]);
-        }
-            
-        return View('page.PhoenixSheater',['first_item'=>$arr, 'menu'=>$menu]);
+        return View('page.PhoenixSheater',['first_item'=>$arr, 'menu'=>$array]);
     }
 
     public function company(): View
     {
-        return View('page.Company');
+        $organization=Organization::all();
+        $statistic=Statistic::all();
+        return View('page.Company',['organization'=>$organization, 'statistic'=>$statistic]);
     }
     
     public function ecological(): View

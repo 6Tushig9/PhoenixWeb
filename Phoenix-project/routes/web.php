@@ -16,7 +16,6 @@ Route::controller(RoutePages::class)->group(function (){
     Route::get('/test','test');
     Route::get('/login','login');
 });
-
 Route::controller(CustomerReact::class)->group(function(){
     Route::post('/hamtrah','hamtrah');
     Route::post('/sanal','sanal');
