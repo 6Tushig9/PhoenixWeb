@@ -93,44 +93,20 @@
                                         <button class="VMore VMoring">Дэлгэрэнгүй</button>
                                     </div>
                                 </div>
-                                <div class="card swiper-slide">
-                                    <div class="image-content">
-                                        <div class="card-image">
-                                            <img src={{ asset("pics2use/Heaters/S600TW.png")}} class="card-img">
-                                        </div>
-                                        <div class="card-content">
-                                            <h2 class="name">S600TW</h2>
-                                            <p class="descrptn">8-12м2</p>
-                                        </div>
-                                        <script>
-                                            $(document).ready(function() {
-                                                $('.VMoring').click(function() {
-                                                    window.location.href = '/buypage';
-                                                });
-                                            });
-                                        </script>
-                                        <button class="VMore VMoring">Дэлгэрэнгүй</button>
-                                    </div>
-                                </div>
                             @else
-                                @foreach ($menu as $product)
+                                @foreach ($menu as $pro)
                                     <div class="card swiper-slide">
                                         <div class="image-content">
                                             <div class="card-image">
-                                                <img src={{ asset("storage/".$product->Зураг)}} class="card-img">
+                                                <img src={{ asset("storage/".$pro->Зураг)}} class="card-img">
                                             </div>
                                             <div class="card-content">
-                                                <h2 class="name">{{ $product->Бүтээгдэхүүн }}</h2>
-                                                <p class="descrptn">{{ $product->Онцлог_шинж }}</p>
+                                                <h2 class="name">{{ $pro->Бүтээгдэхүүн }}</h2>
+                                                <p class="descrptn">{{ $pro->Онцлог_шинж }}</p>
                                             </div>
-                                            <script>
-                                                $(document).ready(function() {
-                                                    $('.VMoring').click(function() {
-                                                        window.location.href = '/buypage';
-                                                    });
-                                                });
-                                            </script>
-                                            <button class="VMore VMoring">Дэлгэрэнгүй</button>
+                                            <a href={{ route('buy', $pro->id) }}>
+                                                <button class="VMore VMoring">Дэлгэрэнгүй</button>
+                                            </a>
                                         </div>
                                     </div>
                                 @endforeach

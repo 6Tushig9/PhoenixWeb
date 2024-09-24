@@ -17,12 +17,13 @@ class RoutePages extends Controller
     }
 
     public function test1($id){
-        return response()->json(DB::table('main_products')->find($id));
+        $production=MainProduct::find($id);
+        return response()->json($production);
     }
 
     public function phoenixsheater(): View
     {
-        $arr=MainProduct::all()[0] ?? null;
+        $arr=MainProduct::find(1) ?? null;
         $product=MainProduct::all() ?? null;
         return View('page.PhoenixSheater',['first_item'=>$arr, 'menu'=>$product]);
     }
@@ -57,7 +58,10 @@ class RoutePages extends Controller
 
     public function bpage($id): View
     {
-        $production=DB::table('main_products')->find($id);
+        $production=MainProduct::find($id);
+        if (!$production) {
+            abort(404); 
+        }
         return View('page.BuyPage', ['production'=>$production]);
     }
 
