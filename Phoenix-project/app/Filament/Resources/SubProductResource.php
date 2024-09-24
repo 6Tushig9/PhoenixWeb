@@ -29,6 +29,8 @@ class SubProductResource extends Resource
 
     protected static ?string $navigationLabel = 'Загварууд';
 
+    protected static ?string $modelLabel = 'Загварууд';
+
     protected static ?string $navigationIcon = 'heroicon-o-cpu-chip';
 
     public static function form(Form $form): Form
