@@ -19,6 +19,21 @@
 </script>
     
 <div id="AdvPage">
+    @if (count($advice) > 0)
+       @foreach ($advice as $item)
+        <div class="cardd" id="card1">
+                <img src={{ asset("storage/".$item->Зураг)}}>
+                <div>
+                    <h2>{{ $item->Гарчиг }}</h2>
+                    <h3> Нийтэлсэн {{ $item->created_at }}</h3>
+                    <p>
+                        {{ $item->Зөвлөгөө }}
+                    </p>
+                    <button id="More1" onclick="More1()">Дэлгэрэнгүй...</button>
+                </div>
+            </div>
+       @endforeach
+    @else
         <div class="cardd" id="card1">
             <img src={{ asset("pics2use/TechSketch.jpg")}}>
             <div>
@@ -35,5 +50,6 @@
                 <button id="More1" onclick="More1()">Дэлгэрэнгүй...</button>
             </div>
         </div>
+    @endif
 </div>
 @endsection

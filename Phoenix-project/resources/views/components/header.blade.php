@@ -60,6 +60,4 @@
             </section>
         </div>
     </div>
-
-
 </header>
