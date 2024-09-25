@@ -40,18 +40,6 @@
                         амьдрах орчныг бүрдүүлэхээр зорин ажиллаж байна.
                 </div>
             </div>
-            @if (!$posts)
-            @else
-                @foreach ($posts as $item)
-                    <div class="frstPic"> 
-                        <img src={{ asset('storate/'.$item->image) }}>
-                    </div>
-                    <div class="frstInfo">
-                        <h3>{{ $item->title }}</h3>
-                        {{ $item->post }}
-                    </div>
-                @endforeach
-            @endif
         </div>
         <div class="secondInfo">
             <div class="scndIfno">
@@ -77,45 +65,67 @@
                     өрсөлдөх чадвартай бүтээгдэхүүн бүтээсэн.
             </div>
         </div>
-        <div id="Milestone">
-            <div class="section">
-                <div class="Numbers">3</div>
-                <div class="descrptnOfNumber">Жил</div>
+        @if ($statistic->isEmpty())
+            <div id="Milestone">
+                <div class="section">
+                    <div class="Numbers">0</div>
+                    <div class="descrptnOfNumber">Жил</div>
+                </div>
+                <div class="section">
+                    <div class="Numbers">0</div>
+                    <div class="descrptnOfNumber">Нийт айл өрх</div>
+                </div>
+                <div class="section">
+                    <div class="Numbers">0 мВт</div>
+                    <div class="descrptnOfNumber">Хэмнэсэн цахилгаан</div>
+                </div>
+                <div class="section">
+                    <div class="Numbers">0 сая Тн</div>
+                    <div class="descrptnOfNumber">Бууруулсан нүүрс хүчлийн хий</div>
+                </div>
             </div>
-            <div class="section">
-                <div class="Numbers">500'000</div>
-                <div class="descrptnOfNumber">Нийт айл өрх</div>
-            </div>
-            <div class="section">
-                <div class="Numbers">5мВт</div>
-                <div class="descrptnOfNumber">Хэмнэсэн цахилгаан</div>
-            </div>
-            <div class="section">
-                <div class="Numbers">3.5сая Тн</div>
-                <div class="descrptnOfNumber">Бууруулсан нүүрс хүчлийн хий</div>
-            </div>
-        </div>
+        @else
+            @foreach ($statistic as $item)
+                <div id="Milestone">
+                    <div class="section">
+                        <div class="Numbers">{{ $item->Жил }}</div>
+                        <div class="descrptnOfNumber">Жил</div>
+                    </div>
+                    <div class="section">
+                        <div class="Numbers">{{ $item->Нийт_айл_өрх }}</div>
+                        <div class="descrptnOfNumber">Нийт айл өрх</div>
+                    </div>
+                    <div class="section">
+                        <div class="Numbers">{{ $item->Хэмнэсэн_цахилгаан.' мВт' }}</div>
+                        <div class="descrptnOfNumber">Хэмнэсэн цахилгаан</div>
+                    </div>
+                    <div class="section">
+                        <div class="Numbers">{{ $item->Бууруулсан_нүүрс_хүчлийн_хий.' сая Тн' }}</div>
+                        <div class="descrptnOfNumber">Бууруулсан нүүрс хүчлийн хий</div>
+                    </div>
+                </div>
+            @endforeach
+        @endif
         <h2 style="font-weight: 300;">ХАМТРАГЧ БАЙГУУЛЛАГУУД</h2>
         <div class="Hamtragchid">
-            <div class="Hamtragchid-slide">
-                <img src={{ asset("pics2use/Companions/KhaanBank.png")}}>
-                <img src={{ asset("pics2use/Companions/XacBank.png")}}>
-                <img src={{ asset("pics2use/Companions/TuriinBank.png")}}>
-                <img src={{ asset("pics2use/Companions/Pocket.png")}}>
-                <img src={{ asset("pics2use/Companions/StorePay.png")}}>
-                <img src={{ asset("pics2use/Companions/Gund.png")}}>
-                <img src={{ asset("pics2use/Companions/Socratus.png")}}>
-                <img src={{ asset("pics2use/Companions/MAOSIHT.png")}}>
-                <img src={{ asset("pics2use/Companions/TumenHouse.png")}}>
-                <img src={{ asset("pics2use/Companions/Tuss.png")}}>
-                <img src={{ asset("pics2use/Companions/Tomo.png")}}>
-                <img src={{ asset("pics2use/Companions/chatBot.png")}}>
-            </div>
+            @if ($organization->isEmpty())
+                <div class="Hamtragchid-slide">
+                    <img src={{ asset("pics2use/Companions/KhaanBank.png")}}>
+                    <img src={{ asset("pics2use/Companions/XacBank.png")}}>
+                    <img src={{ asset("pics2use/Companions/TuriinBank.png")}}>
+                </div>
+            @else 
+                <div class="Hamtragchid-slide">
+                    @foreach ($organization as $item)
+                        <img src="{{ asset('storage/'.$item->Зураг) }}" alt="">
+                    @endforeach
+                </div>
+            @endif
         </div>
-<script>
-     var copy = document.querySelector(".Hamtragchid-slide").cloneNode(true)
-     document.querySelector(".Hamtragchid").appendChild(copy);
-</script>
+        <script>
+            var copy = document.querySelector(".Hamtragchid-slide").cloneNode(true)
+            document.querySelector(".Hamtragchid").appendChild(copy);
+        </script>
 
         <div class="email-popup-wrapper" id="emailPopup">
             <div class="email-popup">
@@ -151,7 +161,7 @@
                     <input type="text" id="NameOfSender" placeholder="Хүсэлт илгээгчийн нэр" required>
                     <label for="phoneNum">Утасны дугаар:</label>
                     <input type="text" id="phoneNum" placeholder="Утасны дугаар" required>
-                    <label for="message">Мессеж:</label>
+                    <label for="message">Хамтрах хүсэлт:</label>
                     <textarea id="message" placeholder="Таны илгээх мессеж" required></textarea>
                     <button type="submit" class="send-btn">Send</button>
                 </form>

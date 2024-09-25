@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
-use App\Models\Product;
 
 Route::controller(RoutePages::class)->group(function (){
     Route::get('/', 'phoenixsheater');
@@ -11,20 +10,13 @@ Route::controller(RoutePages::class)->group(function (){
     Route::get('/calculate', 'calculate');
     Route::get('/advice', 'advice');
     Route::get('/buypage', 'buypage');
+    Route::get('/buypage/{id}','bpage')->name('buy');
     Route::get('/shoppingcart', 'shoppingcart');
     Route::get('/faq', 'faq');
-    Route::get('/login', 'login');
+    Route::get('/test','test');
+    Route::get('/test1/{id}', 'test1');
 });
-
-Route::controller(Posts::class)->group(function (){
-    Route::post('/hamtrah', 'hamtrah_huselt');
-    Route::post('/sanal', 'sanal_huselt');
+Route::controller(CustomerReact::class)->group(function(){
+    Route::post('/hamtrah','hamtrah');
+    Route::post('/sanal','sanal');
 });
-
-Route::get('/test', function(){
-    return view('test', ['products'=>Product::all()]);
-});
-
-Route::get('/product-model/{id}', [ProductModel::class, 'subcategory'])->name('product-model.show');
-
-Route::post('/typecategory/store', [ProductModel::class, 'store'])->name('typecategory.store');
