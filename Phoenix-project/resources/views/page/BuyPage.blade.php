@@ -36,12 +36,20 @@
         document.querySelector('.tulburiinMedeelel').style.display = 'flex';
         });
     });
+    $('#Salbaraas, #HotDotor, #OronNutag').click(function() {
+    if ($(this).attr('id') !== 'Salbaraas') {
+        $('input[placeholder="Хаяг"]').show();
+    } else {
+        $('input[placeholder="Хаяг"]').hide();
+    }
+});
+
 </script>
 
 
 
 <div id="mainContnr">
-    @if($production == null)
+    @if(!isset($production) || $production == null)
         <div class="prodPicSide">
             <div class="bigImage">
                 <img src={{ asset("pics2use/xmpl2.png")}}>
