@@ -11,7 +11,9 @@
                 <img src={{ asset("pics2use/icons/user.png")}} class="LUserIcon">
             </a>
         </div>
-        <div class="mnubtn"></div>
+        <div class="mnubtn">
+            <span></span><span></span><span></span>
+        </div>
     </div>
     <div class="mblMenu">
         <a href="/company">БАЙГУУЛЛАГА</a>
