@@ -571,6 +571,7 @@ body {
 .scndIfno {
     display: flex;
     font-size: clamp(1rem, 1.5vw, 1.3rem);
+    font-weight: 350;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -604,7 +605,7 @@ body {
     align-items: center;
     flex-direction: column;
     border: 1px solid var(--fontCdark);
-    border-radius: 0.2rem;
+    border-radius: 0.5rem;
     margin-bottom: 1.5rem;
 }
 .Numbers {
@@ -614,6 +615,7 @@ body {
 }
 .descrptnOfNumber {
     font-size: 1.2rem;
+    font-weight: 400;
     color: var(--fontCdark);
 }
 
@@ -624,6 +626,9 @@ body {
     to {
         transform: translateX(-100%);
     }
+}
+.Hamtragchcont{
+    display: flex;
 }
 .Hamtragchid:hover .Hamtragchid-slide {
     animation-play-state: paused;
@@ -729,9 +734,11 @@ body {
     align-items: center;
     gap: 1rem;
     display: flex;
+    color: var(--fontC);
     font-size: 1.2rem;
     font-weight: 400;
-    background: var(--darkerBG);
+    border-radius: 0.5rem;
+    background: var(--accentClr);
     /*border: 0.5px solid var(--shadowClr);*/
     box-shadow: 0 0 2px #26262699;
     border: none;
@@ -1517,7 +1524,7 @@ body {
 /*-----------------------------FAQ Heseg START---------------------------*/
 .faq-container {
     max-width: 80%;
-    background-color: var(--fontC);
+    background-color: var(--darkerBG);
     margin: 7rem auto 2rem auto;
     padding: 2rem;
     border-radius: 8px;
@@ -1686,7 +1693,7 @@ body {
     display: flex;
     position: relative;
     background: var(--mainBGMirror);
-    border-radius: 0.5rem;
+    border-radius: 0.8rem;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
@@ -1855,12 +1862,13 @@ footer{
     font-weight: 350;
 }
 .fcontact{
-    padding: 1rem 5rem 1rem 10rem;
+    padding: 1rem 5% 1rem 10%;
     font-size: 1.3rem;
     font-weight: 350;
 }
 .fsocial{
     padding: 1rem;
+        width: 17rem;
 }
 /* .fsocial a:hover{
     opacity: 1;
@@ -2036,6 +2044,9 @@ footer{
     /* company end*/
     .fcontact{
         padding: 1rem;
+    }
+    .fsocial{
+        width: 17rem;
     }
 }
 /*for small screen*/
@@ -2297,6 +2308,9 @@ footer{
     }
     .fLinks, .fcontact, .fsocial{
         padding: 2rem;
+    }
+    .fsocial{
+        width: 80%;
     }
 }
 

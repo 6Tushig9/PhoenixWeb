@@ -113,6 +113,35 @@
                     <img src={{ asset("pics2use/Companions/KhaanBank.png")}}>
                     <img src={{ asset("pics2use/Companions/XacBank.png")}}>
                     <img src={{ asset("pics2use/Companions/TuriinBank.png")}}>
+                    <img src={{ asset("pics2use/Companions/Pocket.png")}}>
+                    <img src={{ asset("pics2use/Companions/StorePay.png")}}>
+                    <img src={{ asset("pics2use/Companions/Socratus.png")}}>
+                    <img src={{ asset("pics2use/Companions/MAOSIHT.png")}}>
+                    <img src={{ asset("pics2use/Companions/Gund.png")}}>
+                    <img src={{ asset("pics2use/Companions/Tomo.png")}}>
+                    <img src={{ asset("pics2use/Companions/Socratus.png")}}>
+                    <img src={{ asset("pics2use/Companions/Tuss.png")}}>
+                </div>
+            @else 
+                <div class="Hamtragchid-slide">
+                    @foreach ($organization as $item)
+                        <img src="{{ asset('storage/'.$item->Зураг) }}" alt="">
+                    @endforeach
+                </div>
+            @endif
+            @if ($organization->isEmpty())
+                <div class="Hamtragchid-slide">
+                    <img src={{ asset("pics2use/Companions/KhaanBank.png")}}>
+                    <img src={{ asset("pics2use/Companions/XacBank.png")}}>
+                    <img src={{ asset("pics2use/Companions/TuriinBank.png")}}>
+                    <img src={{ asset("pics2use/Companions/Pocket.png")}}>
+                    <img src={{ asset("pics2use/Companions/StorePay.png")}}>
+                    <img src={{ asset("pics2use/Companions/Socratus.png")}}>
+                    <img src={{ asset("pics2use/Companions/MAOSIHT.png")}}>
+                    <img src={{ asset("pics2use/Companions/Gund.png")}}>
+                    <img src={{ asset("pics2use/Companions/Tomo.png")}}>
+                    <img src={{ asset("pics2use/Companions/Socratus.png")}}>
+                    <img src={{ asset("pics2use/Companions/Tuss.png")}}>
                 </div>
             @else 
                 <div class="Hamtragchid-slide">
@@ -169,7 +198,8 @@
         </div>
 
         <button id="sendEmailBtn" class="open-popup-btn">
-            Хамтран ажиллах хүсэлт илгээх<img src="./pics2use/icons/PaperPlane.png">
+            Хамтран ажиллах хүсэлт илгээх
+            <img src="./pics2use/icons/PaperPlaneW.png">
         </button>
     </div>
 <script>
