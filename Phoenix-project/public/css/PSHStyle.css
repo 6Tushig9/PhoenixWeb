@@ -4,10 +4,13 @@
     --secondary-fonts: "Inter", sans-serif; /*solih*/
     /* --mainBG: #ffffff; */
     --mainBG: #eff3f4;
+    --mainBGdark: #c3c5c6;
     --mainBGMirror: #eff3f494;
     --darkerBG: #e9edee;
     --fontSize: 2rem;
     --fontC: #e5e5e5;
+    --fontCdark: #021423;
+    --fontCdarkBlur: #2d2d2d9a;
     --inputColor: #f8f8f8;
     --brightBG: #e2e2e2;
     --fontCdark: #021423;
@@ -49,9 +52,10 @@ body {
     height: 30px;
     display: flex;
     justify-content: space-between;
-    background-color: var(--fontCdark);
-    color: var(--fontC);
+    background-color: var(--accentClr);
+    color: var(--fontCdark);
     position: sticky;
+    font-weight: 400;
     top: 0;
     z-index: 14;
 }
@@ -81,6 +85,7 @@ body {
 }
 .FAQhelp a {
     color: var(--fontC);
+    font-weight: 400;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -92,7 +97,7 @@ body {
     font-family: var(--main-fonts);
     color: var(--fontC);
     font-size: 1rem;
-    font-weight: 200;
+    font-weight: 400;
     background: none;
     border: none;
     text-decoration: none;
@@ -106,7 +111,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1rem;
-    font-weight: 200;
+    font-weight: 400;
     font-family: var(--main-fonts);
     color: var(--fontC);
 }
@@ -148,6 +153,7 @@ body {
 .complaint-popup-wrapper button {
     padding: 10px 20px;
     font-size: 16px;
+    font-weight: 400;
     cursor: pointer;
     border: none;
     border-radius: 5px;
@@ -185,6 +191,7 @@ body {
     top: 10px;
     right: 15px;
     font-size: 24px;
+    font-weight: 500;
     cursor: pointer;
 }
 
@@ -290,13 +297,21 @@ body {
     width: 2rem;
     height: 2rem;
 }
+.Luser:hover{
+    cursor: pointer;
+}
 .Luser{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.2rem;
     gap: 0.5rem;
-    padding-left: 2rem;
+    margin-left: 2rem;
+    padding: 0.3rem;
+    border: none;
+    border-radius: 0.3rem;
     color: var(--accentClr);
+    background: none;
 }
 .mnubtn {
     display: none;
@@ -1608,15 +1623,28 @@ body {
     opacity: 0.2;
 }
 .login-wrapper {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    backdrop-filter: blur(10px);
     font-family: var(--main-fonts);
-    position: relative;
-    display: grid;
-    grid-template-columns: 4fr 3fr;
-    margin: 0 auto;
 }
-
+.closeLog-btn{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+}
 .login-side {
-    padding: 11.75rem 2rem 3rem 2rem;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -1656,6 +1684,9 @@ body {
 }
 .my-form_wrapper {
     display: flex;
+    position: relative;
+    background: var(--mainBGMirror);
+    border-radius: 0.5rem;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
@@ -1873,7 +1904,7 @@ footer{
 .fline{
     width: 100%;
     display: flex;
-    border: 1px solid var(--fontCdark);
+    border: 1px solid var(--accentClr);
     margin: 1.5rem 0;
 }
 .endtext{
@@ -1881,6 +1912,7 @@ footer{
     font-weight: 300;
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
+    color: var(--accentClr);
 }
 /*-------------------------------------------------------------*/
 
@@ -1906,6 +1938,12 @@ footer{
         width: auto;
         height: 18rem;
     }
+    .Luser{
+        font-size: 0;
+    }
+
+
+    
     #mainContnr {
         padding-top: 0;
     }

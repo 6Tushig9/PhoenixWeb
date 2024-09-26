@@ -42,7 +42,7 @@
     } else {
         $('input[placeholder="Хаяг"]').hide();
     }
-});
+    });
 
 </script>
 

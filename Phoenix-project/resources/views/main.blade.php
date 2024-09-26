@@ -17,6 +17,27 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 <body>
+<script>
+    document.addEventListener("DOMContentLoaded", function (){
+        document.getElementById("Luser").addEventListener("click", function() {
+            document.getElementById("loginPopup").style.display = "grid";
+            document.body.classList.add("no-scroll");
+        });
+        document.getElementById("closeloginPopup").addEventListener("click", function() {
+            document.getElementById("loginPopup").style.display = "none";
+            document.body.classList.remove("no-scroll");
+        });
+        window.addEventListener("click", function(event) {
+            const popuplog = document.getElementById("loginPopup");
+            if (event.target === popuplog) {
+                popuplog.style.display = "none";
+                document.body.classList.remove("no-scroll");
+            }
+        });
+    });
+</script>
+
+
     <div id="thinnav">
         <div class="Welcome">Тавтай морил</div>
         <div class="rightsd">
