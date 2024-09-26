@@ -1,19 +1,17 @@
 <header>
     <div class="navi">
-        <div class="lftMenu">
-            <a href="/company">БАЙГУУЛЛАГА</a>
-            <a href="/ecological">Б.О.Н.З</a>
-        </div>
         <a href="/">
-            <img src={{ asset("pics2use/LogoBlck.png")}} class="MenuLogo">
+            <img src={{ asset("pics2use/LogoVert.png")}} class="MenuLogo">
         </a>
         <div class="rghtMenu">
+            <a href="/ecological">Б.О.Н.З</a>
+            <div class="SepLine"></div>
             <a href="/calculate">ТООЦООЛУУР</a>
-            <a href="/advice">ЗӨВЛӨМЖ</a>
+            <a href="/login" class="Luser">НЭВТРЭХ
+                <img src={{ asset("pics2use/icons/user.png")}} class="LUserIcon">
+            </a>
         </div>
-        <div class="mnubtn">
-            
-        </div>
+        <div class="mnubtn"></div>
     </div>
     <div class="mblMenu">
         <a href="/company">БАЙГУУЛЛАГА</a>

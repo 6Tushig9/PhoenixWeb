@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     <div class="zurag1">
-                        <img src={{ asset("pics2use/Heaters/S1200TWbig.png")}} >
+                        <img src={{ asset("pics2use/BackPic.png")}} >
                     </div>
                 @else
                     <div class="medeelliinheseg">
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     <div class="zurag1">
-                        <img src={{ asset("storage/". $first_item->Зураг)}} alt="">
+                        <img src={{ asset("pics2use/BackPic.png")}} >
                     </div>
                 @endif
             </div>
