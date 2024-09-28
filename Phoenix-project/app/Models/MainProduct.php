@@ -16,4 +16,9 @@ class MainProduct extends Model
     {
         return $this->HasMany(SubProduct::class);
     }
+
+    public function image(): HasMany
+    {
+        return $this->HasMany(ProductImage::class);
+    }
 }
