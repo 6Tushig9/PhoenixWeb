@@ -1111,7 +1111,7 @@ body {
 /*-----------------------------Ecological Heseg START---------------------*/
 .grid {
     display: grid;
-    padding: 6rem 6rem 2rem 6rem;
+    padding: 7rem 6em 2rem 6rem;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     font-size: 1.5rem;
