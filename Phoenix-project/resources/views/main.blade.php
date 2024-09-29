@@ -18,15 +18,19 @@
 </head>
 <body>
 <script>
-    document.addEventListener("DOMContentLoaded", function (){
-        document.getElementById("Luser").addEventListener("click", function() {
-            document.getElementById("loginPopup").style.display = "grid";
-            document.body.classList.add("no-scroll");
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll("#Luser").forEach(function (element) {
+            element.addEventListener("click", function() {
+                document.getElementById("loginPopup").style.display = "grid";
+                document.body.classList.add("no-scroll");
+            });
         });
+        
         document.getElementById("closeloginPopup").addEventListener("click", function() {
             document.getElementById("loginPopup").style.display = "none";
             document.body.classList.remove("no-scroll");
         });
+
         window.addEventListener("click", function(event) {
             const popuplog = document.getElementById("loginPopup");
             if (event.target === popuplog) {

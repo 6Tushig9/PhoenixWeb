@@ -4,7 +4,7 @@
             <img src={{ asset("pics2use/LogoVert.png")}} class="MenuLogo">
         </a>
         <div class="rghtMenu">
-            <a href="/ecological">Б.О.Н.З</a>
+            <a href="/ecological">ТОГТВОРТОЙ ХӨГЖИЛ</a>
             <div class="SepLine"></div>
             <a href="/calculate">ТООЦООЛУУР</a>
             <button class="Luser" id="Luser">НЭВТРЭХ
@@ -17,9 +17,12 @@
     </div>
     <div class="mblMenu">
         <a href="/company">БАЙГУУЛЛАГА</a>
-        <a href="/ecological">Б.О.Н.З</a>
+        <a href="/ecological">ТОГТВОРТОЙ ХӨГЖИЛ</a>
         <a href="/calculate" class="CalcBtn">ТООЦООЛУУР</a>
         <a href="/advice">ЗӨВЛӨМЖ</a>
+        <button class="Luser" id="Luser">НЭВТРЭХ
+            {{-- <img src={{ asset("pics2use/icons/user.png")}} class="LUserIcon"> --}}
+        </button>
     </div>
     <div class="complaint-popup-wrapper" id="complaintPopup">
         <div class="complaint-popup">

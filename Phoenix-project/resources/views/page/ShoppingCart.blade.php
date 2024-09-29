@@ -21,48 +21,49 @@ window.addEventListener("click", function(event) {
 <!--Sanal huseltiin heseg END-->
 
 <script>
-// Attach event listeners to all plus and minus buttons
-document.querySelectorAll('.selectionByOrder').forEach(function(card) {
-    // Get the base price from the existing price element
-    let priceElement = card.querySelector('.price');
-    let basePrice = parseInt(priceElement.innerText.replace(/[^\d]/g, '')); // Extract numeric value
-    
-    let quantity = card.querySelector('.quantity');
+    // Attach event listeners to all plus and minus buttons
+    document.querySelectorAll('.selectionByOrder').forEach(function(card) {
+        // Get the base price from the existing price element
+        let priceElement = card.querySelector('.price');
+        let basePrice = parseInt(priceElement.innerText.replace(/[^\d]/g, '')); // Extract numeric value
+        
+        let quantity = card.querySelector('.quantity');
 
-    // Minus button functionality
-    card.querySelector('.minus').addEventListener('click', function() {
-        if (quantity.innerText > 1) {
-            quantity.innerText = parseInt(quantity.innerText) - 1;
+        // Minus button functionality
+        card.querySelector('.minus').addEventListener('click', function() {
+            if (quantity.innerText > 1) {
+                quantity.innerText = parseInt(quantity.innerText) - 1;
+                updatePrice(priceElement, quantity.innerText, basePrice);
+            }
+        });
+
+        // Plus button functionality
+        card.querySelector('.plus').addEventListener('click', function() {
+            quantity.innerText = parseInt(quantity.innerText) + 1;
             updatePrice(priceElement, quantity.innerText, basePrice);
-        }
+        });
     });
-
-    // Plus button functionality
-    card.querySelector('.plus').addEventListener('click', function() {
-        quantity.innerText = parseInt(quantity.innerText) + 1;
-        updatePrice(priceElement, quantity.innerText, basePrice);
+    function updatePrice(priceElement, quantity, basePrice) {
+        let newPrice = basePrice * quantity;
+        priceElement.innerText = `${newPrice}₮`;
+    }
+    //delete section
+    document.querySelectorAll('.close-btn').forEach(function(button) {
+        button.addEventListener('click', function() {
+            let sectionToRemove = button.closest('.selectionByOrder');
+            sectionToRemove.remove();
+        });
     });
-});
-function updatePrice(priceElement, quantity, basePrice) {
-    let newPrice = basePrice * quantity;
-    priceElement.innerText = `${newPrice}₮`;
-}
-//delete section
-document.querySelectorAll('.close-btn').forEach(function(button) {
-    button.addEventListener('click', function() {
-        let sectionToRemove = button.closest('.selectionByOrder');
-        sectionToRemove.remove();
-    });
-});
 </script>
 
     <div id="cartMainCont">
         <div class="selectedHtrs">
+            
             <div class="selectionByOrder">
                 <button class="close-btn">X</button>
-                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
-                <h2 class="OrdrHtrName">S600</h2>
-                <span class="price">399000₮</span>
+                <div><img src={{ asset("pics2use/Heaters/S1200TW_1.png")}}></div>
+                <h2 class="OrdrHtrName">S1200TW</h2>
+                <span class="price">730000₮</span>
                 <div class="quantity-selector1">
                     <button class="qty-btn minus">−</button>
                     <span class="quantity">1</span>
@@ -70,41 +71,6 @@ document.querySelectorAll('.close-btn').forEach(function(button) {
                 </div>
             </div>
 
-            <div class="selectionByOrder">
-                <button class="close-btn">X</button>
-                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
-                <h2 class="OrdrHtrName">S600T</h2>
-                <span class="price">439000₮</span>
-                <div class="quantity-selector1">
-                    <button class="qty-btn minus">−</button>
-                    <span class="quantity">1</span>
-                    <button class="qty-btn plus">+</button>
-                </div>
-            </div>
-
-            <div class="selectionByOrder">
-                <button class="close-btn">X</button>
-                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
-                <h2 class="OrdrHtrName">S600TW</h2>
-                <span class="price">489000₮</span>
-                <div class="quantity-selector1">
-                    <button class="qty-btn minus">−</button>
-                    <span class="quantity">1</span>
-                    <button class="qty-btn plus">+</button>
-                </div>
-            </div>
-
-            <div class="selectionByOrder">
-                <button class="close-btn">X</button>
-                <div><img src={{ asset("pics2use/xmpl2.png")}}></div>
-                <h2 class="OrdrHtrName">S800</h2>
-                <span class="price">520000₮</span>
-                <div class="quantity-selector1">
-                    <button class="qty-btn minus">−</button>
-                    <span class="quantity">1</span>
-                    <button class="qty-btn plus">+</button>
-                </div>
-            </div>
         </div>
         <div class="PaymentDetailsDiv">
             <div class="zahialagchiinBulan1">
