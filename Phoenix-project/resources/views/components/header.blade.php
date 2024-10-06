@@ -10,6 +10,9 @@
             <button class="Luser" id="Luser">НЭВТРЭХ
                 <img src={{ asset("pics2use/icons/user.png")}} class="LUserIcon">
             </button>
+            @if (session(''))
+
+            @endif
         </div>
         <div class="mnubtn">
             <span></span><span></span><span></span>
@@ -72,7 +75,8 @@
                     <h1>Тавтай морил</h1>
                     <p>Хэрэглэгчийн мэдээлэл оруулна уу</p>
                 </div>
-                <form class="my-form">
+                <form class="my-form" action="/login" method="post">
+                    @csrf
                     <div class="text-field">
                         <label for="email">Е-мэйл:</label>
                         <input type="email" id="email" name="email" placeholder="Таны Е-мэйл" required>
@@ -80,12 +84,10 @@
                     </div>
                     <div class="text-field">
                         <label for="email">Нууц үг:</label>
-                        <input type="password" id="email" name="email" placeholder="Таны нууц үг" required>
+                        <input type="password" id="email" name="password" placeholder="Таны нууц үг" required>
                         <img src="./pics2use/icons/PassIcon.png" alt="Email Icon" title="Email Icon">
                     </div>
-                    <input type="submit" 
-                        class="my-form_button" 
-                        value="Нэвтрэх">
+                    <input type="submit" class="my-form_button" value="Нэвтрэх">
                     <div class="my-form_actions">
                         <div class="my-form_row">
                             <span>Нууц үгээ мартсан уу?</span>
