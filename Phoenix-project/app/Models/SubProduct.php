@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class SubProduct extends Model
 {
@@ -15,5 +16,10 @@ class SubProduct extends Model
     public function category(): BelongsTo
     {
         return $this->BelongsTo(MainProduct::class,'main_product_id');
+    }
+
+    public function image(): HasMany
+    {
+        return $this->HasMany(SubProductImage::class);
     }
 }

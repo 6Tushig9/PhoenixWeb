@@ -56,7 +56,6 @@ class MainProductResource extends Resource
                 ImageColumn::make('Зураг'),
                 TextColumn::make('Үнэ')->numeric(),
                 TextColumn::make('Товч_мэдээлэл')->wrap(),
-                TextColumn::make('Тоон_хэмжээ')->numeric(),
             ])
             ->filters([
                 //
