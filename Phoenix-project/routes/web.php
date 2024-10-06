@@ -20,3 +20,7 @@ Route::controller(CustomerReact::class)->group(function(){
     Route::post('/hamtrah','hamtrah');
     Route::post('/sanal','sanal');
 });
+
+Route::controller(Register::class)->group(function(){
+    Route::post('/login','login');
+});
