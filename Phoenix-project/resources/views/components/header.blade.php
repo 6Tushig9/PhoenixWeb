@@ -75,20 +75,12 @@
                 <form class="my-form">
                     <div class="text-field">
                         <label for="email">Е-мэйл:</label>
-                        <input type="email" 
-                                id="email" 
-                                name="email" 
-                                placeholder="Таны Е-мэйл" 
-                                required>
+                        <input type="email" id="email" name="email" placeholder="Таны Е-мэйл" required>
                         <img src="./pics2use/icons/Email@.png" alt="Email Icon" title="Email Icon">
                     </div>
                     <div class="text-field">
                         <label for="email">Нууц үг:</label>
-                        <input type="password" 
-                                id="email" 
-                                name="email" 
-                                placeholder="Таны нууц үг" 
-                                required>
+                        <input type="password" id="email" name="email" placeholder="Таны нууц үг" required>
                         <img src="./pics2use/icons/PassIcon.png" alt="Email Icon" title="Email Icon">
                     </div>
                     <input type="submit" 

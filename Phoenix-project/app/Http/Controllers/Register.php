@@ -9,7 +9,7 @@ class Register extends Controller
 {
     public function signup(Request $request)
     {
-
+        
     }
     public function login(Request $request){
 
