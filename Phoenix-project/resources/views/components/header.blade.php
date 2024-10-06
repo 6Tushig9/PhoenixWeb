@@ -73,21 +73,6 @@
                     <p>Хэрэглэгчийн мэдээлэл оруулна уу</p>
                 </div>
                 <form class="my-form">
-                    <div class="socials-row">
-                        <a href="#" title="Use Google">
-                            <img src="./pics2use/icons/Google.png" alt="Google">
-                            Google-р нэвтрэх
-                        </a>
-                        <a href="#" title="Use Facebook">
-                            <img src="./pics2use/icons/Facebook.png" alt="Facebook">
-                            Facebook-р нэвтрэх
-                        </a>
-                    </div>
-                    <div class="divider">
-                        <div class="divider-line"></div>
-                        Эсвэл
-                        <div class="divider-line"></div>
-                    </div>
                     <div class="text-field">
                         <label for="email">Е-мэйл:</label>
                         <input type="email" 
@@ -117,6 +102,21 @@
                         <div class="my-form_signup">
                             <a href="#" title="Create Account">Бүртгүүлэх</a>
                         </div>
+                    </div>
+                     <div class="divider">
+                        <div class="divider-line"></div>
+                        Эсвэл
+                        <div class="divider-line"></div>
+                    </div>
+                    <div class="socials-row">
+                        <a href="#" title="Use Google">
+                            <img src="./pics2use/icons/Google.png" alt="Google">
+                            Google-р нэвтрэх
+                        </a>
+                        <a href="#" title="Use Facebook">
+                            <img src="./pics2use/icons/Facebook.png" alt="Facebook">
+                            Facebook-р нэвтрэх
+                        </a>
                     </div>
                 </form>
             </div>
