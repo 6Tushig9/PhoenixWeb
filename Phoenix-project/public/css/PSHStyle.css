@@ -1796,6 +1796,9 @@ body {
     backdrop-filter: blur(10px);
     font-family: var(--main-fonts);
 }
+.login-wrapper p{
+    font-size: 1.2rem;
+}
 .closeLog-btn{
     position: absolute;
     top: 10px;
@@ -1808,39 +1811,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: start;
-}
-.info-side {
-    height: 100vh;
-    padding: 5.25rem 3rem 3rem 2rem;
-    color: #401b3d;
-    width: 100%;
-    display: flex;
-    overflow: hidden;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    background: var(--brightBG);
-}
-.info-side h2 {
-    margin-top: 3rem;
-    color: var(--fontCdarkBlur);
-    font-size: 1.8rem;
-    margin-bottom: 0.75rem;
-}
-.info-side p {
-    font-size: 1.2rem;
-}
-.info-side img {
-    max-width: 53.75rem;
-}
-.welcome-message {
-    max-width: 22.5rem;
-}
-.logo {
-    height: 6rem;
-    position: absolute;
-    top: 1.25rem;
-    left: 1.25rem;
 }
 .my-form_wrapper {
     display: flex;
@@ -1963,13 +1933,33 @@ body {
 }
 .text-field label {
     color: var(--fontCdark);
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.03rem;
     z-index: 10;
 }
-
 /*----------------login popup try END-----------------*/
+/*----------------Register popup try START---------------*/
+.register-side {
+    display: none;
+    justify-content: center;
+    align-items: start;
+}
+.my-form_wrapperR {
+    display: flex;
+    position: relative;
+    background: var(--mainBGMirror);
+    border-radius: 0.8rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 28.75rem;
+    width: 100%;
+    padding: 3rem 2rem;
+    height: fit-content;
+    box-shadow: rgba(100, 100, 111, 0.2) 0rem 6px 26px 0rem;
+}
+/*----------------Register popup try END-----------------*/
 
 /*footer section footer n @media heseg deer edit hiigdehgui */
 

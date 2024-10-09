@@ -39,8 +39,47 @@
             }
         });
     });
-</script>
 
+    //Register hesgiin js
+    document.addEventListener("DOMContentLoaded", function () {
+        // Show registration form when "Бүртгүүлэх" is clicked
+        document.querySelector('.my-form_signup a').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            document.querySelector('.register-side').style.display = 'block';
+                document.getElementById("login-side").style.display = "none";
+        });
+
+        // Hide registration form when the close button is clicked
+        document.getElementById('closeRegPopup').addEventListener('click', function() {
+            document.getElementById('loginPopup').style.display = 'none';
+            document.querySelector('.register-side').style.display = 'none';
+                document.getElementById("login-side").style.display = "flex";
+        });
+        
+        window.addEventListener("click", function(event) {
+            const popuplog = document.getElementById("loginPopup");
+            if (event.target === popuplog) {
+                popuplog.style.display = "none";
+                document.body.classList.remove("no-scroll");
+                document.querySelector('.register-side').style.display = 'none';
+                document.getElementById("login-side").style.display = "flex";
+            }
+        });
+
+        //password dawtagdaj bgaa esehiig shalgah  --V--    
+        document.getElementById('passwordRep').addEventListener('input', function () {
+            const password = document.getElementById('password').value;
+            const passwordRep = document.getElementById('passwordRep').value;
+
+            if (password !== passwordRep) {
+                this.setCustomValidity('Нууц үгс хоорондоо таарахгүй байна.');
+            } else {
+                this.setCustomValidity('');
+            }
+        });
+    });
+
+</script>
 
     <div id="thinnav">
         <div class="Welcome">Тавтай морил</div>
