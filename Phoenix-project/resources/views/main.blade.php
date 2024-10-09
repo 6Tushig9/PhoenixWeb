@@ -53,7 +53,7 @@
         document.getElementById('closeRegPopup').addEventListener('click', function() {
             document.getElementById('loginPopup').style.display = 'none';
             document.querySelector('.register-side').style.display = 'none';
-                document.getElementById("login-side").style.display = "flex";
+            document.getElementById("login-side").style.display = "flex";
         });
         
         window.addEventListener("click", function(event) {
