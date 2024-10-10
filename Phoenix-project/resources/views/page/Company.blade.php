@@ -100,7 +100,7 @@
                         <div class="descrptnOfNumber">Хэмнэсэн цахилгаан</div>
                     </div>
                     <div class="section">
-                        <div class="Numbers">{{ $item->Бууруулсан_нүүрс_хүчлийн_хий.' сая Тн' }}</div>
+                        <div class="Numbers">{{ $item->Бууруулсан_нүүрс_хүчлийн_хий.'Тн' }}</div>
                         <div class="descrptnOfNumber">Бууруулсан нүүрс хүчлийн хий</div>
                     </div>
                 </div>

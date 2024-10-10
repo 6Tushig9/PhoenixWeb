@@ -21,6 +21,7 @@
     --btnClrBlr: #054202a7;
     --accentClr: #f76521;
     --accentClrLight: #ff7900;
+    --accentClrLight1: #ff9100;
     --warningColor: #a3960f;
     --alertColor: #a20505;
 }
@@ -905,6 +906,9 @@ body {
     gap: 1.5rem;
     margin-top: 1rem;
 }
+.tooshirheg span{
+    font-weight: 400;
+}
 .quantity-selector {
     width: 11rem;
     display: flex;
@@ -965,11 +969,17 @@ body {
 .orderBtn {
     width: 40%;
     padding: 1rem 0.5rem;
-    border: 1px solid var(--shadowClr);
+    border: 2px solid var(--accentClr);
     border-radius: 0.2rem;
-    background: var(--mainBG);
+    color: var(--accentClr);
+    background: none;
     font-size: 1.5rem;
     margin-top: 1rem;
+}
+.orderBtn{
+    background: var(--accentClr);
+    border: 1px solid var(--accentClr);
+    color: var(--fontC);
 }
 
 .zahialagchiinBulan,
@@ -979,7 +989,7 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 1rem;
-    border: 1px dashed var(--brightBG);
+    border: 2px dashed var(--brightBG);
     background: var(--mainBG);
     border-radius: 0.3rem;
     padding: 1rem;
@@ -1014,8 +1024,9 @@ body {
 .zahialagchiinBulan button:hover,
 .zahialagchiinBulan1 button:hover {
     cursor: pointer;
-    background: var(--brightBG);
-    border: 1px solid var(--darkerBG);
+    color: var(--fontC);
+    background: var(--fontCdark);
+    border: 1px solid var(--fontCdark);
 }
 .zahialagchiinBulan button,
 .zahialagchiinBulan1 button {
@@ -1025,15 +1036,15 @@ body {
     border-radius: 0.2rem;
     margin-top: 1rem;
     color: var(--fontCdark);
-    background: var(--darkerBG);
-    border: 1px solid var(--darkerBG);
+    background: none;
+    border: 1px solid var(--fontCdark);
     transition: 0.3s ease;
 }
 #ZahialagchDID {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background: var(--brightBG);
+    border: 2px dashed var(--brightBG);
     padding: 1rem 0.5rem;
     border-radius: 0.2rem;
 }
@@ -1045,7 +1056,7 @@ body {
 .PaymentDetails {
     width: 70%;
     background: var(--darkerBG);
-    border: 1px solid var(--darkerBG);
+    border: 2px solid var(--darkerBG);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1082,14 +1093,14 @@ body {
 }
 .continueBtn,
 .cancelBtn {
-    width: 15rem;
+    width: 10rem;
     font-size: 1.2rem;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     border: none;
     border-radius: 0.2rem;
 }
 .continueBtn {
-    background: var(--btnClr2);
+    background: var(--accentClr);
     color: var(--fontC);
 }
 .cancelBtn {
@@ -1116,7 +1127,6 @@ body {
     width: 40rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
-
 }
 /*-----------------------------BuyPage Heseg END-------------------------*/
 
