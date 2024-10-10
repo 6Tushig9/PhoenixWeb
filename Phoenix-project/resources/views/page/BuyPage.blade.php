@@ -61,16 +61,16 @@
             </div>
             <div class="advantageImage">
                 <div class="advntg">
-                    <img src={{ asset("pics2use/TechSketch.jpg")}}>
+                    <img src={{ asset("pics2use/EnergyEfficient.png")}}>
                     Эрчим хүч хэмнэнэ
                 </div>
                 <div class="advntg">
-                    <img src={{ asset("pics2use/TechSketch.jpg")}}>
-                    Эрчим хүч хэмнэнэ
+                    <img src={{ asset("pics2use/humidity.png")}}>
+                    Агаарыг шатааж, хуурайшуулахгүй 
                 </div>
                 <div class="advntg">
-                    <img src={{ asset("pics2use/TechSketch.jpg")}}>
-                    Эрчим хүч хэмнэнэ
+                    <img src={{ asset("pics2use/healthy.png")}}>
+                    Харшил үүсгэхгүй, эрүүл мэндэд ээлтэй
                 </div>
             </div>
         </div>
@@ -82,9 +82,9 @@
                 <div class="heaterDesc">
                     -Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
                     <br> 
-                    -Expedita, aut. Aspernatur, totam! Perferendis, deleniti <br>
+                    -30%-с доошгүй эрчим хүч хэмнэнэ <br>
                     <br>
-                    -fugit perspiciatis labore adipisci illum.
+                    -Өрөө тус бүрийг өөр хэмд тохируулах боломжтой
                 </div>
                 <div class="zagwaruudlabel">Загварууд</div>
                 <div class="HeaterSelection">
@@ -190,17 +190,30 @@
                 <div class="bigImage">
                     <img src={{ asset("storage/".$production->Зураг)}} alt="">
                 </div>
-                @foreach ($production->category as $sub_pro)
-                    {{-- <div class="miniImage">
+                <div class="miniImage">
+                    @foreach ($production->category as $sub_pro)
                         <img src={{ asset("storage/".$sub_pro->Зураг)}} class="mnimgs" alt="">
-                    </div> --}}
-                    <div class="advantageImage">
+                    {{-- <div class="advantageImage">
                         <div class="advntg">
                             <img src={{ asset("storage/".$sub_pro->Зураг)}} alt="">
-                            Эрчим хүч хэмнэнэ
                         </div>
+                    </div> --}}
+                    @endforeach
+                </div>
+                <div class="advantageImage">
+                    <div class="advntg">
+                        <img src={{ asset("pics2use/EnergyEfficient.png")}}>
+                        Эрчим хүч хэмнэнэ
                     </div>
-                @endforeach
+                    <div class="advntg">
+                        <img src={{ asset("pics2use/humidity.png")}}>
+                        Агаарыг шатааж, хуурайшуулахгүй 
+                    </div>
+                    <div class="advntg">
+                        <img src={{ asset("pics2use/healthy.png")}}>
+                        Харшил үүсгэхгүй, эрүүл мэндэд ээлтэй
+                    </div>
+                </div>
             </div>
             <div class="specSide">
                 <div class="heaterinfoDiv">
@@ -208,7 +221,7 @@
                         {{ $production->Бүтээгдэхүүн }} Төрлийн халаагуур
                     </div>
                     <div class="heaterDesc">
-                        {{ '- '.$production->Онцлог_шинж }}
+                        {{ '- '.$production->Товч_мэдээлэл }}
                     </div>
                     <div class="zagwaruudlabel">Загварууд</div>
                     <div class="HeaterSelection">
