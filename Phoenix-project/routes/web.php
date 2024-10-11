@@ -13,8 +13,6 @@ Route::controller(RoutePages::class)->group(function (){
     Route::get('/buypage/{id}','bpage')->name('buy');
     Route::get('/shoppingcart', 'shoppingcart');
     Route::get('/faq', 'faq');
-    Route::get('/test','test');
-    Route::get('/test1/{id}', 'test1');
 });
 Route::controller(CustomerReact::class)->group(function(){
     Route::post('/hamtrah','hamtrah');
