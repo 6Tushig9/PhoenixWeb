@@ -10,17 +10,7 @@ use App\Models\Statistic;
 use Illuminate\Support\Facades\DB;
 
 class RoutePages extends Controller
-{   
-
-    public function test(){
-       return response()->json(Statistic::all() ?? null);
-    }
-
-    public function test1($id){
-        $production=MainProduct::find($id);
-        return response()->json($production);
-    }
-
+{
     public function phoenixsheater(): View
     {
         $arr=MainProduct::find(1) ?? null;
@@ -34,7 +24,7 @@ class RoutePages extends Controller
         $statistic=Statistic::all() ?? null;
         return View('page.Company',['organization'=>$organization, 'statistic'=>$statistic]);
     }
-    
+
     public function ecological(): View
     {
         return View('page.Ecological');
@@ -60,7 +50,7 @@ class RoutePages extends Controller
     {
         $production=MainProduct::find($id);
         if (!$production) {
-            abort(404); 
+            abort(404);
         }
         return View('page.BuyPage', ['production'=>$production]);
     }
