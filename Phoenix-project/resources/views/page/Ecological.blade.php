@@ -1,21 +1,21 @@
 @extends("main")
 @section("Phoenix")
 <script>
-document.getElementById("complaintBtn").addEventListener("click", function() {
-document.getElementById("complaintPopup").style.display = "flex";
-document.body.classList.add("no-scroll");
-});
-document.getElementById("closeComplaintPopup").addEventListener("click", function() {
-document.getElementById("complaintPopup").style.display = "none";
-document.body.classList.remove("no-scroll");
-});
-window.addEventListener("click", function(event) {
-const popup = document.getElementById("complaintPopup");
-if (event.target === popup) {
-    popup.style.display = "none";
+    document.getElementById("complaintBtn").addEventListener("click", function() {
+    document.getElementById("complaintPopup").style.display = "flex";
+    document.body.classList.add("no-scroll");
+    });
+    document.getElementById("closeComplaintPopup").addEventListener("click", function() {
+    document.getElementById("complaintPopup").style.display = "none";
     document.body.classList.remove("no-scroll");
-}
-});
+    });
+    window.addEventListener("click", function(event) {
+    const popup = document.getElementById("complaintPopup");
+    if (event.target === popup) {
+        popup.style.display = "none";
+        document.body.classList.remove("no-scroll");
+    }
+    });
 </script>
 
 
@@ -31,17 +31,17 @@ if (event.target === popup) {
             <div class="plant-info">
                 <div class="info-box leaf">
                     <h2>8</h2>
-                    <p>Тогтвортой, хүртээмжтэй эдийн засгийн өсөлт, бүрэн, 
+                    <p>Тогтвортой, хүртээмжтэй эдийн засгийн өсөлт, бүрэн,
                     бүтээмжтэй ажил эрхлэлт, зохистой хөдөлмөрийг хөхүүлэн дэмжих</p>
                 </div>
                 <div class="info-box shoot">
                     <h2>9</h2>
-                    <p>Уян хатан дэд бүтцийг байгуулж, хүртээмжтэй, 
+                    <p>Уян хатан дэд бүтцийг байгуулж, хүртээмжтэй,
                     тогтвортой аж үйлдвэржилтийг дэмжиж, инновацийг хөгжүүлэх</p>
                 </div>
                 <div class="info-box stem">
                     <h2>13</h2>
-                    <p>Цаг уурын өөрчлөлт, түүний үр дагавартай тэмцэх 
+                    <p>Цаг уурын өөрчлөлт, түүний үр дагавартай тэмцэх
                     талаар яаралтай арга хэмжээ авах</p>
                 </div>
             </div>
@@ -66,7 +66,7 @@ if (event.target === popup) {
                             </div>
                             <div class="BsepLine"></div><!--dashed sep line-->
                             <div class="bonzText">
-                                <p>Монгол улсын стандартаар ~780кВт/ц хэрэглэх байсан 
+                                <p>Монгол улсын стандартаар ~780кВт/ц хэрэглэх байсан
                                 цахилгааныг ~600кВт/ц болгож багасгав.</p>
                             </div>
                         </div>
@@ -77,7 +77,7 @@ if (event.target === popup) {
                             </div>
                             <div class="BsepLine"></div><!--dashed sep line-->
                             <div class="bonzText">
-                                <p>Манай халаагуурыг хэрэглэж буй нийт айл өрхүүд 
+                                <p>Манай халаагуурыг хэрэглэж буй нийт айл өрхүүд
                                 1 жилд 174'960'000 төгрөг хэмнэв.</p>
                             </div>
                         </div>
@@ -98,8 +98,8 @@ if (event.target === popup) {
                             </div>
                             <div class="BsepLine"></div><!--dashed sep line-->
                             <div class="bonzText">
-                                <p>Эрх бүхий эрчим хүчний аудитораар халаагуур 
-                                тус бүрт хэмжилт хийлгүүлж 30-с доошгүй цахилгааны 
+                                <p>Эрх бүхий эрчим хүчний аудитораар халаагуур
+                                тус бүрт хэмжилт хийлгүүлж 30-с доошгүй цахилгааны
                                 хэмнэлттэй гэх дүгнэлт гаргуулсан.</p>
                             </div>
                         </div>
@@ -119,7 +119,4 @@ if (event.target === popup) {
         }
     });
 </script>
-
-
-
 @endsection
