@@ -23,8 +23,8 @@
                     <div class="medeelliinheseg">
                         <h1>S1200TW</h1>
                         <h2>22м2 талбай халаах хүчин чадалтай</h2>
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Ducimus ullam voluptate sapiente expedita nisi voluptates 
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Ducimus ullam voluptate sapiente expedita nisi voluptates
                             perspiciatis doloremque est eligendi consequatur animi.</h3>
                         <div class="shuudhudaldah">
                             <script>

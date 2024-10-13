@@ -1,7 +1,7 @@
 @extends("main")
 @section("Phoenix")
 <script>
-    
+
     document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("complaintBtn").addEventListener("click", function() {
             document.getElementById("complaintPopup").style.display = "flex";
@@ -66,7 +66,7 @@
                 </div>
                 <div class="advntg">
                     <img src={{ asset("pics2use/humidity.png")}}>
-                    Агаарыг шатааж, хуурайшуулахгүй 
+                    Агаарыг шатааж, хуурайшуулахгүй
                 </div>
                 <div class="advntg">
                     <img src={{ asset("pics2use/healthy.png")}}>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="heaterDesc">
                     -Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
-                    <br> 
+                    <br>
                     -30%-с доошгүй эрчим хүч хэмнэнэ <br>
                     <br>
                     -Өрөө тус бүрийг өөр хэмд тохируулах боломжтой
@@ -207,7 +207,7 @@
                     </div>
                     <div class="advntg">
                         <img src={{ asset("pics2use/humidity.png")}}>
-                        Агаарыг шатааж, хуурайшуулахгүй 
+                        Агаарыг шатааж, хуурайшуулахгүй
                     </div>
                     <div class="advntg">
                         <img src={{ asset("pics2use/healthy.png")}}>

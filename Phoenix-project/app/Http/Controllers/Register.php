@@ -22,7 +22,7 @@ class Register extends Controller
                 'email'=>$request->email,
                 'password'=>Hash::make($request->password),
             ]);
-            return redirect()->route('/');
+            return redirect('/');
         }
         } catch(\Exception $error){
             return response()->json(['status'=>$error->getMessage()]);
@@ -36,10 +36,7 @@ class Register extends Controller
                 'password'=>'required'
             ]);
             if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
-                session_start();
                 return redirect('/')->with('success', 'You are successfully logged in.');
-            } else {
-                return redirect('/')->with('error', 'You are wrong password or email.');
             }
 
         }
@@ -50,5 +47,6 @@ class Register extends Controller
     }
     public function logout(){
         Auth::logout();
+        return redirect('/');
     }
 }

@@ -18,18 +18,14 @@ window.addEventListener("click", function(event) {
     }
 });
 </script>
-<!--Sanal huseltiin heseg END-->
 
 <script>
-    // Attach event listeners to all plus and minus buttons
     document.querySelectorAll('.selectionByOrder').forEach(function(card) {
-        // Get the base price from the existing price element
         let priceElement = card.querySelector('.price');
-        let basePrice = parseInt(priceElement.innerText.replace(/[^\d]/g, '')); // Extract numeric value
-        
+        let basePrice = parseInt(priceElement.innerText.replace(/[^\d]/g, ''));
+
         let quantity = card.querySelector('.quantity');
 
-        // Minus button functionality
         card.querySelector('.minus').addEventListener('click', function() {
             if (quantity.innerText > 1) {
                 quantity.innerText = parseInt(quantity.innerText) - 1;
@@ -37,7 +33,6 @@ window.addEventListener("click", function(event) {
             }
         });
 
-        // Plus button functionality
         card.querySelector('.plus').addEventListener('click', function() {
             quantity.innerText = parseInt(quantity.innerText) + 1;
             updatePrice(priceElement, quantity.innerText, basePrice);
@@ -47,7 +42,7 @@ window.addEventListener("click", function(event) {
         let newPrice = basePrice * quantity;
         priceElement.innerText = `${newPrice}₮`;
     }
-    //delete section
+
     document.querySelectorAll('.close-btn').forEach(function(button) {
         button.addEventListener('click', function() {
             let sectionToRemove = button.closest('.selectionByOrder');
@@ -58,7 +53,7 @@ window.addEventListener("click", function(event) {
 
     <div id="cartMainCont">
         <div class="selectedHtrs">
-            
+
             <div class="selectionByOrder">
                 <button class="close-btn">X</button>
                 <div><img src={{ asset("pics2use/Heaters/S1200TW_1.png")}}></div>
@@ -110,7 +105,7 @@ window.addEventListener("click", function(event) {
             <div class="tulburiinMedeelel1">
                 <h2>Төлбөрийн мэдээлэл</h2>
                 <div class="PaymentDetails">
-    
+
                 </div>
             </div>
         </div>

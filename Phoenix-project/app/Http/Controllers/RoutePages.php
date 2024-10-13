@@ -7,7 +7,8 @@ use App\Models\Advice;
 use Illuminate\View\View;
 use App\Models\Organization;
 use App\Models\Statistic;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Notification;
+use App\Notifications\Product;
 
 class RoutePages extends Controller
 {

@@ -21,4 +21,5 @@ Route::controller(CustomerReact::class)->group(function(){
 
 Route::controller(Register::class)->group(function(){
     Route::post('/login','login');
+    Route::post('/logout','logout');
 });
