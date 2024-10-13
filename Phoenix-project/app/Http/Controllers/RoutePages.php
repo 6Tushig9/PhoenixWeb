@@ -58,6 +58,7 @@ class RoutePages extends Controller
 
     public function shoppingcart(): View
     {
+
          return View('page.ShoppingCart');
     }
 

@@ -10,13 +10,13 @@ use Illuminate\Notifications\Notification;
 class Product extends Notification
 {
     use Queueable;
-
     /**
      * Create a new notification instance.
      */
-    public function __construct()
+    private $bell;
+    public function __construct($bell)
     {
-        //
+        $this->bell=$bell;
     }
 
     /**
@@ -48,7 +48,7 @@ class Product extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            //
+            'bell'=>$this->bell
         ];
     }
 }
