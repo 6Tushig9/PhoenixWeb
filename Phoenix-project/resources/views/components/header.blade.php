@@ -73,7 +73,6 @@
                     <p>Хэрэглэгчийн мэдээлэл оруулна уу</p>
                 </div>
 
-
                 <form class="my-form" action="/login" method="post">
                     @csrf
                     <div class="text-field">

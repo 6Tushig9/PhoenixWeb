@@ -87,7 +87,8 @@
             <div class="miniicon">
                 <div class="shpngcrt">
                     <a href="/shoppingcart">
-                        <img src={{ asset("pics2use/icons/Shoppingcart.png") }} class="shoppingC"><!-- src={{ asset("pics2use/icons/Shoppingcart.png") }}-->
+                        <img src={{ asset("pics2use/icons/Shoppingcart.png") }} class="">
+                        <span class="notification-count">{{ $notifications->where('read_at', null)->count() }}</span>
                     </a>
                 </div>
                 <div class="miniSocial">
