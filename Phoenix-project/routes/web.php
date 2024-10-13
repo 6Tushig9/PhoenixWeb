@@ -11,7 +11,7 @@ Route::controller(RoutePages::class)->group(function (){
     Route::get('/advice', 'advice');
     Route::get('/buypage', 'buypage');
     Route::get('/buypage/{id}','bpage')->name('buy');
-    Route::get('/shoppingcart', 'shoppingcart');
+    Route::get('/shoppingcart', 'shoppingcart')->name('shopping');
     Route::get('/faq', 'faq');
 });
 Route::controller(CustomerReact::class)->group(function(){
