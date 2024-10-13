@@ -22,10 +22,10 @@ class Register extends Controller
                 'email'=>$request->email,
                 'password'=>Hash::make($request->password),
             ]);
-            return 'User created success';
+            return redirect('/');
         }
         } catch(\Exception $error){
-            return $error;
+            return response()->json(['status'=>$error->getMessage()]);
         }
     }
     public function login(Request $request){
@@ -37,18 +37,16 @@ class Register extends Controller
             ]);
             if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
                 return redirect('/')->with('success', 'You are successfully logged in.');
-            } else {
-                return redirect('/')->with('error', 'You are wrong password or email.');
             }
 
         }
         } catch(\Exception $error) {
-            return $error->getMessage();
+            return response()->json(['status'=>$error->getMessage()]);
         }
-        return 'Bad Request';
+        return response()->json(['status'=>'Bad request']);
     }
-    public function logout(Request $request){
-        Session::flush();
+    public function logout(){
         Auth::logout();
+        return redirect('/');
     }
 }

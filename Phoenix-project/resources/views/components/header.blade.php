@@ -10,9 +10,6 @@
             <button class="Luser" id="Luser">НЭВТРЭХ
                 <img src={{ asset("pics2use/icons/user.png")}} class="LUserIcon">
             </button>
-            @if (session(''))
-
-            @endif
         </div>
         <div class="mnubtn">
             <span></span><span></span><span></span>
@@ -75,15 +72,17 @@
                     <h1>Тавтай морил</h1>
                     <p>Хэрэглэгчийн мэдээлэл оруулна уу</p>
                 </div>
+
+
                 <form class="my-form" action="/login" method="post">
                     @csrf
                     <div class="text-field">
                         <label for="email">Е-мэйл:</label>
-                        <input type="email" id="email" name="email" placeholder="Таны Е-мэйл" required>
+                        <input type="email" id="email" name="email" placeholder="Таны Е-мэйл">
                     </div>
                     <div class="text-field">
                         <label for="password">Нууц үг:</label>
-                        <input type="password" id="password" name="password" placeholder="Таны нууц үг" required>
+                        <input type="password" id="password" name="password" placeholder="Таны нууц үг">
                     </div>
                     <input type="submit" class="my-form_button" value="Нэвтрэх">
                     <div class="my-form_actions">
@@ -115,7 +114,7 @@
         </div>
 
 
-        <div class="register-side">            
+        <div class="register-side">
             <div class="my-form_wrapperR">
                 <span class="closeLog-btn" id="closeRegPopup">&times;</span>
                 <div class="login-welcome-row">
@@ -126,19 +125,19 @@
                     @csrf
                     <div class="text-field">
                         <label for="nameUser">Нэр:</label>
-                        <input type="text" id="nameUser" name="nameUser" placeholder="Таны нэр" required>
+                        <input type="text" id="nameUser" name="nameUser" placeholder="Таны нэр" >
                     </div>
                     <div class="text-field">
                         <label for="email">Е-мэйл:</label>
-                        <input type="email" id="email" name="email" placeholder="Таны Е-мэйл" required>
+                        <input type="email" id="email" name="email" placeholder="Таны Е-мэйл">
                     </div>
                     <div class="text-field">
                         <label for="password">Нууц үг:</label>
-                        <input type="password" id="password" name="password" placeholder="Таны нууц үг" required>
+                        <input type="password" id="password" name="password" placeholder="Таны нууц үг" >
                     </div>
                     <div class="text-field">
                         <label for="passwordRep">Нууц үг давтах:</label>
-                        <input type="password" id="passwordRep" name="passwordRep" placeholder="Таны нууц үгээ давтаж оруулна уу" required>
+                        <input type="password" id="passwordRep" name="passwordRep" placeholder="Таны нууц үгээ давтаж оруулна уу">
                     </div>
                     <input type="submit" class="my-form_button" value="Нэвтрэх">
                     <div class="divider">

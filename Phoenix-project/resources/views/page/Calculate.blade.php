@@ -46,7 +46,7 @@
 
         roomNum.addEventListener("input", function() {
             if (roomNum.value.trim() !== "") {
-                roomContainer.innerHTML = ""; 
+                roomContainer.innerHTML = "";
                 const numRooms = parseInt(roomNum.value);
                 for (let i = 0; i < numRooms; i++) {
                     const label = document.createElement("label");
@@ -54,7 +54,7 @@
                     const input = document.createElement("input");
                     input.type = "number";
                     input.className = "RoomS";
-                    
+
                     roomContainer.appendChild(label);
                     roomContainer.appendChild(input);
                 }
@@ -111,8 +111,8 @@
         bodojOloh.addEventListener("click", function() {
             const roomSInputs = roomContainer.querySelectorAll(".RoomS");
             const windowHeight = parseFloat(windowHigh.value);
-            heaterCardContainer.innerHTML = ""; 
-            totalBillContainer.innerHTML = "";  
+            heaterCardContainer.innerHTML = "";
+            totalBillContainer.innerHTML = "";
 
             let totalBill = 0;
 
@@ -182,8 +182,8 @@
     <div class="calcHead">
         <h1>ХАЛААГУУРЫН ТООЦООЛУУР</h1>
         <p>Та доорх тооцоолуураар өөрийн байшиндаа
-             хэдэн халаагуур суурилуулж болох болон 
-             сард халаалтанд хэр хэмжээний зардал гарах 
+             хэдэн халаагуур суурилуулж болох болон
+             сард халаалтанд хэр хэмжээний зардал гарах
              талаар мэдээллийг мэдэж болно</p>
     </div>
     <div class="HouseInfo">
