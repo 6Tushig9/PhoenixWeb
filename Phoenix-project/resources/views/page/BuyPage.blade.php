@@ -62,9 +62,10 @@
                                 });
                             });
                         </script>
-                        <a href={{ route('shopping', $production->id)}}>
+                        {{-- <a href={{ route('shopping', $production->id)}}>
                             <button class="cartBtn">Сагсанд хийх</button>
-                        </a>
+                        </a> --}}
+                        <button class="cartBtn">Сагсанд хийх</button>
                         <button class="orderBtn">Захиалга өгөх</button>
                     </div>
                 </div>

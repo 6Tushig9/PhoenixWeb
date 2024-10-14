@@ -139,13 +139,13 @@ body {
 }
 .notification-count {
     position: absolute;
-    top: -5px;
+    top: 1px;
     right: -10px;
-    background-color: white;
-    color: green;
+    background-color: var(--alertColor);
+    color: var(--fontC);
     border-radius: 50%;
-    padding: 3px 3px;
-    font-size: 8px;
+    padding: 2px 4px;
+    font-size: 0.6rem;
 }
 .miniSocial {
     width: 65%;
