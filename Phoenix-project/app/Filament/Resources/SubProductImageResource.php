@@ -12,10 +12,21 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Group;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\MarkdownEditor;
+use Filament\Forms\Components\RichtextEditor;
+use Filament\Forms\Components\TextInput;
+use App\Models\SubProduct;
 
 class SubProductImageResource extends Resource
 {
     protected static ?string $model = SubProductImage::class;
+
+    protected static ?string $navigationLabel = 'Дагавар загварын зураг';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -23,7 +34,20 @@ class SubProductImageResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Group::make([
+                    Select::make('sub_product_id')
+                        ->options(SubProduct::all()->pluck('Загвар', 'id')),
+                    FileUpload::make('Зураг_1')
+                        ->required(),
+                    FileUpload::make('Зураг_2')
+                        ->required(),
+                    FileUpload::make('Зураг_3')
+                        ->required(),
+                    FileUpload::make('Зураг_4')
+                        ->required(),
+                    FileUpload::make('Зураг_5')
+                        ->required(),
+                ])
             ]);
     }
 
@@ -31,7 +55,12 @@ class SubProductImageResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('Загвар'),
+                ImageColumn::make('Зураг_1'),
+                ImageColumn::make('Зураг_2'),
+                ImageColumn::make('Зураг_3'),
+                ImageColumn::make('Зураг_4'),
+                ImageColumn::make('Зураг_5'),
             ])
             ->filters([
                 //

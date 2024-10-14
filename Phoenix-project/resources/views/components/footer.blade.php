@@ -47,13 +47,13 @@
         </div>
         <div class="fsocial">
             <div class="ftitle">Сошиал</div>
-            <a href="https://www.facebook.com/centralrich.mongolia">
+            <a href="https://www.facebook.com/centralrich.mongolia" target="_blank">
                 <img src={{ asset("pics2use/icons/facebookf.png")}} class="Facebookicon">Phoenix-S Цахилгаан халаагуур
             </a>
-            <a href="https://www.instagram.com/phoenix_s_heater">
+            <a href="https://www.instagram.com/phoenix_s_heater" target="_blank">
                 <img src={{ asset("pics2use/icons/instagram.png")}} class="Instagramicon">Phoenix_S_heater
             </a>
-            <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">
+            <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank">
                 <img src={{ asset("pics2use/icons/gmail.png")}} class="Emailicon">centralrich.mongolia@gmail.com
             </a>
         </div>

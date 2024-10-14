@@ -86,19 +86,19 @@
             </div>
             <div class="miniicon">
                 <div class="shpngcrt">
-                    <a href="/shoppingcart">
+                    <a href="/shoppingcart" >
                         <img src={{ asset("pics2use/icons/Shoppingcart.png") }} class="">
                         <span class="notification-count">{{ $notifications->where('read_at', null)->count() }}</span>
                     </a>
                 </div>
                 <div class="miniSocial">
-                    <a href="https://www.facebook.com/centralrich.mongolia">
+                    <a href="https://www.facebook.com/centralrich.mongolia" target="_blank">
                         <img src= {{ asset("pics2use/icons/facebookwhite.png")}} class="mini fb">
                     </a>
-                    <a href="https://www.facebook.com/centralrich.mongolia">
+                    <a href="https://www.facebook.com/centralrich.mongolia" target="_blank">
                         <img src={{ asset("pics2use/icons/fbgroup.png")}} class="mini group">
                     </a>
-                    <a href="https://www.instagram.com/phoenix_s_heater">
+                    <a href="https://www.instagram.com/phoenix_s_heater" target="_blank">
                         <img src={{ asset("pics2use/icons/igwhite.png")}} class="mini insta">
                     </a>
                 </div>

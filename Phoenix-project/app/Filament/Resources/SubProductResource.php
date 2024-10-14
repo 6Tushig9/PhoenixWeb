@@ -45,7 +45,6 @@ class SubProductResource extends Resource
                     FileUpload::make('Зураг')->required(),
                     TextInput::make('Үнэ')->numeric()->required(),
                     MarkdownEditor::make('Товч_мэдээлэл')->required(),
-                    TextInput::make('Тоон_хэмжээ')->numeric()->required(),
                 ])
             ]);
     }
