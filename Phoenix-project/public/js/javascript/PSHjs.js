@@ -122,84 +122,41 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //ene hesegt advice page deh medeellig delgerengui uzeh bolon haahad zoriulagdsan code bgaa
-function More1() {
-    var pelement = document.querySelector("#card1 p");
-    var buttonname = document.getElementById("More1");
-    if (pelement.style.overflow === "visible") {
-        buttonname.innerHTML = "Дэлгэрэнгүй...";
-        pelement.style.overflow = "hidden";
-        pelement.style.height = "50px";
+function toggleContent(button) {
+    var card = button.closest(".cardd");
+    var content = card.querySelector(".advice-content");
+    var image = card.querySelector("img");
+
+    if (content.style.overflow === "visible") {
+        button.innerHTML = "Дэлгэрэнгүй...";
+        content.style.overflow = "hidden";
+        content.style.height = "50px";
+
+        // Reset to original styles
+        card.style.display = "flex";
+        image.style.maxWidth = "280px"; // Original max width
+        image.style.width = "35vw"; // Original width
+        image.style.height = "380px"; // Original height
+        image.style.objectFit = "cover"; // Original fit
+        image.style.marginLeft = "-60px";
+        image.style.marginRight = "80px";
     } else {
-        buttonname.innerHTML = "Нуух";
-        pelement.style.overflow = "visible";
-        pelement.style.height = "auto";
+        button.innerHTML = "Нуух";
+        content.style.overflow = "visible";
+        content.style.height = "auto";
+
+        // Adjust image to look more natural at the top
+        card.style.display = "block"; // Stack content vertically
+        image.style.maxWidth = "50%"; // Allow image to take full width
+        image.style.width = "100%"; // Full width of container
+        image.style.height = "280px"; // Adjust height naturally
+        image.style.objectFit = "fit"; // Ensure image is not cropped
+        image.style.marginLeft = "auto"; // Center horizontally
+        image.style.marginRight = "auto"; // Center horizontally
+        image.style.display = "block"; // Ensure the image is block element
     }
 }
-function More2() {
-    var pelement = document.querySelector("#card2 p");
-    var buttonname = document.getElementById("More2");
-    if (pelement.style.overflow === "visible") {
-        buttonname.innerHTML = "Дэлгэрэнгүй...";
-        pelement.style.overflow = "hidden";
-        pelement.style.height = "50px";
-    } else {
-        buttonname.innerHTML = "Нуух";
-        pelement.style.overflow = "visible";
-        pelement.style.height = "auto";
-    }
-}
-function More3() {
-    var pelement = document.querySelector("#card3 p");
-    var buttonname = document.getElementById("More3");
-    if (pelement.style.overflow === "visible") {
-        buttonname.innerHTML = "Дэлгэрэнгүй...";
-        pelement.style.overflow = "hidden";
-        pelement.style.height = "50px";
-    } else {
-        buttonname.innerHTML = "Нуух";
-        pelement.style.overflow = "visible";
-        pelement.style.height = "auto";
-    }
-}
-function More4() {
-    var pelement = document.querySelector("#card4 p");
-    var buttonname = document.getElementById("More4");
-    if (pelement.style.overflow === "visible") {
-        buttonname.innerHTML = "Дэлгэрэнгүй...";
-        pelement.style.overflow = "hidden";
-        pelement.style.height = "50px";
-    } else {
-        buttonname.innerHTML = "Нуух";
-        pelement.style.overflow = "visible";
-        pelement.style.height = "auto";
-    }
-}
-function More5() {
-    var pelement = document.querySelector("#card5 p");
-    var buttonname = document.getElementById("More5");
-    if (pelement.style.overflow === "visible") {
-        buttonname.innerHTML = "Дэлгэрэнгүй...";
-        pelement.style.overflow = "hidden";
-        pelement.style.height = "50px";
-    } else {
-        buttonname.innerHTML = "Нуух";
-        pelement.style.overflow = "visible";
-        pelement.style.height = "auto";
-    }
-}
-function More6() {
-    var pelement = document.querySelector("#card6 p");
-    var buttonname = document.getElementById("More6");
-    if (pelement.style.overflow === "visible") {
-        buttonname.innerHTML = "Дэлгэрэнгүй...";
-        pelement.style.overflow = "hidden";
-        pelement.style.height = "50px";
-    } else {
-        buttonname.innerHTML = "Нуух";
-        pelement.style.overflow = "visible";
-        pelement.style.height = "auto";
-    }
-}
+
 
 //buyPage ruu shiljih code
 document.addEventListener("DOMContentLoaded", function () {

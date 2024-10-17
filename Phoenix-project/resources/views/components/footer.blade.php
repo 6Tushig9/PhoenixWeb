@@ -34,7 +34,7 @@
         <div class="fLinks">
             <div class="ftitle">Холбоосууд</div>
             <a href="/company">БАЙГУУЛЛАГА</a>
-            <a href="/ecological">Б.О.Н.З</a>
+            <a href="/ecological">ТОГТВОРТОЙ ХӨГЖИЛ</a>
             <a href="/calculate" class="CalcBtn">ТООЦООЛУУР</a>
             <a href="/advice">ЗӨВЛӨМЖ</a>
         </div>
