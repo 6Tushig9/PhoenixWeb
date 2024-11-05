@@ -17,8 +17,9 @@ class MainProduct extends Model
         return $this->HasMany(SubProduct::class);
     }
 
-    public function image(): HasMany
+    public function images()
     {
-        return $this->HasMany(MainProductImage::class);
+        return $this->hasMany(MainProductImage::class, 'main_product_id');
     }
+
 }

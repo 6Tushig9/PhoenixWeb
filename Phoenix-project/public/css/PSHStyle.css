@@ -776,7 +776,7 @@ body {
 }
 .prodPicSide {
     width: 50%;
-    height: 45rem;
+    height: 65rem;
     display: flex;
     padding-top: 6rem;
     flex-direction: column;
@@ -788,6 +788,7 @@ body {
 }
 .bigImage {
     width: 80%;
+    height: 25rem;
     display: flex;
     background-repeat: no-repeat;
     background-size: contain;
@@ -798,25 +799,59 @@ body {
     width: 80%;
 }
 .miniImage {
-    width: 80%;
+    width: 80%; /* Keep this percentage for responsiveness */
+    height: 20rem;
+    overflow-x: auto; /* Allow horizontal scrolling */
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start; /* Align items at the start */
     align-items: center;
-    gap: 0.5rem;
+    padding: 10px; /* Padding for aesthetics */
+    position: relative; /* Relative positioning for child elements */
+    transition: transform 0.3s ease;
+}
+.image-container {
+    width: 100%;
+    display: flex; /* Maintain flex for children alignment */
+    transition: transform 0.3s ease; /* Smooth transition for centering */
+    padding-left: 1rem;
+    position: relative; /* Ensure positioning for children */
+    /* No need for a specific width */
 }
 .miniImage img:hover {
     cursor: pointer;
+    transform: scale(1.05); /* Scale on hover */
 }
 .miniImage img {
-    width: 20%;
+    width: 20%; /* Image width */
     background: var(--darkerBG);
     border: 1px solid var(--shadowClr);
     border-radius: 0.15rem;
     opacity: 0.7;
+    transition: transform 0.3s, opacity 0.3s; /* Smooth transition */
+    margin-right: 0.5rem; /* Margin between images */
 }
+
+.miniImage img.selected {
+    opacity: 1;
+    border: 1px solid var(--fontCdark);
+}
+.miniImage::-webkit-scrollbar {
+    width: 0.5rem; /* width of the scrollbar */
+    height: 0.5rem; /* height of the scrollbar */
+}
+
+.miniImage::-webkit-scrollbar-thumb {
+    background: #888; /* color of the scrollbar thumb */
+    border-radius: 10px; /* roundness of the scrollbar thumb */
+}
+
+.miniImage::-webkit-scrollbar-thumb:hover {
+    background: #555; /* color on hover */
+}
+
 .advantageImage {
     width: 80%;
+    height: 20rem;
     display: flex;
     flex-wrap: wrap;
     padding: 1rem 2rem;
@@ -2178,7 +2213,7 @@ footer {
     .frstIfno h3,
     .scndIfno h3 {
         display: flex;
-        font-size: clamp(2rem, 2.5vw, 2.5rem);
+        font-size: clamp(1.7rem, 2.1vw, 2.1rem);
     }
     .frstIfno,
     .scndIfno {

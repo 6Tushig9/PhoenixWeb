@@ -18,6 +18,11 @@ return new class extends Migration
             $table->mediumText('Зураг_1')->nullable();
             $table->mediumText('Зураг_2')->nullable();
             $table->mediumText('Зураг_3')->nullable();
+            $table->mediumText('Зураг_4')->nullable();
+            $table->mediumText('Зураг_5')->nullable();
+            $table->mediumText('Зураг_6')->nullable();
+            $table->mediumText('Зураг_7')->nullable();
+            $table->mediumText('Зураг_8')->nullable();
             $table->timestamps();
         });
     }

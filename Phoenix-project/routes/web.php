@@ -31,3 +31,5 @@ Route::get('/test', function(Request $request){
     $user=User::find(1);
     return response()->json(['data'=>$user->notifications]);
 });
+
+Route::resource('sub-product-images', SubProductImageResource::class);

@@ -43,6 +43,16 @@ class MainProductImageResource extends Resource
                         ->required(),
                     FileUpload::make('Зураг_3')
                         ->required(),
+                    FileUpload::make('Зураг_4')
+                        ->required(),
+                    FileUpload::make('Зураг_5')
+                        ->required(),
+                    FileUpload::make('Зураг_6')
+                        ->required(),
+                    FileUpload::make('Зураг_7')
+                        ->required(),
+                    FileUpload::make('Зураг_8')
+                        ->required(),
                 ])
             ]);
     }
@@ -55,6 +65,11 @@ class MainProductImageResource extends Resource
                 ImageColumn::make('Зураг_1'),
                 ImageColumn::make('Зураг_2'),
                 ImageColumn::make('Зураг_3'),
+                ImageColumn::make('Зураг_4'),
+                ImageColumn::make('Зураг_5'),
+                ImageColumn::make('Зураг_6'),
+                ImageColumn::make('Зураг_7'),
+                ImageColumn::make('Зураг_8'),
             ])
             ->filters([
                 //

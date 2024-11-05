@@ -74,20 +74,42 @@ document.addEventListener("DOMContentLoaded", function () {
 //buypage deh jijig zurag songolt
 document.addEventListener("DOMContentLoaded", function () {
     const littleIMGs = document.querySelectorAll(".mnimgs");
+    const container = document.querySelector(".image-container");
 
     littleIMGs.forEach((littleIMG) => {
-        littleIMG.addEventListener("click", () => {
+        littleIMG.addEventListener("click", (event) => {
+            event.preventDefault(); // Prevent default action
             // Reset all images' styles
             littleIMGs.forEach((img) => {
-                img.style.opacity = "0.7";
-                img.style.border = "1px solid var(--shadowClr)";
+                img.classList.remove("selected");
             });
             // Set clicked image's styles
-            littleIMG.style.opacity = "1";
-            littleIMG.style.border = "1px solid var(--fontCdark)";
+            littleIMG.classList.add("selected");
+            centerImage(littleIMG); // Center the clicked image
+        });
+
+        // Allow keyboard navigation
+        littleIMG.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                littleIMG.click();
+            }
         });
     });
+
+    function centerImage(image) {
+        const index = Array.from(littleIMGs).indexOf(image); // Get index of clicked image
+        const imageWidth =
+            image.offsetWidth + parseFloat(getComputedStyle(image).marginRight); // Include margin
+        const scrollPosition = index * imageWidth; // Calculate the scroll position to center the image
+
+        // Center the image with transform
+        const offset = container.offsetWidth / 2 - imageWidth / 2; // Centering offset
+        container.style.transform = `translateX(-${scrollPosition - offset}px)`; // Center the image
+    }
 });
+
+
+
 
 //effect for carousel
 document.addEventListener("DOMContentLoaded", function () {

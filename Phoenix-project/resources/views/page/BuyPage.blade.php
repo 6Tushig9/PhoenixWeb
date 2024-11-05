@@ -12,11 +12,22 @@
                 <!-- Default big image -->
                 <img id="bigImage" src="{{ asset('storage/'.$production->Зураг) }}" alt="">
             </div>
-            <div class="miniImage">
-                @foreach ($production->category as $sub_pro)
-                    <!-- Each mini image -->
-                    <img src="{{ asset('storage/'.$sub_pro->Зураг) }}" class="mnimgs" alt="">
-                @endforeach
+            <div class="miniImage" role="region" aria-label="Image gallery">
+                <div class="image-container">
+                    @foreach ($production->images as $image)
+                        @for ($i = 1; $i <= 8; $i++)
+                            @if ($image->{'Зураг_' . $i})
+                                <img 
+                                    src="{{ asset('storage/' . $image->{'Зураг_' . $i}) }}" 
+                                    class="mnimgs" 
+                                    alt="Image {{ $i }} from {{ $production->name }}" 
+                                    tabindex="0" 
+                                    role="button"
+                                >
+                            @endif
+                        @endfor
+                    @endforeach
+                </div>
             </div>
             <div class="advantageImage">
                 <div class="advntg">
@@ -127,7 +138,6 @@
     zahialgaNumDiv.innerText = `${formattedDate}/01`; // You can change "/01" to reflect your order system
 
 </script>
-
             <div class="specSide">
                 <div class="heaterinfoDiv">
                     <div class="heaterName">

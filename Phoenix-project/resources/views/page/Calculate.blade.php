@@ -31,11 +31,11 @@
         const totalBillContainer = document.getElementById("total-bill-container");
 
         const heaters = [
-            { name: 'S1200', capacity: 22, kW: 1.2 },
-            { name: 'S1000', capacity: 20, kW: 1 },
-            { name: 'S900', capacity: 18, kW: 0.9 },
-            { name: 'S800', capacity: 16, kW: 0.8 },
-            { name: 'S600', capacity: 10, kW: 0.6 }
+            { name: 'S1200', capacity: 21, kW: 1.2 },
+            { name: 'S1000', capacity: 19, kW: 1 },
+            { name: 'S900', capacity: 17, kW: 0.9 },
+            { name: 'S800', capacity: 15, kW: 0.8 },
+            { name: 'S600', capacity: 9, kW: 0.6 }
         ];
 
         niitTalbai.addEventListener("input", function() {

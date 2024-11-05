@@ -36,7 +36,7 @@ class Register extends Controller
                 'password'=>'required'
             ]);
             if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
-                return redirect('/')->with('success', 'You are successfully logged in.');
+                return redirect('/')->with('success', 'Амжилттай нэвтэрлээ. Та тавтай морилно уу');
             }
 
         }
