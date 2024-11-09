@@ -800,7 +800,7 @@ body {
 }
 .miniImage {
     width: 80%; /* Keep this percentage for responsiveness */
-    height: 20rem;
+    height: 18rem;
     overflow-x: auto; /* Allow horizontal scrolling */
     display: flex;
     justify-content: flex-start; /* Align items at the start */
@@ -822,7 +822,7 @@ body {
     transform: scale(1.05); /* Scale on hover */
 }
 .miniImage img {
-    width: 25%; /* Image width */
+    width: 20%; /* Image width */
     background: var(--darkerBG);
     border: 1px solid var(--shadowClr);
     border-radius: 0.15rem;
@@ -2462,7 +2462,7 @@ footer {
         padding-bottom: 2rem;
         gap: 0;
     }
-    .bigImage{
+    .bigImage {
         width: 100%;
     }
     .bigImage img {
@@ -2475,7 +2475,7 @@ footer {
         justify-content: center;
         align-items: center;
     }
-    .miniImage{
+    .miniImage {
         height: 8rem;
     }
     .miniImage img {
