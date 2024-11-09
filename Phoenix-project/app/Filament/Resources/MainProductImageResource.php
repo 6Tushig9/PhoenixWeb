@@ -37,22 +37,14 @@ class MainProductImageResource extends Resource
                 Group::make([
                     Select::make('main_product_id')
                         ->options(MainProduct::all()->pluck('Бүтээгдэхүүн', 'id')),
-                    FileUpload::make('Зураг_1')
-                        ->required(),
-                    FileUpload::make('Зураг_2')
-                        ->required(),
-                    FileUpload::make('Зураг_3')
-                        ->required(),
-                    FileUpload::make('Зураг_4')
-                        ->required(),
-                    FileUpload::make('Зураг_5')
-                        ->required(),
-                    FileUpload::make('Зураг_6')
-                        ->required(),
-                    FileUpload::make('Зураг_7')
-                        ->required(),
-                    FileUpload::make('Зураг_8')
-                        ->required(),
+                    FileUpload::make('Зураг_1'),
+                    FileUpload::make('Зураг_2'),
+                    FileUpload::make('Зураг_3'),
+                    FileUpload::make('Зураг_4'),
+                    FileUpload::make('Зураг_5'),
+                    FileUpload::make('Зураг_6'),
+                    FileUpload::make('Зураг_7'),
+                    FileUpload::make('Зураг_8'),
                 ])
             ]);
     }

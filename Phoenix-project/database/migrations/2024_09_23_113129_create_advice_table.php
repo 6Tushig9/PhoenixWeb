@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->mediumText('Гарчиг')->default('')->nullable();
             $table->mediumText('Зураг')->nullable();
-            $table->mediumText('Зөвлөгөө')->default('')->nullable();
+            $table->longText('Зөвлөгөө')->default('')->nullable();
             $table->timestamps();
         });
     }

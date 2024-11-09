@@ -44,100 +44,6 @@
                 </div>
             </div>
         </div>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Select all mini images
-        const miniImages = document.querySelectorAll('.miniImage img');
-        const bigImage = document.getElementById('bigImage');
-
-        // Log to check if images are being selected correctly
-        console.log('Mini images:', miniImages);
-        console.log('Big image:', bigImage);
-
-        // Check if bigImage is found
-        if (bigImage) {
-            // Add click event listener to each mini image
-            miniImages.forEach(miniImage => {
-                miniImage.addEventListener('click', function() {
-                    // Store the current big image src
-                    const currentBigImageSrc = bigImage.src;
-
-                    // Switch the big image src with the clicked mini image src
-                    bigImage.src = this.src;
-
-                });
-            });
-        } else {
-            console.error('Big image not found.');
-        }
-
-
-
-        //JS for medeelel awah heseg 
-        // Elements for delivery options and fees
-        const hotDotorButton = document.getElementById('HotDotor');
-        const salbaraasButton = document.getElementById('Salbaraas');
-        const oronNutagButton = document.getElementById('OronNutag');
-        const hurgeltFeeDiv = document.querySelector('.hurgeltS + .dun'); // Next to .hurgeltS
-        const suuriluulaltFeeDiv = document.querySelector('.suuriluulaltS + .dun'); // Next to .suuriluulaltS
-        const totalDiv = document.querySelector('.dunTotal'); // Total amount
-        const quantitySelect = document.getElementById('quantity');
-
-        // Delivery fees based on selection
-        hotDotorButton.addEventListener('click', () => {
-            hurgeltFeeDiv.innerText = '10000₮'; // Set delivery fee to 10,000₮
-            updateTotal(); // Update the total amount
-        });
-
-        salbaraasButton.addEventListener('click', () => {
-            hurgeltFeeDiv.innerText = '0₮'; // No delivery fee
-            updateTotal(); // Update the total amount
-        });
-
-        oronNutagButton.addEventListener('click', () => {
-            hurgeltFeeDiv.innerText = '0₮'; // No delivery fee
-            updateTotal(); // Update the total amount
-        });
-
-        // Elements for installation options
-        const instYesButton = document.getElementById('InstYes');
-        const instNoButton = document.getElementById('InstNo');
-
-        // Installation fee calculation based on quantity
-        instYesButton.addEventListener('click', () => {
-            const quantity = parseInt(quantitySelect.value); // Get selected quantity
-            const installFee = quantity * 5000; // Calculate installation fee: quantity * 5000₮
-            suuriluulaltFeeDiv.innerText = `${installFee}₮`; // Update installation fee
-            updateTotal(); // Update the total amount
-        });
-
-        instNoButton.addEventListener('click', () => {
-            suuriluulaltFeeDiv.innerText = '0₮'; // No installation fee
-            updateTotal(); // Update the total amount
-        });
-
-        // Update the total amount function
-        function updateTotal() {
-            const baraaDun = 1250000; // Example base amount for items
-            const deliveryFee = parseInt(hurgeltFeeDiv.innerText.replace('₮', '')) || 0;
-            const installFee = parseInt(suuriluulaltFeeDiv.innerText.replace('₮', '')) || 0;
-
-            const totalAmount = baraaDun + deliveryFee + installFee;
-            totalDiv.innerText = `${totalAmount}₮`; // Update total amount
-        }
-
-    });
-
-
-    // Get the current date
-    const today = new Date();
-    const formattedDate = today.toISOString().slice(0, 10).replace(/-/g, '/'); // Format: YYYY/MM/DD
-
-    // Set the "zahialgaNum" with the current date and an order suffix (e.g., "/01")
-    const zahialgaNumDiv = document.querySelector('.zahialgaNum');
-    zahialgaNumDiv.innerText = `${formattedDate}/01`; // You can change "/01" to reflect your order system
-
-</script>
             <div class="specSide">
                 <div class="heaterinfoDiv">
                     <div class="heaterName">
@@ -149,7 +55,7 @@
                     <div class="zagwaruudlabel">Загварууд</div>
                     <div class="HeaterSelection">
                         @foreach ($production->category as $sub_pro)
-                            <div class="selections">
+                            <div class="selections" data-price="{{ $sub_pro->Үнэ }}">
                                 <h2>{{ $sub_pro->Загвар }}</h2>
                                 <p>{{ $sub_pro->Үнэ.'₮' }}</p>
                             </div>
@@ -188,13 +94,14 @@
                 </div>
                 <div class="zahialagchiinBulan">
                     <h2>Захиалагчийн мэдээлэл</h2>
-                    <div class="NoaTdiv" id="ZahialagchDID">
+                    {{-- <div class="NoaTdiv" id="ZahialagchDID">
                         <label for="NoaT">НӨАТ:</label>
                         <div id="NoaT">
-                            <button class="opt">Хувь хүн</button>
-                            <button class="opt">Байгууллага</button>
+                            <button class="opt" id="opt1">Хувь хүн</button>
+                            <button class="opt" id="opt2">Байгууллага</button>
                         </div>
-                    </div>
+                        <input type="text" placeholder="Байгууллагын регистер" style="display: none;"> <!-- Initially hidden -->
+                    </div> --}}
                     <div class="PersDiv" id="ZahialagchDID">
                         <label for="PersonalInfo">Хувийн мэдээлэл оруулах:</label>
                         <div id="PersonalInfo">
@@ -230,7 +137,7 @@
                         <div class="sepLine"></div>
                         <div class="zahDetails">
                             <div class="baraaS">Барааны дүн</div>
-                            <div class="dun">0₮</div>
+                            <div class="dun">0₮</div> <!-- This is where the product price will be displayed -->
                         </div>
                         <div class="zahDetails">
                             <div class="hurgeltS">Хүргэлтийн төлбөр</div>
@@ -253,7 +160,21 @@
                 </div>
             </div>
             <div class="paymentDisp">
-                <div class="detCont"></div>
+                <div class="detCont">
+                    <h1 class="tulburmedeelel">Төлбөрийн мэдээлэл</h1>
+                    <div class="dans">
+                        <p class="dansner">Централ Рич Монголиа ХХК</p>
+                        <p class="dansDugaar">Хаан банк : 5122040846</p>
+                    </div>
+                    <div class="guilgeeUtga">
+                        <p>Гүйлгээний утга : 00000000 Хэрэглэгч</p>
+                        <p>Гүйлгээний дүн : 0₮</p>
+                    </div>
+                    <p class="anhaaruulga">Та гүйлгээ хийхээс өмнө ажилтантай 
+                        холбогдож дэлгэрэнгүй мэдээллээ өгсөнөөр илүү нарийн 
+                        хэмжилт хийж тохирсон халаагуураа сонгох боломжтой. <br>
+                        утас : 8939-0000</p>
+                </div>
             </div>
         @endif
 </div>

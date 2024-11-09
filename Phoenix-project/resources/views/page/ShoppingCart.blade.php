@@ -2,21 +2,21 @@
 @section("Phoenix")
 
 <script>
-document.getElementById("complaintBtn").addEventListener("click", function() {
-    document.getElementById("complaintPopup").style.display = "flex";
-    document.body.classList.add("no-scroll");
-});
-document.getElementById("closeComplaintPopup").addEventListener("click", function() {
-    document.getElementById("complaintPopup").style.display = "none";
-    document.body.classList.remove("no-scroll");
-});
-window.addEventListener("click", function(event) {
-    const popup = document.getElementById("complaintPopup");
-    if (event.target === popup) {
-        popup.style.display = "none";
+    document.getElementById("complaintBtn").addEventListener("click", function() {
+        document.getElementById("complaintPopup").style.display = "flex";
+        document.body.classList.add("no-scroll");
+    });
+    document.getElementById("closeComplaintPopup").addEventListener("click", function() {
+        document.getElementById("complaintPopup").style.display = "none";
         document.body.classList.remove("no-scroll");
-    }
-});
+    });
+    window.addEventListener("click", function(event) {
+        const popup = document.getElementById("complaintPopup");
+        if (event.target === popup) {
+            popup.style.display = "none";
+            document.body.classList.remove("no-scroll");
+        }
+    });
 </script>
 
 <script>
@@ -105,7 +105,21 @@ window.addEventListener("click", function(event) {
             <div class="tulburiinMedeelel1">
                 <h2>Төлбөрийн мэдээлэл</h2>
                 <div class="PaymentDetails">
-
+                    <div class="detCont1">
+                        <h1 class="tulburmedeelel">Төлбөрийн мэдээлэл</h1>
+                        <div class="dans">
+                            <p class="dansner">Централ Рич Монголиа ХХК</p>
+                            <p class="dansDugaar">Хаан банк : 5122040846</p>
+                        </div>
+                        <div class="guilgeeUtga">
+                            <p>Гүйлгээний утга : 00000000 Хэрэглэгч</p>
+                            <p>Гүйлгээний дүн : 0₮</p>
+                        </div>
+                        <p class="anhaaruulga">Та гүйлгээ хийхээс өмнө ажилтантай 
+                            холбогдож дэлгэрэнгүй мэдээллээ өгсөнөөр илүү нарийн 
+                            хэмжилт хийж тохирсон халаагуураа сонгох боломжтой. <br>
+                            утас : 8939-0000</p>
+                    </div>
                 </div>
             </div>
         </div>

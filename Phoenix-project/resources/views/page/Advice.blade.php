@@ -27,7 +27,8 @@
                 <h2>{{ $item->Гарчиг }}</h2>
                 <h3> Нийтэлсэн {{ $item->created_at }}</h3>
                 <p class="advice-content">
-                    {{ $item->Зөвлөгөө }}
+                    {!! $item->Зөвлөгөө !!}
+                    {{-- {!! strip_tags($item->Зөвлөгөө, '<p><br><strong><em><u>') !!} --}}
                 </p>
                 <button class="more-btn" onclick="toggleContent(this)">Дэлгэрэнгүй...</button>
             </div>
