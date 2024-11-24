@@ -36,16 +36,16 @@ class SubProductImageResource extends Resource
             ->schema([
                 Group::make([
                     Select::make('sub_product_id')
-                        ->options(SubProduct::all()->pluck('Загвар', 'id')),
-                    FileUpload::make('Зураг_1')
+                        ->options(SubProduct::all()->pluck('model', 'id')),
+                    FileUpload::make('picture_1')
                         ->required(),
-                    FileUpload::make('Зураг_2')
+                    FileUpload::make('picture_2')
                         ->required(),
-                    FileUpload::make('Зураг_3')
+                    FileUpload::make('picture_3')
                         ->required(),
-                    FileUpload::make('Зураг_4')
+                    FileUpload::make('picture_4')
                         ->required(),
-                    FileUpload::make('Зураг_5')
+                    FileUpload::make('picture_5')
                         ->required(),
                 ])
             ]);
@@ -56,11 +56,11 @@ class SubProductImageResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('Загвар'),
-                ImageColumn::make('Зураг_1'),
-                ImageColumn::make('Зураг_2'),
-                ImageColumn::make('Зураг_3'),
-                ImageColumn::make('Зураг_4'),
-                ImageColumn::make('Зураг_5'),
+                ImageColumn::make('picture_1'),
+                ImageColumn::make('picture_2'),
+                ImageColumn::make('picture_3'),
+                ImageColumn::make('picture_4'),
+                ImageColumn::make('picture_5'),
             ])
             ->filters([
                 //

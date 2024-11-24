@@ -22,12 +22,12 @@
     @if (count($advice) > 0)
        @foreach ($advice as $item) 
         <div class="cardd">
-            <img src={{ asset("storage/".$item->Зураг) }}>
+            <img src={{ asset("storage/".$item->image) }}>
             <div>
-                <h2>{{ $item->Гарчиг }}</h2>
+                <h2>{{ $item->title }}</h2>
                 <h3> Нийтэлсэн {{ $item->created_at }}</h3>
                 <p class="advice-content">
-                    {!! $item->Зөвлөгөө !!}
+                    {!! $item->full_advice !!}
                     {{-- {!! strip_tags($item->Зөвлөгөө, '<p><br><strong><em><u>') !!} --}}
                 </p>
                 <button class="more-btn" onclick="toggleContent(this)">Дэлгэрэнгүй...</button>

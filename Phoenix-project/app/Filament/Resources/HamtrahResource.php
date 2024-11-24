@@ -26,17 +26,26 @@ class HamtrahResource extends Resource
     {
         return $form
             ->schema([
-                //
-            ]);
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->label('Name'),
+                Forms\Components\TextInput::make('phone_number')
+                    ->required()
+                    ->numeric()
+                    ->label('Phone Number'),
+                Forms\Components\Textarea::make('hamtrah_huselt')
+                    ->label('Hamtrah Huselt'),
+                ]);
+
     }
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                TextColumn::make('Нэр'),
-                TextColumn::make('Утасны_дугаар')->numeric(),
-                TextColumn::make('Хатрах_хүсэлт')->wrap(),
+                TextColumn::make('name'),
+                TextColumn::make('phone_number')->numeric(),
+                TextColumn::make('hamtrah_huselt')->wrap(),
             ])
             ->filters([
                 //

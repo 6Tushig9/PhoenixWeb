@@ -9,9 +9,9 @@
                     <div>Мэдээлэл байхгүй байна</div>
                 @else
                     <div class="medeelliinheseg">
-                        <h1>{{ $first_item->Бүтээгдэхүүн }}</h1>
-                        <h2>{{ $first_item->Онцлог_шинж }}</h2>
-                        <h3>{{ $first_item->Товч_мэдээлэл }}</h3>
+                        <h1>{{ $first_item->product_name }}</h1>
+                        <h2>{{ $first_item->ontslog_shinj }}</h2>
+                        <h3>{{ $first_item->brief_information }}</h3>
                         <div class="shuudhudaldah">
                             <script>
                                 $(document).ready(function() {
@@ -43,11 +43,11 @@
                                     <div class="card swiper-slide">
                                         <div class="image-content">
                                             <div class="card-image">
-                                                <img src={{ asset("storage/".$pro->Зураг)}} class="card-img">
+                                                <img src={{ asset("storage/".$pro->image)}} class="card-img">
                                             </div>
                                             <div class="card-content">
-                                                <h2 class="name">{{ $pro->Бүтээгдэхүүн }}</h2>
-                                                <p class="descrptn">{{ $pro->Онцлог_шинж }}</p>
+                                                <h2 class="name">{{ $pro->product_name }}</h2>
+                                                <p class="descrptn">{{ $pro->ontslog_shinj }}</p>
                                             </div>
                                             <a href={{ route('buy', $pro->id) }}>
                                                 <button class="VMore VMoring">Дэлгэрэнгүй</button>

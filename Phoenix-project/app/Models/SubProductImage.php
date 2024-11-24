@@ -11,7 +11,7 @@ class SubProductImage extends Model
 
     protected $table = 'sub_product_images';
 
-    protected $fillable = ['sub_product_id', 'Зураг_1', 'Зураг_2', 'Зураг_3', 'Зураг_4', 'Зураг_5'];
+    protected $fillable = ['sub_product_id', 'picture_1','picture_2','picture_3','picture_4','picture_5'];
 
     // Renamed the method for clarity
     public function subProduct(): BelongsTo

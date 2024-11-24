@@ -10,7 +10,7 @@ class MainProduct extends Model
 {
     use HasFactory;
     protected $table='main_products';
-    protected $fillable=['Бүтээгдэхүүн','Онцлог_шинж','Зураг','Үнэ','Товч_мэдээлэл','Тоон_хэмжээ'];
+    protected $fillable = ['product_name','ontslog_shinj','image','price','brief_information','quantity'];
 
     public function category(): HasMany
     {

@@ -10,15 +10,15 @@
         <div class="prodPicSide">
             <div class="bigImage">
                 <!-- Default big image -->
-                <img id="bigImage" src="{{ asset('storage/'.$production->Зураг) }}" alt="">
+                <img id="bigImage" src="{{ asset('storage/'.$production->image) }}" alt="">
             </div>
             <div class="miniImage" role="region" aria-label="Image gallery">
                 <div class="image-container">
                     @foreach ($production->images as $image)
                         @for ($i = 1; $i <= 8; $i++)
-                            @if ($image->{'Зураг_' . $i})
+                            @if ($image->{'picture_' . $i})
                                 <img 
-                                    src="{{ asset('storage/' . $image->{'Зураг_' . $i}) }}" 
+                                    src="{{ asset('storage/' . $image->{'picture_' . $i}) }}" 
                                     class="mnimgs" 
                                     alt="Image {{ $i }} from {{ $production->name }}" 
                                     tabindex="0" 
@@ -47,17 +47,17 @@
             <div class="specSide">
                 <div class="heaterinfoDiv">
                     <div class="heaterName">
-                        {{ $production->Бүтээгдэхүүн }} Төрлийн халаагуур
+                        {{ $production->product_name }} Төрлийн халаагуур
                     </div>
                     <div class="heaterDesc">
-                        {{ '- '.$production->Товч_мэдээлэл }}
+                        {{ '- '.$production->brief_information }}
                     </div>
                     <div class="zagwaruudlabel">Загварууд</div>
                     <div class="HeaterSelection">
                         @foreach ($production->category as $sub_pro)
-                            <div class="selections" data-price="{{ $sub_pro->Үнэ }}">
-                                <h2>{{ $sub_pro->Загвар }}</h2>
-                                <p>{{ $sub_pro->Үнэ.'₮' }}</p>
+                            <div class="selections" data-price="{{ $sub_pro->price }}">
+                                <h2>{{ $sub_pro->model }}</h2>
+                                <p>{{ $sub_pro->price.'₮' }}</p>
                             </div>
                         @endforeach
                     </div>

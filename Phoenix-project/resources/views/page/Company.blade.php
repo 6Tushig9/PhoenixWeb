@@ -88,19 +88,19 @@
             @foreach ($statistic as $item)
                 <div id="Milestone">
                     <div class="section">
-                        <div class="Numbers">{{ $item->Жил }}</div>
+                        <div class="Numbers">{{ $item->year }}</div>
                         <div class="descrptnOfNumber">Жил</div>
                     </div>
                     <div class="section">
-                        <div class="Numbers">{{ $item->Нийт_айл_өрх }}</div>
+                        <div class="Numbers">{{ $item->household_sum }}</div>
                         <div class="descrptnOfNumber">Нийт айл өрх</div>
                     </div>
                     <div class="section">
-                        <div class="Numbers">{{ $item->Хэмнэсэн_цахилгаан.' мВт' }}</div>
+                        <div class="Numbers">{{ $item->saved_bill.' мВт' }}</div>
                         <div class="descrptnOfNumber">Хэмнэсэн цахилгаан</div>
                     </div>
                     <div class="section">
-                        <div class="Numbers">{{ $item->Бууруулсан_нүүрс_хүчлийн_хий.'Тн' }}</div>
+                        <div class="Numbers">{{ $item->carbon_reduced.'Тн' }}</div>
                         <div class="descrptnOfNumber">Бууруулсан нүүрс хүчлийн хий</div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
             @else
                 <div class="Hamtragchid-slide">
                     @foreach ($organization as $item)
-                        <img src="{{ asset('storage/'.$item->Зураг) }}" alt="">
+                        <img src="{{ asset('storage/'.$item->image) }}" alt="">
                     @endforeach
                 </div>
             @endif
@@ -146,7 +146,7 @@
             @else
                 <div class="Hamtragchid-slide">
                     @foreach ($organization as $item)
-                        <img src="{{ asset('storage/'.$item->Зураг) }}" alt="">
+                        <img src="{{ asset('storage/'.$item->image) }}" alt="">
                     @endforeach
                 </div>
             @endif

@@ -35,8 +35,8 @@ class OrganizationResource extends Resource
         return $form
             ->schema([
                 Group::make([
-                    TextInput::make('Нэр')->required(),
-                    FileUpload::make('Зураг')->required(),
+                    TextInput::make('name')->required(),
+                    FileUpload::make('image')->required(),
                 ])
             ]);
     }
@@ -45,8 +45,8 @@ class OrganizationResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('Нэр'),
-                ImageColumn::make('Зураг'),
+                TextColumn::make('name'),
+                ImageColumn::make('image'),
             ])
             ->filters([
                 //

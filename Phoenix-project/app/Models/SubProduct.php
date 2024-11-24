@@ -11,7 +11,7 @@ class SubProduct extends Model
 {
     use HasFactory;
     protected $table='sub_products';
-    protected $fillable=['main_product_id','Загвар','Онцлог_шинж','Зураг','Үнэ','Товч_мэдээлэл','Тоон_хэмжээ'];
+    protected $fillable=['main_product_id','model','ontslog_shinj','image','price','brief_information','quantity'];
 
     public function category(): BelongsTo
     {

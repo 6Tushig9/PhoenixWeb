@@ -26,17 +26,27 @@ class SanalResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->label('Name'),
+                Forms\Components\TextInput::make('phone_number')
+                    ->required()
+                    ->numeric()
+                    ->label('Phone Number'),
+                Forms\Components\Textarea::make('sanal_huselt')
+                    ->required()
+                    ->label('Sanal Huselt'),
             ]);
+
     }
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                TextColumn::make('Нэр'),
-                TextColumn::make('Утасны_дугаар')->numeric(),
-                TextColumn::make('Санал_хүсэлт')->wrap(),
+                TextColumn::make('name'),
+                TextColumn::make('phone_number')->numeric(),
+                TextColumn::make('sanal_huselt')->wrap(),
             ])
             ->filters([
                 //

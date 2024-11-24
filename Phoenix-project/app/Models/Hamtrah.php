@@ -9,5 +9,5 @@ class Hamtrah extends Model
 {
     use HasFactory;
     protected $table='hamtrahs';
-    protected $fillable=['Нэр','Утасны_дугаар','Хатрах_хүсэлт'];
+    protected $fillable=['name','phone_number','sanal_huselt'];
 }

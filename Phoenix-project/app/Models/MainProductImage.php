@@ -10,7 +10,7 @@ class MainProductImage extends Model
 {
     use HasFactory;
     protected $table='main_product_images';
-    protected $fillable=['main_product_id','Зураг_1','Зураг_2','Зураг_3','Зураг_4','Зураг_5','Зураг_6','Зураг_7','Зураг_8'];
+    protected $fillable=['main_product_id','picture_1','picture_2','picture_3','picture_4','picture_5','picture_6','picture_7','picture_8'];
 
     public function image(): BelongsTo
     {

@@ -9,5 +9,5 @@ class Sanal extends Model
 {
     use HasFactory;
     protected $table='sanals';
-    protected $fillable=['Нэр','Утасны_дугаар','Санал_хүсэлт'];
+    protected $fillable=['name','phone_number','sanal_huselt'];
 }

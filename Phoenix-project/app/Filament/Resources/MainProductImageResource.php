@@ -36,15 +36,15 @@ class MainProductImageResource extends Resource
             ->schema([
                 Group::make([
                     Select::make('main_product_id')
-                        ->options(MainProduct::all()->pluck('Бүтээгдэхүүн', 'id')),
-                    FileUpload::make('Зураг_1'),
-                    FileUpload::make('Зураг_2'),
-                    FileUpload::make('Зураг_3'),
-                    FileUpload::make('Зураг_4'),
-                    FileUpload::make('Зураг_5'),
-                    FileUpload::make('Зураг_6'),
-                    FileUpload::make('Зураг_7'),
-                    FileUpload::make('Зураг_8'),
+                        ->options(MainProduct::all()->pluck('product_name'/*"бүтээгдэхүүн" гэдэг нэртэй байв*/, 'id')),
+                    FileUpload::make('picture_1'),
+                    FileUpload::make('picture_2'),
+                    FileUpload::make('picture_3'),
+                    FileUpload::make('picture_4'),
+                    FileUpload::make('picture_5'),
+                    FileUpload::make('picture_6'),
+                    FileUpload::make('picture_7'),
+                    FileUpload::make('picture_8'),
                 ])
             ]);
     }
@@ -53,15 +53,15 @@ class MainProductImageResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('image.Бүтээгдэхүүн'),
-                ImageColumn::make('Зураг_1'),
-                ImageColumn::make('Зураг_2'),
-                ImageColumn::make('Зураг_3'),
-                ImageColumn::make('Зураг_4'),
-                ImageColumn::make('Зураг_5'),
-                ImageColumn::make('Зураг_6'),
-                ImageColumn::make('Зураг_7'),
-                ImageColumn::make('Зураг_8'),
+                TextColumn::make('image.product_name'),
+                ImageColumn::make('picture_1'),
+                ImageColumn::make('picture_2'),
+                ImageColumn::make('picture_3'),
+                ImageColumn::make('picture_4'),
+                ImageColumn::make('picture_5'),
+                ImageColumn::make('picture_6'),
+                ImageColumn::make('picture_7'),
+                ImageColumn::make('picture_8'),
             ])
             ->filters([
                 //
