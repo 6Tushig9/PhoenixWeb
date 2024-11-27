@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('hamtrahs', function (Blueprint $table) {
             $table->id();
-            $table->mediumText('name')->default('')->nullable();
-            $table->mediumInteger('phone_number')->default(0)->nullable();
-            $table->mediumText('hamtrah_huselt')->default('')->nullable();
+            $table->mediumText('name')->nullable();
+            $table->mediumInteger('phone_number')->nullable()->default(0);
+            $table->mediumText('hamtrah_huselt')->nullable();
             $table->timestamps();
         });
     }

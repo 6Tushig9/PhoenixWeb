@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('statistics', function (Blueprint $table) {
             $table->id();
-            $table->mediumInteger('year')->default(0)->nullable();
-            $table->mediumInteger('household_sum')->default(0)->nullable();
-            $table->mediumText('saved_bill')->default(0)->nullable();
-            $table->mediumText('carbon_reduced')->default(0)->nullable();
+            $table->mediumInteger('year')->nullable()->default(0);
+            $table->mediumInteger('household_sum')->nullable()->default(0);
+            $table->mediumText('saved_bill')->nullable()->default(0);
+            $table->mediumText('carbon_reduced')->nullable()->default(0);
             $table->timestamps();
         });
     }

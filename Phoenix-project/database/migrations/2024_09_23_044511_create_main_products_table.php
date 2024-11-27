@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('main_products', function (Blueprint $table) {
             $table->id();
-            $table->mediumText('product_name')->default('')->nullable();
-            $table->mediumText('ontslog_shinj')->default('')->nullable();
+            $table->mediumText('product_name')->nullable();
+            $table->mediumText('ontslog_shinj')->nullable();
             $table->mediumText('image')->nullable();
-            $table->mediumInteger('price')->default(0)->nullable();
-            $table->mediumText('brief_information')->default('')->nullable();
-            $table->mediumInteger('quantity')->default(0)->nullable();
+            $table->mediumInteger('price')->nullable()->default(0);
+            $table->mediumText('brief_information')->nullable();
+            $table->mediumInteger('quantity')->nullable()->default(0);
             $table->timestamps();
         });
     }
