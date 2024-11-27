@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('main_products', function (Blueprint $table) {
             $table->id();
-            $table->mediumText('Бүтээгдэхүүн')->default('')->nullable();
-            $table->mediumText('Онцлог_шинж')->default('')->nullable();
-            $table->mediumText('Зураг')->nullable();
-            $table->mediumInteger('Үнэ')->default(0)->nullable();
-            $table->mediumText('Товч_мэдээлэл')->default('')->nullable();
-            $table->mediumInteger('Тоон_хэмжээ')->default(0)->nullable();
+            $table->mediumText('product_name')->default('')->nullable();
+            $table->mediumText('ontslog_shinj')->default('')->nullable();
+            $table->mediumText('image')->nullable();
+            $table->mediumInteger('price')->default(0)->nullable();
+            $table->mediumText('brief_information')->default('')->nullable();
+            $table->mediumInteger('quantity')->default(0)->nullable();
             $table->timestamps();
         });
     }

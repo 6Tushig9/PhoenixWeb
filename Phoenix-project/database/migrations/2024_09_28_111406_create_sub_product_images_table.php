@@ -15,11 +15,11 @@ return new class extends Migration
         Schema::create('sub_product_images', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(SubProduct::class)->constrained();
-            $table->mediumText('Зураг_1')->nullable();
-            $table->mediumText('Зураг_2')->nullable();
-            $table->mediumText('Зураг_3')->nullable();
-            $table->mediumText('Зураг_4')->nullable();
-            $table->mediumText('Зураг_5')->nullable();
+            $table->mediumText('picture_1')->nullable();
+            $table->mediumText('picture_2')->nullable();
+            $table->mediumText('picture_3')->nullable();
+            $table->mediumText('picture_4')->nullable();
+            $table->mediumText('picture_5')->nullable();
             $table->timestamps();
         });
     }

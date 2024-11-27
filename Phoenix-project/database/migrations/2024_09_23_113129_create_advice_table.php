@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('advice', function (Blueprint $table) {
             $table->id();
-            $table->mediumText('Гарчиг')->default('')->nullable();
-            $table->mediumText('Зураг')->nullable();
-            $table->longText('Зөвлөгөө')->default('')->nullable();
+            $table->mediumText('title')->default('')->nullable();
+            $table->mediumText('image')->nullable();
+            $table->longText('full_advice')->default('')->nullable();
             $table->timestamps();
         });
     }

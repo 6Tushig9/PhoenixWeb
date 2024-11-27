@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('statistics', function (Blueprint $table) {
             $table->id();
-            $table->mediumInteger('Жил')->default(0)->nullable();
-            $table->mediumInteger('Нийт_айл_өрх')->default(0)->nullable();
-            $table->mediumText('Хэмнэсэн_цахилгаан')->default(0)->nullable();
-            $table->mediumText('Бууруулсан_нүүрс_хүчлийн_хий')->default(0)->nullable();
+            $table->mediumInteger('year')->default(0)->nullable();
+            $table->mediumInteger('household_sum')->default(0)->nullable();
+            $table->mediumText('saved_bill')->default(0)->nullable();
+            $table->mediumText('carbon_reduced')->default(0)->nullable();
             $table->timestamps();
         });
     }

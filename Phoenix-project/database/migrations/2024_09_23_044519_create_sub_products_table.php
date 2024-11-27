@@ -15,12 +15,12 @@ return new class extends Migration
         Schema::create('sub_products', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(MainProduct::class)->constrained();
-            $table->mediumText('Загвар')->default('')->nullable();
-            $table->mediumText('Онцлог_шинж')->default('')->nullable();
-            $table->mediumText('Зураг')->nullable();
-            $table->mediumInteger('Үнэ')->default(0)->nullable();
-            $table->mediumText('Товч_мэдээлэл')->default('')->nullable();
-            $table->mediumInteger('Тоон_хэмжээ')->default(0)->nullable();
+            $table->mediumText('model')->default('')->nullable();
+            $table->mediumText('ontslog_shinj')->default('')->nullable();
+            $table->mediumText('image')->nullable();
+            $table->mediumInteger('price')->default(0)->nullable();
+            $table->mediumText('brief_information')->default('')->nullable();
+            $table->mediumInteger('quantity')->default(0)->nullable();
             $table->timestamps();
         });
     }

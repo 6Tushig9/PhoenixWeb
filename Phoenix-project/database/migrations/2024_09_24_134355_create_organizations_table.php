@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('organizations', function (Blueprint $table) {
             $table->id();
-            $table->mediumText('Нэр')->nullable();
-            $table->mediumText('Зураг')->nullable();
+            $table->mediumText('name')->nullable();
+            $table->mediumText('image')->nullable();
             $table->timestamps();
         });
     }
