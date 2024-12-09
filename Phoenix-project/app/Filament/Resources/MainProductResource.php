@@ -55,7 +55,7 @@ class MainProductResource extends Resource
                 TextColumn::make('product_name'),
                 TextColumn::make('ontslog_shinj'),
                 ImageColumn::make('image'),
-                TextColumn::make('price')->format('0,0.00'),  // Use TextColumn with format for numeric values
+                NumberColumn::make('price')->format('0,0.00'), // This will now work for formatting the numeric column
                 TextColumn::make('brief_information')->wrap(),
             ])
             ->filters([
