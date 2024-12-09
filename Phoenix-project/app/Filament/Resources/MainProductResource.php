@@ -55,7 +55,7 @@ class MainProductResource extends Resource
                 TextColumn::make('product_name'),
                 TextColumn::make('ontslog_shinj'),
                 ImageColumn::make('image'),
-                NumberColumn::make('price')->format('0,0.00'),
+                TextColumn::make('price')->format('0,0.00'),
                 TextColumn::make('brief_information')->wrap(),
             ])
             ->filters([
