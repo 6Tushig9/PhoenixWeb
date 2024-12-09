@@ -13,9 +13,9 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Columns\NumberColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\NumberColumn;
 use Filament\Tables\Table;
 use Filament\Tables\View\TablesRenderHook;
 use Illuminate\Database\Eloquent\Builder;
@@ -55,7 +55,7 @@ class MainProductResource extends Resource
                 TextColumn::make('product_name'),
                 TextColumn::make('ontslog_shinj'),
                 ImageColumn::make('image'),
-                NumberColumn::make('price')->format('0,0.00'), // This will now work for formatting the numeric column
+                NumberColumn::make('price')->format('0,0.00'),  // Correctly using NumberColumn
                 TextColumn::make('brief_information')->wrap(),
             ])
             ->filters([
