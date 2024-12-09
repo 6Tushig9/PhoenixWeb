@@ -15,7 +15,6 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Columns\NumberColumn;
 use Filament\Tables\Table;
 use Filament\Tables\View\TablesRenderHook;
 use Illuminate\Database\Eloquent\Builder;
@@ -48,33 +47,34 @@ class MainProductResource extends Resource
             ]);
     }
 
-    public static function table(Table $table): Table
-    {
-        return $table
-            ->columns([
-                TextColumn::make('product_name'),
-                TextColumn::make('ontslog_shinj'),
-                ImageColumn::make('image'),
-                NumberColumn::make('price')->format('0,0.00'),  // Correctly using NumberColumn
-                TextColumn::make('brief_information')->wrap(),
-            ])
-            ->filters([
-                //
-            ])
-            ->actions([
-                Tables\Actions\Action::make('Category')
-                    ->color('gray')
-                    ->icon('heroicon-o-cpu-chip')
-                    ->url(fn(MainProduct $record) => route('filament.admin.resources.sub-products.create', ['main_product_id' => $record->id])),
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
-            ]);
-    }
+public static function table(Table $table): Table
+{
+    return $table
+        ->columns([
+            TextColumn::make('product_name'),
+            TextColumn::make('ontslog_shinj'),
+            ImageColumn::make('image'),
+            TextColumn::make('price')
+                ->formatStateUsing(fn ($state) => number_format($state, 2, '.', ',')),  // Format the price
+            TextColumn::make('brief_information')->wrap(),
+        ])
+        ->filters([
+            //
+        ])
+        ->actions([
+            Tables\Actions\Action::make('Category')
+                ->color('gray')
+                ->icon('heroicon-o-cpu-chip')
+                ->url(fn(MainProduct $record) => route('filament.admin.resources.sub-products.create', ['main_product_id' => $record->id])),
+            Tables\Actions\EditAction::make(),
+            Tables\Actions\DeleteAction::make(),
+        ])
+        ->bulkActions([
+            Tables\Actions\BulkActionGroup::make([
+                Tables\Actions\DeleteBulkAction::make(),
+            ]),
+        ]);
+}
 
     public static function getRelations(): array
     {
