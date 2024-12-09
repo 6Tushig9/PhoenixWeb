@@ -55,7 +55,7 @@ class MainProductResource extends Resource
                 TextColumn::make('product_name'),
                 TextColumn::make('ontslog_shinj'),
                 ImageColumn::make('image'),
-                TextColumn::make('price')->format('0,0.00'),
+                TextColumn::make('price')->format('0,0.00'),  // Use TextColumn with format for numeric values
                 TextColumn::make('brief_information')->wrap(),
             ])
             ->filters([
@@ -65,7 +65,7 @@ class MainProductResource extends Resource
                 Tables\Actions\Action::make('Category')
                     ->color('gray')
                     ->icon('heroicon-o-cpu-chip')
-                    ->url(fn(MainProduct $record)=>route('filament.admin.resources.sub-products.create',['main_product_id'=>$record->id])),
+                    ->url(fn(MainProduct $record) => route('filament.admin.resources.sub-products.create', ['main_product_id' => $record->id])),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])
