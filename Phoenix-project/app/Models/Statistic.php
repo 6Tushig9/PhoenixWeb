@@ -9,5 +9,5 @@ class Statistic extends Model
 {
     use HasFactory;
     protected $table='statistics';
-    protected $fillable=['Жил','Нийт_айл_өрх','Хэмнэсэн_цахилгаан','Бууруулсан_нүүрс_хүчлийн_хий'];
+    protected $fillable=['year','household_sum','saved_bill','carbon_reduced'];
 }

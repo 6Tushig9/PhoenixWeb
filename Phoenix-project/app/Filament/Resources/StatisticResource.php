@@ -33,16 +33,16 @@ class StatisticResource extends Resource
         return $form
             ->schema([
                 Group::make([
-                    TextInput::make('Жил')
+                    TextInput::make('year')
                         ->numeric()
                         ->required(),
-                    TextInput::make('Нийт_айл_өрх')
+                    TextInput::make('household_sum')
                         ->numeric()
                         ->required(),
-                    TextInput::make('Хэмнэсэн_цахилгаан')
+                    TextInput::make('saved_bill')
                         ->numeric()
                         ->required(),
-                    TextInput::make('Бууруулсан_нүүрс_хүчлийн_хий')
+                    TextInput::make('carbon_reduced')
                         ->numeric()
                         ->required(),
                 ])
@@ -53,10 +53,10 @@ class StatisticResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('Жил'),
-                TextColumn::make('Нийт_айл_өрх'),
-                TextColumn::make('Хэмнэсэн_цахилгаан'),
-                TextColumn::make('Бууруулсан_нүүрс_хүчлийн_хий'),
+                TextColumn::make('year'),
+                TextColumn::make('household_sum'),
+                TextColumn::make('saved_bill'),
+                TextColumn::make('carbon_reduced'),
             ])
             ->filters([
                 //

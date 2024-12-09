@@ -9,5 +9,5 @@ class Advice extends Model
 {
     use HasFactory;
     protected $table='advice';
-    protected $fillable=['Гарчиг','Зураг','Зөвлөгөө'];
+    protected $fillable=['title','image','full_advice'];
 }

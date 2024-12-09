@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('sanals', function (Blueprint $table) {
             $table->id();
-            $table->mediumText('Нэр')->default('')->nullable();
-            $table->mediumInteger('Утасны_дугаар')->default(0)->nullable();
-            $table->mediumText('Санал_хүсэлт')->default('')->nullable();
+            $table->mediumText('name')->nullable();
+            $table->mediumInteger('phone_number')->nullable()->default(0);
+            $table->mediumText('sanal_huselt')->nullable();
             $table->timestamps();
         });
     }

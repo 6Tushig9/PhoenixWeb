@@ -39,13 +39,12 @@ class SubProductResource extends Resource
             ->schema([
                 Group::make([
                     Select::make('main_product_id')
-                        ->options(MainProduct::all()->pluck('Бүтээгдэхүүн', 'id')),
-                    TextInput::make('Загвар')->required(),
-                    TextInput::make('Онцлог_шинж')->required(),
-                    FileUpload::make('Зураг')->required(),
-                    TextInput::make('Үнэ')->numeric()->required(),
-                    MarkdownEditor::make('Товч_мэдээлэл')->required(),
-                    TextInput::make('Тоон_хэмжээ')->numeric()->required(),
+                        ->options(MainProduct::all()->pluck('product_name', 'id')),
+                    TextInput::make('model')->required(),
+                    TextInput::make('ontslog_shinj')->required(),
+                    FileUpload::make('image')->required(),
+                    TextInput::make('price')->numeric()->required(),
+                    MarkdownEditor::make('brief_information')->required(),
                 ])
             ]);
     }
@@ -54,13 +53,13 @@ class SubProductResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('category.Бүтээгдэхүүн'),
-                TextColumn::make('Загвар'),
-                TextColumn::make('Онцлог_шинж'),
-                ImageColumn::make('Зураг'),
-                TextColumn::make('Үнэ')->numeric(),
-                TextColumn::make('Товч_мэдээлэл')->wrap(),
-                TextColumn::make('Тоон_хэмжээ')->numeric(),
+                TextColumn::make('category.product_name'),
+                TextColumn::make('model'),
+                TextColumn::make('ontslog_shinj'),
+                ImageColumn::make('image'),
+                TextColumn::make('price')->numeric(),
+                TextColumn::make('brief_information')->wrap(),
+                TextColumn::make('quantity')->numeric(),
             ])
             ->filters([
                 //

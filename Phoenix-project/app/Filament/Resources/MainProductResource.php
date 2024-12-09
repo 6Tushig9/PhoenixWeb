@@ -24,11 +24,11 @@ class MainProductResource extends Resource
 {
     protected static ?string $model = MainProduct::class;
 
-    protected static ?string $navigationGroup = 'Бүтээгдэхүүн';
+    protected static ?string $navigationGroup = 'Products';
 
-    protected static ?string $navigationLabel = 'Ц - Халаагуур';
+    protected static ?string $navigationLabel = 'Халаагуур';
 
-    protected static ?string $modelLabel = 'Ц - Халаагуур';
+    protected static ?string $modelLabel = 'Халаагуур';
 
     protected static ?string $navigationIcon = 'heroicon-o-bolt';
 
@@ -37,12 +37,12 @@ class MainProductResource extends Resource
         return $form
             ->schema([
                 Group::make([
-                    TextInput::make('Бүтээгдэхүүн')->required(),
-                    TextInput::make('Онцлог_шинж')->required(),
-                    FileUpload::make('Зураг')->required(),
-                    TextInput::make('Үнэ')->numeric()->required(),
-                    MarkdownEditor::make('Товч_мэдээлэл')->required(),
-                    TextInput::make('Тоон_хэмжээ')->numeric()->required(),
+                    TextInput::make('product_name')->required(),
+                    TextInput::make('ontslog_shinj')->required(),
+                    FileUpload::make('image')->required(),
+                    TextInput::make('price')->numeric()->required(),
+                    MarkdownEditor::make('brief_information')->required(),
+                    TextInput::make('quantity')->numeric()->required(),
                 ])
             ]);
     }
@@ -51,12 +51,11 @@ class MainProductResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('Бүтээгдэхүүн'),
-                TextColumn::make('Онцлог_шинж'),
-                ImageColumn::make('Зураг'),
-                TextColumn::make('Үнэ')->numeric(),
-                TextColumn::make('Товч_мэдээлэл')->wrap(),
-                TextColumn::make('Тоон_хэмжээ')->numeric(),
+                TextColumn::make('product_name'),
+                TextColumn::make('ontslog_shinj'),
+                ImageColumn::make('image'),
+                NumberColumn::make('price')->format('0,0.00'),
+                TextColumn::make('brief_information')->wrap(),
             ])
             ->filters([
                 //

@@ -25,18 +25,18 @@ class AdviceResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-bottom-center-text';
 
-    protected static ?string $navigationGroup = 'Зөвлөгөө';
+    protected static ?string $navigationGroup = 'Advice';
 
-    protected static ?string $navigationLabel = 'Зөвлөгөө';
+    protected static ?string $navigationLabel = 'Advice';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Group::make([
-                    TextInput::make('Гарчиг')->required(),
-                    FileUpload::make('Зураг')->required(),
-                    MarkdownEditor::make('Зөвлөгөө')->required(),
+                    TextInput::make('title')->required(),
+                    FileUpload::make('image')->required(),
+                    MarkdownEditor::make('full_advice')->required(),
                 ])
             ]);
     }
@@ -45,9 +45,9 @@ class AdviceResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('Гарчиг'),
-                ImageColumn::make('Зураг'),
-                TextColumn::make('Зөвлөгөө')->wrap(),
+                TextColumn::make('title'),
+                ImageColumn::make('image'),
+                TextColumn::make('full_advice')->wrap(),
             ])
             ->filters([
                 //

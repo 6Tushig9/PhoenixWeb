@@ -12,9 +12,9 @@ class CustomerReact extends Controller
          if($request->isMethod('post')){
             try{
                 Hamtrah::create([
-                    'Нэр'=>$request->name,
-                    'Утасны_дугаар'=>$request->phone,
-                    'Хатрах_хүсэлт'=>$request->post
+                    'name'=>$request->name,
+                    'phone_number'=>$request->phone,
+                    'hamtrah_huselt'=>$request->post
                 ]);
             } catch(\Exception $e) {
                 return response()->json(['status'=>$e->getMessage()]);
@@ -27,9 +27,9 @@ class CustomerReact extends Controller
         if($request->isMethod('post')){
             try{
                 Sanal::create([
-                    'Нэр'=>$request->name,
-                    'Утасны_дугаар'=>$request->phone,
-                    'Санал_хүсэлт'=>$request->post
+                    'name'=>$request->name,
+                    'phone_number'=>$request->phone,
+                    'sanal_huselt'=>$request->post
                 ]);
             } catch(\Exception $e) {
                 return response()->json(['status'=>$e->getMessage()]);
