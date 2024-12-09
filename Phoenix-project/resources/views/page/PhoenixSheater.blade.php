@@ -18,9 +18,9 @@
                                     $('#buying').click(function() {
                                         window.location.href = '/buypage';
                                     });
-                                    $('#basketing').click(function(){
-                                        window.location.href='/shoppingcart';
-                                    });
+                                    // $('#basketing').click(function(){
+                                    //     window.location.href='/shoppingcart';
+                                    // });
                                 });
                             </script>
                             <div class="fnctbtn buy" id="buying">Худалдан авах</div>

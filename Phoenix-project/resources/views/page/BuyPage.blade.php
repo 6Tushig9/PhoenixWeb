@@ -79,11 +79,11 @@
                     </div>
                     <div class="bntsForOrder">
                         <script>
-                            $(document).ready(function() {
-                                $('.cartBtn').click(function() {
-                                window.location.href = '/shoppingcart';
-                                });
-                            });
+                            // $(document).ready(function() {
+                            //     $('.cartBtn').click(function() {
+                            //     window.location.href = '/shoppingcart';
+                            //     });
+                            // });
                         </script>
                         {{-- <a href={{ route('shopping', $production->id)}}>
                             <button class="cartBtn">Сагсанд хийх</button>
