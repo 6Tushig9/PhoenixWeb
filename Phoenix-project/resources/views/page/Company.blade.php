@@ -21,7 +21,7 @@
         <div class="firstInfo">
             <div class="firstInfo">
                 <div class="frstPic">
-                    <img src={{ asset("pics2use/PicEmployee.avif")}}>
+                    <img src={{ asset("pics2use/emIMG.png")}}>
                 </div>
                 <div class="frstIfno">
                     <h3>Бидний эхэлсэн шалтгаан</h3>
