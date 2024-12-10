@@ -43,7 +43,7 @@
                                     <div class="card swiper-slide">
                                         <div class="image-content">
                                             <div class="card-image">
-                                                <img src={{ asset("storage/".$pro->image)}} class="card-img">
+                                                <img src="{{ asset("storage/".$pro->image) }}" class="card-img">
                                             </div>
                                             <div class="card-content">
                                                 <h2 class="name">{{ $pro->product_name }}</h2>
